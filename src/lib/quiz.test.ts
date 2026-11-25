@@ -51,6 +51,24 @@ describe('quiz questions', () => {
     expect(buildQuestion(await context('gen1'), 'eff|Ghost|Psychic')!.answer).toBe('0×');
   });
 
+  it('quizzes natures', async () => {
+    const ctx = await context('gen9');
+    expect(buildQuestion(ctx, 'nat|Adamant|up')!.answer).toBe('Attack');
+    expect(buildQuestion(ctx, 'nat|Adamant|down')!.answer).toBe('Sp. Atk');
+    const find = buildQuestion(ctx, 'natfind|Timid', seeded(3))!;
+    expect(find.prompt).toBe('Which nature raises Speed and lowers Attack?');
+    expect(find.answer).toBe('Timid');
+    expect(allKeys(ctx, ['nature'])).toHaveLength(60);
+    expect(availableKinds(await context('gen2'))).not.toContain('nature');
+  });
+
+  it('lists every Pokémon with the quizzed ability', async () => {
+    const ctx = await context('gen9', 'gen9ou');
+    const q = buildQuestion(ctx, 'abdesc|intimidate', seeded(1))!;
+    expect(q.related?.species).toEqual(expect.arrayContaining(['Gyarados', 'Landorus-Therian', 'Incineroar']));
+    expect(q.related?.species.every((n) => ctx.rs.getSpecies(n)!.abilities.includes('Intimidate'))).toBe(true);
+  });
+
   it('asks about romhack stat changes', async () => {
     const q = buildQuestion(await context('unbound'), 'hstat|venusaur', seeded(1))!;
     expect(q.prompt).toMatch(/Unbound, what's Venusaur's base/);

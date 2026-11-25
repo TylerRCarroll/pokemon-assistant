@@ -17,6 +17,8 @@ export interface Question {
   choices: string[];
   answer: string;
   explanation: string;
+  /** Species shown under the explanation, e.g. everything that can have the quizzed ability */
+  related?: { label: string; species: string[] };
 }
 
 export interface QuizContext {
@@ -27,7 +29,7 @@ export interface QuizContext {
   formatName?: string;
 }
 
-export type QuizKind = 'effectiveness' | 'weakness' | 'ability' | 'abilityEffect' | 'moveType' | 'counter' | 'hackChange';
+export type QuizKind = 'effectiveness' | 'weakness' | 'ability' | 'abilityEffect' | 'nature' | 'moveType' | 'counter' | 'hackChange';
 
 type Rng = () => number;
 
@@ -60,6 +62,16 @@ const choicesWith = (answer: string, distractors: string[], n: number, rng: Rng)
 
 /** The official ruleset a romhack is built on, to spot what the hack changed */
 const baseRuleset = (rs: Ruleset) => getRuleset(rs.natDex ? `gen${rs.gen}natdex` : `gen${rs.gen}`);
+
+/** Every species in the ruleset that can have this ability */
+const withAbility = (rs: Ruleset, ability: string) => ({
+  label: `Pokémon with ${ability}`,
+  species: rs.species().filter((s) => s.abilities.includes(ability)).map((s) => s.name),
+});
+
+const STAT_NAMES: Record<StatID, string> = { hp: 'HP', atk: 'Attack', def: 'Defense', spa: 'Sp. Atk', spd: 'Sp. Def', spe: 'Speed' };
+/** Natures that change stats; the five neutral ones have nothing to quiz */
+const statNatures = (rs: Ruleset) => rs.natures().filter((n) => n.plus && n.minus && n.plus !== n.minus);
 
 export const GENERATORS: Record<QuizKind, Generator> = {
   effectiveness: {
@@ -132,6 +144,7 @@ export const GENERATORS: Record<QuizKind, Generator> = {
         choices: choicesWith(answer, others, 4, rng),
         answer,
         explanation: `${sp.name}'s abilities: ${sp.abilities.join(', ')}.`,
+        related: withAbility(rs, answer),
       };
     },
   },
@@ -158,6 +171,47 @@ export const GENERATORS: Record<QuizKind, Generator> = {
         choices: choicesWith(ability.shortDesc, others, 4, rng),
         answer: ability.shortDesc,
         explanation: ability.desc || ability.shortDesc,
+        related: withAbility(rs, ability.name),
+      };
+    },
+  },
+
+  nature: {
+    label: 'Natures',
+    available: ({ rs }) => genFeatures(rs).natures,
+    keys: ({ rs }) => statNatures(rs).flatMap((n) => [`nat|${n.name}|up`, `nat|${n.name}|down`, `natfind|${n.name}`]),
+    build: ({ rs }, key, rng) => {
+      const [prefix, name, dir] = key.split('|');
+      const all = statNatures(rs);
+      const n = all.find((x) => x.name === name);
+      if (!n?.plus || !n.minus) return undefined;
+      const plus = STAT_NAMES[n.plus];
+      const minus = STAT_NAMES[n.minus];
+      const sameUp = all.filter((x) => x.plus === n.plus && x !== n).map((x) => x.name);
+      const explanation = `${n.name} raises ${plus} and lowers ${minus}. Other +${plus} natures: ${sameUp.join(', ')}.`;
+      if (prefix === 'natfind') {
+        // near misses (same raised or lowered stat) make better distractors than random natures
+        const near = all.filter((x) => x !== n && (x.plus === n.plus || x.minus === n.minus)).map((x) => x.name);
+        return {
+          key,
+          kind: 'nature',
+          prompt: `Which nature raises ${plus} and lowers ${minus}?`,
+          choiceKind: 'text',
+          choices: choicesWith(n.name, near, 4, rng),
+          answer: n.name,
+          explanation,
+        };
+      }
+      const stats = STAT_IDS.filter((s) => s !== 'hp').map((s) => STAT_NAMES[s]);
+      const up = dir === 'up';
+      return {
+        key,
+        kind: 'nature',
+        prompt: `Which stat does a ${n.name} nature ${up ? 'raise' : 'lower'}?`,
+        choiceKind: 'text',
+        choices: stats,
+        answer: up ? plus : minus,
+        explanation,
       };
     },
   },
@@ -248,7 +302,7 @@ export const GENERATORS: Record<QuizKind, Generator> = {
       if (!sp || !before) return undefined;
       const answer = sp.types.join('/');
       const old = before.types.join('/');
-      const decoys = [old, ...rs.types.filter((t) => !sp.types.includes(t)).map((t) => `${sp.types[0]}/${t}`), ...rs.types.map((t) => `${t}/${sp.types.at(-1)}`)];
+      const decoys = [old, ...rs.types.filter((t) => !sp.types.includes(t)).map((t) => `${sp.types[0]}/${t}`), ...rs.types.map((t) => `${t}/${sp.types[sp.types.length - 1]}`)];
       return {
         key,
         kind: 'hackChange',
@@ -319,6 +373,8 @@ const KIND_BY_PREFIX: Record<string, QuizKind> = {
   weak: 'weakness',
   abil: 'ability',
   abdesc: 'abilityEffect',
+  nat: 'nature',
+  natfind: 'nature',
   mtype: 'moveType',
   ctr: 'counter',
   htype: 'hackChange',

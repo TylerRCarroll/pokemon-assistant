@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { Sprite } from '../../components/Sprite';
 import { TypeBadge } from '../../components/TypeBadge';
 import { card, input } from '../../components/ui';
@@ -129,6 +129,7 @@ function Quiz({ ctx }: { ctx: QuizContext }) {
           >
             <p className="font-semibold">{picked === question.answer ? 'Correct!' : `Not quite. The answer is ${question.answer}.`}</p>
             <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">{question.explanation}</p>
+            {question.related && <RelatedSpecies rs={rs} {...question.related} />}
             <button className={`${button} mt-3`} onClick={() => next(question.key)} autoFocus>
               Next question <span className="text-xs text-slate-400">(Enter)</span>
             </button>
@@ -192,6 +193,31 @@ function Quiz({ ctx }: { ctx: QuizContext }) {
           )}
         </section>
       </aside>
+    </div>
+  );
+}
+
+function RelatedSpecies({ rs, label, species }: { rs: Ruleset; label: string; species: string[] }) {
+  return (
+    <div className="mt-3">
+      <h3 className="mb-1.5 text-xs font-semibold uppercase text-slate-500">
+        {label} ({species.length})
+      </h3>
+      <div className="flex max-h-64 flex-wrap gap-1.5 overflow-y-auto">
+        {species.map((name) => {
+          const sp = rs.getSpecies(name);
+          return (
+            <Link
+              key={name}
+              to={`/dex/pokemon/${sp?.id ?? name}`}
+              className="flex items-center gap-1 rounded border border-slate-200 py-0.5 pl-0.5 pr-2 text-xs hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800"
+            >
+              <Sprite id={sp?.spriteId ?? ''} name={name} size={24} />
+              {name}
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 }
