@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { SearchSelect } from '../../components/SearchSelect';
 import { Sprite } from '../../components/Sprite';
+import { ItemName, MoveName } from '../../components/Tooltip';
 import { TypeBadge } from '../../components/TypeBadge';
 import { card, input, link } from '../../components/ui';
 import { formatsFor } from '../../data/formats';
@@ -160,9 +161,11 @@ function MonPlan({
   const moveLink = (n: string) => {
     const m = rs.getMove(n);
     return m ? (
-      <Link to={`/dex/moves/${m.id}`} className="hover:underline">
-        {m.name}
-      </Link>
+      <MoveName rs={rs} name={m.name}>
+        <Link to={`/dex/moves/${m.id}`} className="hover:underline">
+          {m.name}
+        </Link>
+      </MoveName>
     ) : (
       n
     );
@@ -215,6 +218,7 @@ function MonPlan({
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {usage && (
           <SetCard
+            rs={rs}
             title="Most common choices"
             subtitle="Top moves, item, ability, and spread from usage stats"
             set={setFromUsage(rs, sp.name, usage)}
@@ -222,7 +226,7 @@ function MonPlan({
           />
         )}
         {Object.entries(sets).map(([setName, s]) => (
-          <SetCard key={setName} title={setName} subtitle="Smogon analysis set" smogon={s} set={setFromSmogon(rs, sp.name, s)} onAdd={() => add(setFromSmogon(rs, sp.name, s))} />
+          <SetCard rs={rs} key={setName} title={setName} subtitle="Smogon analysis set" smogon={s} set={setFromSmogon(rs, sp.name, s)} onAdd={() => add(setFromSmogon(rs, sp.name, s))} />
         ))}
       </div>
 
@@ -230,7 +234,7 @@ function MonPlan({
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           <ShareList title="Moves" shares={usage.moves} render={moveLink} />
           <div className="space-y-4">
-            <ShareList title="Items" shares={usage.items} />
+            <ShareList title="Items" shares={usage.items} render={(n) => <ItemName rs={rs} name={n} />} />
             <ShareList title="Abilities" shares={usage.abilities} />
           </div>
           <div className="space-y-4">

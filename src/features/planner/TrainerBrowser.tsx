@@ -1,6 +1,7 @@
-import { useMemo, useState } from 'react';
+import { Fragment, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Sprite } from '../../components/Sprite';
+import { ItemName, MoveName } from '../../components/Tooltip';
 import { card, input, link } from '../../components/ui';
 import { matches } from '../../lib/search';
 import { groupBySplit, trainerName } from '../../lib/trainers';
@@ -91,8 +92,21 @@ function TrainerCard({ rs, trainer: t }: { rs: Ruleset; trainer: TrainerInfo }) 
               <span className="font-semibold">
                 {m.species} Lv{m.level}
               </span>
-              {m.item && ` @ ${m.item}`} · {m.ability} · {m.nature} · {m.ivs} IVs
-              <div className="text-slate-500">{m.moves.join(' / ')}</div>
+              {m.item && (
+                <>
+                  {' @ '}
+                  <ItemName rs={rs} name={m.item} />
+                </>
+              )}{' '}
+              · {m.ability} · {m.nature} · {m.ivs} IVs
+              <div className="text-slate-500">
+                {m.moves.map((mv, j) => (
+                  <Fragment key={j}>
+                    {j > 0 && ' / '}
+                    <MoveName rs={rs} name={mv} />
+                  </Fragment>
+                ))}
+              </div>
             </li>
           ))}
         </ul>
