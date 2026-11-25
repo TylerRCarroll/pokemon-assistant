@@ -130,6 +130,7 @@ export function createOfficialRuleset(num: GenerationNum, opts: OfficialOptions 
     kind: 'official',
     gen: num,
     verified: true,
+    natDex: opts.natDex,
     types,
 
     effectiveness(attack: TypeName, defend: TypeName[]) {

@@ -100,6 +100,10 @@ export interface Ruleset {
   gen: number;
   /** false while romhack data is unverified against the hack's own documentation */
   verified: boolean;
+  /** Species pool includes Pokémon cut from that gen's games */
+  natDex?: boolean;
+  /** Gen whose type chart this ruleset uses, when different from `gen` (e.g. a Gen 4 hack with Fairy) */
+  typeChartGen?: number;
   notes?: string;
 
   types: TypeName[];

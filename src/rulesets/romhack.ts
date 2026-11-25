@@ -69,6 +69,8 @@ export function createRomhackRuleset(overlay: RomhackOverlay): Ruleset {
     verified: overlay.verified,
     notes: overlay.notes,
     tms: overlay.tms,
+    natDex: overlay.natDex,
+    typeChartGen: overlay.typeChartGen,
     types: chart.types,
     effectiveness: chart.effectiveness,
 

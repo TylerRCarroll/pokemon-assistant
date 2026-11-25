@@ -18,13 +18,17 @@ export function SetEditor({
   issues,
   onChange,
   onRemove,
+  narrow = false,
 }: {
   rs: Ruleset;
   set: TeamSet | null;
   learnset?: LearnsetEntry[];
   issues: SetIssue[];
   onChange: (set: TeamSet) => void;
-  onRemove: () => void;
+  /** Omit to hide the remove button (e.g. in the calculator) */
+  onRemove?: () => void;
+  /** Two-column layout for half-width panels */
+  narrow?: boolean;
 }) {
   const f = genFeatures(rs);
 
@@ -85,7 +89,7 @@ export function SetEditor({
 
   return (
     <div className={`${card} space-y-4 p-4`}>
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className={`grid gap-3 sm:grid-cols-2 ${narrow ? '' : 'lg:grid-cols-4'}`}>
         <div>
           <span className={label}>Pokémon</span>
           <SearchSelect
@@ -214,9 +218,11 @@ export function SetEditor({
         </ul>
       )}
 
-      <button onClick={onRemove} className="text-sm text-red-700 hover:underline dark:text-red-400">
-        Remove from team
-      </button>
+      {onRemove && (
+        <button onClick={onRemove} className="text-sm text-red-700 hover:underline dark:text-red-400">
+          Remove from team
+        </button>
+      )}
     </div>
   );
 }

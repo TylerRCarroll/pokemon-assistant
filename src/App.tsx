@@ -1,5 +1,6 @@
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import { Layout } from './components/Layout';
+import { CalcPage } from './features/calc/CalcPage';
 import { AbilityDetail } from './features/dex/AbilityDetail';
 import { DexPage } from './features/dex/DexPage';
 import { MoveDetail } from './features/dex/MoveDetail';
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
       { path: 'dex/abilities/:id', element: <AbilityDetail /> },
       { path: 'team', element: <TeamPage /> },
       { path: 'planner/:mon?', element: <PlannerPage /> },
-      { path: 'calc', element: <ComingSoon title="Damage Calc" phase={5} blurb="Smogon calc plus meta threat checks against your team." /> },
+      { path: 'calc', element: <CalcPage /> },
       { path: 'trainer', element: <ComingSoon title="Matchup Trainer" phase={6} blurb="Spaced-repetition quizzes on types, abilities, and counters." /> },
     ],
   },
