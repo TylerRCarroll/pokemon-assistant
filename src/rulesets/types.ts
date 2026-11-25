@@ -31,6 +31,10 @@ export interface MoveInfo {
   pp: number;
   priority: number;
   shortDesc: string;
+  /** Showdown-style move flags, e.g. { contact: 1, bite: 1 } */
+  flags?: Record<string, 1>;
+  /** Fraction of damage dealt the user recovers, e.g. [1, 2] */
+  drain?: [number, number];
 }
 
 export interface AbilityInfo {

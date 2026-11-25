@@ -338,7 +338,7 @@
  {
   "num": 49,
   "name": "Leech Fang",
-  "move": null,
+  "move": "leechfang",
   "type": "bug",
   "location": "Redwood Village (after beating the Gym Leader)"
  },

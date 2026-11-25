@@ -26,10 +26,13 @@ for (let g = 9; g >= 1; g--) {
   }
 }
 
+// JSON imports widen tuples (drain: [1, 2] becomes number[]), so overlay files are cast via unknown
+const unboundOverlay = unboundBase as unknown as RomhackOverlay;
+
 // Generated data (npm run import:unbound) merges under the hand-curated overlay; hand edits win
 const unbound: RomhackOverlay = {
-  ...(unboundBase as RomhackOverlay),
-  species: { ...unboundSpecies, ...unboundBase.species },
+  ...unboundOverlay,
+  species: { ...unboundSpecies, ...unboundOverlay.species },
   tms: unboundTMs,
 };
 

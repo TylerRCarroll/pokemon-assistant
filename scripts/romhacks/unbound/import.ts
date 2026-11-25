@@ -4,6 +4,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { readWorkbook, sheetRows } from '../../lib/xlsx';
 import { createOfficialRuleset } from '../../../src/rulesets/official';
 import type { StatsTable } from '../../../src/rulesets/types';
+import overlay from '../../../data-src/romhacks/unbound/overlay.json';
 
 const DOCS = 'Documentation/Unbound';
 const OUT = 'data-src/romhacks/unbound/generated';
@@ -15,6 +16,12 @@ function speciesNames(raw: string): string[] {
   const name = raw.replace(/\s+/g, ' ').trim();
   const special: Record<string, string[]> = {
     'Rotom-Form': ['Rotom-Heat', 'Rotom-Wash', 'Rotom-Frost', 'Rotom-Fan', 'Rotom-Mow'],
+    // one row for all of Unbound's alt Pikachu, like Rotom-Form above. Unbound also has
+    // Surfing/Flying Pikachu, which @pkmn has no species for, so they can't take stats yet.
+    'Pikachu Alt Form': [
+      'Pikachu-Original', 'Pikachu-Hoenn', 'Pikachu-Sinnoh', 'Pikachu-Unova',
+      'Pikachu-Kalos', 'Pikachu-Alola', 'Pikachu-Partner',
+    ],
     'Spiky-Eared Pichu': ['Pichu-Spiky-eared'],
     'Minior Shield': ['Minior-Meteor'],
     'Minior Core': ['Minior'],
@@ -88,7 +95,9 @@ async function importTMs() {
     .filter(({ cells }) => cells[0] && cells[1])
     .map(({ cells: [id, rawName, type, location] }) => {
       const name = MOVE_FIXES[rawName.trim()] ?? rawName.trim();
-      const move = base.getMove(name);
+      // Unbound-only moves (hand-defined in overlay.json) win over official data
+      const custom = Object.values(overlay.customMoves).find((m) => m.name === name);
+      const move = custom ?? base.getMove(name);
       if (!move) warnings.push(`TM${id} "${rawName}": unknown move, kept with move: null`);
       return { num: Number(id), name: move?.name ?? name, move: move?.id ?? null, type, location };
     });

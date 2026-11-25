@@ -23,6 +23,8 @@ export interface RomhackOverlay {
   notes?: string;
   species?: Record<string, Partial<Pick<SpeciesInfo, 'types' | 'baseStats' | 'abilities'>>>;
   moves?: Record<string, Partial<Pick<MoveInfo, 'type' | 'category' | 'basePower' | 'accuracy' | 'pp'>>>;
+  /** Moves that exist only in the hack, keyed by move id */
+  customMoves?: Record<string, MoveInfo & { assumed?: string[] }>;
   /** Full learnset replacement for a species, keyed by species id */
   learnsets?: Record<string, LearnsetEntry[]>;
   /** The hack's TM list; `move` is null when the name doesn't match a known move */
@@ -85,9 +87,11 @@ export function createRomhackRuleset(overlay: RomhackOverlay): Ruleset {
       return s ? speciesOverride(s) : undefined;
     },
     moves() {
-      return (movesCache ??= base.moves().map(moveOverride));
+      return (movesCache ??= [...base.moves().map(moveOverride), ...Object.values(overlay.customMoves ?? {})]);
     },
     getMove(name) {
+      const custom = overlay.customMoves?.[toID(name)];
+      if (custom) return custom;
       const m = base.getMove(name);
       return m ? moveOverride(m) : undefined;
     },

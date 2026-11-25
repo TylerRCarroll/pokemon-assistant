@@ -86,9 +86,18 @@ describe('romhack overlays', () => {
     expect(ub.getSpecies('Venusaur-Mega')!.baseStats.def).toBe(117);
     expect(ub.getSpecies('Gourgeist-Small')!.baseStats).toMatchObject({ hp: 55, spe: 122 });
     expect(ub.getSpecies('Gourgeist')!.baseStats).toMatchObject({ hp: 65, spe: 104 });
+    // "Pikachu Alt Form" row covers the cap Pikachu; base Pikachu keeps its own row
+    expect(ub.getSpecies('Pikachu-Partner')!.baseStats).toEqual({ hp: 35, atk: 109, def: 79, spa: 99, spd: 99, spe: 178 });
+    expect(ub.getSpecies('Pikachu')!.baseStats.spe).toBe(90);
     expect(ub.species().find((s) => s.id === 'smeargle')!.baseStats).toEqual(
       ub.getSpecies('Smeargle')!.baseStats,
     );
+    // Unbound-only move, taught by TM49
+    const fang = ub.getMove('Leech Fang')!;
+    expect(fang).toMatchObject({ type: 'Bug', basePower: 80, pp: 10, drain: [1, 2] });
+    expect(fang.flags?.bite).toBe(1);
+    expect(ub.moves().some((m) => m.id === 'leechfang')).toBe(true);
+    expect(getRuleset('gen8natdex').getMove('Leech Fang')).toBeUndefined();
     // other rulesets keep official stats
     expect(getRuleset('gen8natdex').getSpecies('Venusaur')!.baseStats.atk).toBe(82);
   });

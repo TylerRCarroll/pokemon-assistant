@@ -7,5 +7,33 @@
   "notes": "Partial: balanced base stats and the TM list are imported from the docs. Learnsets, abilities, and boss teams still use Gen 8 defaults.",
   "species": {},
   "moves": {},
+  "customMoves": {
+    "leechfang": {
+      "id": "leechfang",
+      "name": "Leech Fang",
+      "type": "Bug",
+      "category": "Physical",
+      "basePower": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "priority": 0,
+      "shortDesc": "User recovers 50% of the damage dealt. Boosted by Strong Jaw.",
+      "flags": {
+        "contact": 1,
+        "bite": 1,
+        "protect": 1,
+        "mirror": 1
+      },
+      "drain": [
+        1,
+        2
+      ],
+      "assumed": [
+        "accuracy",
+        "category",
+        "flags.contact"
+      ]
+    }
+  },
   "learnsets": {}
 }

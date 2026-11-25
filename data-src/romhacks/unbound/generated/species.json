@@ -89,6 +89,76 @@
    "spe": 111
   }
  },
+ "pikachuoriginal": {
+  "baseStats": {
+   "hp": 35,
+   "atk": 109,
+   "def": 79,
+   "spa": 99,
+   "spd": 99,
+   "spe": 178
+  }
+ },
+ "pikachuhoenn": {
+  "baseStats": {
+   "hp": 35,
+   "atk": 109,
+   "def": 79,
+   "spa": 99,
+   "spd": 99,
+   "spe": 178
+  }
+ },
+ "pikachusinnoh": {
+  "baseStats": {
+   "hp": 35,
+   "atk": 109,
+   "def": 79,
+   "spa": 99,
+   "spd": 99,
+   "spe": 178
+  }
+ },
+ "pikachuunova": {
+  "baseStats": {
+   "hp": 35,
+   "atk": 109,
+   "def": 79,
+   "spa": 99,
+   "spd": 99,
+   "spe": 178
+  }
+ },
+ "pikachukalos": {
+  "baseStats": {
+   "hp": 35,
+   "atk": 109,
+   "def": 79,
+   "spa": 99,
+   "spd": 99,
+   "spe": 178
+  }
+ },
+ "pikachualola": {
+  "baseStats": {
+   "hp": 35,
+   "atk": 109,
+   "def": 79,
+   "spa": 99,
+   "spd": 99,
+   "spe": 178
+  }
+ },
+ "pikachupartner": {
+  "baseStats": {
+   "hp": 35,
+   "atk": 109,
+   "def": 79,
+   "spa": 99,
+   "spd": 99,
+   "spe": 178
+  }
+ },
  "raichu": {
   "baseStats": {
    "hp": 60,

@@ -146,6 +146,8 @@ export function createOfficialRuleset(num: GenerationNum, opts: OfficialOptions 
       pp: m.pp,
       priority: m.priority,
       shortDesc: m.shortDesc,
+      flags: { ...m.flags } as Record<string, 1>,
+      drain: m.drain,
     };
   }
 }
