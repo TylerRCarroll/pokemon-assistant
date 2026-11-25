@@ -4,6 +4,7 @@ import { AbilityDetail } from './features/dex/AbilityDetail';
 import { DexPage } from './features/dex/DexPage';
 import { MoveDetail } from './features/dex/MoveDetail';
 import { PokemonDetail } from './features/dex/PokemonDetail';
+import { PlannerPage } from './features/planner/PlannerPage';
 import { TeamPage } from './features/team/TeamPage';
 import { TypesPage } from './features/types/TypesPage';
 import { useRuleset } from './state/ruleset';
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
       { path: 'dex/moves/:id', element: <MoveDetail /> },
       { path: 'dex/abilities/:id', element: <AbilityDetail /> },
       { path: 'team', element: <TeamPage /> },
-      { path: 'planner/:mon?', element: <ComingSoon title="Move Planner" phase={4} blurb="Popular sets, items, abilities, teammates, and sample teams." /> },
+      { path: 'planner/:mon?', element: <PlannerPage /> },
       { path: 'calc', element: <ComingSoon title="Damage Calc" phase={5} blurb="Smogon calc plus meta threat checks against your team." /> },
       { path: 'trainer', element: <ComingSoon title="Matchup Trainer" phase={6} blurb="Spaced-repetition quizzes on types, abilities, and counters." /> },
     ],

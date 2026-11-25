@@ -21,6 +21,8 @@ interface TeamsState {
   setActive: (rulesetId: string, id: string) => void;
   setSlot: (id: string, index: number, set: TeamSet | null) => void;
   setSlots: (id: string, slots: (TeamSet | null)[]) => void;
+  /** Put a set in the ruleset's active team's first free slot, or start a new team when it's full */
+  addSet: (rulesetId: string, set: TeamSet) => { teamName: string; created: boolean };
 }
 
 const emptySlots = (): (TeamSet | null)[] => Array(6).fill(null);
@@ -53,6 +55,18 @@ export const useTeamsStore = create<TeamsState>()(
         setActive: (rulesetId, id) => set((s) => ({ activeByRuleset: { ...s.activeByRuleset, [rulesetId]: id } })),
         setSlot: (id, index, slot) => patch(id, (t) => ({ slots: t.slots.map((s, i) => (i === index ? slot : s)) })),
         setSlots: (id, slots) => patch(id, () => ({ slots: padSlots(slots) })),
+        addSet(rulesetId, newSet) {
+          const { teams, activeByRuleset } = get();
+          const mine = teams.filter((t) => t.rulesetId === rulesetId);
+          const team = mine.find((t) => t.id === activeByRuleset[rulesetId]) ?? mine[0];
+          const free = team?.slots.findIndex((s) => !s) ?? -1;
+          if (team && free >= 0) {
+            get().setSlot(team.id, free, newSet);
+            return { teamName: team.name, created: false };
+          }
+          const id = get().createTeam(rulesetId, undefined, [newSet]);
+          return { teamName: get().teams.find((t) => t.id === id)!.name, created: true };
+        },
       };
     },
     { name: 'pokeplanner:teams' },

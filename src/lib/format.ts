@@ -1,4 +1,5 @@
-import type { MoveInfo, StatsTable } from '../rulesets/types';
+import type { MoveInfo, StatID, StatsTable } from '../rulesets/types';
+import { STAT_IDS, STAT_LABELS } from './team';
 
 export const statTotal = (s: StatsTable) => s.hp + s.atk + s.def + s.spa + s.spd + s.spe;
 
@@ -29,3 +30,12 @@ const TYPE_COLORS: Record<string, string> = {
 export function typeColor(type: string) {
   return TYPE_COLORS[type] ?? '#888';
 }
+
+/** Share 0-1 as a percentage; one decimal below 10% */
+export const pct = (v: number) => (v >= 0.995 ? '100%' : `${(v * 100).toFixed(v < 0.1 ? 1 : 0)}%`);
+
+/** "252 Atk / 4 Def / 252 Spe" (zero stats omitted) */
+export const formatEvs = (evs: Partial<Record<StatID, number>> | undefined) =>
+  STAT_IDS.filter((s) => evs?.[s])
+    .map((s) => `${evs![s]} ${STAT_LABELS[s]}`)
+    .join(' / ');
