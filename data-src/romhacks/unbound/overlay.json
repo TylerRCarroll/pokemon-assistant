@@ -1,0 +1,11 @@
+{
+  "id": "unbound",
+  "name": "Pokémon Unbound",
+  "baseGen": 8,
+  "natDex": true,
+  "verified": false,
+  "notes": "Partial: balanced base stats and the TM list are imported from the docs. Learnsets, abilities, and boss teams still use Gen 8 defaults.",
+  "species": {},
+  "moves": {},
+  "learnsets": {}
+}

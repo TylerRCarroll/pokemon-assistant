@@ -1,0 +1,4892 @@
+{
+ "venusaur": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 95,
+   "def": 96,
+   "spa": 116,
+   "spd": 116,
+   "spe": 93
+  }
+ },
+ "charizard": {
+  "baseStats": {
+   "hp": 78,
+   "atk": 96,
+   "def": 89,
+   "spa": 124,
+   "spd": 97,
+   "spe": 114
+  }
+ },
+ "blastoise": {
+  "baseStats": {
+   "hp": 79,
+   "atk": 95,
+   "def": 115,
+   "spa": 98,
+   "spd": 121,
+   "spe": 90
+  }
+ },
+ "butterfree": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 72,
+   "def": 80,
+   "spa": 145,
+   "spd": 128,
+   "spe": 112
+  }
+ },
+ "beedrill": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 145,
+   "def": 64,
+   "spa": 72,
+   "spd": 129,
+   "spe": 121
+  }
+ },
+ "pidgeot": {
+  "baseStats": {
+   "hp": 83,
+   "atk": 104,
+   "def": 97,
+   "spa": 91,
+   "spd": 91,
+   "spe": 131
+  }
+ },
+ "raticate": {
+  "baseStats": {
+   "hp": 55,
+   "atk": 123,
+   "def": 91,
+   "spa": 76,
+   "spd": 106,
+   "spe": 147
+  }
+ },
+ "fearow": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 127,
+   "def": 92,
+   "spa": 86,
+   "spd": 86,
+   "spe": 141
+  }
+ },
+ "arbok": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 132,
+   "def": 96,
+   "spa": 90,
+   "spd": 109,
+   "spe": 111
+  }
+ },
+ "raichu": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 114,
+   "def": 69,
+   "spa": 114,
+   "spd": 101,
+   "spe": 139
+  }
+ },
+ "sandslash": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 140,
+   "def": 154,
+   "spa": 63,
+   "spd": 77,
+   "spe": 91
+  }
+ },
+ "nidoqueen": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 113,
+   "def": 106,
+   "spa": 92,
+   "spd": 104,
+   "spe": 93
+  }
+ },
+ "nidoking": {
+  "baseStats": {
+   "hp": 81,
+   "atk": 124,
+   "def": 94,
+   "spa": 104,
+   "spd": 91,
+   "spe": 104
+  }
+ },
+ "clefable": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 91,
+   "def": 95,
+   "spa": 123,
+   "spd": 117,
+   "spe": 78
+  }
+ },
+ "ninetales": {
+  "baseStats": {
+   "hp": 73,
+   "atk": 92,
+   "def": 91,
+   "spa": 98,
+   "spd": 121,
+   "spe": 121
+  }
+ },
+ "wigglytuff": {
+  "baseStats": {
+   "hp": 140,
+   "atk": 109,
+   "def": 70,
+   "spa": 132,
+   "spd": 77,
+   "spe": 70
+  }
+ },
+ "vileplume": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 101,
+   "def": 107,
+   "spa": 139,
+   "spd": 113,
+   "spe": 63
+  }
+ },
+ "parasect": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 148,
+   "def": 125,
+   "spa": 93,
+   "spd": 125,
+   "spe": 46
+  }
+ },
+ "venomoth": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 90,
+   "def": 83,
+   "spa": 125,
+   "spd": 104,
+   "spe": 125
+  }
+ },
+ "dugtrio": {
+  "baseStats": {
+   "hp": 35,
+   "atk": 144,
+   "def": 72,
+   "spa": 72,
+   "spd": 101,
+   "spe": 173
+  }
+ },
+ "persian": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 99,
+   "def": 85,
+   "spa": 92,
+   "spd": 92,
+   "spe": 164
+  }
+ },
+ "golduck": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 101,
+   "def": 96,
+   "spa": 117,
+   "spd": 99,
+   "spe": 105
+  }
+ },
+ "primeape": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 144,
+   "def": 82,
+   "spa": 82,
+   "spd": 96,
+   "spe": 130
+  }
+ },
+ "arcanine": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 120,
+   "def": 87,
+   "spa": 109,
+   "spd": 87,
+   "spe": 104
+  }
+ },
+ "poliwrath": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 115,
+   "def": 115,
+   "spa": 85,
+   "spd": 109,
+   "spe": 85
+  }
+ },
+ "alakazam": {
+  "baseStats": {
+   "hp": 55,
+   "atk": 61,
+   "def": 55,
+   "spa": 165,
+   "spd": 116,
+   "spe": 146
+  }
+ },
+ "machamp": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 159,
+   "def": 98,
+   "spa": 79,
+   "spd": 104,
+   "spe": 67
+  }
+ },
+ "victreebel": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 133,
+   "def": 82,
+   "spa": 126,
+   "spd": 88,
+   "spe": 88
+  }
+ },
+ "tentacruel": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 83,
+   "def": 77,
+   "spa": 95,
+   "spd": 143,
+   "spe": 119
+  }
+ },
+ "golem": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 150,
+   "def": 162,
+   "spa": 68,
+   "spd": 81,
+   "spe": 56
+  }
+ },
+ "rapidash": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 122,
+   "def": 86,
+   "spa": 98,
+   "spd": 98,
+   "spe": 129
+  }
+ },
+ "slowbro": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 95,
+   "def": 140,
+   "spa": 127,
+   "spd": 102,
+   "spe": 38
+  }
+ },
+ "farfetchd": {
+  "baseStats": {
+   "hp": 52,
+   "atk": 151,
+   "def": 92,
+   "spa": 97,
+   "spd": 104,
+   "spe": 101
+  }
+ },
+ "dodrio": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 144,
+   "def": 92,
+   "spa": 79,
+   "spd": 79,
+   "spe": 144
+  }
+ },
+ "dewgong": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 92,
+   "def": 105,
+   "spa": 92,
+   "spd": 125,
+   "spe": 92
+  }
+ },
+ "muk": {
+  "baseStats": {
+   "hp": 105,
+   "atk": 131,
+   "def": 93,
+   "spa": 81,
+   "spd": 125,
+   "spe": 62
+  }
+ },
+ "cloyster": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 110,
+   "def": 208,
+   "spa": 98,
+   "spd": 52,
+   "spe": 81
+  }
+ },
+ "gengar": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 79,
+   "def": 73,
+   "spa": 159,
+   "spd": 92,
+   "spe": 135
+  }
+ },
+ "hypno": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 94,
+   "def": 90,
+   "spa": 94,
+   "spd": 148,
+   "spe": 86
+  }
+ },
+ "kingler": {
+  "baseStats": {
+   "hp": 55,
+   "atk": 168,
+   "def": 149,
+   "spa": 64,
+   "spd": 64,
+   "spe": 97
+  }
+ },
+ "electrode": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 62,
+   "def": 87,
+   "spa": 100,
+   "spd": 100,
+   "spe": 188
+  }
+ },
+ "exeggutor": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 110,
+   "def": 98,
+   "spa": 145,
+   "spd": 87,
+   "spe": 63
+  }
+ },
+ "marowak": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 118,
+   "def": 162,
+   "spa": 73,
+   "spd": 118,
+   "spe": 66
+  }
+ },
+ "hitmonlee": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 162,
+   "def": 71,
+   "spa": 47,
+   "spd": 149,
+   "spe": 118
+  }
+ },
+ "hitmonchan": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 142,
+   "def": 107,
+   "spa": 47,
+   "spd": 149,
+   "spe": 103
+  }
+ },
+ "weezing": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 113,
+   "def": 151,
+   "spa": 107,
+   "spd": 88,
+   "spe": 75
+  }
+ },
+ "kangaskhan": {
+  "baseStats": {
+   "hp": 105,
+   "atk": 122,
+   "def": 102,
+   "spa": 51,
+   "spd": 102,
+   "spe": 115
+  }
+ },
+ "seaking": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 129,
+   "def": 91,
+   "spa": 91,
+   "spd": 112,
+   "spe": 95
+  }
+ },
+ "starmie": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 88,
+   "def": 99,
+   "spa": 117,
+   "spd": 99,
+   "spe": 135
+  }
+ },
+ "mrmime": {
+  "baseStats": {
+   "hp": 40,
+   "atk": 60,
+   "def": 86,
+   "spa": 133,
+   "spd": 160,
+   "spe": 120
+  }
+ },
+ "jynx": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 68,
+   "def": 48,
+   "spa": 157,
+   "spd": 130,
+   "spe": 130
+  }
+ },
+ "pinsir": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 153,
+   "def": 122,
+   "spa": 67,
+   "spd": 86,
+   "spe": 104
+  }
+ },
+ "tauros": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 126,
+   "def": 120,
+   "spa": 50,
+   "spd": 88,
+   "spe": 139
+  }
+ },
+ "gyarados": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 141,
+   "def": 89,
+   "spa": 68,
+   "spd": 113,
+   "spe": 91
+  }
+ },
+ "lapras": {
+  "baseStats": {
+   "hp": 130,
+   "atk": 98,
+   "def": 92,
+   "spa": 98,
+   "spd": 110,
+   "spe": 69
+  }
+ },
+ "ditto": {
+  "baseStats": {
+   "hp": 48,
+   "atk": 110,
+   "def": 110,
+   "spa": 110,
+   "spd": 110,
+   "spe": 110
+  }
+ },
+ "vaporeon": {
+  "baseStats": {
+   "hp": 130,
+   "atk": 77,
+   "def": 71,
+   "spa": 130,
+   "spd": 113,
+   "spe": 77
+  }
+ },
+ "jolteon": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 75,
+   "def": 69,
+   "spa": 127,
+   "spd": 110,
+   "spe": 151
+  }
+ },
+ "flareon": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 151,
+   "def": 69,
+   "spa": 110,
+   "spd": 127,
+   "spe": 75
+  }
+ },
+ "omastar": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 74,
+   "def": 155,
+   "spa": 143,
+   "spd": 87,
+   "spe": 68
+  }
+ },
+ "kabutops": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 142,
+   "def": 130,
+   "spa": 80,
+   "spd": 86,
+   "spe": 99
+  }
+ },
+ "aerodactyl": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 125,
+   "def": 77,
+   "spa": 71,
+   "spd": 89,
+   "spe": 155
+  }
+ },
+ "snorlax": {
+  "baseStats": {
+   "hp": 160,
+   "atk": 127,
+   "def": 75,
+   "spa": 75,
+   "spd": 127,
+   "spe": 34
+  }
+ },
+ "articuno": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 88,
+   "def": 104,
+   "spa": 98,
+   "spd": 130,
+   "spe": 88
+  }
+ },
+ "zapdos": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 93,
+   "def": 88,
+   "spa": 130,
+   "spd": 93,
+   "spe": 104
+  }
+ },
+ "moltres": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 104,
+   "def": 93,
+   "spa": 130,
+   "spd": 88,
+   "spe": 93
+  }
+ },
+ "mewtwo": {
+  "baseStats": {
+   "hp": 106,
+   "atk": 94,
+   "def": 77,
+   "spa": 132,
+   "spd": 77,
+   "spe": 111
+  }
+ },
+ "meganium": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 95,
+   "def": 116,
+   "spa": 96,
+   "spd": 116,
+   "spe": 93
+  }
+ },
+ "typhlosion": {
+  "baseStats": {
+   "hp": 78,
+   "atk": 96,
+   "def": 89,
+   "spa": 124,
+   "spd": 97,
+   "spe": 114
+  }
+ },
+ "feraligatr": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 121,
+   "def": 115,
+   "spa": 91,
+   "spd": 96,
+   "spe": 90
+  }
+ },
+ "furret": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 118,
+   "def": 99,
+   "spa": 70,
+   "spd": 85,
+   "spe": 140
+  }
+ },
+ "noctowl": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 71,
+   "def": 71,
+   "spa": 122,
+   "spd": 136,
+   "spe": 99
+  }
+ },
+ "ledian": {
+  "baseStats": {
+   "hp": 55,
+   "atk": 56,
+   "def": 81,
+   "spa": 89,
+   "spd": 178,
+   "spe": 138
+  }
+ },
+ "ariados": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 144,
+   "def": 112,
+   "spa": 96,
+   "spd": 112,
+   "spe": 64
+  }
+ },
+ "crobat": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 103,
+   "def": 91,
+   "spa": 80,
+   "spd": 91,
+   "spe": 148
+  }
+ },
+ "lanturn": {
+  "baseStats": {
+   "hp": 125,
+   "atk": 82,
+   "def": 82,
+   "spa": 107,
+   "spd": 107,
+   "spe": 95
+  }
+ },
+ "pichuspikyeared": {
+  "baseStats": {
+   "hp": 20,
+   "atk": 125,
+   "def": 47,
+   "spa": 109,
+   "spd": 109,
+   "spe": 188
+  }
+ },
+ "xatu": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 99,
+   "def": 92,
+   "spa": 125,
+   "spd": 92,
+   "spe": 125
+  }
+ },
+ "ampharos": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 91,
+   "def": 103,
+   "spa": 139,
+   "spd": 109,
+   "spe": 66
+  }
+ },
+ "bellossom": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 101,
+   "def": 120,
+   "spa": 113,
+   "spd": 126,
+   "spe": 63
+  }
+ },
+ "azumarill": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 78,
+   "def": 125,
+   "spa": 93,
+   "spd": 125,
+   "spe": 78
+  }
+ },
+ "sudowoodo": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 155,
+   "def": 179,
+   "spa": 46,
+   "spd": 101,
+   "spe": 46
+  }
+ },
+ "politoed": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 93,
+   "def": 93,
+   "spa": 111,
+   "spd": 124,
+   "spe": 87
+  }
+ },
+ "jumpluff": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 75,
+   "def": 95,
+   "spa": 75,
+   "spd": 129,
+   "spe": 150
+  }
+ },
+ "sunflora": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 112,
+   "def": 82,
+   "spa": 157,
+   "spd": 127,
+   "spe": 45
+  }
+ },
+ "quagsire": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 128,
+   "def": 128,
+   "spa": 97,
+   "spd": 97,
+   "spe": 52
+  }
+ },
+ "espeon": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 75,
+   "def": 69,
+   "spa": 151,
+   "spd": 110,
+   "spe": 127
+  }
+ },
+ "umbreon": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 76,
+   "def": 129,
+   "spa": 70,
+   "spd": 152,
+   "spe": 76
+  }
+ },
+ "slowking": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 95,
+   "def": 102,
+   "spa": 127,
+   "spd": 140,
+   "spe": 38
+  }
+ },
+ "unown": {
+  "baseStats": {
+   "hp": 48,
+   "atk": 138,
+   "def": 92,
+   "spa": 138,
+   "spd": 92,
+   "spe": 92
+  }
+ },
+ "wobbuffet": {
+  "baseStats": {
+   "hp": 190,
+   "atk": 62,
+   "def": 110,
+   "spa": 62,
+   "spd": 110,
+   "spe": 62
+  }
+ },
+ "girafarig": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 110,
+   "def": 89,
+   "spa": 123,
+   "spd": 89,
+   "spe": 117
+  }
+ },
+ "forretress": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 121,
+   "def": 188,
+   "spa": 80,
+   "spd": 80,
+   "spe": 53
+  }
+ },
+ "dunsparce": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 111,
+   "def": 111,
+   "spa": 103,
+   "spd": 103,
+   "spe": 71
+  }
+ },
+ "steelix": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 102,
+   "def": 241,
+   "spa": 66,
+   "spd": 78,
+   "spe": 36
+  }
+ },
+ "granbull": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 170,
+   "def": 106,
+   "spa": 85,
+   "spd": 85,
+   "spe": 63
+  }
+ },
+ "qwilfish": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 135,
+   "def": 121,
+   "spa": 78,
+   "spd": 78,
+   "spe": 121
+  }
+ },
+ "scizor": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 160,
+   "def": 123,
+   "spa": 67,
+   "spd": 98,
+   "spe": 80
+  }
+ },
+ "shuckle": {
+  "baseStats": {
+   "hp": 20,
+   "atk": 11,
+   "def": 255,
+   "spa": 11,
+   "spd": 255,
+   "spe": 5
+  }
+ },
+ "heracross": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 154,
+   "def": 92,
+   "spa": 49,
+   "spd": 117,
+   "spe": 105
+  }
+ },
+ "ursaring": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 161,
+   "def": 93,
+   "spa": 93,
+   "spd": 93,
+   "spe": 68
+  }
+ },
+ "magcargo": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 72,
+   "def": 175,
+   "spa": 131,
+   "spd": 116,
+   "spe": 43
+  }
+ },
+ "corsola": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 85,
+   "def": 147,
+   "spa": 100,
+   "spd": 147,
+   "spe": 54
+  }
+ },
+ "octillery": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 136,
+   "def": 97,
+   "spa": 136,
+   "spd": 97,
+   "spe": 58
+  }
+ },
+ "delibird": {
+  "baseStats": {
+   "hp": 45,
+   "atk": 107,
+   "def": 87,
+   "spa": 126,
+   "spd": 87,
+   "spe": 146
+  }
+ },
+ "mantine": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 51,
+   "def": 90,
+   "spa": 103,
+   "spd": 180,
+   "spe": 90
+  }
+ },
+ "skarmory": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 107,
+   "def": 187,
+   "spa": 53,
+   "spd": 93,
+   "spe": 93
+  }
+ },
+ "houndoom": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 111,
+   "def": 61,
+   "spa": 135,
+   "spd": 98,
+   "spe": 117
+  }
+ },
+ "kingdra": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 107,
+   "def": 107,
+   "spa": 107,
+   "spd": 107,
+   "spe": 95
+  }
+ },
+ "donphan": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 149,
+   "def": 149,
+   "spa": 74,
+   "spd": 74,
+   "spe": 62
+  }
+ },
+ "stantler": {
+  "baseStats": {
+   "hp": 73,
+   "atk": 127,
+   "def": 83,
+   "spa": 114,
+   "spd": 87,
+   "spe": 114
+  }
+ },
+ "smeargle": {
+  "baseStats": {
+   "hp": 55,
+   "atk": 55,
+   "def": 97,
+   "spa": 55,
+   "spd": 125,
+   "spe": 209
+  }
+ },
+ "hitmontop": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 129,
+   "def": 129,
+   "spa": 47,
+   "spd": 149,
+   "spe": 95
+  }
+ },
+ "miltank": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 102,
+   "def": 134,
+   "spa": 51,
+   "spd": 89,
+   "spe": 127
+  }
+ },
+ "blissey": {
+  "baseStats": {
+   "hp": 255,
+   "atk": 12,
+   "def": 12,
+   "spa": 90,
+   "spd": 163,
+   "spe": 66
+  }
+ },
+ "raikou": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 88,
+   "def": 78,
+   "spa": 119,
+   "spd": 104,
+   "spe": 119
+  }
+ },
+ "entei": {
+  "baseStats": {
+   "hp": 115,
+   "atk": 119,
+   "def": 88,
+   "spa": 93,
+   "spd": 78,
+   "spe": 104
+  }
+ },
+ "suicune": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 78,
+   "def": 119,
+   "spa": 93,
+   "spd": 119,
+   "spe": 88
+  }
+ },
+ "lugia": {
+  "baseStats": {
+   "hp": 106,
+   "atk": 77,
+   "def": 111,
+   "spa": 77,
+   "spd": 132,
+   "spe": 94
+  }
+ },
+ "hooh": {
+  "baseStats": {
+   "hp": 106,
+   "atk": 111,
+   "def": 77,
+   "spa": 94,
+   "spd": 132,
+   "spe": 77
+  }
+ },
+ "sceptile": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 97,
+   "def": 74,
+   "spa": 120,
+   "spd": 97,
+   "spe": 138
+  }
+ },
+ "blaziken": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 138,
+   "def": 80,
+   "spa": 127,
+   "spd": 80,
+   "spe": 92
+  }
+ },
+ "swampert": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 126,
+   "def": 103,
+   "spa": 97,
+   "spd": 103,
+   "spe": 68
+  }
+ },
+ "mightyena": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 136,
+   "def": 106,
+   "spa": 90,
+   "spd": 90,
+   "spe": 106
+  }
+ },
+ "linoone": {
+  "baseStats": {
+   "hp": 78,
+   "atk": 106,
+   "def": 93,
+   "spa": 76,
+   "spd": 93,
+   "spe": 152
+  }
+ },
+ "beautifly": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 112,
+   "def": 80,
+   "spa": 161,
+   "spd": 80,
+   "spe": 104
+  }
+ },
+ "dustox": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 83,
+   "def": 116,
+   "spa": 83,
+   "spd": 149,
+   "spe": 108
+  }
+ },
+ "ludicolo": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 91,
+   "def": 91,
+   "spa": 117,
+   "spd": 130,
+   "spe": 91
+  }
+ },
+ "shiftry": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 130,
+   "def": 78,
+   "spa": 117,
+   "spd": 78,
+   "spe": 104
+  }
+ },
+ "ninjask": {
+  "baseStats": {
+   "hp": 61,
+   "atk": 122,
+   "def": 61,
+   "spa": 68,
+   "spd": 68,
+   "spe": 218
+  }
+ },
+ "swellow": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 116,
+   "def": 82,
+   "spa": 102,
+   "spd": 68,
+   "spe": 170
+  }
+ },
+ "breloom": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 175,
+   "def": 108,
+   "spa": 81,
+   "spd": 81,
+   "spe": 94
+  }
+ },
+ "spinda": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 108,
+   "def": 108,
+   "spa": 108,
+   "spd": 108,
+   "spe": 108
+  }
+ },
+ "pelipper": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 71,
+   "def": 142,
+   "spa": 135,
+   "spd": 99,
+   "spe": 92
+  }
+ },
+ "masquerain": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 82,
+   "def": 85,
+   "spa": 138,
+   "spd": 113,
+   "spe": 110
+  }
+ },
+ "wailord": {
+  "baseStats": {
+   "hp": 170,
+   "atk": 117,
+   "def": 58,
+   "spa": 117,
+   "spd": 58,
+   "spe": 78
+  }
+ },
+ "delcatty": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 104,
+   "def": 104,
+   "spa": 88,
+   "spd": 88,
+   "spe": 144
+  }
+ },
+ "kecleon": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 127,
+   "def": 99,
+   "spa": 85,
+   "spd": 170,
+   "spe": 56
+  }
+ },
+ "claydol": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 85,
+   "def": 128,
+   "spa": 85,
+   "spd": 147,
+   "spe": 92
+  }
+ },
+ "torkoal": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 112,
+   "def": 185,
+   "spa": 112,
+   "spd": 92,
+   "spe": 26
+  }
+ },
+ "sableye": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 125,
+   "def": 125,
+   "spa": 108,
+   "spd": 108,
+   "spe": 83
+  }
+ },
+ "whiscash": {
+  "baseStats": {
+   "hp": 110,
+   "atk": 106,
+   "def": 99,
+   "spa": 104,
+   "spd": 97,
+   "spe": 82
+  }
+ },
+ "luvdisc": {
+  "baseStats": {
+   "hp": 43,
+   "atk": 58,
+   "def": 106,
+   "spa": 77,
+   "spd": 126,
+   "spe": 188
+  }
+ },
+ "crawdaunt": {
+  "baseStats": {
+   "hp": 63,
+   "atk": 159,
+   "def": 112,
+   "spa": 119,
+   "spd": 72,
+   "spe": 72
+  }
+ },
+ "milotic": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 68,
+   "def": 89,
+   "spa": 113,
+   "spd": 141,
+   "spe": 91
+  }
+ },
+ "sharpedo": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 163,
+   "def": 54,
+   "spa": 129,
+   "spd": 54,
+   "spe": 129
+  }
+ },
+ "flygon": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 118,
+   "def": 94,
+   "spa": 94,
+   "spd": 94,
+   "spe": 118
+  }
+ },
+ "hariyama": {
+  "baseStats": {
+   "hp": 144,
+   "atk": 165,
+   "def": 82,
+   "spa": 55,
+   "spd": 82,
+   "spe": 69
+  }
+ },
+ "manectric": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 98,
+   "def": 78,
+   "spa": 137,
+   "spd": 78,
+   "spe": 137
+  }
+ },
+ "camerupt": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 135,
+   "def": 95,
+   "spa": 142,
+   "spd": 101,
+   "spe": 54
+  }
+ },
+ "walrein": {
+  "baseStats": {
+   "hp": 110,
+   "atk": 93,
+   "def": 105,
+   "spa": 110,
+   "spd": 105,
+   "spe": 75
+  }
+ },
+ "cacturne": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 150,
+   "def": 78,
+   "spa": 150,
+   "spd": 78,
+   "spe": 71
+  }
+ },
+ "glalie": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 104,
+   "def": 104,
+   "spa": 104,
+   "spd": 104,
+   "spe": 104
+  }
+ },
+ "lunatone": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 75,
+   "def": 89,
+   "spa": 130,
+   "spd": 117,
+   "spe": 96
+  }
+ },
+ "solrock": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 130,
+   "def": 117,
+   "spa": 75,
+   "spd": 89,
+   "spe": 96
+  }
+ },
+ "grumpig": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 60,
+   "def": 86,
+   "spa": 120,
+   "spd": 146,
+   "spe": 106
+  }
+ },
+ "plusle": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 78,
+   "def": 62,
+   "spa": 133,
+   "spd": 117,
+   "spe": 148
+  }
+ },
+ "minun": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 62,
+   "def": 78,
+   "spa": 117,
+   "spd": 133,
+   "spe": 148
+  }
+ },
+ "mawile": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 141,
+   "def": 141,
+   "spa": 91,
+   "spd": 91,
+   "spe": 83
+  }
+ },
+ "medicham": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 92,
+   "def": 115,
+   "spa": 92,
+   "spd": 115,
+   "spe": 123
+  }
+ },
+ "altaria": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 88,
+   "def": 113,
+   "spa": 88,
+   "spd": 132,
+   "spe": 101
+  }
+ },
+ "slaking": {
+  "baseStats": {
+   "hp": 150,
+   "atk": 138,
+   "def": 86,
+   "spa": 82,
+   "spd": 56,
+   "spe": 86
+  }
+ },
+ "swalot": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 99,
+   "def": 113,
+   "spa": 99,
+   "spd": 113,
+   "spe": 74
+  }
+ },
+ "tropius": {
+  "baseStats": {
+   "hp": 99,
+   "atk": 94,
+   "def": 115,
+   "spa": 99,
+   "spd": 120,
+   "spe": 70
+  }
+ },
+ "exploud": {
+  "baseStats": {
+   "hp": 104,
+   "atk": 116,
+   "def": 80,
+   "spa": 116,
+   "spd": 93,
+   "spe": 87
+  }
+ },
+ "huntail": {
+  "baseStats": {
+   "hp": 55,
+   "atk": 131,
+   "def": 133,
+   "spa": 119,
+   "spd": 95,
+   "spe": 65
+  }
+ },
+ "gorebyss": {
+  "baseStats": {
+   "hp": 55,
+   "atk": 106,
+   "def": 133,
+   "spa": 144,
+   "spd": 95,
+   "spe": 65
+  }
+ },
+ "absol": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 173,
+   "def": 80,
+   "spa": 100,
+   "spd": 80,
+   "spe": 100
+  }
+ },
+ "banette": {
+  "baseStats": {
+   "hp": 64,
+   "atk": 157,
+   "def": 89,
+   "spa": 113,
+   "spd": 86,
+   "spe": 89
+  }
+ },
+ "seviper": {
+  "baseStats": {
+   "hp": 73,
+   "atk": 136,
+   "def": 82,
+   "spa": 136,
+   "spd": 82,
+   "spe": 88
+  }
+ },
+ "zangoose": {
+  "baseStats": {
+   "hp": 73,
+   "atk": 157,
+   "def": 82,
+   "spa": 82,
+   "spd": 82,
+   "spe": 123
+  }
+ },
+ "relicanth": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 116,
+   "def": 168,
+   "spa": 58,
+   "spd": 84,
+   "spe": 71
+  }
+ },
+ "aggron": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 126,
+   "def": 207,
+   "spa": 69,
+   "spd": 69,
+   "spe": 57
+  }
+ },
+ "castform": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 106,
+   "def": 106,
+   "spa": 106,
+   "spd": 106,
+   "spe": 106
+  }
+ },
+ "volbeat": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 107,
+   "def": 109,
+   "spa": 68,
+   "spd": 124,
+   "spe": 124
+  }
+ },
+ "illumise": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 68,
+   "def": 109,
+   "spa": 107,
+   "spd": 124,
+   "spe": 124
+  }
+ },
+ "cradily": {
+  "baseStats": {
+   "hp": 86,
+   "atk": 101,
+   "def": 121,
+   "spa": 101,
+   "spd": 134,
+   "spe": 54
+  }
+ },
+ "armaldo": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 156,
+   "def": 125,
+   "spa": 87,
+   "spd": 100,
+   "spe": 56
+  }
+ },
+ "gardevoir": {
+  "baseStats": {
+   "hp": 68,
+   "atk": 76,
+   "def": 76,
+   "spa": 147,
+   "spd": 135,
+   "spe": 94
+  }
+ },
+ "regirock": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 104,
+   "def": 208,
+   "spa": 52,
+   "spd": 104,
+   "spe": 52
+  }
+ },
+ "regice": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 52,
+   "def": 104,
+   "spa": 104,
+   "spd": 208,
+   "spe": 52
+  }
+ },
+ "registeel": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 78,
+   "def": 156,
+   "spa": 78,
+   "spd": 156,
+   "spe": 52
+  }
+ },
+ "kyogre": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 87,
+   "def": 78,
+   "spa": 131,
+   "spd": 122,
+   "spe": 78
+  }
+ },
+ "groudon": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 131,
+   "def": 122,
+   "spa": 87,
+   "spd": 78,
+   "spe": 78
+  }
+ },
+ "rayquaza": {
+  "baseStats": {
+   "hp": 105,
+   "atk": 129,
+   "def": 77,
+   "spa": 129,
+   "spd": 77,
+   "spe": 81
+  }
+ },
+ "chimecho": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 69,
+   "def": 110,
+   "spa": 131,
+   "spd": 124,
+   "spe": 89
+  }
+ },
+ "torterra": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 128,
+   "def": 123,
+   "spa": 88,
+   "spd": 99,
+   "spe": 65
+  }
+ },
+ "infernape": {
+  "baseStats": {
+   "hp": 76,
+   "atk": 118,
+   "def": 81,
+   "spa": 118,
+   "spd": 81,
+   "spe": 123
+  }
+ },
+ "empoleon": {
+  "baseStats": {
+   "hp": 84,
+   "atk": 99,
+   "def": 101,
+   "spa": 128,
+   "spd": 116,
+   "spe": 69
+  }
+ },
+ "staraptor": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 154,
+   "def": 90,
+   "spa": 64,
+   "spd": 77,
+   "spe": 128
+  }
+ },
+ "bibarel": {
+  "baseStats": {
+   "hp": 79,
+   "atk": 133,
+   "def": 94,
+   "spa": 86,
+   "spd": 94,
+   "spe": 111
+  }
+ },
+ "kricketune": {
+  "baseStats": {
+   "hp": 77,
+   "atk": 144,
+   "def": 86,
+   "spa": 93,
+   "spd": 86,
+   "spe": 110
+  }
+ },
+ "luxray": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 140,
+   "def": 92,
+   "spa": 111,
+   "spd": 92,
+   "spe": 82
+  }
+ },
+ "roserade": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 83,
+   "def": 77,
+   "spa": 148,
+   "spd": 124,
+   "spe": 106
+  }
+ },
+ "rampardos": {
+  "baseStats": {
+   "hp": 97,
+   "atk": 208,
+   "def": 75,
+   "spa": 82,
+   "spd": 63,
+   "spe": 73
+  }
+ },
+ "bastiodon": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 64,
+   "def": 208,
+   "spa": 58,
+   "spd": 171,
+   "spe": 37
+  }
+ },
+ "wormadam": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 87,
+   "def": 126,
+   "spa": 117,
+   "spd": 155,
+   "spe": 53
+  }
+ },
+ "mothim": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 140,
+   "def": 74,
+   "spa": 140,
+   "spd": 74,
+   "spe": 98
+  }
+ },
+ "vespiquen": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 104,
+   "def": 133,
+   "spa": 104,
+   "spd": 133,
+   "spe": 52
+  }
+ },
+ "pachirisu": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 70,
+   "def": 109,
+   "spa": 70,
+   "spd": 140,
+   "spe": 148
+  }
+ },
+ "floatzel": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 131,
+   "def": 69,
+   "spa": 106,
+   "spd": 62,
+   "spe": 144
+  }
+ },
+ "cherrim": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 83,
+   "def": 97,
+   "spa": 121,
+   "spd": 108,
+   "spe": 118
+  }
+ },
+ "gastrodon": {
+  "baseStats": {
+   "hp": 111,
+   "atk": 111,
+   "def": 91,
+   "spa": 123,
+   "spd": 110,
+   "spe": 52
+  }
+ },
+ "ambipom": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 128,
+   "def": 85,
+   "spa": 77,
+   "spd": 85,
+   "spe": 148
+  }
+ },
+ "drifblim": {
+  "baseStats": {
+   "hp": 150,
+   "atk": 103,
+   "def": 56,
+   "spa": 116,
+   "spd": 69,
+   "spe": 103
+  }
+ },
+ "lopunny": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 97,
+   "def": 108,
+   "spa": 69,
+   "spd": 123,
+   "spe": 135
+  }
+ },
+ "mismagius": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 74,
+   "def": 74,
+   "spa": 130,
+   "spd": 130,
+   "spe": 130
+  }
+ },
+ "honchkrow": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 154,
+   "def": 64,
+   "spa": 129,
+   "spd": 64,
+   "spe": 87
+  }
+ },
+ "purugly": {
+  "baseStats": {
+   "hp": 71,
+   "atk": 113,
+   "def": 88,
+   "spa": 88,
+   "spd": 81,
+   "spe": 155
+  }
+ },
+ "skuntank": {
+  "baseStats": {
+   "hp": 103,
+   "atk": 122,
+   "def": 88,
+   "spa": 93,
+   "spd": 80,
+   "spe": 111
+  }
+ },
+ "bronzong": {
+  "baseStats": {
+   "hp": 67,
+   "atk": 109,
+   "def": 142,
+   "spa": 97,
+   "spd": 142,
+   "spe": 40
+  }
+ },
+ "chatot": {
+  "baseStats": {
+   "hp": 76,
+   "atk": 101,
+   "def": 70,
+   "spa": 143,
+   "spd": 65,
+   "spe": 142
+  }
+ },
+ "spiritomb": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 116,
+   "def": 136,
+   "spa": 116,
+   "spd": 136,
+   "spe": 44
+  }
+ },
+ "lucario": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 128,
+   "def": 81,
+   "spa": 133,
+   "spd": 81,
+   "spe": 104
+  }
+ },
+ "hippowdon": {
+  "baseStats": {
+   "hp": 108,
+   "atk": 132,
+   "def": 139,
+   "spa": 80,
+   "spd": 84,
+   "spe": 55
+  }
+ },
+ "drapion": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 110,
+   "def": 135,
+   "spa": 73,
+   "spd": 92,
+   "spe": 117
+  }
+ },
+ "toxicroak": {
+  "baseStats": {
+   "hp": 83,
+   "atk": 134,
+   "def": 82,
+   "spa": 109,
+   "spd": 82,
+   "spe": 107
+  }
+ },
+ "carnivine": {
+  "baseStats": {
+   "hp": 74,
+   "atk": 138,
+   "def": 99,
+   "spa": 124,
+   "spd": 99,
+   "spe": 63
+  }
+ },
+ "lumineon": {
+  "baseStats": {
+   "hp": 69,
+   "atk": 93,
+   "def": 103,
+   "spa": 93,
+   "spd": 116,
+   "spe": 123
+  }
+ },
+ "abomasnow": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 116,
+   "def": 94,
+   "spa": 116,
+   "spd": 107,
+   "spe": 75
+  }
+ },
+ "weavile": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 144,
+   "def": 78,
+   "spa": 54,
+   "spd": 102,
+   "spe": 150
+  }
+ },
+ "magnezone": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 79,
+   "def": 131,
+   "spa": 148,
+   "spd": 102,
+   "spe": 68
+  }
+ },
+ "lickilicky": {
+  "baseStats": {
+   "hp": 110,
+   "atk": 102,
+   "def": 114,
+   "spa": 96,
+   "spd": 114,
+   "spe": 60
+  }
+ },
+ "rhyperior": {
+  "baseStats": {
+   "hp": 115,
+   "atk": 161,
+   "def": 150,
+   "spa": 63,
+   "spd": 63,
+   "spe": 46
+  }
+ },
+ "tangrowth": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 114,
+   "def": 143,
+   "spa": 126,
+   "spd": 57,
+   "spe": 57
+  }
+ },
+ "electivire": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 138,
+   "def": 75,
+   "spa": 107,
+   "spd": 95,
+   "spe": 107
+  }
+ },
+ "magmortar": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 107,
+   "def": 75,
+   "spa": 141,
+   "spd": 107,
+   "spe": 93
+  }
+ },
+ "togekiss": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 55,
+   "def": 106,
+   "spa": 134,
+   "spd": 128,
+   "spe": 89
+  }
+ },
+ "yanmega": {
+  "baseStats": {
+   "hp": 86,
+   "atk": 91,
+   "def": 103,
+   "spa": 138,
+   "spd": 67,
+   "spe": 113
+  }
+ },
+ "leafeon": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 127,
+   "def": 151,
+   "spa": 69,
+   "spd": 75,
+   "spe": 110
+  }
+ },
+ "glaceon": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 69,
+   "def": 127,
+   "spa": 151,
+   "spd": 110,
+   "spe": 75
+  }
+ },
+ "gliscor": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 114,
+   "def": 150,
+   "spa": 54,
+   "spd": 90,
+   "spe": 114
+  }
+ },
+ "mamoswine": {
+  "baseStats": {
+   "hp": 110,
+   "atk": 151,
+   "def": 93,
+   "spa": 81,
+   "spd": 70,
+   "spe": 93
+  }
+ },
+ "porygonz": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 91,
+   "def": 80,
+   "spa": 154,
+   "spd": 85,
+   "spe": 103
+  }
+ },
+ "gallade": {
+  "baseStats": {
+   "hp": 68,
+   "atk": 147,
+   "def": 76,
+   "spa": 76,
+   "spd": 135,
+   "spe": 94
+  }
+ },
+ "probopass": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 63,
+   "def": 168,
+   "spa": 87,
+   "spd": 174,
+   "spe": 46
+  }
+ },
+ "dusknoir": {
+  "baseStats": {
+   "hp": 45,
+   "atk": 115,
+   "def": 156,
+   "spa": 75,
+   "spd": 156,
+   "spe": 52
+  }
+ },
+ "froslass": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 103,
+   "def": 90,
+   "spa": 103,
+   "spd": 90,
+   "spe": 142
+  }
+ },
+ "rotom": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 70,
+   "def": 108,
+   "spa": 133,
+   "spd": 108,
+   "spe": 128
+  }
+ },
+ "rotomheat": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 76,
+   "def": 125,
+   "spa": 122,
+   "spd": 125,
+   "spe": 100
+  }
+ },
+ "rotomwash": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 76,
+   "def": 125,
+   "spa": 122,
+   "spd": 125,
+   "spe": 100
+  }
+ },
+ "rotomfrost": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 76,
+   "def": 125,
+   "spa": 122,
+   "spd": 125,
+   "spe": 100
+  }
+ },
+ "rotomfan": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 76,
+   "def": 125,
+   "spa": 122,
+   "spd": 125,
+   "spe": 100
+  }
+ },
+ "rotommow": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 76,
+   "def": 125,
+   "spa": 122,
+   "spd": 125,
+   "spe": 100
+  }
+ },
+ "uxie": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 77,
+   "def": 135,
+   "spa": 77,
+   "spd": 135,
+   "spe": 98
+  }
+ },
+ "mesprit": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 109,
+   "def": 109,
+   "spa": 109,
+   "spd": 109,
+   "spe": 83
+  }
+ },
+ "azelf": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 129,
+   "def": 72,
+   "spa": 129,
+   "spd": 72,
+   "spe": 119
+  }
+ },
+ "dialga": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 103,
+   "def": 103,
+   "spa": 129,
+   "spd": 86,
+   "spe": 77
+  }
+ },
+ "palkia": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 103,
+   "def": 86,
+   "spa": 129,
+   "spd": 103,
+   "spe": 86
+  }
+ },
+ "regigigas": {
+  "baseStats": {
+   "hp": 110,
+   "atk": 140,
+   "def": 96,
+   "spa": 70,
+   "spd": 96,
+   "spe": 87
+  }
+ },
+ "giratina": {
+  "baseStats": {
+   "hp": 150,
+   "atk": 84,
+   "def": 101,
+   "spa": 84,
+   "spd": 101,
+   "spe": 76
+  }
+ },
+ "giratinaorigin": {
+  "baseStats": {
+   "hp": 150,
+   "atk": 101,
+   "def": 84,
+   "spa": 101,
+   "spd": 84,
+   "spe": 76
+  }
+ },
+ "phione": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 104,
+   "def": 104,
+   "spa": 104,
+   "spd": 104,
+   "spe": 104
+  }
+ },
+ "arceus": {
+  "baseStats": {
+   "hp": 120,
+   "atk": 96,
+   "def": 96,
+   "spa": 96,
+   "spd": 96,
+   "spe": 96
+  }
+ },
+ "serperior": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 86,
+   "def": 110,
+   "spa": 86,
+   "spd": 110,
+   "spe": 130
+  }
+ },
+ "emboar": {
+  "baseStats": {
+   "hp": 110,
+   "atk": 144,
+   "def": 76,
+   "spa": 117,
+   "spd": 76,
+   "spe": 76
+  }
+ },
+ "samurott": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 116,
+   "def": 99,
+   "spa": 125,
+   "spd": 81,
+   "spe": 81
+  }
+ },
+ "watchog": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 127,
+   "def": 103,
+   "spa": 90,
+   "spd": 103,
+   "spe": 115
+  }
+ },
+ "stoutland": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 136,
+   "def": 111,
+   "spa": 55,
+   "spd": 111,
+   "spe": 99
+  }
+ },
+ "liepard": {
+  "baseStats": {
+   "hp": 64,
+   "atk": 123,
+   "def": 70,
+   "spa": 123,
+   "spd": 70,
+   "spe": 148
+  }
+ },
+ "simisage": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 121,
+   "def": 78,
+   "spa": 121,
+   "spd": 78,
+   "spe": 125
+  }
+ },
+ "simisear": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 121,
+   "def": 78,
+   "spa": 121,
+   "spd": 78,
+   "spe": 125
+  }
+ },
+ "simipour": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 121,
+   "def": 78,
+   "spa": 121,
+   "spd": 78,
+   "spe": 125
+  }
+ },
+ "musharna": {
+  "baseStats": {
+   "hp": 116,
+   "atk": 71,
+   "def": 110,
+   "spa": 139,
+   "spd": 123,
+   "spe": 37
+  }
+ },
+ "unfezant": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 146,
+   "def": 101,
+   "spa": 82,
+   "spd": 70,
+   "spe": 118
+  }
+ },
+ "zebstrika": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 124,
+   "def": 78,
+   "spa": 99,
+   "spd": 78,
+   "spe": 144
+  }
+ },
+ "gigalith": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 161,
+   "def": 155,
+   "spa": 71,
+   "spd": 95,
+   "spe": 29
+  }
+ },
+ "swoobat": {
+  "baseStats": {
+   "hp": 67,
+   "atk": 84,
+   "def": 81,
+   "spa": 114,
+   "spd": 81,
+   "spe": 169
+  }
+ },
+ "excadrill": {
+  "baseStats": {
+   "hp": 110,
+   "atk": 166,
+   "def": 73,
+   "spa": 61,
+   "spd": 80,
+   "spe": 108
+  }
+ },
+ "audino": {
+  "baseStats": {
+   "hp": 103,
+   "atk": 87,
+   "def": 124,
+   "spa": 87,
+   "spd": 124,
+   "spe": 72
+  }
+ },
+ "conkeldurr": {
+  "baseStats": {
+   "hp": 105,
+   "atk": 173,
+   "def": 117,
+   "spa": 68,
+   "spd": 80,
+   "spe": 55
+  }
+ },
+ "seismitoad": {
+  "baseStats": {
+   "hp": 105,
+   "atk": 116,
+   "def": 91,
+   "spa": 104,
+   "spd": 91,
+   "spe": 90
+  }
+ },
+ "throh": {
+  "baseStats": {
+   "hp": 120,
+   "atk": 139,
+   "def": 118,
+   "spa": 41,
+   "spd": 118,
+   "spe": 62
+  }
+ },
+ "sawk": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 168,
+   "def": 100,
+   "spa": 40,
+   "spd": 100,
+   "spe": 114
+  }
+ },
+ "leavanny": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 127,
+   "def": 98,
+   "spa": 86,
+   "spd": 98,
+   "spe": 113
+  }
+ },
+ "scolipede": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 127,
+   "def": 113,
+   "spa": 69,
+   "spd": 87,
+   "spe": 142
+  }
+ },
+ "whimsicott": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 86,
+   "def": 109,
+   "spa": 99,
+   "spd": 96,
+   "spe": 149
+  }
+ },
+ "lilligant": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 77,
+   "def": 96,
+   "spa": 142,
+   "spd": 96,
+   "spe": 116
+  }
+ },
+ "basculin": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 125,
+   "def": 88,
+   "spa": 108,
+   "spd": 74,
+   "spe": 133
+  }
+ },
+ "krookodile": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 139,
+   "def": 95,
+   "spa": 77,
+   "spd": 83,
+   "spe": 109
+  }
+ },
+ "darmanitan": {
+  "baseStats": {
+   "hp": 105,
+   "atk": 184,
+   "def": 72,
+   "spa": 39,
+   "spd": 72,
+   "spe": 125
+  }
+ },
+ "darmanitanzen": {
+  "baseStats": {
+   "hp": 105,
+   "atk": 34,
+   "def": 119,
+   "spa": 159,
+   "spd": 119,
+   "spe": 62
+  }
+ },
+ "maractus": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 116,
+   "def": 91,
+   "spa": 144,
+   "spd": 91,
+   "spe": 81
+  }
+ },
+ "crustle": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 134,
+   "def": 159,
+   "spa": 83,
+   "spd": 95,
+   "spe": 57
+  }
+ },
+ "scrafty": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 113,
+   "def": 145,
+   "spa": 56,
+   "spd": 145,
+   "spe": 73
+  }
+ },
+ "sigilyph": {
+  "baseStats": {
+   "hp": 72,
+   "atk": 73,
+   "def": 101,
+   "spa": 130,
+   "spd": 101,
+   "spe": 122
+  }
+ },
+ "cofagrigus": {
+  "baseStats": {
+   "hp": 58,
+   "atk": 63,
+   "def": 184,
+   "spa": 121,
+   "spd": 133,
+   "spe": 38
+  }
+ },
+ "carracosta": {
+  "baseStats": {
+   "hp": 74,
+   "atk": 134,
+   "def": 166,
+   "spa": 103,
+   "spd": 81,
+   "spe": 39
+  }
+ },
+ "archeops": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 149,
+   "def": 69,
+   "spa": 119,
+   "spd": 69,
+   "spe": 117
+  }
+ },
+ "garbodor": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 125,
+   "def": 108,
+   "spa": 79,
+   "spd": 108,
+   "spe": 98
+  }
+ },
+ "zoroark": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 126,
+   "def": 72,
+   "spa": 144,
+   "spd": 72,
+   "spe": 126
+  }
+ },
+ "cinccino": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 126,
+   "def": 79,
+   "spa": 86,
+   "spd": 79,
+   "spe": 152
+  }
+ },
+ "gothitelle": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 69,
+   "def": 119,
+   "spa": 119,
+   "spd": 138,
+   "spe": 82
+  }
+ },
+ "reuniclus": {
+  "baseStats": {
+   "hp": 110,
+   "atk": 83,
+   "def": 96,
+   "spa": 161,
+   "spd": 109,
+   "spe": 38
+  }
+ },
+ "swanna": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 114,
+   "def": 83,
+   "spa": 114,
+   "spd": 83,
+   "spe": 129
+  }
+ },
+ "vanilluxe": {
+  "baseStats": {
+   "hp": 71,
+   "atk": 108,
+   "def": 96,
+   "spa": 125,
+   "spd": 108,
+   "spe": 90
+  }
+ },
+ "sawsbuck": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 131,
+   "def": 92,
+   "spa": 78,
+   "spd": 92,
+   "spe": 125
+  }
+ },
+ "emolga": {
+  "baseStats": {
+   "hp": 55,
+   "atk": 109,
+   "def": 87,
+   "spa": 109,
+   "spd": 87,
+   "spe": 150
+  }
+ },
+ "escavalier": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 168,
+   "def": 130,
+   "spa": 74,
+   "spd": 130,
+   "spe": 24
+  }
+ },
+ "amoonguss": {
+  "baseStats": {
+   "hp": 114,
+   "atk": 118,
+   "def": 97,
+   "spa": 118,
+   "spd": 111,
+   "spe": 41
+  }
+ },
+ "jellicent": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 78,
+   "def": 92,
+   "spa": 111,
+   "spd": 138,
+   "spe": 78
+  }
+ },
+ "alomomola": {
+  "baseStats": {
+   "hp": 165,
+   "atk": 106,
+   "def": 114,
+   "spa": 57,
+   "spd": 64,
+   "spe": 92
+  }
+ },
+ "galvantula": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 101,
+   "def": 79,
+   "spa": 127,
+   "spd": 79,
+   "spe": 142
+  }
+ },
+ "ferrothorn": {
+  "baseStats": {
+   "hp": 74,
+   "atk": 119,
+   "def": 166,
+   "spa": 68,
+   "spd": 147,
+   "spe": 25
+  }
+ },
+ "klinklang": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 117,
+   "def": 135,
+   "spa": 82,
+   "spd": 99,
+   "spe": 105
+  }
+ },
+ "eelektross": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 137,
+   "def": 95,
+   "spa": 125,
+   "spd": 95,
+   "spe": 59
+  }
+ },
+ "beheeyem": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 96,
+   "def": 96,
+   "spa": 160,
+   "spd": 121,
+   "spe": 51
+  }
+ },
+ "chandelure": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 64,
+   "def": 105,
+   "spa": 170,
+   "spd": 105,
+   "spe": 93
+  }
+ },
+ "haxorus": {
+  "baseStats": {
+   "hp": 76,
+   "atk": 166,
+   "def": 101,
+   "spa": 67,
+   "spd": 79,
+   "spe": 109
+  }
+ },
+ "beartic": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 160,
+   "def": 98,
+   "spa": 86,
+   "spd": 98,
+   "spe": 61
+  }
+ },
+ "cryogonal": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 59,
+   "def": 59,
+   "spa": 113,
+   "spd": 161,
+   "spe": 125
+  }
+ },
+ "accelgor": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 87,
+   "def": 50,
+   "spa": 125,
+   "spd": 75,
+   "spe": 181
+  }
+ },
+ "stunfisk": {
+  "baseStats": {
+   "hp": 109,
+   "atk": 89,
+   "def": 113,
+   "spa": 109,
+   "spd": 134,
+   "spe": 43
+  }
+ },
+ "mienshao": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 150,
+   "def": 72,
+   "spa": 114,
+   "spd": 72,
+   "spe": 126
+  }
+ },
+ "druddigon": {
+  "baseStats": {
+   "hp": 77,
+   "atk": 153,
+   "def": 115,
+   "spa": 76,
+   "spd": 115,
+   "spe": 61
+  }
+ },
+ "golurk": {
+  "baseStats": {
+   "hp": 89,
+   "atk": 160,
+   "def": 103,
+   "spa": 71,
+   "spd": 103,
+   "spe": 71
+  }
+ },
+ "bisharp": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 157,
+   "def": 125,
+   "spa": 75,
+   "spd": 88,
+   "spe": 88
+  }
+ },
+ "bouffalant": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 140,
+   "def": 121,
+   "spa": 51,
+   "spd": 121,
+   "spe": 70
+  }
+ },
+ "braviary": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 150,
+   "def": 91,
+   "spa": 69,
+   "spd": 91,
+   "spe": 97
+  }
+ },
+ "mandibuzz": {
+  "baseStats": {
+   "hp": 110,
+   "atk": 79,
+   "def": 128,
+   "spa": 67,
+   "spd": 116,
+   "spe": 98
+  }
+ },
+ "heatmor": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 125,
+   "def": 85,
+   "spa": 135,
+   "spd": 85,
+   "spe": 83
+  }
+ },
+ "durant": {
+  "baseStats": {
+   "hp": 58,
+   "atk": 138,
+   "def": 142,
+   "spa": 61,
+   "spd": 61,
+   "spe": 138
+  }
+ },
+ "volcarona": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 66,
+   "def": 71,
+   "spa": 149,
+   "spd": 116,
+   "spe": 110
+  }
+ },
+ "cobalion": {
+  "baseStats": {
+   "hp": 91,
+   "atk": 93,
+   "def": 134,
+   "spa": 93,
+   "spd": 74,
+   "spe": 112
+  }
+ },
+ "terrakion": {
+  "baseStats": {
+   "hp": 91,
+   "atk": 134,
+   "def": 93,
+   "spa": 74,
+   "spd": 93,
+   "spe": 112
+  }
+ },
+ "virizion": {
+  "baseStats": {
+   "hp": 91,
+   "atk": 93,
+   "def": 74,
+   "spa": 93,
+   "spd": 134,
+   "spe": 112
+  }
+ },
+ "tornadus": {
+  "baseStats": {
+   "hp": 79,
+   "atk": 119,
+   "def": 72,
+   "spa": 129,
+   "spd": 83,
+   "spe": 115
+  }
+ },
+ "tornadustherian": {
+  "baseStats": {
+   "hp": 79,
+   "atk": 103,
+   "def": 83,
+   "spa": 114,
+   "spd": 93,
+   "spe": 125
+  }
+ },
+ "thundurus": {
+  "baseStats": {
+   "hp": 79,
+   "atk": 119,
+   "def": 72,
+   "spa": 129,
+   "spd": 83,
+   "spe": 115
+  }
+ },
+ "thundurustherian": {
+  "baseStats": {
+   "hp": 79,
+   "atk": 109,
+   "def": 72,
+   "spa": 150,
+   "spd": 83,
+   "spe": 105
+  }
+ },
+ "reshiram": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 103,
+   "def": 86,
+   "spa": 129,
+   "spd": 103,
+   "spe": 77
+  }
+ },
+ "zekrom": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 129,
+   "def": 103,
+   "spa": 103,
+   "spd": 86,
+   "spe": 77
+  }
+ },
+ "kyurem": {
+  "baseStats": {
+   "hp": 125,
+   "atk": 115,
+   "def": 79,
+   "spa": 115,
+   "spd": 79,
+   "spe": 84
+  }
+ },
+ "kyuremblack": {
+  "baseStats": {
+   "hp": 125,
+   "atk": 140,
+   "def": 82,
+   "spa": 99,
+   "spd": 74,
+   "spe": 78
+  }
+ },
+ "kyuremwhite": {
+  "baseStats": {
+   "hp": 125,
+   "atk": 99,
+   "def": 74,
+   "spa": 140,
+   "spd": 82,
+   "spe": 78
+  }
+ },
+ "keldeo": {
+  "baseStats": {
+   "hp": 91,
+   "atk": 74,
+   "def": 93,
+   "spa": 134,
+   "spd": 93,
+   "spe": 112
+  }
+ },
+ "chesnaught": {
+  "baseStats": {
+   "hp": 88,
+   "atk": 123,
+   "def": 141,
+   "spa": 85,
+   "spd": 86,
+   "spe": 74
+  }
+ },
+ "delphox": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 78,
+   "def": 82,
+   "spa": 130,
+   "spd": 114,
+   "spe": 118
+  }
+ },
+ "greninja": {
+  "baseStats": {
+   "hp": 72,
+   "atk": 109,
+   "def": 77,
+   "spa": 118,
+   "spd": 81,
+   "spe": 140
+  }
+ },
+ "greninjaash": {
+  "baseStats": {
+   "hp": 72,
+   "atk": 134,
+   "def": 62,
+   "spa": 142,
+   "spd": 66,
+   "spe": 122
+  }
+ },
+ "diggersby": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 85,
+   "def": 117,
+   "spa": 76,
+   "spd": 117,
+   "spe": 118
+  }
+ },
+ "talonflame": {
+  "baseStats": {
+   "hp": 78,
+   "atk": 100,
+   "def": 88,
+   "spa": 91,
+   "spd": 85,
+   "spe": 156
+  }
+ },
+ "vivillon": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 81,
+   "def": 78,
+   "spa": 141,
+   "spd": 78,
+   "spe": 139
+  }
+ },
+ "pyroar": {
+  "baseStats": {
+   "hp": 86,
+   "atk": 83,
+   "def": 87,
+   "spa": 133,
+   "spd": 80,
+   "spe": 129
+  }
+ },
+ "floetteeternal": {
+  "baseStats": {
+   "hp": 74,
+   "atk": 71,
+   "def": 73,
+   "spa": 137,
+   "spd": 141,
+   "spe": 101
+  }
+ },
+ "florges": {
+  "baseStats": {
+   "hp": 78,
+   "atk": 71,
+   "def": 74,
+   "spa": 123,
+   "spd": 169,
+   "spe": 82
+  }
+ },
+ "gogoat": {
+  "baseStats": {
+   "hp": 123,
+   "atk": 116,
+   "def": 72,
+   "spa": 113,
+   "spd": 94,
+   "spe": 79
+  }
+ },
+ "pangoro": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 156,
+   "def": 98,
+   "spa": 87,
+   "spd": 89,
+   "spe": 73
+  }
+ },
+ "furfrou": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 105,
+   "def": 79,
+   "spa": 85,
+   "spd": 119,
+   "spe": 134
+  }
+ },
+ "meowstic": {
+  "baseStats": {
+   "hp": 74,
+   "atk": 64,
+   "def": 101,
+   "spa": 111,
+   "spd": 108,
+   "spe": 139
+  }
+ },
+ "aegislash": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 58,
+   "def": 176,
+   "spa": 58,
+   "spd": 176,
+   "spe": 70
+  }
+ },
+ "aegislashblade": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 176,
+   "def": 58,
+   "spa": 176,
+   "spd": 58,
+   "spe": 70
+  }
+ },
+ "aromatisse": {
+  "baseStats": {
+   "hp": 101,
+   "atk": 99,
+   "def": 99,
+   "spa": 136,
+   "spd": 123,
+   "spe": 40
+  }
+ },
+ "slurpuff": {
+  "baseStats": {
+   "hp": 82,
+   "atk": 104,
+   "def": 111,
+   "spa": 110,
+   "spd": 97,
+   "spe": 93
+  }
+ },
+ "malamar": {
+  "baseStats": {
+   "hp": 86,
+   "atk": 119,
+   "def": 114,
+   "spa": 88,
+   "spd": 97,
+   "spe": 94
+  }
+ },
+ "barbaracle": {
+  "baseStats": {
+   "hp": 72,
+   "atk": 129,
+   "def": 141,
+   "spa": 66,
+   "spd": 106,
+   "spe": 83
+  }
+ },
+ "dragalge": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 93,
+   "def": 112,
+   "spa": 120,
+   "spd": 153,
+   "spe": 54
+  }
+ },
+ "clawitzer": {
+  "baseStats": {
+   "hp": 71,
+   "atk": 90,
+   "def": 108,
+   "spa": 147,
+   "spd": 109,
+   "spe": 72
+  }
+ },
+ "heliolisk": {
+  "baseStats": {
+   "hp": 62,
+   "atk": 70,
+   "def": 66,
+   "spa": 139,
+   "spd": 120,
+   "spe": 139
+  }
+ },
+ "tyrantrum": {
+  "baseStats": {
+   "hp": 82,
+   "atk": 142,
+   "def": 140,
+   "spa": 81,
+   "spd": 69,
+   "spe": 83
+  }
+ },
+ "aurorus": {
+  "baseStats": {
+   "hp": 123,
+   "atk": 92,
+   "def": 86,
+   "spa": 118,
+   "spd": 110,
+   "spe": 69
+  }
+ },
+ "sylveon": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 76,
+   "def": 76,
+   "spa": 129,
+   "spd": 152,
+   "spe": 70
+  }
+ },
+ "hawlucha": {
+  "baseStats": {
+   "hp": 78,
+   "atk": 113,
+   "def": 92,
+   "spa": 91,
+   "spd": 77,
+   "spe": 145
+  }
+ },
+ "dedenne": {
+  "baseStats": {
+   "hp": 67,
+   "atk": 84,
+   "def": 83,
+   "spa": 118,
+   "spd": 98,
+   "spe": 147
+  }
+ },
+ "carbink": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 61,
+   "def": 183,
+   "spa": 61,
+   "spd": 183,
+   "spe": 61
+  }
+ },
+ "klefki": {
+  "baseStats": {
+   "hp": 57,
+   "atk": 105,
+   "def": 119,
+   "spa": 105,
+   "spd": 114,
+   "spe": 98
+  }
+ },
+ "trevenant": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 145,
+   "def": 100,
+   "spa": 86,
+   "spd": 108,
+   "spe": 74
+  }
+ },
+ "gourgeistsmall": {
+  "baseStats": {
+   "hp": 55,
+   "atk": 105,
+   "def": 151,
+   "spa": 72,
+   "spd": 93,
+   "spe": 122
+  }
+ },
+ "gourgeist": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 112,
+   "def": 152,
+   "spa": 72,
+   "spd": 93,
+   "spe": 104
+  }
+ },
+ "gourgeistlarge": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 119,
+   "def": 152,
+   "spa": 72,
+   "spd": 93,
+   "spe": 86
+  }
+ },
+ "gourgeistsuper": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 125,
+   "def": 153,
+   "spa": 73,
+   "spd": 94,
+   "spe": 67
+  }
+ },
+ "avalugg": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 141,
+   "def": 221,
+   "spa": 53,
+   "spd": 55,
+   "spe": 33
+  }
+ },
+ "noivern": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 80,
+   "def": 91,
+   "spa": 111,
+   "spd": 91,
+   "spe": 140
+  }
+ },
+ "xerneas": {
+  "baseStats": {
+   "hp": 126,
+   "atk": 112,
+   "def": 81,
+   "spa": 112,
+   "spd": 83,
+   "spe": 84
+  }
+ },
+ "yveltal": {
+  "baseStats": {
+   "hp": 126,
+   "atk": 112,
+   "def": 81,
+   "spa": 112,
+   "spd": 83,
+   "spe": 84
+  }
+ },
+ "zygarde10": {
+  "baseStats": {
+   "hp": 54,
+   "atk": 126,
+   "def": 89,
+   "spa": 77,
+   "spd": 107,
+   "spe": 145
+  }
+ },
+ "zygardecomplete": {
+  "baseStats": {
+   "hp": 216,
+   "atk": 78,
+   "def": 94,
+   "spa": 71,
+   "spd": 74,
+   "spe": 66
+  }
+ },
+ "hoopaunbound": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 138,
+   "def": 52,
+   "spa": 147,
+   "spd": 112,
+   "spe": 69
+  }
+ },
+ "venusaurmega": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 95,
+   "def": 117,
+   "spa": 116,
+   "spd": 114,
+   "spe": 76
+  }
+ },
+ "charizardmegax": {
+  "baseStats": {
+   "hp": 78,
+   "atk": 122,
+   "def": 104,
+   "spa": 122,
+   "spd": 79,
+   "spe": 93
+  }
+ },
+ "charizardmegay": {
+  "baseStats": {
+   "hp": 78,
+   "atk": 97,
+   "def": 73,
+   "spa": 149,
+   "spd": 107,
+   "spe": 93
+  }
+ },
+ "blastoisemega": {
+  "baseStats": {
+   "hp": 79,
+   "atk": 97,
+   "def": 113,
+   "spa": 127,
+   "spd": 108,
+   "spe": 73
+  }
+ },
+ "beedrillmega": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 186,
+   "def": 49,
+   "spa": 18,
+   "spd": 99,
+   "spe": 180
+  }
+ },
+ "pidgeotmega": {
+  "baseStats": {
+   "hp": 83,
+   "atk": 83,
+   "def": 83,
+   "spa": 140,
+   "spd": 83,
+   "spe": 126
+  }
+ },
+ "slowbromega": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 76,
+   "def": 183,
+   "spa": 132,
+   "spd": 81,
+   "spe": 30
+  }
+ },
+ "kangaskhanmega": {
+  "baseStats": {
+   "hp": 105,
+   "atk": 127,
+   "def": 102,
+   "spa": 61,
+   "spd": 102,
+   "spe": 102
+  }
+ },
+ "gyaradosmega": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 143,
+   "def": 101,
+   "spa": 64,
+   "spd": 120,
+   "spe": 75
+  }
+ },
+ "aerodactylmega": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 131,
+   "def": 82,
+   "spa": 68,
+   "spd": 92,
+   "spe": 145
+  }
+ },
+ "mewtwomegax": {
+  "baseStats": {
+   "hp": 106,
+   "atk": 139,
+   "def": 73,
+   "spa": 112,
+   "spd": 73,
+   "spe": 95
+  }
+ },
+ "mewtwomegay": {
+  "baseStats": {
+   "hp": 106,
+   "atk": 109,
+   "def": 51,
+   "spa": 142,
+   "spd": 87,
+   "spe": 102
+  }
+ },
+ "ampharosmega": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 93,
+   "def": 102,
+   "spa": 161,
+   "spd": 107,
+   "spe": 44
+  }
+ },
+ "steelixmega": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 122,
+   "def": 225,
+   "spa": 53,
+   "spd": 93,
+   "spe": 29
+  }
+ },
+ "tyranitarmega": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 136,
+   "def": 125,
+   "spa": 79,
+   "spd": 100,
+   "spe": 59
+  }
+ },
+ "sceptilemega": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 104,
+   "def": 70,
+   "spa": 137,
+   "spd": 80,
+   "spe": 137
+  }
+ },
+ "blazikenmega": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 151,
+   "def": 75,
+   "spa": 122,
+   "spd": 75,
+   "spe": 94
+  }
+ },
+ "swampertmega": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 140,
+   "def": 102,
+   "spa": 88,
+   "spd": 102,
+   "spe": 65
+  }
+ },
+ "gardevoirmega": {
+  "baseStats": {
+   "hp": 68,
+   "atk": 82,
+   "def": 62,
+   "spa": 159,
+   "spd": 130,
+   "spe": 96
+  }
+ },
+ "sableyemega": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 108,
+   "def": 159,
+   "spa": 108,
+   "spd": 147,
+   "spe": 25
+  }
+ },
+ "mawilemega": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 134,
+   "def": 159,
+   "spa": 70,
+   "spd": 121,
+   "spe": 63
+  }
+ },
+ "aggronmega": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 132,
+   "def": 217,
+   "spa": 56,
+   "spd": 75,
+   "spe": 47
+  }
+ },
+ "medichammega": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 120,
+   "def": 102,
+   "spa": 96,
+   "spd": 102,
+   "spe": 120
+  }
+ },
+ "manectricmega": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 78,
+   "def": 83,
+   "spa": 141,
+   "spd": 83,
+   "spe": 141
+  }
+ },
+ "sharpedomega": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 151,
+   "def": 75,
+   "spa": 118,
+   "spd": 70,
+   "spe": 113
+  }
+ },
+ "cameruptmega": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 129,
+   "def": 108,
+   "spa": 156,
+   "spd": 113,
+   "spe": 21
+  }
+ },
+ "altariamega": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 112,
+   "def": 112,
+   "spa": 112,
+   "spd": 107,
+   "spe": 81
+  }
+ },
+ "banettemega": {
+  "baseStats": {
+   "hp": 64,
+   "atk": 180,
+   "def": 81,
+   "spa": 101,
+   "spd": 90,
+   "spe": 81
+  }
+ },
+ "absolmega": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 160,
+   "def": 64,
+   "spa": 123,
+   "spd": 64,
+   "spe": 123
+  }
+ },
+ "glaliemega": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 124,
+   "def": 83,
+   "spa": 124,
+   "spd": 83,
+   "spe": 104
+  }
+ },
+ "salamencemega": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 121,
+   "def": 108,
+   "spa": 100,
+   "spd": 75,
+   "spe": 100
+  }
+ },
+ "metagrossmega": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 121,
+   "def": 125,
+   "spa": 88,
+   "spd": 92,
+   "spe": 92
+  }
+ },
+ "latiasmega": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 83,
+   "def": 100,
+   "spa": 117,
+   "spd": 125,
+   "spe": 92
+  }
+ },
+ "latiosmega": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 109,
+   "def": 83,
+   "spa": 134,
+   "spd": 100,
+   "spe": 92
+  }
+ },
+ "groudonprimal": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 134,
+   "def": 119,
+   "spa": 111,
+   "spd": 67,
+   "spe": 67
+  }
+ },
+ "kyogreprimal": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 111,
+   "def": 67,
+   "spa": 134,
+   "spd": 119,
+   "spe": 67
+  }
+ },
+ "rayquazamega": {
+  "baseStats": {
+   "hp": 105,
+   "atk": 132,
+   "def": 73,
+   "spa": 132,
+   "spd": 73,
+   "spe": 84
+  }
+ },
+ "lopunnymega": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 141,
+   "def": 97,
+   "spa": 56,
+   "spd": 99,
+   "spe": 140
+  }
+ },
+ "garchompmega": {
+  "baseStats": {
+   "hp": 108,
+   "atk": 141,
+   "def": 95,
+   "spa": 99,
+   "spd": 78,
+   "spe": 76
+  }
+ },
+ "lucariomega": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 138,
+   "def": 84,
+   "spa": 133,
+   "spd": 66,
+   "spe": 106
+  }
+ },
+ "abomasnowmega": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 133,
+   "def": 106,
+   "spa": 133,
+   "spd": 106,
+   "spe": 30
+  }
+ },
+ "gallademega": {
+  "baseStats": {
+   "hp": 68,
+   "atk": 159,
+   "def": 91,
+   "spa": 62,
+   "spd": 111,
+   "spe": 106
+  }
+ },
+ "audinomega": {
+  "baseStats": {
+   "hp": 103,
+   "atk": 67,
+   "def": 141,
+   "spa": 89,
+   "spd": 141,
+   "spe": 56
+  }
+ },
+ "dianciemega": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 135,
+   "def": 93,
+   "spa": 135,
+   "spd": 93,
+   "spe": 93
+  }
+ },
+ "decidueye": {
+  "baseStats": {
+   "hp": 78,
+   "atk": 123,
+   "def": 86,
+   "spa": 115,
+   "spd": 115,
+   "spe": 80
+  }
+ },
+ "incineroar": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 133,
+   "def": 104,
+   "spa": 92,
+   "spd": 104,
+   "spe": 69
+  }
+ },
+ "primarina": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 85,
+   "def": 85,
+   "spa": 145,
+   "spd": 134,
+   "spe": 69
+  }
+ },
+ "toucannon": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 154,
+   "def": 96,
+   "spa": 96,
+   "spd": 96,
+   "spe": 77
+  }
+ },
+ "gumshoos": {
+  "baseStats": {
+   "hp": 88,
+   "atk": 170,
+   "def": 93,
+   "spa": 85,
+   "spd": 93,
+   "spe": 69
+  }
+ },
+ "vikavolt": {
+  "baseStats": {
+   "hp": 77,
+   "atk": 86,
+   "def": 111,
+   "spa": 179,
+   "spd": 92,
+   "spe": 53
+  }
+ },
+ "crabominable": {
+  "baseStats": {
+   "hp": 97,
+   "atk": 174,
+   "def": 101,
+   "spa": 81,
+   "spd": 88,
+   "spe": 56
+  }
+ },
+ "oricorio": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 91,
+   "def": 91,
+   "spa": 128,
+   "spd": 91,
+   "spe": 121
+  }
+ },
+ "ribombee": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 73,
+   "def": 80,
+   "spa": 126,
+   "spd": 93,
+   "spe": 165
+  }
+ },
+ "lycanroc": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 146,
+   "def": 82,
+   "spa": 70,
+   "spd": 82,
+   "spe": 142
+  }
+ },
+ "lycanrocmidnight": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 147,
+   "def": 96,
+   "spa": 70,
+   "spd": 96,
+   "spe": 105
+  }
+ },
+ "lycanrocdusk": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 149,
+   "def": 82,
+   "spa": 70,
+   "spd": 82,
+   "spe": 140
+  }
+ },
+ "wishiwashi": {
+  "baseStats": {
+   "hp": 45,
+   "atk": 85,
+   "def": 85,
+   "spa": 106,
+   "spd": 106,
+   "spe": 170
+  }
+ },
+ "wishiwashischool": {
+  "baseStats": {
+   "hp": 45,
+   "atk": 135,
+   "def": 125,
+   "spa": 135,
+   "spd": 130,
+   "spe": 28
+  }
+ },
+ "toxapex": {
+  "baseStats": {
+   "hp": 50,
+   "atk": 77,
+   "def": 187,
+   "spa": 65,
+   "spd": 175,
+   "spe": 43
+  }
+ },
+ "mudsdale": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 156,
+   "def": 125,
+   "spa": 68,
+   "spd": 106,
+   "spe": 43
+  }
+ },
+ "araquanid": {
+  "baseStats": {
+   "hp": 68,
+   "atk": 96,
+   "def": 126,
+   "spa": 68,
+   "spd": 181,
+   "spe": 57
+  }
+ },
+ "lurantis": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 135,
+   "def": 116,
+   "spa": 103,
+   "spd": 116,
+   "spe": 58
+  }
+ },
+ "shiinotic": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 70,
+   "def": 125,
+   "spa": 140,
+   "spd": 156,
+   "spe": 46
+  }
+ },
+ "salazzle": {
+  "baseStats": {
+   "hp": 68,
+   "atk": 82,
+   "def": 77,
+   "spa": 143,
+   "spd": 77,
+   "spe": 151
+  }
+ },
+ "bewear": {
+  "baseStats": {
+   "hp": 120,
+   "atk": 157,
+   "def": 101,
+   "spa": 69,
+   "spd": 75,
+   "spe": 75
+  }
+ },
+ "tsareena": {
+  "baseStats": {
+   "hp": 72,
+   "atk": 144,
+   "def": 118,
+   "spa": 60,
+   "spd": 118,
+   "spe": 86
+  }
+ },
+ "comfey": {
+  "baseStats": {
+   "hp": 51,
+   "atk": 65,
+   "def": 113,
+   "spa": 103,
+   "spd": 139,
+   "spe": 126
+  }
+ },
+ "oranguru": {
+  "baseStats": {
+   "hp": 90,
+   "atk": 76,
+   "def": 102,
+   "spa": 114,
+   "spd": 140,
+   "spe": 76
+  }
+ },
+ "passimian": {
+  "baseStats": {
+   "hp": 100,
+   "atk": 153,
+   "def": 115,
+   "spa": 51,
+   "spd": 76,
+   "spe": 102
+  }
+ },
+ "golisopod": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 144,
+   "def": 161,
+   "spa": 69,
+   "spd": 103,
+   "spe": 46
+  }
+ },
+ "palossand": {
+  "baseStats": {
+   "hp": 85,
+   "atk": 97,
+   "def": 143,
+   "spa": 130,
+   "spd": 97,
+   "spe": 45
+  }
+ },
+ "pyukumuku": {
+  "baseStats": {
+   "hp": 55,
+   "atk": 92,
+   "def": 199,
+   "spa": 46,
+   "spd": 199,
+   "spe": 7
+  }
+ },
+ "silvally": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 101,
+   "def": 101,
+   "spa": 101,
+   "spd": 101,
+   "spe": 101
+  }
+ },
+ "miniormeteor": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 85,
+   "def": 142,
+   "spa": 85,
+   "spd": 142,
+   "spe": 85
+  }
+ },
+ "minior": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 122,
+   "def": 73,
+   "spa": 122,
+   "spd": 73,
+   "spe": 147
+  }
+ },
+ "komala": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 148,
+   "def": 83,
+   "spa": 96,
+   "spd": 122,
+   "spe": 83
+  }
+ },
+ "turtonator": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 99,
+   "def": 171,
+   "spa": 115,
+   "spd": 108,
+   "spe": 45
+  }
+ },
+ "togedemaru": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 141,
+   "def": 91,
+   "spa": 57,
+   "spd": 105,
+   "spe": 138
+  }
+ },
+ "mimikyu": {
+  "baseStats": {
+   "hp": 55,
+   "atk": 116,
+   "def": 103,
+   "spa": 64,
+   "spd": 135,
+   "spe": 124
+  }
+ },
+ "bruxish": {
+  "baseStats": {
+   "hp": 68,
+   "atk": 137,
+   "def": 91,
+   "spa": 91,
+   "spd": 91,
+   "spe": 120
+  }
+ },
+ "drampa": {
+  "baseStats": {
+   "hp": 78,
+   "atk": 76,
+   "def": 109,
+   "spa": 173,
+   "spd": 116,
+   "spe": 46
+  }
+ },
+ "dhelmise": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 155,
+   "def": 118,
+   "spa": 101,
+   "spd": 106,
+   "spe": 47
+  }
+ },
+ "tapukoko": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 121,
+   "def": 90,
+   "spa": 100,
+   "spd": 79,
+   "spe": 137
+  }
+ },
+ "tapulele": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 90,
+   "def": 79,
+   "spa": 137,
+   "spd": 121,
+   "spe": 100
+  }
+ },
+ "tapubulu": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 137,
+   "def": 121,
+   "spa": 90,
+   "spd": 100,
+   "spe": 79
+  }
+ },
+ "tapufini": {
+  "baseStats": {
+   "hp": 70,
+   "atk": 79,
+   "def": 121,
+   "spa": 100,
+   "spd": 137,
+   "spe": 90
+  }
+ },
+ "solgaleo": {
+  "baseStats": {
+   "hp": 137,
+   "atk": 116,
+   "def": 91,
+   "spa": 96,
+   "spd": 75,
+   "spe": 82
+  }
+ },
+ "lunala": {
+  "baseStats": {
+   "hp": 137,
+   "atk": 96,
+   "def": 75,
+   "spa": 116,
+   "spd": 91,
+   "spe": 82
+  }
+ },
+ "nihilego": {
+  "baseStats": {
+   "hp": 109,
+   "atk": 56,
+   "def": 50,
+   "spa": 135,
+   "spd": 139,
+   "spe": 109
+  }
+ },
+ "buzzwole": {
+  "baseStats": {
+   "hp": 107,
+   "atk": 148,
+   "def": 148,
+   "spa": 56,
+   "spd": 56,
+   "spe": 84
+  }
+ },
+ "pheromosa": {
+  "baseStats": {
+   "hp": 71,
+   "atk": 145,
+   "def": 39,
+   "spa": 145,
+   "spd": 39,
+   "spe": 160
+  }
+ },
+ "xurkitree": {
+  "baseStats": {
+   "hp": 83,
+   "atk": 94,
+   "def": 75,
+   "spa": 183,
+   "spd": 75,
+   "spe": 88
+  }
+ },
+ "celesteela": {
+  "baseStats": {
+   "hp": 97,
+   "atk": 107,
+   "def": 109,
+   "spa": 113,
+   "spd": 107,
+   "spe": 64
+  }
+ },
+ "kartana": {
+  "baseStats": {
+   "hp": 59,
+   "atk": 191,
+   "def": 138,
+   "spa": 62,
+   "spd": 32,
+   "spe": 115
+  }
+ },
+ "guzzlord": {
+  "baseStats": {
+   "hp": 223,
+   "atk": 109,
+   "def": 57,
+   "spa": 105,
+   "spd": 57,
+   "spe": 46
+  }
+ },
+ "necrozmaduskmane": {
+  "baseStats": {
+   "hp": 97,
+   "atk": 135,
+   "def": 109,
+   "spa": 97,
+   "spd": 94,
+   "spe": 66
+  }
+ },
+ "necrozmadawnwings": {
+  "baseStats": {
+   "hp": 97,
+   "atk": 97,
+   "def": 94,
+   "spa": 135,
+   "spd": 109,
+   "spe": 66
+  }
+ },
+ "necrozmaultra": {
+  "baseStats": {
+   "hp": 97,
+   "atk": 127,
+   "def": 74,
+   "spa": 127,
+   "spd": 74,
+   "spe": 98
+  }
+ },
+ "naganadel": {
+  "baseStats": {
+   "hp": 73,
+   "atk": 82,
+   "def": 82,
+   "spa": 143,
+   "spd": 82,
+   "spe": 136
+  }
+ },
+ "stakataka": {
+  "baseStats": {
+   "hp": 61,
+   "atk": 138,
+   "def": 223,
+   "spa": 56,
+   "spd": 106,
+   "spe": 13
+  }
+ },
+ "blacephalon": {
+  "baseStats": {
+   "hp": 53,
+   "atk": 134,
+   "def": 56,
+   "spa": 159,
+   "spd": 83,
+   "spe": 113
+  }
+ },
+ "raticatealola": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 110,
+   "def": 108,
+   "spa": 62,
+   "spd": 124,
+   "spe": 119
+  }
+ },
+ "raichualola": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 108,
+   "def": 63,
+   "spa": 120,
+   "spd": 108,
+   "spe": 139
+  }
+ },
+ "sandslashalola": {
+  "baseStats": {
+   "hp": 75,
+   "atk": 140,
+   "def": 168,
+   "spa": 35,
+   "spd": 91,
+   "spe": 91
+  }
+ },
+ "ninetalesalola": {
+  "baseStats": {
+   "hp": 73,
+   "atk": 81,
+   "def": 91,
+   "spa": 98,
+   "spd": 121,
+   "spe": 132
+  }
+ },
+ "dugtrioalola": {
+  "baseStats": {
+   "hp": 35,
+   "atk": 144,
+   "def": 86,
+   "spa": 72,
+   "spd": 101,
+   "spe": 159
+  }
+ },
+ "persianalola": {
+  "baseStats": {
+   "hp": 65,
+   "atk": 85,
+   "def": 85,
+   "spa": 107,
+   "spd": 92,
+   "spe": 164
+  }
+ },
+ "golemalola": {
+  "baseStats": {
+   "hp": 80,
+   "atk": 150,
+   "def": 162,
+   "spa": 68,
+   "spd": 81,
+   "spe": 56
+  }
+ },
+ "mukalola": {
+  "baseStats": {
+   "hp": 105,
+   "atk": 131,
+   "def": 93,
+   "spa": 81,
+   "spd": 125,
+   "spe": 62
+  }
+ },
+ "exeggutoralola": {
+  "baseStats": {
+   "hp": 95,
+   "atk": 121,
+   "def": 98,
+   "spa": 145,
+   "spd": 87,
+   "spe": 52
+  }
+ },
+ "marowakalola": {
+  "baseStats": {
+   "hp": 60,
+   "atk": 118,
+   "def": 162,
+   "spa": 73,
+   "spd": 118,
+   "spe": 66
+  }
+ }
+}

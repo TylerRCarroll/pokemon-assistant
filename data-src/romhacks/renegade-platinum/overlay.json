@@ -1,0 +1,12 @@
+{
+  "id": "renegade-platinum",
+  "name": "Renegade Platinum",
+  "baseGen": 4,
+  "typeChartGen": 6,
+  "fairyRetypesFromGen": 6,
+  "verified": false,
+  "notes": "Draft: Gen 4 base with Fairy type backported via the Gen 6 chart and retypes. Stat, ability, learnset, and trainer changes still need importing from Drayano's documentation.",
+  "species": {},
+  "moves": {},
+  "learnsets": {}
+}

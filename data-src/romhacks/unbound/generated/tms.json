@@ -1,0 +1,842 @@
+[
+ {
+  "num": 1,
+  "name": "Focus Punch",
+  "move": "focuspunch",
+  "type": "fight",
+  "location": "Victory Road (Outdoor hedge maze)"
+ },
+ {
+  "num": 2,
+  "name": "Dragon Claw",
+  "move": "dragonclaw",
+  "type": "dragon",
+  "location": "Victory Road (Snowy cliffs after using Rock Climb)"
+ },
+ {
+  "num": 3,
+  "name": "Water Pulse",
+  "move": "waterpulse",
+  "type": "water",
+  "location": "Valley Cave (on B1F after using Rock Climb)"
+ },
+ {
+  "num": 4,
+  "name": "Calm Mind",
+  "move": "calmmind",
+  "type": "psychic",
+  "location": "Fallshore City (Purchase in the marketplace)"
+ },
+ {
+  "num": 5,
+  "name": "Roar",
+  "move": "roar",
+  "type": "normal",
+  "location": "Crystal Peak (Large room on 1F after using Surf)"
+ },
+ {
+  "num": 6,
+  "name": "Toxic",
+  "move": "toxic",
+  "type": "poison",
+  "location": "Cootes Bog (East side of the bog after using Surf)"
+ },
+ {
+  "num": 7,
+  "name": "Hail",
+  "move": "hail",
+  "type": "ice",
+  "location": "Icy Hole (Help Clown escape; requires Rock Climb[Bellin Town])"
+ },
+ {
+  "num": 8,
+  "name": "Bulk Up",
+  "move": "bulkup",
+  "type": "fight",
+  "location": "Fallshore City (Purchase in the marketplace)"
+ },
+ {
+  "num": 9,
+  "name": "Bullet Seed",
+  "move": "bulletseed",
+  "type": "grass",
+  "location": "Route 5 (east side of the route after using Cut)"
+ },
+ {
+  "num": 10,
+  "name": "Hidden Power",
+  "move": "hiddenpower",
+  "type": "normal",
+  "location": "Fallshore City (Received from the Hidden Power Man in his home)"
+ },
+ {
+  "num": 11,
+  "name": "Sunny Day",
+  "move": "sunnyday",
+  "type": "grass",
+  "location": "Route 16 (Received from Clown after showing Solrock or Solgaleo)"
+ },
+ {
+  "num": 12,
+  "name": "Taunt",
+  "move": "taunt",
+  "type": "dark",
+  "location": "Seaport City (Behind Pokemart)"
+ },
+ {
+  "num": 13,
+  "name": "Ice Beam",
+  "move": "icebeam",
+  "type": "ice",
+  "location": "Icicle Cave (on 3F after beating a pair of Ace Trainers[Surf Required])"
+ },
+ {
+  "num": 14,
+  "name": "Blizzard",
+  "move": "blizzard",
+  "type": "ice",
+  "location": "Icicle Cave (on B1F after pushing a boulder down a hole[Strengh Required])"
+ },
+ {
+  "num": 15,
+  "name": "Hyper Beam",
+  "move": "hyperbeam",
+  "type": "normal",
+  "location": "Dehara Dept"
+ },
+ {
+  "num": 16,
+  "name": "Light Screen",
+  "move": "lightscreen",
+  "type": "psychic",
+  "location": "Dehara City Game Corner (Purchase for 2000 coins)"
+ },
+ {
+  "num": 17,
+  "name": "Protect",
+  "move": "protect",
+  "type": "normal",
+  "location": "Fallshore City (purchase in marketplace)"
+ },
+ {
+  "num": 18,
+  "name": "Rain Dance",
+  "move": "raindance",
+  "type": "water",
+  "location": "Auburn Waterway (Find the Clown hiding)"
+ },
+ {
+  "num": 19,
+  "name": "Giga Drain",
+  "move": "gigadrain",
+  "type": "grass",
+  "location": "Redwood Forest (near the centre of group of trees)"
+ },
+ {
+  "num": 20,
+  "name": "Safeguard",
+  "move": "safeguard",
+  "type": "normal",
+  "location": "Fallshore City (Purchase in the marketplace)"
+ },
+ {
+  "num": 21,
+  "name": "Frustration",
+  "move": "frustration",
+  "type": "normal",
+  "location": "Tomb of Borrius (after navigating the hell cracked floor)"
+ },
+ {
+  "num": 22,
+  "name": "Solar Beam",
+  "move": "solarbeam",
+  "type": "grass",
+  "location": "Magnolia Fields (Under a tree on the East Side)"
+ },
+ {
+  "num": 23,
+  "name": "Iron Tail",
+  "move": "irontail",
+  "type": "steel",
+  "location": "Route 14"
+ },
+ {
+  "num": 24,
+  "name": "Thunderbolt",
+  "move": "thunderbolt",
+  "type": "electr",
+  "location": "Thundercap Mountain(by Epidimh Town entrance after using surf)"
+ },
+ {
+  "num": 25,
+  "name": "Thunder",
+  "move": "thunder",
+  "type": "electr",
+  "location": "Thundercap Mountain"
+ },
+ {
+  "num": 26,
+  "name": "Earthquake",
+  "move": "earthquake",
+  "type": "ground",
+  "location": "Great Desert (above Tomb of Borrius, after using Rock Climb)"
+ },
+ {
+  "num": 27,
+  "name": "Return",
+  "move": "return",
+  "type": "normal",
+  "location": "Blizzard City (Reward for completing the quest \"Bad Babysitter\")"
+ },
+ {
+  "num": 28,
+  "name": "Dig",
+  "move": "dig",
+  "type": "ground",
+  "location": "Lost Tunnel (Reward for completing the quest \"Island saviour\" [Auburn Waterway])"
+ },
+ {
+  "num": 29,
+  "name": "Psychic",
+  "move": "psychic",
+  "type": "psychic",
+  "location": "Fallshore City (Above the KBT Express Way after using Waterfall)"
+ },
+ {
+  "num": 30,
+  "name": "Shadow Ball",
+  "move": "shadowball",
+  "type": "ghost",
+  "location": "Route 9 center of the lake"
+ },
+ {
+  "num": 31,
+  "name": "Brick Break",
+  "move": "brickbreak",
+  "type": "fight",
+  "location": "Ruins of Void (on B3F after using Rock Smash)"
+ },
+ {
+  "num": 32,
+  "name": "Double Team",
+  "move": "doubleteam",
+  "type": "normal",
+  "location": "Dehara City (purchase for 2000 coins [Game Corner])"
+ },
+ {
+  "num": 33,
+  "name": "Reflect",
+  "move": "reflect",
+  "type": "psychic",
+  "location": "Dehara City (purchase for 2000 coins [Game Corner])"
+ },
+ {
+  "num": 34,
+  "name": "Shock Wave",
+  "move": "shockwave",
+  "type": "electr",
+  "location": "Blizzard City (purchase at the Pokemart)"
+ },
+ {
+  "num": 35,
+  "name": "Flamethrower",
+  "move": "flamethrower",
+  "type": "fire",
+  "location": "Cinder Volcano (after crossing over the Magma, [needs Fire type in the party])"
+ },
+ {
+  "num": 36,
+  "name": "Sludge Bomb",
+  "move": "sludgebomb",
+  "type": "poison",
+  "location": "Antisis Sewers (south room after using Waterfall)"
+ },
+ {
+  "num": 37,
+  "name": "Sandstorm",
+  "move": "sandstorm",
+  "type": "rock",
+  "location": "Great Desert (from Clown after breaking all rocks in the west section of the desert)"
+ },
+ {
+  "num": 38,
+  "name": "Fire Blast",
+  "move": "fireblast",
+  "type": "fire",
+  "location": "Cinder Volcano (on 3F after using Rock Climb)"
+ },
+ {
+  "num": 39,
+  "name": "Rock Tomb",
+  "move": "rocktomb",
+  "type": "rock",
+  "location": "Blizzard City (Purchase from the pokemart)"
+ },
+ {
+  "num": 40,
+  "name": "Aerial Ace",
+  "move": "aerialace",
+  "type": "flying",
+  "location": "Blizzard City (after beating the Gym Leader)"
+ },
+ {
+  "num": 41,
+  "name": "Torment",
+  "move": "torment",
+  "type": "dark",
+  "location": "Shadow Base (on B2F behind a locked door"
+ },
+ {
+  "num": 42,
+  "name": "Facade",
+  "move": "facade",
+  "type": "normal",
+  "location": "Fallshore City (after beating the Gym Leader)"
+ },
+ {
+  "num": 43,
+  "name": "Secret Power",
+  "move": "secretpower",
+  "type": "normal",
+  "location": "Dehara City (purchase for 3000 coins [Game Corner]"
+ },
+ {
+  "num": 44,
+  "name": "Rest",
+  "move": "rest",
+  "type": "psychic",
+  "location": "Valley Cave (on B1F after using Surf)"
+ },
+ {
+  "num": 45,
+  "name": "Attract",
+  "move": "attract",
+  "type": "normal",
+  "location": "Route 3 (on a beach next to a fisherman after using Surf)"
+ },
+ {
+  "num": 46,
+  "name": "Thief",
+  "move": "thief",
+  "type": "dark",
+  "location": "Crater Town (after beating the Gym Leader)"
+ },
+ {
+  "num": 47,
+  "name": "Steel Wing",
+  "move": "steelwing",
+  "type": "steel",
+  "location": "Route 12 (South of the Beauty)"
+ },
+ {
+  "num": 48,
+  "name": "Skill Swap",
+  "move": "skillswap",
+  "type": "psychic",
+  "location": "Ruins of Void (on the cliffs after both using the ADM and Rock Climb)"
+ },
+ {
+  "num": 49,
+  "name": "Leech Fang",
+  "move": null,
+  "type": "bug",
+  "location": "Redwood Village (after beating the Gym Leader)"
+ },
+ {
+  "num": 50,
+  "name": "Overheat",
+  "move": "overheat",
+  "type": "fire",
+  "location": "Crystal Peak (on 1F in the left room after hiding blue & red crystals)"
+ },
+ {
+  "num": 51,
+  "name": "Roost",
+  "move": "roost",
+  "type": "flying",
+  "location": "Route 13 (on some rocky ground after using Rock Climb)"
+ },
+ {
+  "num": 52,
+  "name": "Focus Blast",
+  "move": "focusblast",
+  "type": "fight",
+  "location": "Dehara Dept"
+ },
+ {
+  "num": 53,
+  "name": "Energy Ball",
+  "move": "energyball",
+  "type": "grass",
+  "location": "Seaport City (purchase in the marketplace)"
+ },
+ {
+  "num": 54,
+  "name": "False Swipe",
+  "move": "falseswipe",
+  "type": "normal",
+  "location": "Route 10 (next to a fence above the Camper)"
+ },
+ {
+  "num": 55,
+  "name": "Brine",
+  "move": "brine",
+  "type": "water",
+  "location": "Blizzard City (purchased in the mart)"
+ },
+ {
+  "num": 56,
+  "name": "Hone Claws",
+  "move": "honeclaws",
+  "type": "dark",
+  "location": "Icicle Cave (after completing the quest \"The Food Thief\")"
+ },
+ {
+  "num": 57,
+  "name": "Charge Beam",
+  "move": "chargebeam",
+  "type": "electr",
+  "location": "Seaport City (purchase in the marketplace)"
+ },
+ {
+  "num": 58,
+  "name": "Endure",
+  "move": "endure",
+  "type": "normal",
+  "location": "Dehara City (purchase for 1000 coins [Game Corner])"
+ },
+ {
+  "num": 59,
+  "name": "Dragon Pulse",
+  "move": "dragonpulse",
+  "type": "dragon",
+  "location": "Route 18 (north of the Pokemon Center after using Cut)"
+ },
+ {
+  "num": 60,
+  "name": "Drain Punch",
+  "move": "drainpunch",
+  "type": "fight",
+  "location": "Antisis City (after beating the Gym Leader)"
+ },
+ {
+  "num": 61,
+  "name": "Will-O-Wisp",
+  "move": "willowisp",
+  "type": "fire",
+  "location": "Dehara City (purchase for 40000 coins [Game Corner])"
+ },
+ {
+  "num": 62,
+  "name": "Silver Wind",
+  "move": "silverwind",
+  "type": "bug",
+  "location": "Flower Paradise (reward for the quest \"Honey Gather\")"
+ },
+ {
+  "num": 63,
+  "name": "Venoshock",
+  "move": "venoshock",
+  "type": "poison",
+  "location": "Blizzard City (purchase in the mart)"
+ },
+ {
+  "num": 64,
+  "name": "Explosion",
+  "move": "explosion",
+  "type": "normal",
+  "location": "Dehara Dept"
+ },
+ {
+  "num": 65,
+  "name": "Shadow Claw",
+  "move": "shadowclaw",
+  "type": "ghost",
+  "location": "Route 11 (on the cliffs after using Rock Climb)"
+ },
+ {
+  "num": 66,
+  "name": "Payback",
+  "move": "payback",
+  "type": "dark",
+  "location": "Route 2 (on the east side of Challenge Road after using Rock Smash)"
+ },
+ {
+  "num": 67,
+  "name": "Recycle",
+  "move": "recycle",
+  "type": "normal",
+  "location": "Antisis Sewers (in the north room)"
+ },
+ {
+  "num": 68,
+  "name": "Giga Impact",
+  "move": "gigaimpact",
+  "type": "normal",
+  "location": "Dehara Dept"
+ },
+ {
+  "num": 69,
+  "name": "Rock Polish",
+  "move": "rockpolish",
+  "type": "rock",
+  "location": "Icicle Cave (on B1F after sliding around the ice and using Rock Smash)"
+ },
+ {
+  "num": 70,
+  "name": "Flash",
+  "move": "flash",
+  "type": "normal",
+  "location": "Crater Town (as a gift in the mart)"
+ },
+ {
+  "num": 71,
+  "name": "Stone Edge",
+  "move": "stoneedge",
+  "type": "rock",
+  "location": "Crystal Peak (on 1F in the right room after hiding Yellow crystals)"
+ },
+ {
+  "num": 72,
+  "name": "Avalanche",
+  "move": "avalanche",
+  "type": "ice",
+  "location": "Forst Mountain ( on 2F after going up on alternate ladder)"
+ },
+ {
+  "num": 73,
+  "name": "Thunder Wave",
+  "move": "thunderwave",
+  "type": "electr",
+  "location": "Thundercap Mt"
+ },
+ {
+  "num": 74,
+  "name": "Gyro Ball",
+  "move": "gyroball",
+  "type": "steel",
+  "location": "Route 6 (After surfing to rocky ground and using rock climb)"
+ },
+ {
+  "num": 75,
+  "name": "Swords Dance",
+  "move": "swordsdance",
+  "type": "normal",
+  "location": "Dehara City (purchase for 4000 coins [Game Corner]"
+ },
+ {
+  "num": 76,
+  "name": "Stealth Rock",
+  "move": "stealthrock",
+  "type": "rock",
+  "location": "Cinder Volcano (on B1F in the Shadow's storage area after using both Strength & Rock Smash)"
+ },
+ {
+  "num": 77,
+  "name": "Flame Charge",
+  "move": "flamecharge",
+  "type": "fire",
+  "location": "Route 9 (underneath a treetop after using Surf in the eastern hidden pathway)"
+ },
+ {
+  "num": 78,
+  "name": "Low Sweep",
+  "move": "lowsweep",
+  "type": "fight",
+  "location": "Blizzard City (purchase in the mart)"
+ },
+ {
+  "num": 79,
+  "name": "Dark Pulse",
+  "move": "darkpulse",
+  "type": "dark",
+  "location": "Frost Mountain (on 1F after using Rock Climb near the entrance)"
+ },
+ {
+  "num": 80,
+  "name": "Rock Slide",
+  "move": "rockslide",
+  "type": "rock",
+  "location": "Frost Mountain ( on 2F after using both Strength and Rock Climb)"
+ },
+ {
+  "num": 81,
+  "name": "X-Scissor",
+  "move": "xscissor",
+  "type": "bug",
+  "location": "Vivill Woods (near mushrooms hiding Paras after using Surf)"
+ },
+ {
+  "num": 82,
+  "name": "Sleep Talk",
+  "move": "sleeptalk",
+  "type": "normal",
+  "location": "Battle Tower (purchased for 32 BP)"
+ },
+ {
+  "num": 83,
+  "name": "Scald",
+  "move": "scald",
+  "type": "water",
+  "location": "Route 14 (after using Rock Climb above the KBT Expressway)"
+ },
+ {
+  "num": 84,
+  "name": "Poison Jab",
+  "move": "poisonjab",
+  "type": "poison",
+  "location": "Seaport City (purchase in the marketplace)"
+ },
+ {
+  "num": 85,
+  "name": "Dream Eater",
+  "move": "dreameater",
+  "type": "psychic",
+  "location": "Tarmigan Town (received in the Dream Reasearch Lab)"
+ },
+ {
+  "num": 86,
+  "name": "Grass Knot",
+  "move": "grassknot",
+  "type": "grass",
+  "location": "Dresco Town (after beating the Gym Leader)"
+ },
+ {
+  "num": 87,
+  "name": "Swagger",
+  "move": "swagger",
+  "type": "normal",
+  "location": "Dehara City (purchase for 2000 coins [Game Corner])"
+ },
+ {
+  "num": 88,
+  "name": "Pluck",
+  "move": "pluck",
+  "type": "flying",
+  "location": "Blizzard City (purchased from the mart)"
+ },
+ {
+  "num": 89,
+  "name": "U-turn",
+  "move": "uturn",
+  "type": "bug",
+  "location": "Auburn Waterway (in the surf area after using both surf and cut)"
+ },
+ {
+  "num": 90,
+  "name": "Substitute",
+  "move": "substitute",
+  "type": "normal",
+  "location": "Dehara City (purchase for 3000 coins [Game Corner])"
+ },
+ {
+  "num": 91,
+  "name": "Flash Cannon",
+  "move": "flashcannon",
+  "type": "steel",
+  "location": "Thundercap Mountain"
+ },
+ {
+  "num": 92,
+  "name": "Volt Switch",
+  "move": "voltswitch",
+  "type": "electr",
+  "location": "Dehara City (after beating the gym leader)"
+ },
+ {
+  "num": 93,
+  "name": "Dragon Tail",
+  "move": "dragontail",
+  "type": "dragon",
+  "location": "Rift Cave (on 2F after wandering around for a while)"
+ },
+ {
+  "num": 94,
+  "name": "Incinerate",
+  "move": "incinerate",
+  "type": "fire",
+  "location": "Cinder Volcano (on 3F near the Battle Girl)"
+ },
+ {
+  "num": 95,
+  "name": "Struggle Bug",
+  "move": "strugglebug",
+  "type": "bug",
+  "location": "Route 9 (near the ocean)"
+ },
+ {
+  "num": 96,
+  "name": "Bulldoze",
+  "move": "bulldoze",
+  "type": "ground",
+  "location": "Blizzard City (purchase from the mart)"
+ },
+ {
+  "num": 97,
+  "name": "Frost Breath",
+  "move": "frostbreath",
+  "type": "ice",
+  "location": "Bellin Town (after using Rock Climb)"
+ },
+ {
+  "num": 98,
+  "name": "Work Up",
+  "move": "workup",
+  "type": "normal",
+  "location": "Crater Town (reward for completing the quest \"The Black Emboar\")"
+ },
+ {
+  "num": 99,
+  "name": "Wild Charge",
+  "move": "wildcharge",
+  "type": "electr",
+  "location": "Seaport City (in the warehouse where a scientist was experimenting on an Electivire)"
+ },
+ {
+  "num": 100,
+  "name": "Infestation",
+  "move": "infestation",
+  "type": "bug",
+  "location": "Grim Woods (near a bug catcher on the north side of the forest)"
+ },
+ {
+  "num": 101,
+  "name": "Power-Up Punch",
+  "move": "poweruppunch",
+  "type": "fight",
+  "location": "Valley Cave (after using Rock Climb and destroying the Tablet)"
+ },
+ {
+  "num": 102,
+  "name": "Dazzling Gleam",
+  "move": "dazzlinggleam",
+  "type": "fairy",
+  "location": "Redwood Village (underneath a treetop)"
+ },
+ {
+  "num": 103,
+  "name": "Sludge Wave",
+  "move": "sludgewave",
+  "type": "poison",
+  "location": "Battle Tower (purchase for 48 BP)"
+ },
+ {
+  "num": 104,
+  "name": "Psyshock",
+  "move": "psyshock",
+  "type": "psychic",
+  "location": "Route 17 (after using Rock Climb on the eastern beach)"
+ },
+ {
+  "num": 105,
+  "name": "Brutal Swing",
+  "move": "brutalswing",
+  "type": "dark",
+  "location": "Dresco Town (after using Surf)"
+ },
+ {
+  "num": 106,
+  "name": "Smart Strike",
+  "move": "smartstrike",
+  "type": "steel",
+  "location": "Route 10 (reward for completing the quest \"The Terror Granbull\")"
+ },
+ {
+  "num": 107,
+  "name": "Acrobatics",
+  "move": "acrobatics",
+  "type": "flying",
+  "location": "Antisis City (reward for showing a pokemon with the move Eerie Impulse)"
+ },
+ {
+  "num": 108,
+  "name": "Snarl",
+  "move": "snarl",
+  "type": "dark",
+  "location": "Route 7 (above a patch of grass near Frost Mountain)"
+ },
+ {
+  "num": 109,
+  "name": "Defog",
+  "move": "defog",
+  "type": "flying",
+  "location": "Antisis Sewers (Given by the Clown in for showing them a Pokemon with Sweet Scent)"
+ },
+ {
+  "num": 110,
+  "name": "Draining Kiss",
+  "move": "drainingkiss",
+  "type": "fairy",
+  "location": "Battle Tower (purchase for 24 BP)"
+ },
+ {
+  "num": 111,
+  "name": "Smack Down",
+  "move": "smackdown",
+  "type": "rock",
+  "location": "Gurun Town (reward for completing the quest \"as Hard as They Come\")"
+ },
+ {
+  "num": 112,
+  "name": "Round",
+  "move": "round",
+  "type": "normal",
+  "location": "Route 4 (after using Cut outside the western Grim Woods exit)"
+ },
+ {
+  "num": 113,
+  "name": "Echoed Voice",
+  "move": "echoedvoice",
+  "type": "normal",
+  "location": "Dehara City (purchase for 2000 coins [Game corner])"
+ },
+ {
+  "num": 114,
+  "name": "Natural Gift",
+  "move": "naturalgift",
+  "type": "grass",
+  "location": "Seaport City (gift in the marketplace)"
+ },
+ {
+  "num": 115,
+  "name": "Quash",
+  "move": "quash",
+  "type": "dark",
+  "location": "Battle Tower (purchase for 24 BP"
+ },
+ {
+  "num": 116,
+  "name": "Trick Room",
+  "move": "trickroom",
+  "type": "psychic",
+  "location": "Battle Tower (purchase for 48 BP)"
+ },
+ {
+  "num": 117,
+  "name": "Fling",
+  "move": "fling",
+  "type": "dark",
+  "location": "Route 16 (after resurfacing with the ADM)"
+ },
+ {
+  "num": 118,
+  "name": "Aurora Veil",
+  "move": "auroraveil",
+  "type": "ice",
+  "location": "Blizzard City (gift in one of the southern houses)"
+ },
+ {
+  "num": 119,
+  "name": "Sky Drop",
+  "move": "skydrop",
+  "type": "flying",
+  "location": "Route 4 (after using Waterfall)"
+ },
+ {
+  "num": 120,
+  "name": "Nature Power",
+  "move": "naturepower",
+  "type": "grass",
+  "location": "Cootes Bog (reward for completing the quest \"Protector of the Swamp'')"
+ }
+]
