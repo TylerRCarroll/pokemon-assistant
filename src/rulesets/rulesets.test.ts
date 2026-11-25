@@ -85,6 +85,32 @@ describe('romhack overlays', () => {
     expect(getRuleset('gen4').getSpecies('Charizard')!.types).toEqual(['Fire', 'Flying']);
   });
 
+  it('Renegade Platinum has the hack’s moves, learnsets, and TMs', async () => {
+    const rp = getRuleset('renegade-platinum');
+    // moves replaced with later-gen ones
+    expect(rp.getMove('Moonblast')).toMatchObject({ type: 'Fairy', basePower: 95, category: 'Special' });
+    expect(rp.getMove('Hurricane')).toMatchObject({ type: 'Flying', basePower: 110 });
+    expect(rp.moves().some((m) => m.id === 'twister')).toBe(false);
+    expect(rp.getMove('Cross Poison')).toMatchObject({ basePower: 90, pp: 15 });
+    // learnsets come from the doc, egg moves from vanilla
+    const zard = await rp.learnset('Charizard');
+    expect(zard.find((e) => e.move === 'hurricane')?.methods).toContainEqual({ kind: 'tm' });
+    expect(zard.find((e) => e.move === 'dragonclaw')?.methods).toContainEqual({ kind: 'level', level: 1 });
+    expect((await rp.learnset('Bulbasaur')).some((e) => e.methods.some((m) => m.kind === 'egg'))).toBe(true);
+    expect(rp.tms?.find((t) => t.num === 50)).toMatchObject({ name: 'Overheat', location: expect.stringContaining('Sunyshore') });
+  });
+
+  it('Renegade Platinum loads trainer teams', async () => {
+    const trainers = await getRuleset('renegade-platinum').loadTrainers!();
+    const roark = trainers.find((t) => /LEADER ROARK/.test(t.name))!;
+    expect(roark.boss).toBe(true);
+    expect(roark.levelCap).toBe(16);
+    expect(roark.team.map((m) => m.species)).toEqual(['Nosepass', 'Bonsly', 'Geodude', 'Onix', 'Larvitar', 'Cranidos']);
+    expect(roark.team[0]).toMatchObject({ level: 15, item: 'Smooth Rock', ability: 'Sturdy', nature: 'Modest' });
+    expect(trainers.every((t) => t.team.length >= 1 && t.team.length <= 6)).toBe(true);
+    expect(getRuleset('gen4').loadTrainers).toBeUndefined();
+  });
+
   it('Unbound uses Gen 8 mechanics with the National Dex pool', () => {
     const ub = getRuleset('unbound');
     expect(ub.gen).toBe(8);

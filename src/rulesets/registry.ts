@@ -1,9 +1,11 @@
 import type { GenerationNum } from '@pkmn/data';
 import { createOfficialRuleset } from './official';
-import { createRomhackRuleset, type RomhackOverlay } from './romhack';
-import type { Ruleset } from './types';
+import { createRomhackRuleset, type CompactLearnset, type RomhackOverlay } from './romhack';
+import type { Ruleset, TrainerInfo } from './types';
 import rpBase from '../../data-src/romhacks/renegade-platinum/overlay.json';
 import rpSpecies from '../../data-src/romhacks/renegade-platinum/generated/species.json';
+import rpMoves from '../../data-src/romhacks/renegade-platinum/generated/moves.json';
+import rpTMs from '../../data-src/romhacks/renegade-platinum/generated/tms.json';
 import unboundBase from '../../data-src/romhacks/unbound/overlay.json';
 import unboundSpecies from '../../data-src/romhacks/unbound/generated/species.json';
 import unboundTMs from '../../data-src/romhacks/unbound/generated/tms.json';
@@ -37,11 +39,21 @@ const unbound: RomhackOverlay = {
   tms: unboundTMs,
 };
 
-// Complete patch data from the community doc (npm run import:rp); hand edits win
+// Complete patch data from the community doc (npm run import:rp); hand edits win.
+// Learnsets and trainers are big, so they load on first use.
 const rpOverlay = rpBase as unknown as RomhackOverlay;
+const rpMoveData = rpMoves as unknown as Pick<RomhackOverlay, 'customMoves' | 'removedMoves'> & { overrides: RomhackOverlay['moves'] };
 const renegadePlatinum: RomhackOverlay = {
   ...rpOverlay,
   species: { ...rpSpecies, ...rpOverlay.species },
+  moves: { ...rpMoveData.overrides, ...rpOverlay.moves },
+  customMoves: { ...rpMoveData.customMoves, ...rpOverlay.customMoves },
+  removedMoves: rpMoveData.removedMoves,
+  tms: rpTMs,
+  loadLearnsets: () =>
+    import('../../data-src/romhacks/renegade-platinum/generated/learnsets.json').then((m) => m.default as unknown as Record<string, CompactLearnset>),
+  loadTrainers: () =>
+    import('../../data-src/romhacks/renegade-platinum/generated/trainers.json').then((m) => m.default as unknown as TrainerInfo[]),
 };
 
 for (const overlay of [renegadePlatinum, unbound]) {

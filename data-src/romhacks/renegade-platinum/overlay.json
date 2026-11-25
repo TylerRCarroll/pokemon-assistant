@@ -5,7 +5,7 @@
   "typeChartGen": 6,
   "fairyRetypesFromGen": 6,
   "verified": false,
-  "notes": "Complete patch. Types, base stats, and abilities are imported from the community documentation (updated Oct 2026). Learnsets, move changes, and trainers still use Gen 4 defaults.",
+  "notes": "Complete patch, imported from the community documentation (updated Oct 2026): types, stats, abilities, moves, learnsets, TMs, and trainer teams. Egg moves and the Steel-type matchups follow vanilla Platinum and Gen 6 respectively (unconfirmed by the docs).",
   "species": {},
   "moves": {},
   "learnsets": {}

@@ -1,6 +1,6 @@
 import type { GenerationNum } from '@pkmn/data';
 import { createOfficialRuleset, gens, toID } from './official';
-import type { LearnsetEntry, MoveInfo, Ruleset, SpeciesInfo, TMInfo } from './types';
+import type { LearnMethod, LearnsetEntry, MoveInfo, Ruleset, SpeciesInfo, TMInfo, TrainerInfo } from './types';
 
 /**
  * A romhack is described as a base official ruleset plus overrides,
@@ -29,6 +29,29 @@ export interface RomhackOverlay {
   learnsets?: Record<string, LearnsetEntry[]>;
   /** The hack's TM list; `move` is null when the name doesn't match a known move */
   tms?: TMInfo[];
+  /** Moves the hack removed from the game (hidden from move lists) */
+  removedMoves?: string[];
+  /** Generated learnsets, loaded on first use; species missing here fall back to the base gen */
+  loadLearnsets?: () => Promise<Record<string, CompactLearnset>>;
+  loadTrainers?: () => Promise<TrainerInfo[]>;
+}
+
+/** Learnset as stored in generated JSON: move ids per method */
+export interface CompactLearnset {
+  level: [number, string][];
+  tm: string[];
+  tutor: string[];
+  egg: string[];
+}
+
+export function expandLearnset(c: CompactLearnset): LearnsetEntry[] {
+  const byMove = new Map<string, LearnMethod[]>();
+  const add = (move: string, m: LearnMethod) => byMove.set(move, [...(byMove.get(move) ?? []), m]);
+  for (const [level, move] of c.level) add(move, { kind: 'level', level });
+  for (const move of c.tm) add(move, { kind: 'tm' });
+  for (const move of c.tutor) add(move, { kind: 'tutor' });
+  for (const move of c.egg) add(move, { kind: 'egg' });
+  return [...byMove].map(([move, methods]) => ({ move, methods }));
 }
 
 export function createRomhackRuleset(overlay: RomhackOverlay): Ruleset {
@@ -60,6 +83,8 @@ export function createRomhackRuleset(overlay: RomhackOverlay): Ruleset {
 
   let speciesCache: SpeciesInfo[] | undefined;
   let movesCache: MoveInfo[] | undefined;
+  let learnsetsPromise: Promise<Record<string, CompactLearnset>> | undefined;
+  const removed = new Set(overlay.removedMoves ?? []);
 
   return {
     ...base,
@@ -82,7 +107,10 @@ export function createRomhackRuleset(overlay: RomhackOverlay): Ruleset {
       return s ? speciesOverride(s) : undefined;
     },
     moves() {
-      return (movesCache ??= [...base.moves().map(moveOverride), ...Object.values(overlay.customMoves ?? {})]);
+      return (movesCache ??= [
+        ...base.moves().filter((m) => !removed.has(m.id)).map(moveOverride),
+        ...Object.values(overlay.customMoves ?? {}),
+      ]);
     },
     getMove(name) {
       const custom = overlay.customMoves?.[toID(name)];
@@ -91,7 +119,14 @@ export function createRomhackRuleset(overlay: RomhackOverlay): Ruleset {
       return m ? moveOverride(m) : undefined;
     },
     async learnset(name) {
-      return overlay.learnsets?.[toID(name)] ?? base.learnset(name);
+      const id = base.getSpecies(name)?.id ?? toID(name);
+      if (overlay.learnsets?.[id]) return overlay.learnsets[id];
+      if (overlay.loadLearnsets) {
+        const all = await (learnsetsPromise ??= overlay.loadLearnsets());
+        if (all[id]) return expandLearnset(all[id]);
+      }
+      return base.learnset(name);
     },
+    loadTrainers: overlay.loadTrainers,
   };
 }

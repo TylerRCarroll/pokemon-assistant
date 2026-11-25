@@ -1,0 +1,646 @@
+[
+ {
+  "num": 1,
+  "name": "Focus Punch",
+  "move": "focuspunch",
+  "type": "Fighting",
+  "location": "Oreburgh Gate (Item on ground)"
+ },
+ {
+  "num": 2,
+  "name": "Dragon Claw",
+  "move": "dragonclaw",
+  "type": "Dragon",
+  "location": "Mt. Coronet (Item on ground)"
+ },
+ {
+  "num": 3,
+  "name": "Water Pulse",
+  "move": "waterpulse",
+  "type": "Water",
+  "location": "Route 218 (Item on ground)"
+ },
+ {
+  "num": 4,
+  "name": "Calm Mind",
+  "move": "calmmind",
+  "type": "Psychic",
+  "location": "Solaceon Ruins (Item on ground)"
+ },
+ {
+  "num": 5,
+  "name": "Roar",
+  "move": "roar",
+  "type": "Normal",
+  "location": "Route 213 (Item on ground)"
+ },
+ {
+  "num": 6,
+  "name": "Toxic",
+  "move": "toxic",
+  "type": "Poison",
+  "location": "Route 212 (South) (Item on ground)"
+ },
+ {
+  "num": 7,
+  "name": "Hail",
+  "move": "hail",
+  "type": "Ice",
+  "location": "Route 217 (Item on ground)"
+ },
+ {
+  "num": 8,
+  "name": "Bulk Up",
+  "move": "bulkup",
+  "type": "Fighting",
+  "location": "Route 205 (South) (Item on ground)"
+ },
+ {
+  "num": 9,
+  "name": "Bullet Seed",
+  "move": "bulletseed",
+  "type": "Grass",
+  "location": "Route 204 (North) (Item on ground)"
+ },
+ {
+  "num": 10,
+  "name": "Hidden Power",
+  "move": "hiddenpower",
+  "type": "Normal",
+  "location": "Jubilife City (Trainer School) (Gift from NPC)"
+ },
+ {
+  "num": 11,
+  "name": "Sunny Day",
+  "move": "sunnyday",
+  "type": "Fire",
+  "location": "Route 212 (North) (Item on ground)"
+ },
+ {
+  "num": 12,
+  "name": "Taunt",
+  "move": "taunt",
+  "type": "Dark",
+  "location": "Route 211 (West) (Item on ground)"
+ },
+ {
+  "num": 13,
+  "name": "Ice Beam",
+  "move": "icebeam",
+  "type": "Ice",
+  "location": "Route 216 (Gift from NPC)"
+ },
+ {
+  "num": 14,
+  "name": "Blizzard",
+  "move": "blizzard",
+  "type": "Ice",
+  "location": "Lake Acuity (Item on ground)"
+ },
+ {
+  "num": 15,
+  "name": "Hyper Beam",
+  "move": "hyperbeam",
+  "type": "Normal",
+  "location": "Sunyshore City (Gift from NPC)"
+ },
+ {
+  "num": 16,
+  "name": "Light Screen",
+  "move": "lightscreen",
+  "type": "Psychic",
+  "location": "Eterna Galactic Building (Item on ground)"
+ },
+ {
+  "num": 17,
+  "name": "Protect",
+  "move": "protect",
+  "type": "Normal",
+  "location": "Great Marsh (Gift from NPC)"
+ },
+ {
+  "num": 18,
+  "name": "Rain Dance",
+  "move": "raindance",
+  "type": "Water",
+  "location": "Route 223 (Item on ground)"
+ },
+ {
+  "num": 19,
+  "name": "Giga Drain",
+  "move": "gigadrain",
+  "type": "Grass",
+  "location": "Route 209 (Item on ground)"
+ },
+ {
+  "num": 20,
+  "name": "Safeguard",
+  "move": "safeguard",
+  "type": "Normal",
+  "location": "Route 212 (North) (Item on ground)"
+ },
+ {
+  "num": 21,
+  "name": "Frustration",
+  "move": "frustration",
+  "type": "Normal",
+  "location": "Galactic HQ (Item on ground)"
+ },
+ {
+  "num": 22,
+  "name": "Solar Beam",
+  "move": "solarbeam",
+  "type": "Grass",
+  "location": "Route 210 (Item on ground)"
+ },
+ {
+  "num": 23,
+  "name": "Iron Tail",
+  "move": "irontail",
+  "type": "Steel",
+  "location": "Iron Island (Item on ground)"
+ },
+ {
+  "num": 24,
+  "name": "Thunderbolt",
+  "move": "thunderbolt",
+  "type": "Electric",
+  "location": "Valley Windworks (Item on ground)"
+ },
+ {
+  "num": 25,
+  "name": "Thunder",
+  "move": "thunder",
+  "type": "Electric",
+  "location": "Lake Valor (Item on ground)"
+ },
+ {
+  "num": 26,
+  "name": "Earthquake",
+  "move": "earthquake",
+  "type": "Ground",
+  "location": "Veilstone City Dept. Store (Gift from Bertha)"
+ },
+ {
+  "num": 27,
+  "name": "Return",
+  "move": "return",
+  "type": "Normal",
+  "location": "Eterna Forest (Gift from Cheryl)"
+ },
+ {
+  "num": 28,
+  "name": "Dig",
+  "move": "dig",
+  "type": "Ground",
+  "location": "Eterna City (Gift from NPC)"
+ },
+ {
+  "num": 29,
+  "name": "Psychic",
+  "move": "psychic",
+  "type": "Psychic",
+  "location": "Solaceon Town (Gift from Lucian)"
+ },
+ {
+  "num": 30,
+  "name": "Shadow Ball",
+  "move": "shadowball",
+  "type": "Ghost",
+  "location": "Hearthome City (Gift from Fantina)"
+ },
+ {
+  "num": 31,
+  "name": "Brick Break",
+  "move": "brickbreak",
+  "type": "Fighting",
+  "location": "Oreburgh Gate (Item on ground)"
+ },
+ {
+  "num": 32,
+  "name": "Double Team",
+  "move": "doubleteam",
+  "type": "Normal",
+  "location": "Wayward Cave (Item on ground)"
+ },
+ {
+  "num": 33,
+  "name": "Reflect",
+  "move": "reflect",
+  "type": "Psychic",
+  "location": "Eterna Galactic Building (Item on ground)"
+ },
+ {
+  "num": 34,
+  "name": "Shock Wave",
+  "move": "shockwave",
+  "type": "Electric",
+  "location": "Valley Windworks (Item on ground)"
+ },
+ {
+  "num": 35,
+  "name": "Flamethrower",
+  "move": "flamethrower",
+  "type": "Fire",
+  "location": "Fuego Ironworks (Item on ground)"
+ },
+ {
+  "num": 36,
+  "name": "Sludge Bomb",
+  "move": "sludgebomb",
+  "type": "Poison",
+  "location": "Great Marsh (Item on ground)"
+ },
+ {
+  "num": 37,
+  "name": "Sandstorm",
+  "move": "sandstorm",
+  "type": "Rock",
+  "location": "Route 228 (Item on ground)"
+ },
+ {
+  "num": 38,
+  "name": "Fire Blast",
+  "move": "fireblast",
+  "type": "Fire",
+  "location": "Lake Verity (Item on ground)"
+ },
+ {
+  "num": 39,
+  "name": "Rock Tomb",
+  "move": "rocktomb",
+  "type": "Rock",
+  "location": "Ravaged Path (Item on ground)"
+ },
+ {
+  "num": 40,
+  "name": "Aerial Ace",
+  "move": "aerialace",
+  "type": "Flying",
+  "location": "Floaroma Town (Gift from NPC)"
+ },
+ {
+  "num": 41,
+  "name": "Torment",
+  "move": "torment",
+  "type": "Dark",
+  "location": "Route 213 (Item on ground)"
+ },
+ {
+  "num": 42,
+  "name": "Facade",
+  "move": "facade",
+  "type": "Normal",
+  "location": "Jubilife City (Gift from NPC)"
+ },
+ {
+  "num": 43,
+  "name": "Secret Power",
+  "move": "secretpower",
+  "type": "Normal",
+  "location": "Amity Square (Item on ground)"
+ },
+ {
+  "num": 44,
+  "name": "Rest",
+  "move": "rest",
+  "type": "Psychic",
+  "location": "Hearthome City (Gift from NPC)"
+ },
+ {
+  "num": 45,
+  "name": "Attract",
+  "move": "attract",
+  "type": "Normal",
+  "location": "Amity Square (Item on ground)"
+ },
+ {
+  "num": 46,
+  "name": "Thief",
+  "move": "thief",
+  "type": "Dark",
+  "location": "Eterna City (Item on ground)"
+ },
+ {
+  "num": 47,
+  "name": "Steel Wing",
+  "move": "steelwing",
+  "type": "Steel",
+  "location": "Route 209 (Item on ground)"
+ },
+ {
+  "num": 48,
+  "name": "Skill Swap",
+  "move": "skillswap",
+  "type": "Psychic",
+  "location": "Canalave City (Gift from NPC)"
+ },
+ {
+  "num": 49,
+  "name": "Snatch",
+  "move": "snatch",
+  "type": "Dark",
+  "location": "Galactic Warehouse (Item on ground)"
+ },
+ {
+  "num": 50,
+  "name": "Overheat",
+  "move": "overheat",
+  "type": "Fire",
+  "location": "Sunyshore City (Gift from Flint)"
+ },
+ {
+  "num": 51,
+  "name": "Roost",
+  "move": "roost",
+  "type": "Flying",
+  "location": "Route 210 (South) (Gift from NPC)"
+ },
+ {
+  "num": 52,
+  "name": "Focus Blast",
+  "move": "focusblast",
+  "type": "Fighting",
+  "location": "Route 217 (Gift from Maylene)"
+ },
+ {
+  "num": 53,
+  "name": "Energy Ball",
+  "move": "energyball",
+  "type": "Grass",
+  "location": "Valor Lakefront (Item on ground)"
+ },
+ {
+  "num": 54,
+  "name": "False Swipe",
+  "move": "falseswipe",
+  "type": "Normal",
+  "location": "Eterna City (Gift from NPC)"
+ },
+ {
+  "num": 55,
+  "name": "Scald",
+  "move": "scald",
+  "type": "Water",
+  "location": "Hearthome City (Gift from NPC)"
+ },
+ {
+  "num": 56,
+  "name": "Fling",
+  "move": "fling",
+  "type": "Dark",
+  "location": "Route 222 (Item on ground)"
+ },
+ {
+  "num": 57,
+  "name": "Wild Charge",
+  "move": "wildcharge",
+  "type": "Electric",
+  "location": "Sunyshore Gym (Gift from Volkner)"
+ },
+ {
+  "num": 58,
+  "name": "Endure",
+  "move": "endure",
+  "type": "Normal",
+  "location": "Route 203 (Item on ground)"
+ },
+ {
+  "num": 59,
+  "name": "Dragon Pulse",
+  "move": "dragonpulse",
+  "type": "Dragon",
+  "location": "Maniac Tunnel (Item on ground)"
+ },
+ {
+  "num": 60,
+  "name": "Drain Punch",
+  "move": "drainpunch",
+  "type": "Fighting",
+  "location": "Veilstone Gym (Gift from Maylene)"
+ },
+ {
+  "num": 61,
+  "name": "Will-O-Wisp",
+  "move": "willowisp",
+  "type": "Fire",
+  "location": "Lost Tower (Item on ground)"
+ },
+ {
+  "num": 62,
+  "name": "Bug Buzz",
+  "move": "bugbuzz",
+  "type": "Bug",
+  "location": "Route 212 (South) (Item on ground)"
+ },
+ {
+  "num": 63,
+  "name": "Embargo",
+  "move": "embargo",
+  "type": "Dark",
+  "location": "Veilstone City (Gift from NPC)"
+ },
+ {
+  "num": 64,
+  "name": "Explosion",
+  "move": "explosion",
+  "type": "Normal",
+  "location": "Game Corner (Gift from NPC)"
+ },
+ {
+  "num": 65,
+  "name": "Shadow Claw",
+  "move": "shadowclaw",
+  "type": "Ghost",
+  "location": "Old Chateau (Item on ground)"
+ },
+ {
+  "num": 66,
+  "name": "Payback",
+  "move": "payback",
+  "type": "Dark",
+  "location": "Route 215 (Item on ground)"
+ },
+ {
+  "num": 67,
+  "name": "Recycle",
+  "move": "recycle",
+  "type": "Normal",
+  "location": "Eterna City (Gift from NPC)"
+ },
+ {
+  "num": 68,
+  "name": "Giga Impact",
+  "move": "gigaimpact",
+  "type": "Normal",
+  "location": "Victory Road (Item on ground)"
+ },
+ {
+  "num": 69,
+  "name": "Rock Polish",
+  "move": "rockpolish",
+  "type": "Rock",
+  "location": "Mt. Coronet (Item on ground)"
+ },
+ {
+  "num": 70,
+  "name": "Flash",
+  "move": "flash",
+  "type": "Normal",
+  "location": "Oreburgh Gate (Item on ground)"
+ },
+ {
+  "num": 71,
+  "name": "Stone Edge",
+  "move": "stoneedge",
+  "type": "Rock",
+  "location": "Ravaged Path (Item on ground)"
+ },
+ {
+  "num": 72,
+  "name": "Avalanche",
+  "move": "avalanche",
+  "type": "Ice",
+  "location": "Snowpoint City (Gift from Candice)"
+ },
+ {
+  "num": 73,
+  "name": "Thunder Wave",
+  "move": "thunderwave",
+  "type": "Electric",
+  "location": "Eterna Galactic Bldg (Item on ground)"
+ },
+ {
+  "num": 74,
+  "name": "Gyro Ball",
+  "move": "gyroball",
+  "type": "Steel",
+  "location": "Route 206 (Item on ground)"
+ },
+ {
+  "num": 75,
+  "name": "Swords Dance",
+  "move": "swordsdance",
+  "type": "Normal",
+  "location": "Route 208 (Item on ground)"
+ },
+ {
+  "num": 76,
+  "name": "Stealth Rock",
+  "move": "stealthrock",
+  "type": "Rock",
+  "location": "Oreburgh Gym (Gift from Roark)"
+ },
+ {
+  "num": 77,
+  "name": "Psych Up",
+  "move": "psychup",
+  "type": "Normal",
+  "location": "Route 211 (Gift from NPC)"
+ },
+ {
+  "num": 78,
+  "name": "Captivate",
+  "move": "captivate",
+  "type": "Normal",
+  "location": "Route 204 North (Gift from NPC)"
+ },
+ {
+  "num": 79,
+  "name": "Dark Pulse",
+  "move": "darkpulse",
+  "type": "Dark",
+  "location": "Veilstone City (Item on ground)"
+ },
+ {
+  "num": 80,
+  "name": "Rock Slide",
+  "move": "rockslide",
+  "type": "Rock",
+  "location": "Eterna City (Gift from NPC)"
+ },
+ {
+  "num": 81,
+  "name": "X-Scissor",
+  "move": "xscissor",
+  "type": "Bug",
+  "location": "Route 208 (Gift from Aaron)"
+ },
+ {
+  "num": 82,
+  "name": "Sleep Talk",
+  "move": "sleeptalk",
+  "type": "Normal",
+  "location": "Eterna Forest Outside (Item on ground)"
+ },
+ {
+  "num": 83,
+  "name": "Hyper Voice",
+  "move": "hypervoice",
+  "type": "Normal",
+  "location": "Route 215 (Item on ground)"
+ },
+ {
+  "num": 84,
+  "name": "Poison Jab",
+  "move": "poisonjab",
+  "type": "Poison",
+  "location": "Route 212 (South) (Item on ground)"
+ },
+ {
+  "num": 85,
+  "name": "Dazzling Gleam",
+  "move": "dazzlinggleam",
+  "type": "Fairy",
+  "location": "Wayward Cave (Gift from Mira)"
+ },
+ {
+  "num": 86,
+  "name": "Grass Knot",
+  "move": "grassknot",
+  "type": "Grass",
+  "location": "Eterna Gym (Gift from Gardenia)"
+ },
+ {
+  "num": 87,
+  "name": "Swagger",
+  "move": "swagger",
+  "type": "Normal",
+  "location": "Pokémon Mansion (Gift from NPC)"
+ },
+ {
+  "num": 88,
+  "name": "Hurricane",
+  "move": "hurricane",
+  "type": "Flying",
+  "location": "Route 210 (North) (Item on ground)"
+ },
+ {
+  "num": 89,
+  "name": "U-turn",
+  "move": "uturn",
+  "type": "Bug",
+  "location": "Canalave City (Item on ground)"
+ },
+ {
+  "num": 90,
+  "name": "Substitute",
+  "move": "substitute",
+  "type": "Normal",
+  "location": "Old Chateau (Item on ground)"
+ },
+ {
+  "num": 91,
+  "name": "Flash Cannon",
+  "move": "flashcannon",
+  "type": "Steel",
+  "location": "Canalave Gym (Gift from Byron)"
+ },
+ {
+  "num": 92,
+  "name": "Trick Room",
+  "move": "trickroom",
+  "type": "Psychic",
+  "location": "Route 213 (Gift from NPC)"
+ }
+]

@@ -34,6 +34,7 @@ export function CalcPage() {
   const formats = formatsFor(rs.id);
   const format = formats.find((f) => f.id === params.get('format')) ?? formats[0];
   const meta = usePromise(() => (format ? loadFormat(format.id) : Promise.resolve(undefined)), [format?.id]);
+  const trainers = usePromise(() => (rs.loadTrainers ? rs.loadTrainers() : Promise.resolve(undefined)), [rs]);
 
   // the ruleset's active team (same rule the Team Builder uses)
   const teams = useTeamsStore((s) => s.teams);
@@ -87,6 +88,9 @@ export function CalcPage() {
           format={format}
           onFormat={(id) => setParam('format', id)}
           data={meta.data}
+          trainers={trainers.data}
+          trainerId={params.get('trainer') ? Number(params.get('trainer')) : undefined}
+          onTrainer={(id) => setParam('trainer', String(id))}
           onOpen={openMatchup}
         />
       ) : (

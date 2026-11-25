@@ -1,0 +1,634 @@
+{
+ "overrides": {
+  "assurance": {
+   "basePower": 60
+  },
+  "beatup": {
+   "basePower": 0
+  },
+  "bind": {
+   "accuracy": 85
+  },
+  "blazekick": {
+   "basePower": 90,
+   "accuracy": 100
+  },
+  "bonerush": {
+   "accuracy": 90
+  },
+  "bulletseed": {
+   "basePower": 25
+  },
+  "clamp": {
+   "accuracy": 85,
+   "pp": 15
+  },
+  "covet": {
+   "basePower": 60,
+   "pp": 25
+  },
+  "crabhammer": {
+   "basePower": 100,
+   "accuracy": 90
+  },
+  "crosspoison": {
+   "basePower": 90,
+   "pp": 15
+  },
+  "cut": {
+   "type": "Grass",
+   "basePower": 60,
+   "accuracy": 100,
+   "pp": 25
+  },
+  "drainpunch": {
+   "basePower": 75,
+   "pp": 10
+  },
+  "feint": {
+   "basePower": 30
+  },
+  "flamewheel": {
+   "basePower": 75,
+   "pp": 15
+  },
+  "fly": {
+   "basePower": 100,
+   "accuracy": 100
+  },
+  "furycutter": {
+   "basePower": 40
+  },
+  "gunkshot": {
+   "accuracy": 80
+  },
+  "highjumpkick": {
+   "basePower": 130,
+   "pp": 10
+  },
+  "iciclespear": {
+   "basePower": 25
+  },
+  "jumpkick": {
+   "basePower": 100,
+   "pp": 10
+  },
+  "knockoff": {
+   "basePower": 65
+  },
+  "lastresort": {
+   "basePower": 140
+  },
+  "leechlife": {
+   "basePower": 80,
+   "pp": 10
+  },
+  "lick": {
+   "basePower": 30
+  },
+  "meteormash": {
+   "basePower": 90,
+   "accuracy": 90
+  },
+  "needlearm": {
+   "basePower": 90
+  },
+  "outrage": {
+   "pp": 10
+  },
+  "pinmissile": {
+   "basePower": 25,
+   "accuracy": 95
+  },
+  "poisonfang": {
+   "basePower": 65,
+   "accuracy": 95
+  },
+  "poisontail": {
+   "basePower": 90,
+   "pp": 15
+  },
+  "rockblast": {
+   "accuracy": 90
+  },
+  "rockclimb": {
+   "type": "Rock",
+   "basePower": 80,
+   "accuracy": 95,
+   "pp": 10
+  },
+  "rocksmash": {
+   "basePower": 60
+  },
+  "rocktomb": {
+   "basePower": 60,
+   "pp": 15
+  },
+  "sandtomb": {
+   "basePower": 35,
+   "accuracy": 85
+  },
+  "shadowclaw": {
+   "basePower": 80
+  },
+  "shadowpunch": {
+   "basePower": 80,
+   "pp": 15
+  },
+  "skullbash": {
+   "basePower": 130,
+   "pp": 10
+  },
+  "smellingsalts": {
+   "basePower": 70
+  },
+  "strength": {
+   "basePower": 100
+  },
+  "submission": {
+   "pp": 20
+  },
+  "suckerpunch": {
+   "basePower": 70
+  },
+  "tackle": {
+   "basePower": 40,
+   "accuracy": 100
+  },
+  "thief": {
+   "basePower": 60,
+   "pp": 25
+  },
+  "thrash": {
+   "basePower": 120,
+   "pp": 10
+  },
+  "vinewhip": {
+   "basePower": 45,
+   "pp": 25
+  },
+  "wakeupslap": {
+   "basePower": 70
+  },
+  "wrap": {
+   "accuracy": 90
+  },
+  "aircutter": {
+   "basePower": 60
+  },
+  "airslash": {
+   "pp": 15
+  },
+  "aurasphere": {
+   "basePower": 80
+  },
+  "aurorabeam": {
+   "basePower": 75,
+   "pp": 15
+  },
+  "blizzard": {
+   "basePower": 110
+  },
+  "bubble": {
+   "basePower": 40
+  },
+  "bubblebeam": {
+   "basePower": 75,
+   "pp": 15
+  },
+  "chatter": {
+   "basePower": 90,
+   "pp": 15
+  },
+  "doomdesire": {
+   "basePower": 140,
+   "accuracy": 100
+  },
+  "dracometeor": {
+   "basePower": 130
+  },
+  "dragonpulse": {
+   "basePower": 85
+  },
+  "energyball": {
+   "basePower": 90
+  },
+  "extrasensory": {
+   "pp": 20
+  },
+  "fireblast": {
+   "basePower": 110
+  },
+  "firespin": {
+   "basePower": 35,
+   "accuracy": 85
+  },
+  "flamethrower": {
+   "basePower": 90
+  },
+  "futuresight": {
+   "basePower": 120,
+   "accuracy": 100,
+   "pp": 10
+  },
+  "gigadrain": {
+   "basePower": 75
+  },
+  "heatwave": {
+   "basePower": 95
+  },
+  "hydropump": {
+   "basePower": 110
+  },
+  "icebeam": {
+   "basePower": 90
+  },
+  "leafstorm": {
+   "basePower": 130
+  },
+  "magmastorm": {
+   "basePower": 100,
+   "accuracy": 75
+  },
+  "muddywater": {
+   "basePower": 90
+  },
+  "overheat": {
+   "basePower": 130
+  },
+  "petaldance": {
+   "basePower": 120,
+   "pp": 10
+  },
+  "powergem": {
+   "basePower": 80
+  },
+  "psywave": {
+   "accuracy": 100
+  },
+  "sludge": {
+   "basePower": 75,
+   "pp": 15
+  },
+  "smog": {
+   "basePower": 30
+  },
+  "snore": {
+   "basePower": 50
+  },
+  "surf": {
+   "basePower": 90
+  },
+  "thunder": {
+   "basePower": 110
+  },
+  "thunderbolt": {
+   "basePower": 90
+  },
+  "uproar": {
+   "basePower": 90
+  },
+  "whirlpool": {
+   "basePower": 35,
+   "accuracy": 85
+  },
+  "acidarmor": {
+   "pp": 20
+  },
+  "barrier": {
+   "pp": 20
+  },
+  "charm": {
+   "type": "Fairy"
+  },
+  "cottonspore": {
+   "accuracy": 100
+  },
+  "curse": {
+   "type": "Ghost"
+  },
+  "darkvoid": {
+   "accuracy": 50
+  },
+  "disable": {
+   "accuracy": 100
+  },
+  "glare": {
+   "accuracy": 100
+  },
+  "growth": {
+   "pp": 20
+  },
+  "lunardance": {
+   "category": "Other"
+  },
+  "minimize": {
+   "pp": 10
+  },
+  "moonlight": {
+   "type": "Fairy"
+  },
+  "poisongas": {
+   "accuracy": 90
+  },
+  "psychoshift": {
+   "accuracy": 100
+  },
+  "roar": {
+   "accuracy": true
+  },
+  "scaryface": {
+   "accuracy": 100
+  },
+  "swagger": {
+   "accuracy": 85
+  },
+  "swordsdance": {
+   "pp": 20
+  },
+  "tailwind": {
+   "pp": 15
+  },
+  "thunderwave": {
+   "accuracy": 90
+  },
+  "toxic": {
+   "accuracy": 90
+  },
+  "willowisp": {
+   "accuracy": 85
+  }
+ },
+ "customMoves": {
+  "drainingkiss": {
+   "id": "drainingkiss",
+   "name": "Draining Kiss",
+   "type": "Fairy",
+   "category": "Special",
+   "basePower": 75,
+   "accuracy": 100,
+   "pp": 10,
+   "priority": 0,
+   "shortDesc": "User recovers 75% of the damage dealt.",
+   "desc": "The user recovers 3/4 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3× normal, rounded half down.",
+   "flags": {
+    "contact": 1,
+    "protect": 1,
+    "mirror": 1,
+    "heal": 1,
+    "metronome": 1
+   },
+   "drain": [
+    3,
+    4
+   ],
+   "assumed": [
+    "priority",
+    "contact/other flags",
+    "secondary effects"
+   ]
+  },
+  "iciclecrash": {
+   "id": "iciclecrash",
+   "name": "Icicle Crash",
+   "type": "Ice",
+   "category": "Physical",
+   "basePower": 85,
+   "accuracy": 90,
+   "pp": 10,
+   "priority": 0,
+   "shortDesc": "30% chance to make the target flinch.",
+   "desc": "Has a 30% chance to make the target flinch.",
+   "flags": {
+    "protect": 1,
+    "mirror": 1,
+    "metronome": 1
+   },
+   "assumed": [
+    "priority",
+    "contact/other flags",
+    "secondary effects"
+   ]
+  },
+  "drillrun": {
+   "id": "drillrun",
+   "name": "Drill Run",
+   "type": "Ground",
+   "category": "Physical",
+   "basePower": 80,
+   "accuracy": 95,
+   "pp": 10,
+   "priority": 0,
+   "shortDesc": "High critical hit ratio.",
+   "desc": "Has a higher chance for a critical hit.",
+   "flags": {
+    "contact": 1,
+    "protect": 1,
+    "mirror": 1,
+    "metronome": 1
+   },
+   "assumed": [
+    "priority",
+    "contact/other flags",
+    "secondary effects"
+   ]
+  },
+  "bulldoze": {
+   "id": "bulldoze",
+   "name": "Bulldoze",
+   "type": "Ground",
+   "category": "Physical",
+   "basePower": 60,
+   "accuracy": 100,
+   "pp": 20,
+   "priority": 0,
+   "shortDesc": "100% chance lower adjacent Pkmn Speed by 1.",
+   "desc": "Has a 100% chance to lower the target's Speed by 1 stage.",
+   "flags": {
+    "protect": 1,
+    "mirror": 1,
+    "nonsky": 1,
+    "metronome": 1
+   },
+   "assumed": [
+    "priority",
+    "contact/other flags",
+    "secondary effects"
+   ]
+  },
+  "playrough": {
+   "id": "playrough",
+   "name": "Play Rough",
+   "type": "Fairy",
+   "category": "Physical",
+   "basePower": 90,
+   "accuracy": 90,
+   "pp": 10,
+   "priority": 0,
+   "shortDesc": "10% chance to lower the target's Attack by 1.",
+   "desc": "Has a 10% chance to lower the target's Attack by 1 stage.",
+   "flags": {
+    "contact": 1,
+    "protect": 1,
+    "mirror": 1,
+    "metronome": 1
+   },
+   "assumed": [
+    "priority",
+    "contact/other flags",
+    "secondary effects"
+   ]
+  },
+  "wildcharge": {
+   "id": "wildcharge",
+   "name": "Wild Charge",
+   "type": "Electric",
+   "category": "Physical",
+   "basePower": 100,
+   "accuracy": 100,
+   "pp": 15,
+   "priority": 0,
+   "shortDesc": "Has 1/4 recoil.",
+   "desc": "If the target lost HP, the user takes recoil damage equal to 1/4 the HP lost by the target, rounded half up, but not less than 1 HP.",
+   "flags": {
+    "contact": 1,
+    "protect": 1,
+    "mirror": 1,
+    "metronome": 1
+   },
+   "assumed": [
+    "priority",
+    "contact/other flags",
+    "secondary effects"
+   ]
+  },
+  "scald": {
+   "id": "scald",
+   "name": "Scald",
+   "type": "Water",
+   "category": "Special",
+   "basePower": 80,
+   "accuracy": 100,
+   "pp": 15,
+   "priority": 0,
+   "shortDesc": "30% chance to burn the target. Thaws target.",
+   "desc": "Has a 30% chance to burn the target. The target thaws out if it is frozen.",
+   "flags": {
+    "protect": 1,
+    "mirror": 1,
+    "defrost": 1,
+    "metronome": 1
+   },
+   "assumed": [
+    "priority",
+    "contact/other flags",
+    "secondary effects"
+   ]
+  },
+  "dazzlinggleam": {
+   "id": "dazzlinggleam",
+   "name": "Dazzling Gleam",
+   "type": "Fairy",
+   "category": "Special",
+   "basePower": 80,
+   "accuracy": 100,
+   "pp": 10,
+   "priority": 0,
+   "shortDesc": "No additional effect. Hits adjacent foes.",
+   "desc": "No additional effect.",
+   "flags": {
+    "protect": 1,
+    "mirror": 1,
+    "metronome": 1
+   },
+   "assumed": [
+    "priority",
+    "contact/other flags",
+    "secondary effects"
+   ]
+  },
+  "disarmingvoice": {
+   "id": "disarmingvoice",
+   "name": "Disarming Voice",
+   "type": "Fairy",
+   "category": "Special",
+   "basePower": 50,
+   "accuracy": true,
+   "pp": 15,
+   "priority": 0,
+   "shortDesc": "This move does not check accuracy. Hits foes.",
+   "desc": "This move does not check accuracy.",
+   "flags": {
+    "protect": 1,
+    "mirror": 1,
+    "sound": 1,
+    "bypasssub": 1,
+    "metronome": 1
+   },
+   "assumed": [
+    "priority",
+    "contact/other flags",
+    "secondary effects"
+   ]
+  },
+  "hurricane": {
+   "id": "hurricane",
+   "name": "Hurricane",
+   "type": "Flying",
+   "category": "Special",
+   "basePower": 110,
+   "accuracy": 70,
+   "pp": 10,
+   "priority": 0,
+   "shortDesc": "30% chance to confuse target. Can't miss in rain.",
+   "desc": "Has a 30% chance to confuse the target. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If the weather is Heavy Rain or Rain, this move does not check accuracy. If the weather is Intense Sun or Sun, this move's accuracy is 50%. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 70%.",
+   "flags": {
+    "protect": 1,
+    "mirror": 1,
+    "distance": 1,
+    "metronome": 1,
+    "wind": 1
+   },
+   "assumed": [
+    "priority",
+    "contact/other flags",
+    "secondary effects"
+   ]
+  },
+  "moonblast": {
+   "id": "moonblast",
+   "name": "Moonblast",
+   "type": "Fairy",
+   "category": "Special",
+   "basePower": 95,
+   "accuracy": 100,
+   "pp": 15,
+   "priority": 0,
+   "shortDesc": "30% chance to lower the target's Sp. Atk by 1.",
+   "desc": "Has a 30% chance to lower the target's Special Attack by 1 stage.",
+   "flags": {
+    "protect": 1,
+    "mirror": 1,
+    "metronome": 1
+   },
+   "assumed": [
+    "priority",
+    "contact/other flags",
+    "secondary effects"
+   ]
+  }
+ },
+ "removedMoves": [
+  "barrage",
+  "brine",
+  "constrict",
+  "horndrill",
+  "lunardance",
+  "lusterpurge",
+  "mistball",
+  "sandtomb",
+  "submission",
+  "twister",
+  "volttackle"
+ ]
+}

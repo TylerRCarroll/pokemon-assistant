@@ -15,6 +15,7 @@ import { useTeamsStore } from '../../state/teams';
 import { formatEvs, pct } from '../../lib/format';
 import { SetCard } from './SetCard';
 import { ShareList } from './ShareList';
+import { TrainerBrowser } from './TrainerBrowser';
 
 export function PlannerPage() {
   const rs = useRuleset();
@@ -25,6 +26,7 @@ export function PlannerPage() {
   const format = formats.find((f) => f.id === params.get('format')) ?? formats[0];
   const data = usePromise(() => (format ? loadFormat(format.id) : Promise.resolve(undefined)), [format?.id]);
   const species = mon ? rs.getSpecies(mon) : undefined;
+  const trainers = usePromise(() => (rs.loadTrainers ? rs.loadTrainers() : Promise.resolve(undefined)), [rs]);
 
   const monOptions = useMemo(
     () =>
@@ -36,6 +38,15 @@ export function PlannerPage() {
   );
 
   const goTo = (id: string) => navigate(`/planner/${id}${format ? `?format=${format.id}` : ''}`);
+
+  if (!formats.length && rs.loadTrainers) {
+    return (
+      <div className="space-y-4">
+        <h1 className="text-2xl font-bold">Trainer Battles</h1>
+        {trainers.data ? <TrainerBrowser rs={rs} trainers={trainers.data} /> : <p className="text-slate-500">Loading trainer teams…</p>}
+      </div>
+    );
+  }
 
   if (!formats.length) {
     return (

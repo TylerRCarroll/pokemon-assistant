@@ -73,6 +73,33 @@ export interface TMInfo {
   location: string;
 }
 
+/** One Pokémon on an in-game trainer's team (romhack docs) */
+export interface TrainerMon {
+  species: string;
+  level: number;
+  item?: string;
+  ability?: string;
+  nature?: string;
+  /** Trainer Pokémon use one IV value for every stat */
+  ivs: number;
+  moves: string[];
+}
+
+export interface TrainerInfo {
+  /** The game's internal trainer id */
+  id: number;
+  name: string;
+  location: string;
+  /** Progress section, e.g. "Roark split" */
+  split: string;
+  levelCap?: number;
+  /** Conditions like "(IF YOU CHOSE PIPLUP)" */
+  notes: string[];
+  /** Gym leaders, rivals, villain bosses, Elite Four, Champion */
+  boss: boolean;
+  team: TrainerMon[];
+}
+
 export type LearnMethod =
   | { kind: 'level'; level: number }
   | { kind: 'tm' }
@@ -125,4 +152,6 @@ export interface Ruleset {
   calcStat(stat: StatID, base: number, iv: number, ev: number, level: number, nature?: string): number;
   /** The game's TM list with locations, when known (romhack docs) */
   tms?: TMInfo[];
+  /** In-game trainer teams, when known (romhack docs); loaded on demand */
+  loadTrainers?: () => Promise<TrainerInfo[]>;
 }
