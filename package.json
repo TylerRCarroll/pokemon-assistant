@@ -11,7 +11,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "import:unbound": "tsx scripts/romhacks/unbound/import.ts",
-    "fetch:smogon": "tsx scripts/fetch-smogon.ts"
+    "fetch:smogon": "tsx scripts/fetch-smogon.ts",
+    "import:rp": "tsx scripts/romhacks/renegade-platinum/import.ts"
   },
   "dependencies": {
     "@pkmn/data": "^0.11.0",

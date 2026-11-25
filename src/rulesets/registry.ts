@@ -2,7 +2,8 @@ import type { GenerationNum } from '@pkmn/data';
 import { createOfficialRuleset } from './official';
 import { createRomhackRuleset, type RomhackOverlay } from './romhack';
 import type { Ruleset } from './types';
-import renegadePlatinum from '../../data-src/romhacks/renegade-platinum/overlay.json';
+import rpBase from '../../data-src/romhacks/renegade-platinum/overlay.json';
+import rpSpecies from '../../data-src/romhacks/renegade-platinum/generated/species.json';
 import unboundBase from '../../data-src/romhacks/unbound/overlay.json';
 import unboundSpecies from '../../data-src/romhacks/unbound/generated/species.json';
 import unboundTMs from '../../data-src/romhacks/unbound/generated/tms.json';
@@ -36,7 +37,14 @@ const unbound: RomhackOverlay = {
   tms: unboundTMs,
 };
 
-for (const overlay of [renegadePlatinum as RomhackOverlay, unbound]) {
+// Complete patch data from the community doc (npm run import:rp); hand edits win
+const rpOverlay = rpBase as unknown as RomhackOverlay;
+const renegadePlatinum: RomhackOverlay = {
+  ...rpOverlay,
+  species: { ...rpSpecies, ...rpOverlay.species },
+};
+
+for (const overlay of [renegadePlatinum, unbound]) {
   metas.push({ id: overlay.id, name: overlay.name, group: 'Romhacks' });
   factories.set(overlay.id, () => createRomhackRuleset(overlay));
 }

@@ -73,6 +73,18 @@ describe('romhack overlays', () => {
     expect(getRuleset('gen4').getSpecies('Clefable')!.types).toEqual(['Normal']);
   });
 
+  it('Renegade Platinum uses the Complete patch data from the docs', () => {
+    const rp = getRuleset('renegade-platinum');
+    expect(rp.getSpecies('Charizard')!.types).toEqual(['Fire', 'Dragon']);
+    expect(rp.getSpecies('Feraligatr')!.types).toEqual(['Water', 'Dark']);
+    expect(rp.getSpecies('Ninetales')!.types).toEqual(['Fire', 'Fairy']);
+    expect(rp.getSpecies('Venusaur')!.baseStats.spa).toBe(110);
+    expect(rp.getSpecies('Venusaur')!.abilities).toEqual(['Thick Fat', 'Overgrow']);
+    expect(rp.getSpecies('Whiscash')!.abilities).toContain('Anticipation');
+    // vanilla Gen 4 is untouched
+    expect(getRuleset('gen4').getSpecies('Charizard')!.types).toEqual(['Fire', 'Flying']);
+  });
+
   it('Unbound uses Gen 8 mechanics with the National Dex pool', () => {
     const ub = getRuleset('unbound');
     expect(ub.gen).toBe(8);

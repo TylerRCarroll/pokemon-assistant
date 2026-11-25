@@ -9,7 +9,8 @@ export async function readWorkbook(file: string) {
 /** Rows of a sheet as plain strings (1-based row numbers preserved) */
 export function sheetRows(ws: ExcelJS.Worksheet): { n: number; cells: string[] }[] {
   const out: { n: number; cells: string[] }[] = [];
-  ws.eachRow((row, n) => out.push({ n, cells: (row.values as unknown[]).slice(1).map(cellText) }));
+  // Array.from (not .map) so sparse rows give '' for empty cells instead of holes
+  ws.eachRow((row, n) => out.push({ n, cells: Array.from((row.values as unknown[]).slice(1), cellText) }));
   return out;
 }
 
