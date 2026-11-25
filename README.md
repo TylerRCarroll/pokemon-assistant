@@ -18,7 +18,7 @@ All game data goes through a **ruleset** (`src/rulesets/`). A ruleset is either 
 | Ruleset | Base | Status |
 |---|---|---|
 | Gen 1–9, Gen 8/9 National Dex | `@pkmn/data` | Complete |
-| Renegade Platinum | Gen 4 + Fairy type backported | Draft: overlay not yet imported from Drayano's docs |
+| Renegade Platinum (Complete patch) | Gen 4 + Gen 6 type chart | Types, stats, abilities, moves, learnsets, TMs, and 760 trainer battles imported from the community docs |
 | Pokémon Unbound | Gen 8 National Dex | Partial: balanced base stats and TM list imported; learnsets/abilities are still Gen 8 defaults |
 
 ### Romhack data
@@ -27,18 +27,24 @@ Raw romhack documentation lives in `Documentation/<hack>/` (gitignored, since th
 
 ```sh
 npm run import:unbound
+npm run import:rp
+npm run fetch:smogon   # Smogon usage stats, sets, and sample teams (refresh monthly)
 ```
 
 Hand-curated overrides in `data-src/romhacks/<hack>/overlay.json` take precedence over generated data.
 
 ## Roadmap
 
-1. ~~Foundation: ruleset layer, type chart, ruleset switcher~~
-2. Dex: Pokémon, moves, abilities, items, learnsets
-3. Team builder with coverage analysis and Showdown import/export
-4. Move planner: popular sets, items, abilities, and sample teams (Smogon usage stats)
-5. Damage calc (`@smogon/calc`) and meta threat checks
-6. Matchup trainer: spaced-repetition quizzes
+All six planned features are in:
+
+1. **Types** – full type chart and per-typing matchups
+2. **Dex** – Pokémon, moves, abilities, items, learnsets, evolutions
+3. **Team Builder** – legal sets, coverage analysis, Showdown import/export
+4. **Planner** – Smogon usage, sets, and sample teams; romhack trainer battles
+5. **Calc** – `@smogon/calc` damage calculator and threat checks (meta or romhack trainers)
+6. **Trainer** – spaced-repetition quizzes on matchups, abilities, moves, counters, and romhack changes
+
+Ideas next: Unbound learnsets and boss teams, Renegade Platinum evolution changes and encounters, a Pokémon Champions ruleset.
 
 ## Credits
 

@@ -7,21 +7,8 @@ import { MoveDetail } from './features/dex/MoveDetail';
 import { PokemonDetail } from './features/dex/PokemonDetail';
 import { PlannerPage } from './features/planner/PlannerPage';
 import { TeamPage } from './features/team/TeamPage';
+import { TrainerPage } from './features/trainer/TrainerPage';
 import { TypesPage } from './features/types/TypesPage';
-import { useRuleset } from './state/ruleset';
-
-function ComingSoon({ title, phase, blurb }: { title: string; phase: number; blurb: string }) {
-  const rs = useRuleset();
-  return (
-    <div className="rounded-lg border border-dashed border-slate-300 p-10 text-center dark:border-slate-700">
-      <h1 className="text-2xl font-bold">{title}</h1>
-      <p className="mt-2 text-slate-500">{blurb}</p>
-      <p className="mt-4 text-xs uppercase tracking-wide text-slate-400">
-        Phase {phase} · will use {rs.name} · {rs.species().length} species loaded
-      </p>
-    </div>
-  );
-}
 
 const router = createBrowserRouter([
   {
@@ -37,7 +24,7 @@ const router = createBrowserRouter([
       { path: 'team', element: <TeamPage /> },
       { path: 'planner/:mon?', element: <PlannerPage /> },
       { path: 'calc', element: <CalcPage /> },
-      { path: 'trainer', element: <ComingSoon title="Matchup Trainer" phase={6} blurb="Spaced-repetition quizzes on types, abilities, and counters." /> },
+      { path: 'trainer', element: <TrainerPage /> },
     ],
   },
 ]);
