@@ -165,6 +165,13 @@ export function createOfficialRuleset(num: GenerationNum, opts: OfficialOptions 
       return i ? toItemInfo(i) : undefined;
     },
 
+    natures() {
+      return [...gen.natures].map((n) => ({ name: n.name, plus: n.plus, minus: n.minus }));
+    },
+    calcStat(stat, base, iv, ev, level, nature) {
+      return gen.stats.calc(stat, base, iv, ev, level, nature ? gen.natures.get(nature) : undefined);
+    },
+
     async learnset(name) {
       const [own, all] = await Promise.all([gen.learnsets.get(name), gen.learnsets.learnable(name)]);
       if (!all) return [];

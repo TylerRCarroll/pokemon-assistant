@@ -56,6 +56,14 @@ export interface ItemInfo {
   desc?: string;
 }
 
+export type StatID = keyof StatsTable;
+
+export interface NatureInfo {
+  name: string;
+  plus?: StatID;
+  minus?: StatID;
+}
+
 export interface TMInfo {
   num: number;
   name: string;
@@ -107,6 +115,10 @@ export interface Ruleset {
   items(): ItemInfo[];
   getItem(name: string): ItemInfo | undefined;
   learnset(species: string): Promise<LearnsetEntry[]>;
+  /** Natures (empty before Gen 3) */
+  natures(): NatureInfo[];
+  /** Final stat value, using Showdown's 0-31 IV / 0-252 EV scale in every gen */
+  calcStat(stat: StatID, base: number, iv: number, ev: number, level: number, nature?: string): number;
   /** The game's TM list with locations, when known (romhack docs) */
   tms?: TMInfo[];
 }
