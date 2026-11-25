@@ -1,6 +1,6 @@
 import type { GenerationNum } from '@pkmn/data';
 import { createOfficialRuleset, gens, toID } from './official';
-import type { LearnsetEntry, MoveInfo, Ruleset, SpeciesInfo } from './types';
+import type { LearnsetEntry, MoveInfo, Ruleset, SpeciesInfo, TMInfo } from './types';
 
 /**
  * A romhack is described as a base official ruleset plus overrides,
@@ -28,15 +28,7 @@ export interface RomhackOverlay {
   /** Full learnset replacement for a species, keyed by species id */
   learnsets?: Record<string, LearnsetEntry[]>;
   /** The hack's TM list; `move` is null when the name doesn't match a known move */
-  tms?: RomhackTM[];
-}
-
-export interface RomhackTM {
-  num: number;
-  name: string;
-  move: string | null;
-  type: string;
-  location: string;
+  tms?: TMInfo[];
 }
 
 export function createRomhackRuleset(overlay: RomhackOverlay): Ruleset {
@@ -76,6 +68,7 @@ export function createRomhackRuleset(overlay: RomhackOverlay): Ruleset {
     kind: 'romhack',
     verified: overlay.verified,
     notes: overlay.notes,
+    tms: overlay.tms,
     types: chart.types,
     effectiveness: chart.effectiveness,
 

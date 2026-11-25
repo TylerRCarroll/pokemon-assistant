@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react';
-import { TypeBadge, typeColor } from '../../components/TypeBadge';
-import { bucketProfile, defensiveProfile, typeMatrix } from '../../lib/typechart';
+import { MatchupBuckets } from '../../components/MatchupBuckets';
+import { TypeBadge } from '../../components/TypeBadge';
+import { typeColor } from '../../lib/format';
+import { typeMatrix } from '../../lib/typechart';
 import { useRuleset } from '../../state/ruleset';
 
 const CELL: Record<number, { label: string; cls: string }> = {
@@ -9,20 +11,11 @@ const CELL: Record<number, { label: string; cls: string }> = {
   2: { label: '2', cls: 'bg-green-300 text-green-950 dark:bg-green-700 dark:text-white' },
 };
 
-const BUCKETS = [
-  ['quad', '4× weak'],
-  ['weak', '2× weak'],
-  ['resist', '½ resists'],
-  ['quarter', '¼ resists'],
-  ['immune', 'Immune'],
-] as const;
-
 export function TypesPage() {
   const rs = useRuleset();
   const matrix = useMemo(() => typeMatrix(rs), [rs]);
   const [picked, setPicked] = useState<string[]>(['Ground', 'Flying']);
   const valid = picked.filter((t) => rs.types.includes(t));
-  const buckets = valid.length ? bucketProfile(defensiveProfile(rs, valid)) : undefined;
 
   const toggle = (t: string) =>
     setPicked((p) => (p.includes(t) ? p.filter((x) => x !== t) : [...p, t].slice(-2)));
@@ -45,18 +38,7 @@ export function TypesPage() {
             </button>
           ))}
         </div>
-        {buckets && (
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-            {BUCKETS.map(([key, label]) => (
-              <div key={key} className="rounded-lg border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
-                <div className="mb-2 text-xs font-semibold uppercase text-slate-500">{label}</div>
-                <div className="flex flex-wrap gap-1">
-                  {buckets[key].length ? buckets[key].map((t) => <TypeBadge key={t} type={t} />) : <span className="text-sm text-slate-400">None</span>}
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
+        {valid.length > 0 && <MatchupBuckets rs={rs} types={valid} />}
       </section>
 
       <section>

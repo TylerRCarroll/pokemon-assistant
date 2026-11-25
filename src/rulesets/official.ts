@@ -60,7 +60,44 @@ export function methodsFor(codes: string[], gen: number): LearnMethod[] {
   return out;
 }
 
-export function toSpeciesInfo(s: NonNullable<ReturnType<Generation['species']['get']>>): SpeciesInfo {
+type PkmnSpecies = NonNullable<ReturnType<Generation['species']['get']>>;
+
+/** Human-readable evolution requirement from Showdown's evo fields */
+export function evoMethod(s: PkmnSpecies): string | undefined {
+  if (!s.prevo) return undefined;
+  const cond = s.evoCondition ? ` ${s.evoCondition}` : '';
+  const gender = s.gender === 'M' ? ' (male)' : s.gender === 'F' ? ' (female)' : '';
+  let text: string;
+  switch (s.evoType) {
+    case 'useItem':
+      text = `Use ${s.evoItem}`;
+      break;
+    case 'trade':
+      text = s.evoItem ? `Trade holding ${s.evoItem}` : 'Trade';
+      break;
+    case 'levelFriendship':
+      text = 'Level up with high friendship';
+      break;
+    case 'levelHold':
+      text = `Level up holding ${s.evoItem}`;
+      break;
+    case 'levelMove':
+      text = `Level up knowing ${s.evoMove}`;
+      break;
+    case 'levelExtra':
+    case 'other':
+      return (s.evoCondition ? `Level up ${s.evoCondition}` : 'Special condition') + gender;
+    default:
+      text = s.evoLevel ? `Level ${s.evoLevel}` : 'Level up';
+  }
+  return text + cond + gender;
+}
+
+/** Showdown sprite naming: base species id plus "-forme" */
+export const spriteIdFor = (s: { baseSpecies: string; forme: string }) =>
+  toID(s.baseSpecies) + (s.forme ? `-${toID(s.forme)}` : '');
+
+export function toSpeciesInfo(s: PkmnSpecies): SpeciesInfo {
   return {
     id: s.id,
     name: s.name,
@@ -71,6 +108,8 @@ export function toSpeciesInfo(s: NonNullable<ReturnType<Generation['species']['g
     tier: s.tier,
     prevo: s.prevo || undefined,
     evos: s.evos?.length ? [...s.evos] : undefined,
+    evoMethod: evoMethod(s),
+    spriteId: spriteIdFor(s),
   };
 }
 
@@ -112,10 +151,18 @@ export function createOfficialRuleset(num: GenerationNum, opts: OfficialOptions 
       return m ? toMoveInfo(m) : undefined;
     },
     abilities(): AbilityInfo[] {
-      return [...gen.abilities].map((a) => ({ id: a.id, name: a.name, shortDesc: a.shortDesc }));
+      return [...gen.abilities].map(toAbilityInfo);
+    },
+    getAbility(name) {
+      const a = gen.abilities.get(name);
+      return a ? toAbilityInfo(a) : undefined;
     },
     items(): ItemInfo[] {
-      return [...gen.items].map((i) => ({ id: i.id, name: i.name, shortDesc: i.shortDesc }));
+      return [...gen.items].map(toItemInfo);
+    },
+    getItem(name) {
+      const i = gen.items.get(name);
+      return i ? toItemInfo(i) : undefined;
     },
 
     async learnset(name) {
@@ -146,10 +193,19 @@ export function createOfficialRuleset(num: GenerationNum, opts: OfficialOptions 
       pp: m.pp,
       priority: m.priority,
       shortDesc: m.shortDesc,
+      desc: m.desc,
       flags: { ...m.flags } as Record<string, 1>,
       drain: m.drain,
     };
   }
+}
+
+function toAbilityInfo(a: { id: string; name: string; shortDesc: string; desc: string }): AbilityInfo {
+  return { id: a.id, name: a.name, shortDesc: a.shortDesc, desc: a.desc };
+}
+
+function toItemInfo(i: { id: string; name: string; shortDesc: string; desc: string }): ItemInfo {
+  return { id: i.id, name: i.name, shortDesc: i.shortDesc, desc: i.desc };
 }
 
 export { toID };

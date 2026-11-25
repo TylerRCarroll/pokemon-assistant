@@ -19,6 +19,10 @@ export interface SpeciesInfo {
   tier?: string;
   prevo?: string;
   evos?: string[];
+  /** How this species evolves from its prevo, e.g. "Level 30", "Use Thunder Stone" */
+  evoMethod?: string;
+  /** Showdown sprite id, e.g. "raichu-alola" */
+  spriteId: string;
 }
 
 export interface MoveInfo {
@@ -31,6 +35,7 @@ export interface MoveInfo {
   pp: number;
   priority: number;
   shortDesc: string;
+  desc?: string;
   /** Showdown-style move flags, e.g. { contact: 1, bite: 1 } */
   flags?: Record<string, 1>;
   /** Fraction of damage dealt the user recovers, e.g. [1, 2] */
@@ -41,12 +46,23 @@ export interface AbilityInfo {
   id: string;
   name: string;
   shortDesc: string;
+  desc?: string;
 }
 
 export interface ItemInfo {
   id: string;
   name: string;
   shortDesc: string;
+  desc?: string;
+}
+
+export interface TMInfo {
+  num: number;
+  name: string;
+  /** move id, or null when the name doesn't match a known move */
+  move: string | null;
+  type: string;
+  location: string;
 }
 
 export type LearnMethod =
@@ -87,6 +103,10 @@ export interface Ruleset {
   moves(): MoveInfo[];
   getMove(name: string): MoveInfo | undefined;
   abilities(): AbilityInfo[];
+  getAbility(name: string): AbilityInfo | undefined;
   items(): ItemInfo[];
+  getItem(name: string): ItemInfo | undefined;
   learnset(species: string): Promise<LearnsetEntry[]>;
+  /** The game's TM list with locations, when known (romhack docs) */
+  tms?: TMInfo[];
 }
