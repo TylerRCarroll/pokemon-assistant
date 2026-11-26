@@ -54,6 +54,42 @@ The Team Builder has a **Playthrough** mode (Scarlet/Violet, Black/White, Renega
 
 Ideas next: Unbound move tutors and custom-ability descriptions, Renegade Platinum evolution changes and encounters, a Pokémon Champions ruleset.
 
+## Devices: sync, install, Android
+
+**Sync.** Backup → *Sync between devices*: paste a GitHub token with only the **Gists: Read and write** permission on each device. Teams, quiz progress, and settings sync through one private gist (newer edit wins per team; deletions stick). The token is stored in that browser only and is never written into backups or the gist.
+
+**Install the website.** Open the site on a phone and use *Add to Home screen* / *Install app*. It then opens like an app and works offline.
+
+**Android app (Obtainium).** Pushing a version tag builds a signed APK and publishes it as a GitHub Release:
+
+```sh
+git tag v1.0.0 && git push origin v1.0.0
+```
+
+In Obtainium, *Add App* → `https://github.com/TylerRCarroll/pokemon-assistant`. It installs the APK from the latest release and picks up new ones.
+
+One-time signing setup (every release must be signed with the same key, or Android refuses the update). In Git Bash, in a folder outside the repo, choose a password and run:
+
+```sh
+openssl req -x509 -newkey rsa:4096 -nodes -keyout key.pem -out cert.pem -days 10000 -subj "/CN=PokePlanner"
+openssl pkcs12 -export -inkey key.pem -in cert.pem -name pokeplanner -out pokeplanner-release.p12
+base64 -w0 pokeplanner-release.p12 > keystore-base64.txt
+rm key.pem cert.pem
+```
+
+Then in the repo's *Settings → Secrets and variables → Actions*, add:
+
+| Secret | Value |
+|---|---|
+| `ANDROID_KEYSTORE_BASE64` | contents of `keystore-base64.txt` |
+| `ANDROID_KEYSTORE_PASSWORD` | the export password you chose |
+| `ANDROID_KEY_ALIAS` | `pokeplanner` |
+| `ANDROID_KEY_PASSWORD` | the same password |
+
+Back up `pokeplanner-release.p12` and its password somewhere safe (a password manager), then delete `keystore-base64.txt`. If the key is lost, installed copies can't be updated and must be uninstalled first.
+
+Icons and splash screens come from `assets/icon.svg` (`npm run icons`).
+
 ## Credits
 
 Game data from [Pokémon Showdown](https://github.com/smogon/pokemon-showdown) via `@pkmn`. Unbound data from the Unbound community documentation, Skeli's Dynamic Pokémon Expansion, and hzla's Unbound calc. Pokémon is © Nintendo / Game Freak / The Pokémon Company. This is a non-commercial fan project.

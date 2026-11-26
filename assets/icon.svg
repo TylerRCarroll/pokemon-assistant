@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- full-bleed background so the same art works as a maskable / adaptive icon -->
+  <rect width="512" height="512" fill="#0f172a"/>
+  <!-- emblem kept inside the central safe zone (radius ~ 0.4 of the canvas) -->
+  <clipPath id="ball"><circle cx="256" cy="256" r="150"/></clipPath>
+  <g clip-path="url(#ball)">
+    <rect x="96" y="96" width="320" height="160" fill="#ef4444"/>
+    <rect x="96" y="256" width="320" height="160" fill="#f8fafc"/>
+    <rect x="96" y="243" width="320" height="26" fill="#0f172a"/>
+  </g>
+  <circle cx="256" cy="256" r="150" fill="none" stroke="#0f172a" stroke-width="14"/>
+  <circle cx="256" cy="256" r="46" fill="#f8fafc" stroke="#0f172a" stroke-width="22"/>
+</svg>
