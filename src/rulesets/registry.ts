@@ -37,6 +37,9 @@ const unbound: RomhackOverlay = {
   ...unboundOverlay,
   species: { ...unboundSpecies, ...unboundOverlay.species },
   tms: unboundTMs,
+  loadLearnsets: () =>
+    import('../../data-src/romhacks/unbound/generated/learnsets.json').then((m) => m.default as unknown as Record<string, CompactLearnset>),
+  loadTrainers: () => import('../../data-src/romhacks/unbound/generated/trainers.json').then((m) => m.default as unknown as TrainerInfo[]),
 };
 
 // Complete patch data from the community doc (npm run import:rp); hand edits win.

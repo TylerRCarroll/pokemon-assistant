@@ -11,7 +11,7 @@ export function setFromTrainerMon(rs: Ruleset, m: TrainerMon): TeamSet {
     ability: m.ability ?? base.ability,
     nature: m.nature ?? base.nature,
     ivs: Object.fromEntries(STAT_IDS.map((s) => [s, m.ivs])) as unknown as TeamSet['ivs'],
-    evs: Object.fromEntries(STAT_IDS.map((s) => [s, 0])) as unknown as TeamSet['evs'],
+    evs: Object.fromEntries(STAT_IDS.map((s) => [s, m.evs?.[s] ?? 0])) as unknown as TeamSet['evs'],
     moves: m.moves.filter((n) => rs.getMove(n)).slice(0, 4),
   };
 }
@@ -33,5 +33,12 @@ export function groupBySplit(trainers: TrainerInfo[]): SplitGroup[] {
   return [...groups.values()].sort((a, b) => (a.levelCap ?? Infinity) - (b.levelCap ?? Infinity));
 }
 
-/** "GYM LEADER ROARK" → "Gym Leader Roark" */
-export const trainerName = (t: TrainerInfo) => t.name.toLowerCase().replace(/(^|[\s/(-])(\S)/g, (_, sep: string, ch: string) => sep + ch.toUpperCase());
+/** "GYM LEADER ROARK" → "Gym Leader Roark"; names that are already mixed case are left alone */
+export const trainerName = (t: TrainerInfo) =>
+  t.name !== t.name.toUpperCase() ? t.name : t.name.toLowerCase().replace(/(^|[\s/(-])(\S)/g, (_, sep: string, ch: string) => sep + ch.toUpperCase());
+
+/** Difficulties present in a trainer list, in file order (empty for hacks with one set of teams) */
+export const difficultiesOf = (trainers: TrainerInfo[]) => [...new Set(trainers.flatMap((t) => (t.difficulty ? [t.difficulty] : [])))];
+
+/** "Route 201 · (If you chose Piplup)", skipping whatever a hack's data doesn't have */
+export const trainerDetails = (t: TrainerInfo) => [t.location, ...t.notes].filter(Boolean).join(' · ');

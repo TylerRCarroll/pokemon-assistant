@@ -23,6 +23,10 @@ export interface SpeciesInfo {
   evoMethod?: string;
   /** Showdown sprite id, e.g. "raichu-alola" */
   spriteId: string;
+  /** Box legendaries and mythicals (not sub-legendaries like the Lati twins) */
+  legendary?: boolean;
+  /** Formes you can't put on a team directly: Megas, Primals, Gigantamax, in-battle forms */
+  battleOnly?: boolean;
 }
 
 export interface MoveInfo {
@@ -82,6 +86,8 @@ export interface TrainerMon {
   nature?: string;
   /** Trainer Pokémon use one IV value for every stat */
   ivs: number;
+  /** Only harder difficulties give trainers EVs */
+  evs?: Partial<StatsTable>;
   moves: string[];
 }
 
@@ -97,6 +103,8 @@ export interface TrainerInfo {
   notes: string[];
   /** Gym leaders, rivals, villain bosses, Elite Four, Champion */
   boss: boolean;
+  /** Game difficulty the team belongs to, for hacks with per-difficulty teams (Unbound) */
+  difficulty?: string;
   team: TrainerMon[];
 }
 
@@ -129,6 +137,8 @@ export interface Ruleset {
   verified: boolean;
   /** Species pool includes Pokémon cut from that gen's games */
   natDex?: boolean;
+  /** Includes Legends: Arceus species and moves on top of the National Dex (Unbound) */
+  legendsArceus?: boolean;
   /** Gen whose type chart this ruleset uses, when different from `gen` (e.g. a Gen 4 hack with Fairy) */
   typeChartGen?: number;
   notes?: string;

@@ -8,7 +8,9 @@ import { setFromUsage } from '../../lib/smogon';
 import type { FormatData } from '../../lib/smogonTypes';
 import type { TeamSet } from '../../lib/team';
 import { analyzeThreats, type Matchup, type ThreatReport } from '../../lib/threats';
-import { groupBySplit, setFromTrainerMon, trainerName } from '../../lib/trainers';
+import { DifficultySelect } from '../../components/DifficultySelect';
+import { groupBySplit, setFromTrainerMon, trainerDetails, trainerName } from '../../lib/trainers';
+import { useDifficulty } from '../../state/trainerPrefs';
 import type { Ruleset, TrainerInfo } from '../../rulesets/types';
 
 const DANGER_STYLE = {
@@ -35,7 +37,7 @@ export function ThreatsView({
   format,
   onFormat,
   data,
-  trainers,
+  trainers: allDifficulties,
   trainerId,
   onTrainer,
   onOpen,
@@ -56,6 +58,7 @@ export function ThreatsView({
   const [expanded, setExpanded] = useState<string>();
   const [allTrainers, setAllTrainers] = useState(false);
   const [atCap, setAtCap] = useState(true);
+  const { difficulties, difficulty, setDifficulty, trainers } = useDifficulty(rs.id, allDifficulties);
   const trainerMode = !formats.length && !!trainers?.length;
   const bosses = useMemo(() => groupBySplit((trainers ?? []).filter((t) => allTrainers || t.boss)), [trainers, allTrainers]);
   const trainer = trainers?.find((t) => t.id === trainerId) ?? bosses[0]?.trainers[0];
@@ -101,17 +104,19 @@ export function ThreatsView({
               <optgroup key={g.split} label={`${g.split}${g.levelCap ? ` (cap ${g.levelCap})` : ''}`}>
                 {g.trainers.map((t) => (
                   <option key={`${t.id}-${t.location}`} value={t.id}>
-                    {trainerName(t)} · {t.location}
-                    {t.notes.length ? ` · ${t.notes[0]}` : ''}
+                    {[trainerName(t), trainerDetails(t)].filter(Boolean).join(' · ')}
                   </option>
                 ))}
               </optgroup>
             ))}
           </select>
-          <label className="flex items-center gap-1.5">
-            <input type="checkbox" checked={allTrainers} onChange={(e) => setAllTrainers(e.target.checked)} />
-            All trainers
-          </label>
+          <DifficultySelect difficulties={difficulties} value={difficulty} onChange={setDifficulty} />
+          {!trainers?.every((t) => t.boss) && (
+            <label className="flex items-center gap-1.5">
+              <input type="checkbox" checked={allTrainers} onChange={(e) => setAllTrainers(e.target.checked)} />
+              All trainers
+            </label>
+          )}
           <label className="flex items-center gap-1.5">
             <input type="checkbox" checked={atCap} onChange={(e) => setAtCap(e.target.checked)} />
             Set my team to level {cap}

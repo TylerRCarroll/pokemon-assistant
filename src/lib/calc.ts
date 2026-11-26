@@ -1,6 +1,6 @@
 import { calculate, Field, Move, Pokemon } from '@smogon/calc';
 import type { Generation, GenerationNum } from '@pkmn/data';
-import { gens, natDexGens } from '../rulesets/official';
+import { generationFor, gens } from '../rulesets/official';
 import type { MoveInfo, Ruleset, StatsTable } from '../rulesets/types';
 import { STAT_IDS, type TeamSet } from './team';
 
@@ -13,7 +13,7 @@ const genCache = new WeakMap<Ruleset, CalcGen>();
 export function calcGeneration(rs: Ruleset): CalcGen {
   let g = genCache.get(rs);
   if (!g) {
-    const base: Generation = (rs.natDex ? natDexGens : gens).get(rs.gen as GenerationNum);
+    const base: Generation = generationFor(rs.gen as GenerationNum, rs);
     const withChart = rs.typeChartGen
       ? (Object.create(base, { types: { value: gens.get(rs.typeChartGen as GenerationNum).types } }) as Generation)
       : base;

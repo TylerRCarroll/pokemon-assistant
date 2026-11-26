@@ -1,15 +1,20 @@
 import { Fragment, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Sprite } from '../../components/Sprite';
+import { DifficultySelect } from '../../components/DifficultySelect';
 import { ItemName, MoveName } from '../../components/Tooltip';
 import { card, input, link } from '../../components/ui';
+import { formatEvs } from '../../lib/format';
 import { matches } from '../../lib/search';
-import { groupBySplit, trainerName } from '../../lib/trainers';
+import { groupBySplit, trainerDetails, trainerName } from '../../lib/trainers';
 import type { Ruleset, TrainerInfo } from '../../rulesets/types';
+import { useDifficulty } from '../../state/trainerPrefs';
 
 /** Romhack trainer battles by split, for rulesets that have trainer data instead of usage stats */
-export function TrainerBrowser({ rs, trainers }: { rs: Ruleset; trainers: TrainerInfo[] }) {
+export function TrainerBrowser({ rs, trainers: all }: { rs: Ruleset; trainers: TrainerInfo[] }) {
+  const { difficulties, difficulty, setDifficulty, trainers = [] } = useDifficulty(rs.id, all);
   const [bossesOnly, setBossesOnly] = useState(true);
+  const onlyBosses = trainers.every((t) => t.boss);
   const [query, setQuery] = useState('');
   const groups = useMemo(
     () =>
@@ -26,22 +31,29 @@ export function TrainerBrowser({ rs, trainers }: { rs: Ruleset; trainers: Traine
   return (
     <div className="space-y-4">
       <p className="text-sm text-slate-600 dark:text-slate-400">
-        {rs.name} has no Smogon usage stats, so this shows the game's own trainer teams from the hack's documentation. Check any of them against your
+        {rs.name} has no Smogon usage stats, so this shows the game's own trainer teams from the hack's community docs. Check any of them against your
         team in <Link to="/calc?tab=threats" className={link}>Threats</Link>.
       </p>
       <div className="flex flex-wrap items-center gap-3 text-sm">
         <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Trainer, place, or Pokémon…" className={`${input} w-64`} />
-        <label className="flex items-center gap-1.5">
-          <input type="checkbox" checked={bossesOnly} onChange={(e) => setBossesOnly(e.target.checked)} />
-          Bosses only (gym leaders, rivals, Galactic, Elite Four, Champion)
-        </label>
+        <DifficultySelect difficulties={difficulties} value={difficulty} onChange={setDifficulty} />
+        {!onlyBosses && (
+          <label className="flex items-center gap-1.5">
+            <input type="checkbox" checked={bossesOnly} onChange={(e) => setBossesOnly(e.target.checked)} />
+            Bosses only (gym leaders, rivals, villain teams, Elite Four, Champion)
+          </label>
+        )}
       </div>
 
       {groups.map((g) => (
         <section key={g.split} className="space-y-2">
           <h2 className="text-lg font-semibold">
             {g.split}
-            {g.levelCap && <span className="ml-2 text-sm font-normal text-slate-500">level cap {g.levelCap}</span>}
+            {g.levelCap && (
+            <span className="ml-2 text-sm font-normal text-slate-500">
+              {difficulty ? `up to level ${g.levelCap}` : `level cap ${g.levelCap}`}
+            </span>
+          )}
           </h2>
           <div className="grid gap-3 lg:grid-cols-2">
             {g.trainers.map((t) => (
@@ -62,10 +74,7 @@ function TrainerCard({ rs, trainer: t }: { rs: Ruleset; trainer: TrainerInfo }) 
       <div className="flex flex-wrap items-start gap-2">
         <div className="min-w-0 flex-1">
           <div className="font-semibold">{trainerName(t)}</div>
-          <div className="text-xs text-slate-500">
-            {t.location}
-            {t.notes.length > 0 && ` · ${t.notes.join(' · ')}`}
-          </div>
+          <div className="text-xs text-slate-500">{trainerDetails(t)}</div>
         </div>
         <Link
           to={`/calc?tab=threats&trainer=${t.id}`}
@@ -98,7 +107,7 @@ function TrainerCard({ rs, trainer: t }: { rs: Ruleset; trainer: TrainerInfo }) 
                   <ItemName rs={rs} name={m.item} />
                 </>
               )}{' '}
-              · {m.ability} · {m.nature} · {m.ivs} IVs
+              · {m.ability} · {m.nature} · {m.ivs} IVs{m.evs && ` · ${formatEvs(m.evs)}`}
               <div className="text-slate-500">
                 {m.moves.map((mv, j) => (
                   <Fragment key={j}>

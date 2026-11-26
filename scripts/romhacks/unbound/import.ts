@@ -4,11 +4,14 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { readWorkbook, sheetRows } from '../../lib/xlsx';
 import { createOfficialRuleset } from '../../../src/rulesets/official';
 import type { StatsTable } from '../../../src/rulesets/types';
+import { getRuleset } from '../../../src/rulesets/registry';
 import overlay from '../../../data-src/romhacks/unbound/overlay.json';
+import { parseCalcTrainers } from './calc';
+import { parseBaseStats, parseLearnsets } from './dpe';
 
 const DOCS = 'Documentation/Unbound';
 const OUT = 'data-src/romhacks/unbound/generated';
-const base = createOfficialRuleset(8, { natDex: true });
+const base = createOfficialRuleset(8, { natDex: true, legendsArceus: true });
 const warnings: string[] = [];
 
 /** Spreadsheet name → @pkmn species name(s); returns [] when it can't be mapped */
@@ -103,13 +106,44 @@ async function importTMs() {
     });
 }
 
+/** Typings and abilities from the game source, kept only where they differ from Gen 8 */
+async function importTypesAndAbilities(species: Record<string, Partial<{ baseStats: StatsTable; types: string[]; abilities: string[] }>>) {
+  let types = 0;
+  let abilities = 0;
+  for (const [id, s] of Object.entries(await parseBaseStats(base, warnings))) {
+    const official = base.getSpecies(id)!;
+    // order-insensitive: the source lists a few Hisuian typings the other way round
+    if (s.types.length && [...s.types].sort().join('/') !== [...official.types].sort().join('/')) {
+      (species[id] ??= {}).types = s.types;
+      types++;
+    }
+    if (s.abilities.length && s.abilities.join('/') !== official.abilities.join('/')) {
+      (species[id] ??= {}).abilities = s.abilities;
+      abilities++;
+    }
+  }
+  return { types, abilities };
+}
+
 const { species, unchanged } = await importStats();
 const tms = await importTMs();
+const changed = await importTypesAndAbilities(species);
+const learnsets = await parseLearnsets(base, warnings, Object.keys(overlay.customMoves));
+// trainer sets are checked against the hack itself, so Unbound-only moves like Leech Fang resolve
+const trainers = await parseCalcTrainers(getRuleset('unbound'), warnings);
 
 await mkdir(OUT, { recursive: true });
 await writeFile(`${OUT}/species.json`, JSON.stringify(species, null, 1) + '\n');
 await writeFile(`${OUT}/tms.json`, JSON.stringify(tms, null, 1) + '\n');
+await writeFile(`${OUT}/learnsets.json`, JSON.stringify(learnsets) + '\n');
+await writeFile(`${OUT}/trainers.json`, JSON.stringify(trainers) + '\n');
 
-console.log(`species: ${Object.keys(species).length} changed, ${unchanged} identical to Gen 8`);
+console.log(`species: ${Object.keys(species).length} changed, ${unchanged} with Gen 8 stats`);
+console.log(`  ${changed.types} retyped, ${changed.abilities} with different abilities`);
+console.log(`learnsets: ${Object.keys(learnsets).length}`);
+const counts = new Map<string, number>();
+for (const t of trainers) counts.set(t.difficulty ?? '', (counts.get(t.difficulty ?? '') ?? 0) + 1);
+console.log(`trainers: ${[...counts].map(([d, n]) => `${d} ${n}`).join(', ')}`);
 console.log(`TMs: ${tms.length} (${tms.filter((t) => !t.move).length} unresolved)`);
-if (warnings.length) console.log(`\n${warnings.length} warnings:\n  ${warnings.join('\n  ')}`);
+const unique = [...new Set(warnings)];
+if (unique.length) console.log(`\n${unique.length} warnings:\n  ${unique.join('\n  ')}`);

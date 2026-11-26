@@ -12,6 +12,7 @@ export interface RomhackOverlay {
   baseGen: GenerationNum;
   /** Use the National Dex species pool of the base gen (species cut from those games) */
   natDex?: boolean;
+  legendsArceus?: boolean;
   /** Borrow another gen's type chart and type list (e.g. a Gen 4 hack that adds Fairy) */
   typeChartGen?: GenerationNum;
   /**
@@ -55,7 +56,7 @@ export function expandLearnset(c: CompactLearnset): LearnsetEntry[] {
 }
 
 export function createRomhackRuleset(overlay: RomhackOverlay): Ruleset {
-  const base = createOfficialRuleset(overlay.baseGen, { natDex: overlay.natDex });
+  const base = createOfficialRuleset(overlay.baseGen, { natDex: overlay.natDex, legendsArceus: overlay.legendsArceus });
   const chart = overlay.typeChartGen ? createOfficialRuleset(overlay.typeChartGen) : base;
   const fairyGen = overlay.fairyRetypesFromGen ? gens.get(overlay.fairyRetypesFromGen) : undefined;
 
@@ -95,6 +96,7 @@ export function createRomhackRuleset(overlay: RomhackOverlay): Ruleset {
     notes: overlay.notes,
     tms: overlay.tms,
     natDex: overlay.natDex,
+    legendsArceus: overlay.legendsArceus,
     typeChartGen: overlay.typeChartGen,
     types: chart.types,
     effectiveness: chart.effectiveness,

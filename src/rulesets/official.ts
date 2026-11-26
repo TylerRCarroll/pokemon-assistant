@@ -19,6 +19,33 @@ export const natDexGens = new Generations(Dex, (d) => {
   return Generations.DEFAULT_EXISTS(d);
 });
 
+/** Legends: Arceus moves; @pkmn dates them to Gen 9 because Scarlet/Violet brought them to the main games */
+const LEGENDS_ARCEUS_MOVES = new Set([
+  'barbbarrage', 'bittermalice', 'bleakwindstorm', 'ceaselessedge', 'chloroblast', 'direclaw', 'esperwing',
+  'headlongrush', 'infernalparade', 'lunarblessing', 'mountaingale', 'mysticalpower', 'powershift', 'psyshieldbash',
+  'ragingfury', 'sandsearstorm', 'shelter', 'springtidestorm', 'stoneaxe', 'takeheart', 'triplearrows', 'victorydance',
+  'wavecrash', 'wildboltstorm',
+]);
+
+/**
+ * National Dex plus Legends: Arceus content (Hisuian forms, Sneasler, Wyrdeer, the Origin formes, and their
+ * moves), which @pkmn files under "Future" in Gen 8. Some Gen 8 romhacks (Unbound) include it.
+ */
+export const legendsArceusGens = new Generations(Dex, (d) => {
+  if ('isNonstandard' in d && d.isNonstandard === 'Future' && d.exists) {
+    if ('basePower' in d) return LEGENDS_ARCEUS_MOVES.has(d.id);
+    if ('baseStats' in d) return d.gen === 8;
+    return false;
+  }
+  if ('isNonstandard' in d && d.isNonstandard === 'Past') return !!d.exists;
+  return Generations.DEFAULT_EXISTS(d);
+});
+
+/** The @pkmn generation a ruleset's data comes from */
+export function generationFor(num: GenerationNum, opts: OfficialOptions = {}): Generation {
+  return (opts.legendsArceus ? legendsArceusGens : opts.natDex ? natDexGens : gens).get(num);
+}
+
 /** Pseudo-types that exist in the data but aren't real defending types */
 const HIDDEN_TYPES = new Set(['???', 'Stellar']);
 
@@ -110,15 +137,19 @@ export function toSpeciesInfo(s: PkmnSpecies): SpeciesInfo {
     evos: s.evos?.length ? [...s.evos] : undefined,
     evoMethod: evoMethod(s),
     spriteId: spriteIdFor(s),
+    legendary: s.tags.some((t) => t === 'Restricted Legendary' || t === 'Mythical') || undefined,
+    battleOnly: !!(s.battleOnly || s.isMega || s.isPrimal || s.forme === 'Gmax' || s.forme === 'Totem') || undefined,
   };
 }
 
 export interface OfficialOptions {
   natDex?: boolean;
+  /** Also include Legends: Arceus species and moves (implies natDex) */
+  legendsArceus?: boolean;
 }
 
 export function createOfficialRuleset(num: GenerationNum, opts: OfficialOptions = {}): Ruleset {
-  const gen = (opts.natDex ? natDexGens : gens).get(num);
+  const gen = generationFor(num, opts);
   const types = [...gen.types].map((t) => t.name).filter((t) => !HIDDEN_TYPES.has(t));
 
   let speciesCache: SpeciesInfo[] | undefined;
@@ -131,6 +162,7 @@ export function createOfficialRuleset(num: GenerationNum, opts: OfficialOptions 
     gen: num,
     verified: true,
     natDex: opts.natDex,
+    legendsArceus: opts.legendsArceus,
     types,
 
     effectiveness(attack: TypeName, defend: TypeName[]) {

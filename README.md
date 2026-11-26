@@ -19,7 +19,7 @@ All game data goes through a **ruleset** (`src/rulesets/`). A ruleset is either 
 |---|---|---|
 | Gen 1–9, Gen 8/9 National Dex | `@pkmn/data` | Complete |
 | Renegade Platinum (Complete patch) | Gen 4 + Gen 6 type chart | Types, stats, abilities, moves, learnsets, TMs, and 760 trainer battles imported from the community docs |
-| Pokémon Unbound | Gen 8 National Dex | Partial: balanced base stats and TM list imported; learnsets/abilities are still Gen 8 defaults |
+| Pokémon Unbound | Gen 8 National Dex + Legends: Arceus | Balanced base stats, abilities, learnsets (level-up, TM, egg), TMs, and boss teams for Difficult/Expert/Insane. Move tutors not imported |
 
 ### Romhack data
 
@@ -33,6 +33,11 @@ npm run fetch:smogon   # Smogon usage stats, sets, and sample teams (refresh mon
 
 Hand-curated overrides in `data-src/romhacks/<hack>/overlay.json` take precedence over generated data.
 
+Unbound's import also reads two public GitHub sources, saved under `Documentation/Unbound/source/`:
+
+- `dpe/`: `src/Learnsets.c`, `Egg_Moves.c`, `Base_Stats.c`, `TM_Tutor_Tables.c`, and `tm_compatibility/` from the `Unbound` branch of [Skeli789/Dynamic-Pokemon-Expansion](https://github.com/Skeli789/Dynamic-Pokemon-Expansion), the source Unbound 2.1.1 is built from
+- `calc/unbound.js`: `backups/unbound.js` from [hzla/Dynamic-Calc-Unbound](https://github.com/hzla/Dynamic-Calc-Unbound), the boss teams in hzla's damage calc (read as JSON, never executed)
+
 ## Roadmap
 
 All six planned features are in:
@@ -44,8 +49,8 @@ All six planned features are in:
 5. **Calc** – `@smogon/calc` damage calculator and threat checks (meta or romhack trainers)
 6. **Trainer** – spaced-repetition quizzes on matchups, abilities, moves, counters, and romhack changes
 
-Ideas next: Unbound learnsets and boss teams, Renegade Platinum evolution changes and encounters, a Pokémon Champions ruleset.
+Ideas next: Unbound move tutors and custom-ability descriptions, Renegade Platinum evolution changes and encounters, a Pokémon Champions ruleset.
 
 ## Credits
 
-Game data from [Pokémon Showdown](https://github.com/smogon/pokemon-showdown) via `@pkmn`. Unbound data from the Unbound community documentation. Pokémon is © Nintendo / Game Freak / The Pokémon Company. This is a non-commercial fan project.
+Game data from [Pokémon Showdown](https://github.com/smogon/pokemon-showdown) via `@pkmn`. Unbound data from the Unbound community documentation, Skeli's Dynamic Pokémon Expansion, and hzla's Unbound calc. Pokémon is © Nintendo / Game Freak / The Pokémon Company. This is a non-commercial fan project.

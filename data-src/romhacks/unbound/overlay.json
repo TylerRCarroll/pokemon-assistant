@@ -3,8 +3,9 @@
   "name": "Pokémon Unbound",
   "baseGen": 8,
   "natDex": true,
+  "legendsArceus": true,
   "verified": false,
-  "notes": "Partial: balanced base stats and the TM list are imported from the docs. Learnsets, abilities, and boss teams still use Gen 8 defaults.",
+  "notes": "Base stats from the balanced stats sheet; abilities, learnsets (level-up, TM, egg), and TMs from Skeli's Dynamic Pokémon Expansion source (2.1.1); boss teams for Difficult, Expert, and Insane from hzla's Unbound calc. Move tutors aren't imported. A few 2.1.1.1 custom abilities on boss teams (Sound Waves, Portal Power, ...) have no description yet.",
   "species": {},
   "moves": {},
   "customMoves": {

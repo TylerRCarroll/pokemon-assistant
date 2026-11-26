@@ -140,3 +140,41 @@ describe('romhack overlays', () => {
     expect(getRuleset('gen8natdex').getSpecies('Venusaur')!.baseStats.atk).toBe(82);
   });
 });
+
+describe('Unbound game data', () => {
+  const ub = getRuleset('unbound');
+
+  it('uses Unbound abilities', () => {
+    expect(ub.getSpecies('Typhlosion')!.abilities).toContain('Drought');
+    expect(getRuleset('gen8natdex').getSpecies('Typhlosion')!.abilities).not.toContain('Drought');
+  });
+
+  it('includes Legends: Arceus species and moves, which Gen 8 National Dex does not', () => {
+    expect(ub.getSpecies('Sneasler')).toBeDefined();
+    expect(ub.getSpecies('Typhlosion-Hisui')).toBeDefined();
+    expect(ub.getMove('Wave Crash')).toBeDefined();
+    expect(getRuleset('gen8natdex').getSpecies('Sneasler')).toBeUndefined();
+    // but not Scarlet/Violet species
+    expect(ub.getSpecies('Great Tusk')).toBeUndefined();
+  });
+
+  it('has Unbound learnsets with level-up, TM, and inherited egg moves', async () => {
+    const venusaur = await ub.learnset('Venusaur');
+    const leechFang = (await ub.learnset('Ariados')).find((e) => e.move === 'leechfang');
+    expect(venusaur.find((e) => e.move === 'leechseed')?.methods).toContainEqual({ kind: 'level', level: 9 });
+    // Bulbasaur's egg moves carry through to Venusaur
+    expect(venusaur.find((e) => e.move === 'leafstorm')?.methods).toContainEqual({ kind: 'egg' });
+    expect(leechFang?.methods).toContainEqual({ kind: 'tm' });
+  });
+
+  it('has boss teams for each difficulty', async () => {
+    const trainers = await ub.loadTrainers!();
+    expect(new Set(trainers.map((t) => t.difficulty))).toEqual(new Set(['Insane', 'Expert', 'Difficult']));
+    const mirskle = trainers.find((t) => t.difficulty === 'Insane' && t.name === 'Leader Mirskle')!;
+    expect(mirskle.split).toBe('Gym 1: Mirskle');
+    const floette = mirskle.team.find((m) => m.species === 'Floette')!;
+    expect(floette.moves).toContain('Moonblast');
+    expect(floette.evs?.hp).toBe(252);
+    expect(new Set(trainers.map((t) => t.id)).size).toBe(trainers.length);
+  });
+});
