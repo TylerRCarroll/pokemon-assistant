@@ -2,7 +2,7 @@ import type { Ruleset, SpeciesInfo, TypeName } from '../rulesets/types';
 import type { TeamSet } from './team';
 
 /** Abilities that make the holder immune to an attacking type */
-const IMMUNITY_ABILITIES: Record<string, TypeName> = {
+export const IMMUNITY_ABILITIES: Record<string, TypeName> = {
   Levitate: 'Ground',
   'Earth Eater': 'Ground',
   'Flash Fire': 'Fire',
@@ -95,9 +95,17 @@ export function offensiveCoverage(rs: Ruleset, members: Member[]): OffensiveRow[
   });
 }
 
+/** What a warning is about, so advice can target it */
+export type TeamIssue =
+  | { kind: 'stackedWeakness'; type: TypeName; weak: Member[] }
+  | { kind: 'coverageGap'; types: TypeName[] }
+  | { kind: 'noAttacks'; member: Member }
+  | { kind: 'duplicateItem'; item: string };
+
 export interface TeamWarning {
   severity: 'high' | 'medium';
   message: string;
+  issue: TeamIssue;
 }
 
 export function teamWarnings(rs: Ruleset, members: Member[]): TeamWarning[] {
@@ -105,22 +113,44 @@ export function teamWarnings(rs: Ruleset, members: Member[]): TeamWarning[] {
   const out: TeamWarning[] = [];
   for (const row of defensiveCoverage(rs, members)) {
     if (row.weak.length >= 3 && row.weak.length > row.resist.length) {
-      out.push({ severity: 'high', message: `${row.weak.length} members are weak to ${row.type} and only ${row.resist.length} resist it` });
+      out.push({
+        severity: 'high',
+        message: `${row.weak.length} members are weak to ${row.type} and only ${row.resist.length} resist it`,
+        issue: { kind: 'stackedWeakness', type: row.type, weak: row.weak },
+      });
     } else if (row.weak.length >= 2 && row.resist.length === 0) {
-      out.push({ severity: 'medium', message: `${row.weak.length} members are weak to ${row.type} and nothing resists it` });
+      out.push({
+        severity: 'medium',
+        message: `${row.weak.length} members are weak to ${row.type} and nothing resists it`,
+        issue: { kind: 'stackedWeakness', type: row.type, weak: row.weak },
+      });
     }
   }
   const withMoves = members.filter((m) => m.set.moves.length > 0);
   if (withMoves.length) {
     const unhit = offensiveCoverage(rs, members).filter((r) => r.best <= 1).map((r) => r.type);
-    if (unhit.length) out.push({ severity: 'medium', message: `Nothing hits ${unhit.join(', ')} super-effectively` });
+    if (unhit.length) {
+      out.push({
+        severity: 'medium',
+        message: `Nothing hits ${unhit.join(', ')} super-effectively`,
+        issue: { kind: 'coverageGap', types: unhit },
+      });
+    }
   }
   const noAttacks = members.filter(
     (m) => m.set.moves.length > 0 && !m.set.moves.some((n) => (rs.getMove(n)?.basePower ?? 0) > 0),
   );
-  for (const m of noAttacks) out.push({ severity: 'medium', message: `${m.species.name} has no damaging moves` });
+  for (const m of noAttacks) {
+    out.push({ severity: 'medium', message: `${m.species.name} has no damaging moves`, issue: { kind: 'noAttacks', member: m } });
+  }
   const items = members.map((m) => m.set.item).filter(Boolean);
   const dupItem = items.find((it, i) => items.indexOf(it) !== i);
-  if (dupItem) out.push({ severity: 'medium', message: `${dupItem} is held by more than one member (Item Clause in most formats)` });
+  if (dupItem) {
+    out.push({
+      severity: 'medium',
+      message: `${dupItem} is held by more than one member (Item Clause in most formats)`,
+      issue: { kind: 'duplicateItem', item: dupItem },
+    });
+  }
   return out.sort((a, b) => (a.severity === b.severity ? 0 : a.severity === 'high' ? -1 : 1));
 }

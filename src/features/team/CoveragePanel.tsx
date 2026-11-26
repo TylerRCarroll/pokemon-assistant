@@ -1,8 +1,17 @@
+import { useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { Sprite } from '../../components/Sprite';
+import { MoveName } from '../../components/Tooltip';
 import { TypeBadge } from '../../components/TypeBadge';
 import { card } from '../../components/ui';
 import { defensiveCoverage, offensiveCoverage, teamWarnings, type Member } from '../../lib/coverage';
-import type { Ruleset } from '../../rulesets/types';
+import type { FormatData } from '../../lib/smogonTypes';
+import { suggestSwaps, tipFor, type Swap, type Tip } from '../../lib/teamAdvice';
+import type { TeamSet } from '../../lib/team';
+import type { LearnsetEntry, Ruleset } from '../../rulesets/types';
+
+const button =
+  'rounded border border-slate-300 px-2 py-0.5 text-xs font-medium hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800';
 
 function Minis({ members }: { members: Member[] }) {
   return (
@@ -16,9 +25,87 @@ function Minis({ members }: { members: Member[] }) {
   );
 }
 
-export function CoveragePanel({ rs, members }: { rs: Ruleset; members: Member[] }) {
+function TipLine({ rs, tip }: { rs: Ruleset; tip: Tip }) {
+  return (
+    <div className="ml-5 mt-0.5 text-xs text-slate-600 dark:text-slate-400">
+      {tip.moves?.map((t) => (
+        <div key={`${t.member.species.id}-${t.move.id}`} className="flex flex-wrap items-center gap-1">
+          <span className="text-slate-400">Fix:</span> teach {t.member.species.name}
+          <MoveName rs={rs} name={t.move.name}>
+            <span className="font-medium text-slate-800 underline decoration-dotted dark:text-slate-200">{t.move.name}</span>
+          </MoveName>
+          <TypeBadge type={t.move.type} short />
+          {t.hits.length > 0 && <span>to hit {t.hits.join(', ')}</span>}
+        </div>
+      ))}
+      {tip.text}
+    </div>
+  );
+}
+
+function SwapCard({ rs, swap, onSwap }: { rs: Ruleset; swap: Swap; onSwap: () => void }) {
+  return (
+    <li className="rounded border border-slate-200 p-2.5 dark:border-slate-800">
+      <div className="flex flex-wrap items-center gap-2 text-sm">
+        <Sprite id={swap.out.species.spriteId} name={swap.out.species.name} size={32} />
+        <span className="text-slate-500 line-through">{swap.out.species.name}</span>
+        <span className="text-slate-400">→</span>
+        <Sprite id={swap.incoming.spriteId} name={swap.incoming.name} size={32} />
+        <Link to={`/dex/pokemon/${swap.incoming.id}`} className="font-semibold hover:underline">
+          {swap.incoming.name}
+        </Link>
+        <span className="flex gap-1">
+          {swap.incoming.types.map((t) => (
+            <TypeBadge key={t} type={t} short />
+          ))}
+        </span>
+        <span className="ml-auto flex gap-1.5">
+          <Link to={`/planner/${swap.incoming.id}`} className={button}>
+            Sets
+          </Link>
+          <button className={button} onClick={onSwap}>
+            Swap in
+          </button>
+        </span>
+      </div>
+      <ul className="mt-1 list-inside list-disc text-xs text-slate-600 dark:text-slate-400">
+        {swap.fixes.map((f) => (
+          <li key={f}>{f}</li>
+        ))}
+        {swap.outReasons.length > 0 && (
+          <li>
+            Why {swap.out.species.name}: {swap.outReasons.join('; ')}
+          </li>
+        )}
+        {rs.kind === 'romhack' && <li className="text-slate-400">Check it&apos;s obtainable at your point in the game.</li>}
+      </ul>
+    </li>
+  );
+}
+
+export function CoveragePanel({
+  rs,
+  members,
+  learnsetOf,
+  meta,
+  onSwap,
+  undo,
+}: {
+  rs: Ruleset;
+  members: Member[];
+  learnsetOf: (m: Member) => LearnsetEntry[] | undefined;
+  /** Usage stats for the ruleset's main format, to favour meta-relevant swaps */
+  meta?: FormatData;
+  onSwap: (out: Member, set: TeamSet) => void;
+  /** Shown after a swap so it can be reverted */
+  undo?: { label: string; run: () => void };
+}) {
+  const warnings = useMemo(() => teamWarnings(rs, members), [rs, members]);
+  const swaps = useMemo(
+    () => (warnings.some((w) => w.issue.kind !== 'duplicateItem') ? suggestSwaps(rs, members, meta) : []),
+    [rs, members, meta, warnings],
+  );
   if (!members.length) return null;
-  const warnings = teamWarnings(rs, members);
   const defense = defensiveCoverage(rs, members);
   const offense = offensiveCoverage(rs, members);
 
@@ -29,16 +116,42 @@ export function CoveragePanel({ rs, members }: { rs: Ruleset; members: Member[] 
         {warnings.length ? (
           <ul className="space-y-1 text-sm">
             {warnings.map((w) => (
-              <li key={w.message} className="flex gap-2">
-                <span className={w.severity === 'high' ? 'text-red-600' : 'text-amber-600'}>{w.severity === 'high' ? '●' : '○'}</span>
-                {w.message}
+              <li key={w.message}>
+                <div className="flex gap-2">
+                  <span className={w.severity === 'high' ? 'text-red-600' : 'text-amber-600'}>{w.severity === 'high' ? '●' : '○'}</span>
+                  {w.message}
+                </div>
+                <TipLine rs={rs} tip={tipFor(rs, w.issue, members, learnsetOf)} />
               </li>
             ))}
           </ul>
         ) : (
           <p className="text-sm text-slate-500">No glaring holes. Nice.</p>
         )}
+        {undo && (
+          <p className="mt-2 text-xs text-slate-500">
+            {undo.label}{' '}
+            <button className={button} onClick={undo.run}>
+              Undo
+            </button>
+          </p>
+        )}
       </section>
+
+      {swaps.length > 0 && (
+        <section className={`${card} p-4`}>
+          <h2 className="font-semibold">Suggested swaps</h2>
+          <p className="mb-2 text-xs text-slate-500">
+            Replacements that fix the most warnings, weighed against what you&apos;d lose.{' '}
+            {meta ? 'Drawn from the most-used Pokémon in the format.' : 'Drawn from fully evolved, non-legendary Pokémon.'}
+          </p>
+          <ul className="space-y-2">
+            {swaps.map((s) => (
+              <SwapCard key={`${s.out.species.id}-${s.incoming.id}`} rs={rs} swap={s} onSwap={() => onSwap(s.out, s.set)} />
+            ))}
+          </ul>
+        </section>
+      )}
 
       <div className="grid gap-4 lg:grid-cols-2">
         <section className={`${card} overflow-x-auto p-4`}>

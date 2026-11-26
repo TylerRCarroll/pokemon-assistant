@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useState } from 'react';
 import { card } from '../../components/ui';
-import { resolveMembers } from '../../lib/coverage';
+import { formatsFor } from '../../data/formats';
+import { resolveMembers, type Member } from '../../lib/coverage';
+import { loadFormat } from '../../lib/smogon';
+import type { TeamSet } from '../../lib/team';
 import { checkSet } from '../../lib/legality';
 import { usePromise } from '../../lib/usePromise';
 import type { LearnsetEntry } from '../../rulesets/types';
@@ -36,6 +39,20 @@ export function TeamPage() {
   };
 
   const members = useMemo(() => resolveMembers(rs, team?.slots ?? []), [rs, team?.slots]);
+  const learnsetOf = (m: Member) => learnsets.data?.[team?.slots.indexOf(m.set) ?? -1];
+  // the ruleset's main format (OU, usually) steers swap suggestions toward meta-relevant picks
+  const mainFormat = formatsFor(rs.id)[0]?.id;
+  const meta = usePromise(() => (mainFormat ? loadFormat(mainFormat) : Promise.resolve(undefined)), [mainFormat]);
+  const [lastSwap, setLastSwap] = useState<{ index: number; prev: TeamSet; label: string }>();
+  useEffect(() => setLastSwap(undefined), [team?.id, rs.id]);
+
+  const swap = (out: Member, set: TeamSet) => {
+    if (!team) return;
+    const index = team.slots.indexOf(out.set);
+    if (index < 0) return;
+    setSlot(team.id, index, set);
+    setLastSwap({ index, prev: out.set, label: `Swapped ${out.species.name} for ${set.species}.` });
+  };
 
   return (
     <div className="space-y-5">
@@ -64,7 +81,22 @@ export function TeamPage() {
             onRemove={() => setSlot(team.id, selected, null)}
           />
 
-          <CoveragePanel rs={rs} members={members} />
+          <CoveragePanel
+            rs={rs}
+            members={members}
+            learnsetOf={learnsetOf}
+            meta={meta.data}
+            onSwap={swap}
+            undo={
+              lastSwap && {
+                label: lastSwap.label,
+                run: () => {
+                  setSlot(team.id, lastSwap.index, lastSwap.prev);
+                  setLastSwap(undefined);
+                },
+              }
+            }
+          />
         </>
       )}
     </div>
