@@ -70,7 +70,8 @@ const range = (r?: { minPct: number; maxPct: number }) => (r ? `${r.minPct}–${
 
 function describe(m: Matchup, extra?: string): string {
   const verdict = extra ?? (m.revengeKills ? 'outspeeds and OHKOs' : m.walls ? 'walls it' : 'not a check yet');
-  return `${verdict}: takes ${range(m.theirBest)}, deals ${range(m.yourBest)}${m.yourBest ? ` with ${m.yourBest.move}` : ''}`;
+  const knocked = m.losesItem ? ` (its Knock Off takes the ${m.losesItem}${m.revengeKills ? ', but you move first' : ' after one hit'})` : '';
+  return `${verdict}: takes ${range(m.theirBest)}, deals ${range(m.yourBest)}${m.yourBest ? ` with ${m.yourBest.move}` : ''}${knocked}`;
 }
 
 // ---------------------------------------------------------------------------------------------

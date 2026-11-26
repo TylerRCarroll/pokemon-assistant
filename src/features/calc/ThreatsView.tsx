@@ -272,6 +272,11 @@ function MatchupGrid({ rs, report, onOpen }: { rs: Ruleset; report: ThreatReport
               {m.yourBest && ` (${m.yourBest.move})`}
             </div>
             <div className="text-slate-500">{m.speedTie ? 'Speed tie' : m.threatFaster ? 'Threat is faster' : 'You are faster'}</div>
+            {m.losesItem && (
+              <div className="text-amber-700 dark:text-amber-400" title="Damage figures assume the item is gone after the first hit">
+                Knock Off takes its {m.losesItem}
+              </div>
+            )}
           </div>
           <button
             onClick={() => onOpen(m.member, report.threat, report.tera)}

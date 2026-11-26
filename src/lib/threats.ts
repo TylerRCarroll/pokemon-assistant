@@ -16,6 +16,8 @@ export interface Matchup {
   revengeKills: boolean;
   /** walls or revengeKills */
   checks: boolean;
+  /** The member's item, when the threat's Knock Off would take it (damage figures then assume it's gone after one hit) */
+  losesItem?: string;
 }
 
 export interface ThreatReport {
@@ -32,13 +34,33 @@ export interface ThreatReport {
   danger: 'high' | 'medium' | 'low';
 }
 
+/** Items Knock Off can't take: they're part of what the holder is (Mega Stones, Z-Crystals, Plates, ...) */
+const STUCK_ITEM = /^(?!Eviolite$).*ite( [XY])?$|ium Z$| Plate$| Memory$| Drive$|^Griseous (Orb|Core)$|^Rusted (Sword|Shield)$|^(Red|Blue) Orb$|Mask$|^Booster Energy$/;
+
+/** The threat would Knock Off the member's item (Gen 3+; not through Sticky Hold) */
+export function knocksOff(rs: Ruleset, threat: TeamSet, member: TeamSet): boolean {
+  if (rs.gen < 3 || !member.item || STUCK_ITEM.test(member.item) || member.ability === 'Sticky Hold') return false;
+  return threat.moves.some((n) => rs.getMove(n)?.id === 'knockoff');
+}
+
+const worse = (a?: MoveResult, b?: MoveResult) => (!a ? b : !b ? a : b.maxPct > a.maxPct ? b : a);
+
 /** One team member against one threat. Sides can carry boosts (the counter advisor's setup moves). */
 export function matchupOf(rs: Ruleset, threat: CalcSide, member: CalcSide, field: FieldOptions = {}, threatSpeed = effectiveSpeed(rs, threat)): Matchup {
-  const theirBest = calcAll(rs, threat, member, field)[0];
-  const yourBest = calcAll(rs, member, threat, field)[0];
+  let theirBest: MoveResult | undefined = calcAll(rs, threat, member, field)[0];
+  let yourBest: MoveResult | undefined = calcAll(rs, member, threat, field)[0];
   const memberSpeed = effectiveSpeed(rs, member);
+  const faster = memberSpeed > threatSpeed;
+  const revengeKills = faster && (yourBest?.minPct ?? 0) >= 100;
+  // Knock Off: the item is there for the first hit (the calc gives Knock Off its holder bonus), gone after it.
+  // Outspeeding and OHKOing still works with the item; walling has to hold up without it.
+  const losesItem = knocksOff(rs, threat.set, member.set) ? member.set.item : undefined;
+  if (losesItem) {
+    const bare = { ...member, set: { ...member.set, item: undefined } };
+    theirBest = worse(theirBest, calcAll(rs, threat, bare, field)[0]);
+    if (!revengeKills) yourBest = calcAll(rs, bare, threat, field)[0];
+  }
   const walls = (theirBest?.maxPct ?? 0) < 50 && (yourBest?.minPct ?? 0) >= 50;
-  const revengeKills = memberSpeed > threatSpeed && (yourBest?.minPct ?? 0) >= 100;
   return {
     member: member.set,
     theirBest,
@@ -48,6 +70,7 @@ export function matchupOf(rs: Ruleset, threat: CalcSide, member: CalcSide, field
     walls,
     revengeKills,
     checks: walls || revengeKills,
+    ...(losesItem ? { losesItem } : {}),
   };
 }
 
