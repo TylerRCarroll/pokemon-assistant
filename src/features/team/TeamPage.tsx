@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { card } from '../../components/ui';
 import { formatsFor } from '../../data/formats';
 import { resolveMembers, type Member } from '../../lib/coverage';
+import { memberRoles } from '../../lib/roles';
 import { loadFormat } from '../../lib/smogon';
 import type { TeamSet } from '../../lib/team';
 import { checkSet } from '../../lib/legality';
@@ -46,6 +47,11 @@ export function TeamPage() {
   const [lastSwap, setLastSwap] = useState<{ index: number; prev: TeamSet; label: string }>();
   useEffect(() => setLastSwap(undefined), [team?.id, rs.id]);
 
+  const rolesFor = (set: TeamSet | null) => {
+    const sp = set && rs.getSpecies(set.species);
+    return set && sp ? memberRoles(rs, set, sp, meta.data) : [];
+  };
+
   const swap = (out: Member, set: TeamSet) => {
     if (!team) return;
     const index = team.slots.indexOf(out.set);
@@ -67,7 +73,15 @@ export function TeamPage() {
         <>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
             {team.slots.map((set, i) => (
-              <SlotCard key={i} rs={rs} set={set} selected={i === selected} issueCount={issuesFor(i).length} onSelect={() => setSelected(i)} />
+              <SlotCard
+                key={i}
+                rs={rs}
+                set={set}
+                selected={i === selected}
+                issueCount={issuesFor(i).length}
+                roles={rolesFor(set)}
+                onSelect={() => setSelected(i)}
+              />
             ))}
           </div>
 

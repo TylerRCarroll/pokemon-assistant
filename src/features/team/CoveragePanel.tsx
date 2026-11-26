@@ -4,7 +4,7 @@ import { Sprite } from '../../components/Sprite';
 import { MoveName } from '../../components/Tooltip';
 import { TypeBadge } from '../../components/TypeBadge';
 import { card } from '../../components/ui';
-import { defensiveCoverage, offensiveCoverage, teamWarnings, type Member } from '../../lib/coverage';
+import { defensiveCoverage, offensiveCoverage, roleCoverage, teamWarnings, type Member } from '../../lib/coverage';
 import type { FormatData } from '../../lib/smogonTypes';
 import { suggestSwaps, tipFor, type Swap, type Tip } from '../../lib/teamAdvice';
 import type { TeamSet } from '../../lib/team';
@@ -100,7 +100,8 @@ export function CoveragePanel({
   /** Shown after a swap so it can be reverted */
   undo?: { label: string; run: () => void };
 }) {
-  const warnings = useMemo(() => teamWarnings(rs, members), [rs, members]);
+  const warnings = useMemo(() => teamWarnings(rs, members, meta), [rs, members, meta]);
+  const roles = useMemo(() => roleCoverage(rs, members, meta), [rs, members, meta]);
   const swaps = useMemo(
     () => (warnings.some((w) => w.issue.kind !== 'duplicateItem') ? suggestSwaps(rs, members, meta) : []),
     [rs, members, meta, warnings],
@@ -138,11 +139,35 @@ export function CoveragePanel({
         )}
       </section>
 
+      <section className={`${card} p-4`}>
+        <h2 className="font-semibold">Team roles</h2>
+        <p className="mb-2 text-xs text-slate-500">
+          {rs.kind === 'romhack'
+            ? 'Tuned for in-game bosses, which set up far more often than they set hazards.'
+            : 'What a competitive singles team usually needs.'}{' '}
+          Detected from moves, items, abilities, and base stats{meta ? ', or the most common set while a slot has no moves' : ''}.
+        </p>
+        <ul className="grid gap-x-4 gap-y-1.5 text-sm sm:grid-cols-2">
+          {roles.map(({ need, providers }) => (
+            <li key={need.id} className="flex items-center gap-2" title={`Needs ${need.why}`}>
+              <span className={providers.length ? 'text-green-600' : need.core ? 'text-red-600' : 'text-slate-400'}>
+                {providers.length ? '✓' : '✗'}
+              </span>
+              <span className={providers.length ? '' : 'text-slate-500'}>
+                {need.label}
+                {!need.core && <span className="ml-1 text-xs text-slate-400">(nice to have)</span>}
+              </span>
+              <Minis members={providers} />
+            </li>
+          ))}
+        </ul>
+      </section>
+
       {swaps.length > 0 && (
         <section className={`${card} p-4`}>
           <h2 className="font-semibold">Suggested swaps</h2>
           <p className="mb-2 text-xs text-slate-500">
-            Replacements that fix the most warnings, weighed against what you&apos;d lose.{' '}
+            Replacements that fix the most warnings and missing roles, weighed against what you&apos;d lose.{' '}
             {meta ? 'Drawn from the most-used Pokémon in the format.' : 'Drawn from fully evolved, non-legendary Pokémon.'}
           </p>
           <ul className="space-y-2">

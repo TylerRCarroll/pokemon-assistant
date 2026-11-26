@@ -1,4 +1,6 @@
 import type { Ruleset, SpeciesInfo, TypeName } from '../rulesets/types';
+import { memberRoles, roleNeeds, type RoleNeed } from './roles';
+import type { FormatData } from './smogonTypes';
 import type { TeamSet } from './team';
 
 /** Abilities that make the holder immune to an attacking type */
@@ -100,7 +102,8 @@ export type TeamIssue =
   | { kind: 'stackedWeakness'; type: TypeName; weak: Member[] }
   | { kind: 'coverageGap'; types: TypeName[] }
   | { kind: 'noAttacks'; member: Member }
-  | { kind: 'duplicateItem'; item: string };
+  | { kind: 'duplicateItem'; item: string }
+  | { kind: 'missingRole'; need: RoleNeed };
 
 export interface TeamWarning {
   severity: 'high' | 'medium';
@@ -108,7 +111,16 @@ export interface TeamWarning {
   issue: TeamIssue;
 }
 
-export function teamWarnings(rs: Ruleset, members: Member[]): TeamWarning[] {
+/** Which of the ruleset's role needs the team meets, and who meets each */
+export function roleCoverage(rs: Ruleset, members: Member[], meta?: FormatData) {
+  const roles = members.map((m) => memberRoles(rs, m.set, m.species, meta));
+  return roleNeeds(rs).map((need) => ({
+    need,
+    providers: members.filter((_, i) => roles[i].some((r) => need.roles.includes(r))),
+  }));
+}
+
+export function teamWarnings(rs: Ruleset, members: Member[], meta?: FormatData): TeamWarning[] {
   if (!members.length) return [];
   const out: TeamWarning[] = [];
   for (const row of defensiveCoverage(rs, members)) {
@@ -142,6 +154,14 @@ export function teamWarnings(rs: Ruleset, members: Member[]): TeamWarning[] {
   );
   for (const m of noAttacks) {
     out.push({ severity: 'medium', message: `${m.species.name} has no damaging moves`, issue: { kind: 'noAttacks', member: m } });
+  }
+  // half-built teams would trip every role check, so wait until there are a few members
+  if (members.length >= 4) {
+    for (const { need, providers } of roleCoverage(rs, members, meta)) {
+      if (need.core && !providers.length) {
+        out.push({ severity: 'medium', message: `No ${need.label.toLowerCase()}: nothing provides ${need.why}`, issue: { kind: 'missingRole', need } });
+      }
+    }
   }
   const items = members.map((m) => m.set.item).filter(Boolean);
   const dupItem = items.find((it, i) => items.indexOf(it) !== i);

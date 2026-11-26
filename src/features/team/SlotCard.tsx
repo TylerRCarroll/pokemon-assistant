@@ -1,6 +1,7 @@
 import { Sprite } from '../../components/Sprite';
 import { TypeBadge } from '../../components/TypeBadge';
 import { card } from '../../components/ui';
+import { ROLE_LABELS, type Role } from '../../lib/roles';
 import type { TeamSet } from '../../lib/team';
 import type { Ruleset } from '../../rulesets/types';
 
@@ -9,12 +10,14 @@ export function SlotCard({
   set,
   selected,
   issueCount,
+  roles = [],
   onSelect,
 }: {
   rs: Ruleset;
   set: TeamSet | null;
   selected: boolean;
   issueCount: number;
+  roles?: Role[];
   onSelect: () => void;
 }) {
   const ring = selected ? 'ring-2 ring-blue-500' : 'hover:border-slate-400 dark:hover:border-slate-600';
@@ -54,6 +57,15 @@ export function SlotCard({
           </li>
         ))}
       </ul>
+      {roles.length > 0 && (
+        <div className="mt-auto flex flex-wrap gap-1 pt-1">
+          {roles.map((r) => (
+            <span key={r} className="rounded bg-slate-100 px-1.5 text-[10px] font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+              {ROLE_LABELS[r]}
+            </span>
+          ))}
+        </div>
+      )}
     </button>
   );
 }

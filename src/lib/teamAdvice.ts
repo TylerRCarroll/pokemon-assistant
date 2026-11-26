@@ -1,5 +1,6 @@
 import type { LearnsetEntry, MoveInfo, Ruleset, SpeciesInfo, TypeName } from '../rulesets/types';
 import { defensiveCoverage, IMMUNITY_ABILITIES, memberTakes, teamWarnings, type Member, type TeamIssue } from './coverage';
+import { memberRoles, ROLE_MOVES, roleNeeds, type Role, type RoleNeed } from './roles';
 import { statTotal } from './format';
 import { findUsage, setFromUsage } from './smogon';
 import type { FormatData } from './smogonTypes';
@@ -100,6 +101,61 @@ export function tipFor(
     }
     case 'duplicateItem':
       return { text: `Give one of them a different item. Leftovers, Heavy-Duty Boots, or a Choice item are the usual alternatives.` };
+    case 'missingRole':
+      return roleTip(rs, issue.need, members, learnsetOf);
+  }
+}
+
+/** Who on the team could pick up a missing role: a learnable move, or an item for speed and power */
+function roleTip(rs: Ruleset, need: RoleNeed, members: Member[], learnsetOf: (m: Member) => LearnsetEntry[] | undefined): Tip {
+  const offense = (m: Member) => Math.max(m.species.baseStats.atk, m.species.baseStats.spa);
+  const ranked = (by: (m: Member) => number) => [...members].sort((a, b) => by(b) - by(a));
+  const teach = (role: Role, order: Member[]): MoveTip | undefined => {
+    const list = ROLE_MOVES[role];
+    if (!list) return undefined;
+    // the role's lists run best-first (Stealth Rock before Spikes), so the move order wins over member order
+    for (const id of list) {
+      for (const m of order) {
+        const known = new Set(m.set.moves.map((n) => rs.getMove(n)?.id));
+        const move = !known.has(id) && learnsetOf(m)?.some((e) => e.move === id) ? rs.getMove(id) : undefined;
+        if (move) return { member: m, move, hits: [] };
+      }
+    }
+  };
+  const swapHint = 'or see the suggested swaps';
+  switch (need.id) {
+    case 'speed': {
+      const fastest = ranked((m) => m.species.baseStats.spe)[0];
+      const priority = members
+        .flatMap((m) => {
+          const known = new Set(m.set.moves.map((n) => rs.getMove(n)?.id));
+          return (learnsetOf(m) ?? []).flatMap((e) => {
+            const mv = rs.getMove(e.move);
+            return mv && mv.priority > 0 && mv.basePower >= 40 && mv.category !== 'Status' && !known.has(mv.id) ? [{ member: m, move: mv, hits: [] }] : [];
+          });
+        })
+        .sort((a, b) => offense(b.member) * b.move.basePower - offense(a.member) * a.move.basePower)[0];
+      return {
+        moves: priority ? [priority] : undefined,
+        text: rs.gen >= 4 ? `Or put a Choice Scarf on ${fastest.species.name} (base ${fastest.species.baseStats.spe} Speed), ${swapHint}.` : `Or ${swapHint}.`,
+      };
+    }
+    case 'wincon': {
+      const setup = teach('setup', ranked(offense));
+      const strongest = ranked(offense)[0];
+      const physical = strongest.species.baseStats.atk >= strongest.species.baseStats.spa;
+      return {
+        moves: setup ? [setup] : undefined,
+        text: rs.gen >= 4 ? `Or give ${strongest.species.name} a ${physical ? 'Choice Band' : 'Choice Specs'} or Life Orb, ${swapHint}.` : `Or ${swapHint}.`,
+      };
+    }
+    case 'physical':
+    case 'special':
+      return { text: 'This takes bulk and recovery rather than one move; the suggested swaps include Pokémon that fill it.' };
+    default: {
+      const tip = need.roles.map((r) => teach(r, members)).find(Boolean);
+      return tip ? { moves: [tip] } : { text: 'Nobody on the team can learn a move for this; the suggested swaps can bring one in.' };
+    }
   }
 }
 
@@ -131,8 +187,9 @@ function attackTypes(rs: Ruleset, m: Member): TypeName[] {
   ];
 }
 
-/** Lower is better: stacked weaknesses, unresisted types, and types nothing hits super-effectively */
+/** Lower is better: stacked weaknesses, unresisted types, types nothing hits super-effectively, and missing roles */
 function makePenalty(rs: Ruleset) {
+  const needs = roleNeeds(rs);
   const takes = new Map<string, number>();
   const hits = new Map<string, number>();
   const take = (m: Member, t: TypeName) => {
@@ -147,8 +204,11 @@ function makePenalty(rs: Ruleset) {
     if (v === undefined) hits.set(key, (v = rs.effectiveness(atk, [def])));
     return v;
   };
-  return (team: Member[], attacks: TypeName[][]) => {
+  return (team: Member[], attacks: TypeName[][], roles: Role[][]) => {
     let p = 0;
+    for (const need of needs) {
+      if (!roles.some((mine) => mine.some((r) => need.roles.includes(r)))) p += need.core ? 2.5 : 0.75;
+    }
     for (const t of rs.types) {
       let weak = 0;
       let resist = 0;
@@ -194,17 +254,25 @@ export function suggestSwaps(rs: Ruleset, members: Member[], meta?: FormatData, 
   if (members.length < 2) return [];
   const penalty = makePenalty(rs);
   const attacks = members.map((m) => attackTypes(rs, m));
-  const before = penalty(members, attacks);
+  const roles = members.map((m) => memberRoles(rs, m.set, m.species, meta));
+  const before = penalty(members, attacks, roles);
   const qualities = members.map((m) => quality(m, meta));
 
   const best = new Map<string, { i: number; species: SpeciesInfo; set: TeamSet; score: number }>();
   for (const c of candidatePool(rs, members, meta)) {
     const incoming: Member = { species: c.species, set: c.set };
     const incomingAttacks = attackTypes(rs, incoming);
+    const incomingRoles = memberRoles(rs, c.set, c.species, meta);
     const q = quality(incoming, meta);
     members.forEach((_, i) => {
       const team = members.map((m, j) => (j === i ? incoming : m));
-      const gain = before - penalty(team, attacks.map((a, j) => (j === i ? incomingAttacks : a)));
+      const gain =
+        before -
+        penalty(
+          team,
+          attacks.map((a, j) => (j === i ? incomingAttacks : a)),
+          roles.map((r, j) => (j === i ? incomingRoles : r)),
+        );
       if (gain < 1) return;
       const score = gain + 0.6 * (q - qualities[i]);
       const prev = best.get(c.species.id);
@@ -224,7 +292,7 @@ export function suggestSwaps(rs: Ruleset, members: Member[], meta?: FormatData, 
       outReasons: outReasons(rs, members, b.i, qualities, meta),
       incoming: b.species,
       set: b.set,
-      fixes: describeFixes(rs, members, members.map((m, j) => (j === b.i ? incoming : m))),
+      fixes: describeFixes(rs, members, members.map((m, j) => (j === b.i ? incoming : m)), meta),
       score: b.score,
     });
     if (picked.length >= limit) break;
@@ -235,7 +303,7 @@ export function suggestSwaps(rs: Ruleset, members: Member[], meta?: FormatData, 
 function outReasons(rs: Ruleset, members: Member[], i: number, qualities: number[], meta?: FormatData): string[] {
   const m = members[i];
   const reasons: string[] = [];
-  const stacked = teamWarnings(rs, members).flatMap((w) =>
+  const stacked = teamWarnings(rs, members, meta).flatMap((w) =>
     w.issue.kind === 'stackedWeakness' && w.issue.weak.includes(m) ? [w.issue.type] : [],
   );
   if (stacked.length) reasons.push(`adds to the ${listOf(stacked)} weakness${stacked.length > 1 ? 'es' : ''}`);
@@ -247,8 +315,17 @@ function outReasons(rs: Ruleset, members: Member[], i: number, qualities: number
 }
 
 /** Before/after differences worth saying out loud */
-function describeFixes(rs: Ruleset, before: Member[], after: Member[]): string[] {
+function describeFixes(rs: Ruleset, before: Member[], after: Member[], meta?: FormatData): string[] {
   const fixes: string[] = [];
+  const met = (team: Member[]) => {
+    const roles = team.map((m) => memberRoles(rs, m.set, m.species, meta));
+    return new Set(roleNeeds(rs).filter((n) => roles.some((r) => r.some((x) => n.roles.includes(x)))).map((n) => n.label));
+  };
+  const metBefore = met(before);
+  const metAfter = met(after);
+  const gained = [...metAfter].filter((l) => !metBefore.has(l));
+  const lost = [...metBefore].filter((l) => !metAfter.has(l));
+  if (gained.length) fixes.push(`adds ${listOf(gained.map((l) => l.toLowerCase()))}`);
   const rowsBefore = defensiveCoverage(rs, before);
   const rowsAfter = defensiveCoverage(rs, after);
   rowsBefore.forEach((b, k) => {
@@ -265,8 +342,9 @@ function describeFixes(rs: Ruleset, before: Member[], after: Member[]): string[]
   const covered = gaps(before).filter((t) => !gaps(after).includes(t));
   if (covered.length) fixes.push(`now hits ${listOf(covered)} super-effectively`);
   const newProblems = rowsAfter.filter((a, k) => a.weak.length >= 3 && rowsBefore[k].weak.length < 3).map((a) => a.type);
-  // the biggest defensive improvements first, capped so the card stays readable
+  // role changes and the biggest defensive improvements first, capped so the card stays readable
   const shown = fixes.slice(0, 4);
+  if (lost.length) shown.push(`but loses ${listOf(lost.map((l) => l.toLowerCase()))}`);
   if (newProblems.length) shown.push(`but stacks a ${listOf(newProblems)} weakness`);
   return shown;
 }
