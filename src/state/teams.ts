@@ -15,6 +15,8 @@ interface TeamsState {
   teams: Team[];
   /** Last-opened team per ruleset */
   activeByRuleset: Record<string, string>;
+  /** When each deleted team was deleted, so syncing and merging don't bring it back */
+  deleted: Record<string, number>;
   createTeam: (rulesetId: string, name?: string, slots?: (TeamSet | null)[]) => string;
   renameTeam: (id: string, name: string) => void;
   deleteTeam: (id: string) => void;
@@ -37,6 +39,7 @@ export const useTeamsStore = create<TeamsState>()(
       return {
         teams: [],
         activeByRuleset: {},
+        deleted: {},
         createTeam(rulesetId, name, slots) {
           const id = crypto.randomUUID();
           const count = get().teams.filter((t) => t.rulesetId === rulesetId).length;
@@ -51,7 +54,7 @@ export const useTeamsStore = create<TeamsState>()(
           return id;
         },
         renameTeam: (id, name) => patch(id, () => ({ name })),
-        deleteTeam: (id) => set((s) => ({ teams: s.teams.filter((t) => t.id !== id) })),
+        deleteTeam: (id) => set((s) => ({ teams: s.teams.filter((t) => t.id !== id), deleted: { ...s.deleted, [id]: Date.now() } })),
         setActive: (rulesetId, id) => set((s) => ({ activeByRuleset: { ...s.activeByRuleset, [rulesetId]: id } })),
         setSlot: (id, index, slot) => patch(id, (t) => ({ slots: t.slots.map((s, i) => (i === index ? slot : s)) })),
         setSlots: (id, slots) => patch(id, () => ({ slots: padSlots(slots) })),

@@ -36,7 +36,20 @@ describe('backups', () => {
     expect(teams.teams.map((t: { name: string }) => t.name).sort()).toEqual(['c', 'd', 'local B', 'newer A']);
     // this browser's active team choices win; missing rulesets are filled in
     expect(teams.activeByRuleset).toEqual({ gen9: 'c', gen5: 'x' });
-    expect(plan.summary[0]).toBe('1 new team, 1 updated, 1 already up to date');
+    expect(plan.summary[0]).toBe('1 new team, 1 updated');
+  });
+
+  it('keeps deleted teams deleted, unless edited after the deletion', () => {
+    // this browser deleted "a" at t=10; the other side still has it (last edited t=5) and edited "b" at t=20
+    const local = { 'pokeplanner:teams': store({ teams: [team('b', 1)], activeByRuleset: {}, deleted: { a: 10, b: 15 } }) };
+    const backup = createBackup(fakeStorage({ 'pokeplanner:teams': JSON.stringify(store({ teams: [team('a', 5), team('b', 20, 'edited later')] })) }));
+    const merged = JSON.parse(planImport(local, backup, 'merge').writes['pokeplanner:teams']).state;
+    expect(merged.teams.map((t: { name: string }) => t.name)).toEqual(['edited later']);
+    expect(merged.deleted).toEqual({ a: 10, b: 15 });
+    // and a deletion made elsewhere removes the team here
+    const other = createBackup(fakeStorage({ 'pokeplanner:teams': JSON.stringify(store({ teams: [], deleted: { b: 30 } })) }));
+    const after = JSON.parse(planImport({ 'pokeplanner:teams': store({ teams: [team('b', 20)] }) }, other, 'merge').writes['pokeplanner:teams']).state;
+    expect(after.teams).toEqual([]);
   });
 
   it('keeps the quiz progress with more answers and fills in missing settings', () => {

@@ -16,6 +16,21 @@ const backupSchema = z.object({
 export type Backup = z.infer<typeof backupSchema>;
 type Stored = Backup['data'][string];
 
+/** Every pokeplanner store in `storage`, parsed (unparseable entries come back undefined) */
+export function readStores(storage: Pick<Storage, 'length' | 'key' | 'getItem'>): Record<string, Stored | undefined> {
+  const out: Record<string, Stored | undefined> = {};
+  for (let i = 0; i < storage.length; i++) {
+    const key = storage.key(i);
+    if (!key?.startsWith(PREFIX)) continue;
+    try {
+      out[key] = JSON.parse(storage.getItem(key)!);
+    } catch {
+      out[key] = undefined;
+    }
+  }
+  return out;
+}
+
 /** Read every pokeplanner store out of `storage` */
 export function createBackup(storage: Pick<Storage, 'length' | 'key' | 'getItem'>, now = new Date()): Backup {
   const data: Backup['data'] = {};
@@ -90,19 +105,34 @@ function mergeStore(key: string, local: Stored, incoming: Stored, summary: strin
   if (name === 'teams') {
     const mine = (local.state.teams ?? []) as TeamLike[];
     const theirs = (incoming.state.teams ?? []) as TeamLike[];
+    // deletions win over any edit made before them, from either side
+    const deleted: Record<string, number> = { ...(incoming.state.deleted as object) };
+    for (const [id, at] of Object.entries((local.state.deleted ?? {}) as Record<string, number>)) deleted[id] = Math.max(at, deleted[id] ?? 0);
     const byId = new Map(mine.map((t) => [t.id, t]));
     let added = 0;
     let updated = 0;
     for (const t of theirs) {
       const existing = byId.get(t.id);
+      if ((deleted[t.id] ?? -1) >= t.updatedAt) continue;
       if (!existing) added++;
       else if (t.updatedAt > existing.updatedAt) updated++;
       else continue;
       byId.set(t.id, t);
     }
-    summary.push(`${added} new team${added === 1 ? '' : 's'}, ${updated} updated, ${theirs.length - added - updated} already up to date`);
+    let removed = 0;
+    for (const [id, t] of byId) {
+      if ((deleted[id] ?? -1) >= t.updatedAt) {
+        byId.delete(id);
+        removed++;
+      }
+    }
+    if (added || updated || removed) {
+      summary.push(
+        [`${added} new team${added === 1 ? '' : 's'}`, `${updated} updated`, ...(removed ? [`${removed} deleted`] : [])].join(', '),
+      );
+    }
     const active = { ...(incoming.state.activeByRuleset as object), ...(local.state.activeByRuleset as object) };
-    return { ...local, state: { ...local.state, teams: [...byId.values()], activeByRuleset: active } };
+    return { ...local, state: { ...local.state, teams: [...byId.values()], activeByRuleset: active, deleted } };
   }
   if (name === 'quiz') {
     type Progress = { answered: number };

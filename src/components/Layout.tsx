@@ -1,6 +1,7 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import { RULESETS } from '../rulesets/registry';
 import { useRuleset, useRulesetStore } from '../state/ruleset';
+import { useAutoSync, useSyncStore } from '../state/sync';
 
 const NAV = [
   { to: '/types', label: 'Types' },
@@ -16,6 +17,8 @@ export function Layout() {
   const rulesetId = useRulesetStore((s) => s.rulesetId);
   const setRuleset = useRulesetStore((s) => s.setRuleset);
   const ruleset = useRuleset();
+  useAutoSync();
+  const sync = useSyncStore((s) => s.status);
 
   return (
     <div className="min-h-screen">
@@ -39,7 +42,16 @@ export function Layout() {
               </NavLink>
             ))}
           </nav>
-          <label className="ml-auto flex items-center gap-2 text-sm">
+          {sync !== 'off' && (
+            <Link
+              to="/backup"
+              title="Sync status"
+              className={`ml-auto rounded px-2 py-0.5 text-xs ${sync === 'error' ? 'bg-red-100 text-red-700 dark:bg-red-950 dark:text-red-300' : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800'}`}
+            >
+              {sync === 'syncing' ? 'Syncing…' : sync === 'error' ? 'Sync error' : 'Synced ✓'}
+            </Link>
+          )}
+          <label className={`${sync === 'off' ? 'ml-auto ' : ''}flex items-center gap-2 text-sm`}>
             <span className="text-slate-500">Ruleset</span>
             <select
               value={rulesetId}

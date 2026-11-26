@@ -1,24 +1,10 @@
 import { useMemo, useState } from 'react';
 import { card, input } from '../../components/ui';
-import { createBackup, parseBackup, planImport, PREFIX, type Backup, type ImportMode } from '../../lib/backup';
+import { SyncSection } from './SyncSection';
+import { createBackup, parseBackup, planImport, PREFIX, readStores, type Backup, type ImportMode } from '../../lib/backup';
 
 const button =
   'rounded border border-slate-300 px-3 py-1 text-sm font-medium hover:bg-slate-100 disabled:opacity-50 dark:border-slate-700 dark:hover:bg-slate-800';
-
-/** Current pokeplanner stores in this browser, parsed */
-function readCurrent() {
-  const out: Record<string, { state: Record<string, unknown>; version?: number } | undefined> = {};
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i);
-    if (!key?.startsWith(PREFIX)) continue;
-    try {
-      out[key] = JSON.parse(localStorage.getItem(key)!);
-    } catch {
-      out[key] = undefined;
-    }
-  }
-  return out;
-}
 
 const teamCount = (b: Backup) => ((b.data[`${PREFIX}teams`]?.state.teams as unknown[]) ?? []).length;
 
@@ -31,7 +17,7 @@ export function BackupPage() {
   const local = useMemo(() => createBackup(localStorage), []);
   const exportText = useMemo(() => JSON.stringify(local, null, 1), [local]);
   const parsed = useMemo(() => (text.trim() ? parseBackup(text) : {}), [text]);
-  const plan = useMemo(() => parsed.backup && planImport(readCurrent(), parsed.backup, mode), [parsed.backup, mode]);
+  const plan = useMemo(() => parsed.backup && planImport(readStores(localStorage), parsed.backup, mode), [parsed.backup, mode]);
 
   const download = () => {
     const blob = new Blob([exportText], { type: 'application/json' });
@@ -59,12 +45,14 @@ export function BackupPage() {
   return (
     <div className="space-y-5">
       <div>
-        <h1 className="text-2xl font-bold">Backup &amp; restore</h1>
+        <h1 className="text-2xl font-bold">Backup &amp; sync</h1>
         <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
           Teams, quiz progress, and settings live in this browser only, so each site (localhost, GitHub Pages) and each browser has its own.
           Export here, then import on the other one.
         </p>
       </div>
+
+      <SyncSection />
 
       <section className={`${card} space-y-3 p-4`}>
         <h2 className="font-semibold">Export from this browser</h2>
