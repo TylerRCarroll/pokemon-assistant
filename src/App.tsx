@@ -7,6 +7,7 @@ import { MoveDetail } from './features/dex/MoveDetail';
 import { PokemonDetail } from './features/dex/PokemonDetail';
 import { PlannerPage } from './features/planner/PlannerPage';
 import { TeamPage } from './features/team/TeamPage';
+import { BackupPage } from './features/backup/BackupPage';
 import { TrainerPage } from './features/trainer/TrainerPage';
 import { TypesPage } from './features/types/TypesPage';
 
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: 'planner/:mon?', element: <PlannerPage /> },
       { path: 'calc', element: <CalcPage /> },
       { path: 'trainer', element: <TrainerPage /> },
+      { path: 'backup', element: <BackupPage /> },
     ],
   },
   // match Vite's base so routes work under /pokemon-assistant/ on GitHub Pages
