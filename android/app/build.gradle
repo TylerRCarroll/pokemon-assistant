@@ -31,6 +31,12 @@ android {
         }
     }
     buildTypes {
+        // Debug builds get their own app ID so they install next to the Obtainium release instead of
+        // replacing it (and wiping its saved teams). The name is overridden in src/debug/res.
+        debug {
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+        }
         release {
             if (System.getenv("ANDROID_KEYSTORE_PATH")) signingConfig signingConfigs.release
             minifyEnabled false
