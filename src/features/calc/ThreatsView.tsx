@@ -61,7 +61,14 @@ export function ThreatsView({
   const { difficulties, difficulty, setDifficulty, trainers } = useDifficulty(rs.id, allDifficulties);
   const trainerMode = !formats.length && !!trainers?.length;
   const bosses = useMemo(() => groupBySplit((trainers ?? []).filter((t) => allTrainers || t.boss)), [trainers, allTrainers]);
-  const trainer = trainers?.find((t) => t.id === trainerId) ?? bosses[0]?.trainers[0];
+  // ids differ per difficulty, so after switching, follow the same trainer (and rival variant) by name
+  const selected = allDifficulties?.find((t) => t.id === trainerId);
+  const sameTrainer = selected && trainers?.filter((t) => t.name === selected.name);
+  const trainer =
+    trainers?.find((t) => t.id === trainerId) ??
+    sameTrainer?.find((t) => t.notes.join('|') === selected!.notes.join('|')) ??
+    sameTrainer?.[0] ??
+    bosses[0]?.trainers[0];
   const cap = trainer && (trainer.levelCap ?? Math.max(...trainer.team.map((m) => m.level)));
 
   // in a romhack, compare at the split's level cap rather than whatever level the builder set
