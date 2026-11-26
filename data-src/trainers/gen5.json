@@ -1,0 +1,3292 @@
+[
+ {
+  "id": 24,
+  "name": "Trainer Cheren",
+  "location": "Nuvema Town",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "First battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Tepig",
+    "level": 5,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Tail Whip"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 25,
+  "name": "Trainer Cheren",
+  "location": "Nuvema Town",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "First battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Oshawott",
+    "level": 5,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Tail Whip"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 26,
+  "name": "Trainer Cheren",
+  "location": "Nuvema Town",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "First battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Snivy",
+    "level": 5,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Leer"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 45,
+  "name": "Trainer Bianca",
+  "location": "Nuvema Town",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "First battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Oshawott",
+    "level": 5,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Tail Whip"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 46,
+  "name": "Trainer Bianca",
+  "location": "Nuvema Town",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "First battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Snivy",
+    "level": 5,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Leer"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 47,
+  "name": "Trainer Bianca",
+  "location": "Nuvema Town",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "First battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Tepig",
+    "level": 5,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Tail Whip"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 16,
+  "name": "Trainer N",
+  "location": "Accumula Town",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "First battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Purrloin",
+    "level": 7,
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Scratch",
+     "Growl"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 48,
+  "name": "Trainer Bianca",
+  "location": "Unova Route 2",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "Second battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lillipup",
+    "level": 6,
+    "ability": "Vital Spirit",
+    "ivs": 31,
+    "moves": [
+     "Leer",
+     "Tackle",
+     "Odor Sleuth"
+    ]
+   },
+   {
+    "species": "Oshawott",
+    "level": 7,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Tail Whip",
+     "Water Gun"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 49,
+  "name": "Trainer Bianca",
+  "location": "Unova Route 2",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "Second battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lillipup",
+    "level": 6,
+    "ability": "Vital Spirit",
+    "ivs": 31,
+    "moves": [
+     "Leer",
+     "Tackle",
+     "Odor Sleuth"
+    ]
+   },
+   {
+    "species": "Snivy",
+    "level": 7,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Leer",
+     "Vine Whip"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 50,
+  "name": "Trainer Bianca",
+  "location": "Unova Route 2",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "Second battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lillipup",
+    "level": 6,
+    "ability": "Vital Spirit",
+    "ivs": 31,
+    "moves": [
+     "Leer",
+     "Tackle",
+     "Odor Sleuth"
+    ]
+   },
+   {
+    "species": "Tepig",
+    "level": 7,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Tail Whip",
+     "Ember"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 27,
+  "name": "Trainer Cheren",
+  "location": "Striaton City",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "Second battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Tepig",
+    "level": 8,
+    "item": "Oran Berry",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Tail Whip",
+     "Ember"
+    ]
+   },
+   {
+    "species": "Purrloin",
+    "level": 8,
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Scratch",
+     "Growl",
+     "Assist"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 28,
+  "name": "Trainer Cheren",
+  "location": "Striaton City",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "Second battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Oshawott",
+    "level": 8,
+    "item": "Oran Berry",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Tail Whip",
+     "Water Gun"
+    ]
+   },
+   {
+    "species": "Purrloin",
+    "level": 8,
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Scratch",
+     "Growl",
+     "Assist"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 29,
+  "name": "Trainer Cheren",
+  "location": "Striaton City",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "Second battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Snivy",
+    "level": 8,
+    "item": "Oran Berry",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Leer",
+     "Vine Whip"
+    ]
+   },
+   {
+    "species": "Purrloin",
+    "level": 8,
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Scratch",
+     "Growl",
+     "Assist"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 17,
+  "name": "Trainer N",
+  "location": "Nacrene City",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "Second battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pidove",
+    "level": 13,
+    "ability": "Big Pecks",
+    "ivs": 31,
+    "moves": [
+     "Gust",
+     "Quick Attack",
+     "Leer",
+     "Growl"
+    ]
+   },
+   {
+    "species": "Timburr",
+    "level": 13,
+    "ability": "Sheer Force",
+    "ivs": 31,
+    "moves": [
+     "Low Kick",
+     "Focus Energy",
+     "Bide",
+     "Leer"
+    ]
+   },
+   {
+    "species": "Tympole",
+    "level": 13,
+    "ability": "Swift Swim",
+    "ivs": 31,
+    "moves": [
+     "Supersonic",
+     "Bubble Beam",
+     "Growl",
+     "Round"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 1,
+  "name": "Leader Chili",
+  "location": "Striaton Gym",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lillipup",
+    "level": 12,
+    "ability": "Pickup",
+    "ivs": 31,
+    "moves": [
+     "Bite",
+     "Work Up"
+    ]
+   },
+   {
+    "species": "Pansear",
+    "level": 14,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Incinerate",
+     "Work Up"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 2,
+  "name": "Leader Cress",
+  "location": "Striaton Gym",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lillipup",
+    "level": 12,
+    "ability": "Pickup",
+    "ivs": 31,
+    "moves": [
+     "Bite",
+     "Work Up"
+    ]
+   },
+   {
+    "species": "Panpour",
+    "level": 14,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Water Gun",
+     "Work Up"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 3,
+  "name": "Leader Cilan",
+  "location": "Striaton Gym",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lillipup",
+    "level": 12,
+    "ability": "Pickup",
+    "ivs": 31,
+    "moves": [
+     "Bite",
+     "Work Up"
+    ]
+   },
+   {
+    "species": "Pansage",
+    "level": 14,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Vine Whip",
+     "Work Up"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 30,
+  "name": "Trainer Cheren",
+  "location": "Unova Route 3",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "Third battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Tepig",
+    "level": 14,
+    "item": "Oran Berry",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Odor Sleuth",
+     "Tail Whip",
+     "Ember",
+     "Defense Curl"
+    ]
+   },
+   {
+    "species": "Purrloin",
+    "level": 12,
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Fury Swipes",
+     "Growl",
+     "Assist",
+     "Sand Attack"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 31,
+  "name": "Trainer Cheren",
+  "location": "Unova Route 3",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "Third battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Oshawott",
+    "level": 14,
+    "item": "Oran Berry",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Focus Energy",
+     "Tail Whip",
+     "Water Gun",
+     "Water Sport"
+    ]
+   },
+   {
+    "species": "Purrloin",
+    "level": 12,
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Fury Swipes",
+     "Growl",
+     "Assist",
+     "Sand Attack"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 32,
+  "name": "Trainer Cheren",
+  "location": "Unova Route 3",
+  "split": "Gym 1: Striaton trio",
+  "levelCap": 14,
+  "notes": [
+   "Third battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Snivy",
+    "level": 14,
+    "item": "Oran Berry",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Growth",
+     "Leer",
+     "Vine Whip",
+     "Wrap"
+    ]
+   },
+   {
+    "species": "Purrloin",
+    "level": 12,
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Fury Swipes",
+     "Growl",
+     "Assist",
+     "Sand Attack"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 4,
+  "name": "Leader Lenora",
+  "location": "Nacrene Gym",
+  "split": "Gym 2: Lenora",
+  "levelCap": 20,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Herdier",
+    "level": 18,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Take Down",
+     "Bite",
+     "Retaliate",
+     "Leer"
+    ]
+   },
+   {
+    "species": "Watchog",
+    "level": 20,
+    "ability": "Illuminate",
+    "ivs": 31,
+    "moves": [
+     "Leer",
+     "Crunch",
+     "Retaliate",
+     "Hypnosis"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 51,
+  "name": "Trainer Bianca",
+  "location": "Castelia City",
+  "split": "Gym 2: Lenora",
+  "levelCap": 20,
+  "notes": [
+   "Third battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Herdier",
+    "level": 18,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Odor Sleuth",
+     "Bite",
+     "Helping Hand",
+     "Take Down"
+    ]
+   },
+   {
+    "species": "Pansear",
+    "level": 18,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Lick",
+     "Incinerate",
+     "Fury Swipes",
+     "Yawn"
+    ]
+   },
+   {
+    "species": "Munna",
+    "level": 18,
+    "ability": "Forewarn",
+    "ivs": 31,
+    "moves": [
+     "Yawn",
+     "Psybeam",
+     "Imprison",
+     "Moonlight"
+    ]
+   },
+   {
+    "species": "Dewott",
+    "level": 20,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Water Sport",
+     "Focus Energy",
+     "Razor Shell",
+     "Fury Cutter"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 52,
+  "name": "Trainer Bianca",
+  "location": "Castelia City",
+  "split": "Gym 2: Lenora",
+  "levelCap": 20,
+  "notes": [
+   "Third battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Herdier",
+    "level": 18,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Odor Sleuth",
+     "Bite",
+     "Helping Hand",
+     "Take Down"
+    ]
+   },
+   {
+    "species": "Panpour",
+    "level": 18,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Lick",
+     "Water Gun",
+     "Fury Swipes",
+     "Water Sport"
+    ]
+   },
+   {
+    "species": "Munna",
+    "level": 18,
+    "ability": "Forewarn",
+    "ivs": 31,
+    "moves": [
+     "Yawn",
+     "Psybeam",
+     "Imprison",
+     "Moonlight"
+    ]
+   },
+   {
+    "species": "Servine",
+    "level": 20,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Wrap",
+     "Growth",
+     "Leaf Tornado",
+     "Leech Seed"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 53,
+  "name": "Trainer Bianca",
+  "location": "Castelia City",
+  "split": "Gym 2: Lenora",
+  "levelCap": 20,
+  "notes": [
+   "Third battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Herdier",
+    "level": 18,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Odor Sleuth",
+     "Bite",
+     "Helping Hand",
+     "Take Down"
+    ]
+   },
+   {
+    "species": "Pansage",
+    "level": 18,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Lick",
+     "Vine Whip",
+     "Fury Swipes",
+     "Leech Seed"
+    ]
+   },
+   {
+    "species": "Munna",
+    "level": 18,
+    "ability": "Forewarn",
+    "ivs": 31,
+    "moves": [
+     "Yawn",
+     "Psybeam",
+     "Imprison",
+     "Moonlight"
+    ]
+   },
+   {
+    "species": "Pignite",
+    "level": 20,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Defense Curl",
+     "Flame Charge",
+     "Arm Thrust",
+     "Smog"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 18,
+  "name": "Team Plasma N",
+  "location": "Nimbasa City",
+  "split": "Gym 3: Burgh",
+  "levelCap": 23,
+  "notes": [
+   "Third battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Sandile",
+    "level": 22,
+    "ability": "Moxie",
+    "ivs": 31,
+    "moves": [
+     "Assurance",
+     "Embargo",
+     "Sand Tomb",
+     "Mud-Slap"
+    ]
+   },
+   {
+    "species": "Scraggy",
+    "level": 22,
+    "ability": "Shed Skin",
+    "ivs": 31,
+    "moves": [
+     "Swagger",
+     "Brick Break",
+     "Headbutt",
+     "Feint Attack"
+    ]
+   },
+   {
+    "species": "Darumaka",
+    "level": 22,
+    "ability": "Hustle",
+    "ivs": 31,
+    "moves": [
+     "Fire Punch",
+     "Headbutt",
+     "Facade",
+     "Uproar"
+    ]
+   },
+   {
+    "species": "Sigilyph",
+    "level": 22,
+    "ability": "Magic Guard",
+    "ivs": 31,
+    "moves": [
+     "Whirlwind",
+     "Psybeam",
+     "Tailwind",
+     "Air Cutter"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 33,
+  "name": "Trainer Cheren",
+  "location": "Unova Route 4",
+  "split": "Gym 3: Burgh",
+  "levelCap": 23,
+  "notes": [
+   "Fourth battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pidove",
+    "level": 20,
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Leer",
+     "Air Cutter",
+     "Roost"
+    ]
+   },
+   {
+    "species": "Pansage",
+    "level": 20,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Bite",
+     "Vine Whip",
+     "Leech Seed",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Liepard",
+    "level": 20,
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Pursuit",
+     "Torment",
+     "Sand Attack",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Pignite",
+    "level": 22,
+    "item": "Sitrus Berry",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Flame Charge",
+     "Defense Curl",
+     "Arm Thrust",
+     "Smog"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 34,
+  "name": "Trainer Cheren",
+  "location": "Unova Route 4",
+  "split": "Gym 3: Burgh",
+  "levelCap": 23,
+  "notes": [
+   "Fourth battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pidove",
+    "level": 20,
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Leer",
+     "Air Cutter",
+     "Roost"
+    ]
+   },
+   {
+    "species": "Pansear",
+    "level": 20,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Bite",
+     "Incinerate",
+     "Yawn",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Liepard",
+    "level": 20,
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Pursuit",
+     "Torment",
+     "Sand Attack",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Dewott",
+    "level": 22,
+    "item": "Sitrus Berry",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Razor Shell",
+     "Focus Energy",
+     "Water Sport",
+     "Fury Cutter"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 35,
+  "name": "Trainer Cheren",
+  "location": "Unova Route 4",
+  "split": "Gym 3: Burgh",
+  "levelCap": 23,
+  "notes": [
+   "Fourth battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pidove",
+    "level": 20,
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Leer",
+     "Air Cutter",
+     "Roost"
+    ]
+   },
+   {
+    "species": "Panpour",
+    "level": 20,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Bite",
+     "Water Gun",
+     "Water Sport",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Liepard",
+    "level": 20,
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Pursuit",
+     "Torment",
+     "Sand Attack",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Servine",
+    "level": 22,
+    "item": "Sitrus Berry",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Leaf Tornado",
+     "Wrap",
+     "Leech Seed",
+     "Growth"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 5,
+  "name": "Leader Burgh",
+  "location": "Castelia Gym",
+  "split": "Gym 3: Burgh",
+  "levelCap": 23,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Whirlipede",
+    "level": 21,
+    "ability": "Swarm",
+    "ivs": 31,
+    "moves": [
+     "Poison Tail",
+     "Struggle Bug",
+     "Pursuit",
+     "Screech"
+    ]
+   },
+   {
+    "species": "Dwebble",
+    "level": 21,
+    "ability": "Shell Armor",
+    "ivs": 31,
+    "moves": [
+     "Smack Down",
+     "Struggle Bug",
+     "Feint Attack",
+     "Sand Attack"
+    ]
+   },
+   {
+    "species": "Leavanny",
+    "level": 23,
+    "ability": "Swarm",
+    "ivs": 31,
+    "moves": [
+     "Razor Leaf",
+     "Struggle Bug",
+     "String Shot",
+     "Protect"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 36,
+  "name": "Trainer Cheren",
+  "location": "Unova Route 5",
+  "split": "Gym 4: Elesa",
+  "levelCap": 27,
+  "notes": [
+   "Fifth battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Liepard",
+    "level": 24,
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Pursuit",
+     "Torment",
+     "Fake Out",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Pansage",
+    "level": 24,
+    "item": "Miracle Seed",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Bite",
+     "Seed Bomb",
+     "Leech Seed",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Tranquill",
+    "level": 24,
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Detect",
+     "Air Cutter",
+     "Roost"
+    ]
+   },
+   {
+    "species": "Pignite",
+    "level": 26,
+    "item": "Sitrus Berry",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Flame Charge",
+     "Rollout",
+     "Arm Thrust",
+     "Smog"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 37,
+  "name": "Trainer Cheren",
+  "location": "Unova Route 5",
+  "split": "Gym 4: Elesa",
+  "levelCap": 27,
+  "notes": [
+   "Fifth battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Liepard",
+    "level": 24,
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Pursuit",
+     "Torment",
+     "Fake Out",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Pansear",
+    "level": 24,
+    "item": "Charcoal",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Bite",
+     "Flame Burst",
+     "Yawn",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Tranquill",
+    "level": 24,
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Detect",
+     "Air Cutter",
+     "Roost"
+    ]
+   },
+   {
+    "species": "Dewott",
+    "level": 26,
+    "item": "Sitrus Berry",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Water Pulse",
+     "Fury Cutter",
+     "Razor Shell",
+     "Focus Energy"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 38,
+  "name": "Trainer Cheren",
+  "location": "Unova Route 5",
+  "split": "Gym 4: Elesa",
+  "levelCap": 27,
+  "notes": [
+   "Fifth battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Liepard",
+    "level": 24,
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Pursuit",
+     "Torment",
+     "Fake Out",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Panpour",
+    "level": 24,
+    "item": "Mystic Water",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Bite",
+     "Scald",
+     "Water Sport",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Tranquill",
+    "level": 24,
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Detect",
+     "Air Cutter",
+     "Roost"
+    ]
+   },
+   {
+    "species": "Servine",
+    "level": 26,
+    "item": "Sitrus Berry",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Mega Drain",
+     "Leech Seed",
+     "Leaf Tornado",
+     "Growth"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 6,
+  "name": "Leader Elesa",
+  "location": "Nimbasa Gym",
+  "split": "Gym 4: Elesa",
+  "levelCap": 27,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Emolga",
+    "level": 25,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Volt Switch",
+     "Aerial Ace",
+     "Pursuit",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Emolga",
+    "level": 25,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Volt Switch",
+     "Aerial Ace",
+     "Pursuit",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Zebstrika",
+    "level": 27,
+    "ability": "Lightning Rod",
+    "ivs": 31,
+    "moves": [
+     "Flame Charge",
+     "Spark",
+     "Volt Switch",
+     "Quick Attack"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 19,
+  "name": "Team Plasma N",
+  "location": "Chargestone Cave",
+  "split": "Gym 5: Clay",
+  "levelCap": 31,
+  "notes": [
+   "Fourth battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Boldore",
+    "level": 28,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Mud-Slap",
+     "Iron Defense",
+     "Smack Down",
+     "Power Gem"
+    ]
+   },
+   {
+    "species": "Ferroseed",
+    "level": 28,
+    "ability": "Iron Barbs",
+    "ivs": 31,
+    "moves": [
+     "Metal Claw",
+     "Pin Missile",
+     "Gyro Ball",
+     "Iron Defense"
+    ]
+   },
+   {
+    "species": "Joltik",
+    "level": 28,
+    "ability": "Unnerve",
+    "ivs": 31,
+    "moves": [
+     "Electroweb",
+     "Bug Bite",
+     "Gastro Acid",
+     "Slash"
+    ]
+   },
+   {
+    "species": "Klink",
+    "level": 28,
+    "ability": "Plus",
+    "ivs": 31,
+    "moves": [
+     "Gear Grind",
+     "Thunder Shock",
+     "Bind",
+     "Charge Beam"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 54,
+  "name": "Trainer Bianca",
+  "location": "Driftveil City",
+  "split": "Gym 5: Clay",
+  "levelCap": 31,
+  "notes": [
+   "Fourth battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Herdier",
+    "level": 26,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Helping Hand",
+     "Take Down",
+     "Work Up",
+     "Crunch"
+    ]
+   },
+   {
+    "species": "Pansear",
+    "level": 26,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Yawn",
+     "Bite",
+     "Flame Burst",
+     "Amnesia"
+    ]
+   },
+   {
+    "species": "Musharna",
+    "level": 26,
+    "ability": "Forewarn",
+    "ivs": 31,
+    "moves": [
+     "Defense Curl",
+     "Lucky Chant",
+     "Psybeam",
+     "Hypnosis"
+    ]
+   },
+   {
+    "species": "Dewott",
+    "level": 28,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Razor Shell",
+     "Fury Cutter",
+     "Water Pulse",
+     "Revenge"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 55,
+  "name": "Trainer Bianca",
+  "location": "Driftveil City",
+  "split": "Gym 5: Clay",
+  "levelCap": 31,
+  "notes": [
+   "Fourth battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Herdier",
+    "level": 26,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Helping Hand",
+     "Take Down",
+     "Work Up",
+     "Crunch"
+    ]
+   },
+   {
+    "species": "Panpour",
+    "level": 26,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Water Sport",
+     "Bite",
+     "Scald",
+     "Taunt"
+    ]
+   },
+   {
+    "species": "Musharna",
+    "level": 26,
+    "ability": "Forewarn",
+    "ivs": 31,
+    "moves": [
+     "Defense Curl",
+     "Lucky Chant",
+     "Psybeam",
+     "Hypnosis"
+    ]
+   },
+   {
+    "species": "Servine",
+    "level": 28,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Leaf Tornado",
+     "Leech Seed",
+     "Mega Drain",
+     "Slam"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 56,
+  "name": "Trainer Bianca",
+  "location": "Driftveil City",
+  "split": "Gym 5: Clay",
+  "levelCap": 31,
+  "notes": [
+   "Fourth battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Herdier",
+    "level": 26,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Helping Hand",
+     "Take Down",
+     "Work Up",
+     "Crunch"
+    ]
+   },
+   {
+    "species": "Pansage",
+    "level": 26,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Leech Seed",
+     "Bite",
+     "Seed Bomb",
+     "Torment"
+    ]
+   },
+   {
+    "species": "Musharna",
+    "level": 26,
+    "ability": "Forewarn",
+    "ivs": 31,
+    "moves": [
+     "Defense Curl",
+     "Lucky Chant",
+     "Psybeam",
+     "Hypnosis"
+    ]
+   },
+   {
+    "species": "Pignite",
+    "level": 28,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Arm Thrust",
+     "Smog",
+     "Rollout",
+     "Take Down"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 7,
+  "name": "Leader Clay",
+  "location": "Driftveil Gym",
+  "split": "Gym 5: Clay",
+  "levelCap": 31,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Krokorok",
+    "level": 29,
+    "ability": "Moxie",
+    "ivs": 31,
+    "moves": [
+     "Swagger",
+     "Crunch",
+     "Bulldoze",
+     "Torment"
+    ]
+   },
+   {
+    "species": "Palpitoad",
+    "level": 29,
+    "ability": "Swift Swim",
+    "ivs": 31,
+    "moves": [
+     "Aqua Ring",
+     "Bulldoze",
+     "Muddy Water",
+     "Bubble Beam"
+    ]
+   },
+   {
+    "species": "Excadrill",
+    "level": 31,
+    "ability": "Sand Rush",
+    "ivs": 31,
+    "moves": [
+     "Hone Claws",
+     "Slash",
+     "Rock Slide",
+     "Bulldoze"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 8,
+  "name": "Leader Skyla",
+  "location": "Mistralton Gym",
+  "split": "Gym 6: Skyla",
+  "levelCap": 35,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Swoobat",
+    "level": 33,
+    "ability": "Unaware",
+    "ivs": 31,
+    "moves": [
+     "Amnesia",
+     "Heart Stamp",
+     "Acrobatics",
+     "Assurance"
+    ]
+   },
+   {
+    "species": "Unfezant",
+    "level": 33,
+    "ability": "Big Pecks",
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Razor Wind",
+     "Air Slash",
+     "Leer"
+    ]
+   },
+   {
+    "species": "Swanna",
+    "level": 35,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Aqua Ring",
+     "Aerial Ace",
+     "Air Slash",
+     "Bubble Beam"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 39,
+  "name": "Trainer Cheren",
+  "location": "Twist Mountain",
+  "split": "Gym 6: Skyla",
+  "levelCap": 35,
+  "notes": [
+   "Sixth battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Unfezant",
+    "level": 33,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Roost",
+     "Detect",
+     "Air Slash",
+     "Taunt"
+    ]
+   },
+   {
+    "species": "Simisage",
+    "level": 33,
+    "item": "Miracle Seed",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Lick",
+     "Seed Bomb",
+     "Leer",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Liepard",
+    "level": 33,
+    "item": "Sitrus Berry",
+    "ability": "Limber",
+    "ivs": 31,
+    "moves": [
+     "Assurance",
+     "Torment",
+     "Fake Out",
+     "Hone Claws"
+    ]
+   },
+   {
+    "species": "Pignite",
+    "level": 35,
+    "item": "Leftovers",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Heat Crash",
+     "Rollout",
+     "Take Down",
+     "Smog"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 40,
+  "name": "Trainer Cheren",
+  "location": "Twist Mountain",
+  "split": "Gym 6: Skyla",
+  "levelCap": 35,
+  "notes": [
+   "Sixth battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Unfezant",
+    "level": 33,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Roost",
+     "Detect",
+     "Air Slash",
+     "Taunt"
+    ]
+   },
+   {
+    "species": "Simisear",
+    "level": 33,
+    "item": "Charcoal",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Lick",
+     "Flame Burst",
+     "Leer",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Liepard",
+    "level": 33,
+    "item": "Sitrus Berry",
+    "ability": "Limber",
+    "ivs": 31,
+    "moves": [
+     "Assurance",
+     "Torment",
+     "Fake Out",
+     "Hone Claws"
+    ]
+   },
+   {
+    "species": "Dewott",
+    "level": 35,
+    "item": "Leftovers",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Fury Cutter",
+     "Revenge",
+     "Aqua Jet",
+     "Water Pulse"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 41,
+  "name": "Trainer Cheren",
+  "location": "Twist Mountain",
+  "split": "Gym 6: Skyla",
+  "levelCap": 35,
+  "notes": [
+   "Sixth battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Unfezant",
+    "level": 33,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Roost",
+     "Detect",
+     "Air Slash",
+     "Taunt"
+    ]
+   },
+   {
+    "species": "Simipour",
+    "level": 33,
+    "item": "Mystic Water",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Lick",
+     "Scald",
+     "Leer",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Liepard",
+    "level": 33,
+    "item": "Sitrus Berry",
+    "ability": "Limber",
+    "ivs": 31,
+    "moves": [
+     "Assurance",
+     "Torment",
+     "Fake Out",
+     "Hone Claws"
+    ]
+   },
+   {
+    "species": "Servine",
+    "level": 35,
+    "item": "Leftovers",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Mega Drain",
+     "Leaf Blade",
+     "Leech Seed",
+     "Slam"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 9,
+  "name": "Leader Brycen",
+  "location": "Icirrus Gym",
+  "split": "Gym 7: Brycen",
+  "levelCap": 39,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Vanillish",
+    "level": 37,
+    "ability": "Ice Body",
+    "ivs": 31,
+    "moves": [
+     "Frost Breath",
+     "Acid Armor",
+     "Astonish",
+     "Mirror Shot"
+    ]
+   },
+   {
+    "species": "Cryogonal",
+    "level": 37,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Aurora Beam",
+     "Reflect",
+     "Frost Breath",
+     "Rapid Spin"
+    ]
+   },
+   {
+    "species": "Beartic",
+    "level": 39,
+    "ability": "Snow Cloak",
+    "ivs": 31,
+    "moves": [
+     "Swagger",
+     "Icicle Crash",
+     "Slash",
+     "Brine"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 57,
+  "name": "Trainer Bianca",
+  "location": "Unova Route 8",
+  "split": "Gym 8: Drayden",
+  "levelCap": 43,
+  "notes": [
+   "Fifth battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Stoutland",
+    "level": 38,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Work Up",
+     "Crunch",
+     "Roar",
+     "Retaliate"
+    ]
+   },
+   {
+    "species": "Simisear",
+    "level": 38,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Leer",
+     "Lick",
+     "Fury Swipes",
+     "Flame Burst"
+    ]
+   },
+   {
+    "species": "Musharna",
+    "level": 38,
+    "ability": "Forewarn",
+    "ivs": 31,
+    "moves": [
+     "Defense Curl",
+     "Lucky Chant",
+     "Psybeam",
+     "Hypnosis"
+    ]
+   },
+   {
+    "species": "Samurott",
+    "level": 40,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Revenge",
+     "Aqua Jet",
+     "Slash",
+     "Encore"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 58,
+  "name": "Trainer Bianca",
+  "location": "Unova Route 8",
+  "split": "Gym 8: Drayden",
+  "levelCap": 43,
+  "notes": [
+   "Fifth battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Stoutland",
+    "level": 38,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Work Up",
+     "Crunch",
+     "Roar",
+     "Retaliate"
+    ]
+   },
+   {
+    "species": "Simipour",
+    "level": 38,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Leer",
+     "Lick",
+     "Fury Swipes",
+     "Scald"
+    ]
+   },
+   {
+    "species": "Musharna",
+    "level": 38,
+    "ability": "Forewarn",
+    "ivs": 31,
+    "moves": [
+     "Defense Curl",
+     "Lucky Chant",
+     "Psybeam",
+     "Hypnosis"
+    ]
+   },
+   {
+    "species": "Serperior",
+    "level": 40,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Mega Drain",
+     "Slam",
+     "Leaf Blade",
+     "Coil"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 59,
+  "name": "Trainer Bianca",
+  "location": "Unova Route 8",
+  "split": "Gym 8: Drayden",
+  "levelCap": 43,
+  "notes": [
+   "Fifth battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Stoutland",
+    "level": 38,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Work Up",
+     "Crunch",
+     "Roar",
+     "Retaliate"
+    ]
+   },
+   {
+    "species": "Simisage",
+    "level": 38,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Leer",
+     "Lick",
+     "Fury Swipes",
+     "Seed Bomb"
+    ]
+   },
+   {
+    "species": "Musharna",
+    "level": 38,
+    "ability": "Forewarn",
+    "ivs": 31,
+    "moves": [
+     "Defense Curl",
+     "Lucky Chant",
+     "Psybeam",
+     "Hypnosis"
+    ]
+   },
+   {
+    "species": "Emboar",
+    "level": 40,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Rollout",
+     "Take Down",
+     "Heat Crash",
+     "Assurance"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 10,
+  "name": "Leader Drayden",
+  "location": "Opelucid Gym",
+  "split": "Gym 8: Drayden",
+  "levelCap": 43,
+  "notes": [
+   "Pokémon Black"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Fraxure",
+    "level": 41,
+    "ability": "Rivalry",
+    "ivs": 31,
+    "moves": [
+     "Dragon Tail",
+     "Dragon Dance",
+     "Assurance",
+     "Dragon Rage"
+    ]
+   },
+   {
+    "species": "Druddigon",
+    "level": 41,
+    "ability": "Rough Skin",
+    "ivs": 31,
+    "moves": [
+     "Night Slash",
+     "Revenge",
+     "Dragon Tail",
+     "Chip Away"
+    ]
+   },
+   {
+    "species": "Haxorus",
+    "level": 43,
+    "ability": "Rivalry",
+    "ivs": 31,
+    "moves": [
+     "Dragon Tail",
+     "Dragon Dance",
+     "Slash",
+     "Assurance"
+    ]
+   }
+  ],
+  "games": [
+   "black"
+  ]
+ },
+ {
+  "id": 11,
+  "name": "Leader Iris",
+  "location": "Opelucid Gym",
+  "split": "Gym 8: Drayden",
+  "levelCap": 43,
+  "notes": [
+   "Pokémon White"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Fraxure",
+    "level": 41,
+    "ability": "Rivalry",
+    "ivs": 31,
+    "moves": [
+     "Dragon Tail",
+     "Dragon Dance",
+     "Assurance",
+     "Dragon Rage"
+    ]
+   },
+   {
+    "species": "Druddigon",
+    "level": 41,
+    "ability": "Sheer Force",
+    "ivs": 31,
+    "moves": [
+     "Dragon Tail",
+     "Revenge",
+     "Night Slash",
+     "Chip Away"
+    ]
+   },
+   {
+    "species": "Haxorus",
+    "level": 43,
+    "ability": "Mold Breaker",
+    "ivs": 31,
+    "moves": [
+     "Dragon Tail",
+     "Dragon Dance",
+     "Slash",
+     "Assurance"
+    ]
+   }
+  ],
+  "games": [
+   "white"
+  ]
+ },
+ {
+  "id": 42,
+  "name": "Trainer Cheren",
+  "location": "Unova Route 10",
+  "split": "Elite Four, N & Ghetsis",
+  "levelCap": 54,
+  "notes": [
+   "Seventh battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Unfezant",
+    "level": 43,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Razor Wind",
+     "Detect",
+     "Air Slash",
+     "Taunt"
+    ]
+   },
+   {
+    "species": "Simisage",
+    "level": 43,
+    "item": "Miracle Seed",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Lick",
+     "Seed Bomb",
+     "Leer",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Liepard",
+    "level": 43,
+    "item": "Sitrus Berry",
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Assurance",
+     "Night Slash",
+     "Slash",
+     "Taunt"
+    ]
+   },
+   {
+    "species": "Emboar",
+    "level": 45,
+    "item": "Leftovers",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Heat Crash",
+     "Assurance",
+     "Take Down",
+     "Flamethrower"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 43,
+  "name": "Trainer Cheren",
+  "location": "Unova Route 10",
+  "split": "Elite Four, N & Ghetsis",
+  "levelCap": 54,
+  "notes": [
+   "Seventh battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Unfezant",
+    "level": 43,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Razor Wind",
+     "Detect",
+     "Air Slash",
+     "Taunt"
+    ]
+   },
+   {
+    "species": "Simisear",
+    "level": 43,
+    "item": "Charcoal",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Lick",
+     "Flame Burst",
+     "Leer",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Liepard",
+    "level": 43,
+    "item": "Sitrus Berry",
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Assurance",
+     "Night Slash",
+     "Slash",
+     "Taunt"
+    ]
+   },
+   {
+    "species": "Samurott",
+    "level": 45,
+    "item": "Leftovers",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Aqua Tail",
+     "Slash",
+     "Aqua Jet",
+     "Encore"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 44,
+  "name": "Trainer Cheren",
+  "location": "Unova Route 10",
+  "split": "Elite Four, N & Ghetsis",
+  "levelCap": 54,
+  "notes": [
+   "Seventh battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Unfezant",
+    "level": 43,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Razor Wind",
+     "Detect",
+     "Air Slash",
+     "Taunt"
+    ]
+   },
+   {
+    "species": "Simipour",
+    "level": 43,
+    "item": "Mystic Water",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Lick",
+     "Scald",
+     "Leer",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Liepard",
+    "level": 43,
+    "item": "Sitrus Berry",
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Assurance",
+     "Night Slash",
+     "Slash",
+     "Taunt"
+    ]
+   },
+   {
+    "species": "Serperior",
+    "level": 45,
+    "item": "Leftovers",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Giga Drain",
+     "Leaf Blade",
+     "Coil",
+     "Slam"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 12,
+  "name": "Elite Four Shauntal",
+  "location": "Pokémon League (Unova)",
+  "split": "Elite Four, N & Ghetsis",
+  "levelCap": 54,
+  "notes": [
+   "First battle (pre-National Pokédex)"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Cofagrigus",
+    "level": 48,
+    "ability": "Mummy",
+    "ivs": 31,
+    "moves": [
+     "Psychic",
+     "Will-O-Wisp",
+     "Shadow Ball",
+     "Grass Knot"
+    ]
+   },
+   {
+    "species": "Jellicent",
+    "level": 48,
+    "ability": "Cursed Body",
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Surf",
+     "Energy Ball",
+     "Brine"
+    ]
+   },
+   {
+    "species": "Golurk",
+    "level": 48,
+    "ability": "Iron Fist",
+    "ivs": 31,
+    "moves": [
+     "Curse",
+     "Brick Break",
+     "Earthquake",
+     "Shadow Punch"
+    ]
+   },
+   {
+    "species": "Chandelure",
+    "level": 50,
+    "ability": "Flame Body",
+    "ivs": 31,
+    "moves": [
+     "Fire Blast",
+     "Psychic",
+     "Shadow Ball",
+     "Payback"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 13,
+  "name": "Elite Four Grimsley",
+  "location": "Pokémon League (Unova)",
+  "split": "Elite Four, N & Ghetsis",
+  "levelCap": 54,
+  "notes": [
+   "First battle (pre-National Pokédex)"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Scrafty",
+    "level": 48,
+    "ability": "Moxie",
+    "ivs": 31,
+    "moves": [
+     "Sand Attack",
+     "Crunch",
+     "Poison Jab",
+     "Brick Break"
+    ]
+   },
+   {
+    "species": "Krookodile",
+    "level": 48,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Dragon Claw",
+     "Foul Play",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Liepard",
+    "level": 48,
+    "ability": "Limber",
+    "ivs": 31,
+    "moves": [
+     "Fake Out",
+     "Attract",
+     "Aerial Ace",
+     "Night Slash"
+    ]
+   },
+   {
+    "species": "Bisharp",
+    "level": 50,
+    "ability": "Defiant",
+    "ivs": 31,
+    "moves": [
+     "X-Scissor",
+     "Night Slash",
+     "Metal Claw",
+     "Aerial Ace"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 14,
+  "name": "Elite Four Caitlin",
+  "location": "Pokémon League (Unova)",
+  "split": "Elite Four, N & Ghetsis",
+  "levelCap": 54,
+  "notes": [
+   "First battle (pre-National Pokédex)"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Reuniclus",
+    "level": 48,
+    "ability": "Magic Guard",
+    "ivs": 31,
+    "moves": [
+     "Energy Ball",
+     "Thunder",
+     "Focus Blast",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Musharna",
+    "level": 48,
+    "ability": "Synchronize",
+    "ivs": 31,
+    "moves": [
+     "Reflect",
+     "Charge Beam",
+     "Shadow Ball",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Sigilyph",
+    "level": 48,
+    "ability": "Wonder Skin",
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Ice Beam",
+     "Air Slash",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Gothitelle",
+    "level": 50,
+    "ability": "Frisk",
+    "ivs": 31,
+    "moves": [
+     "Calm Mind",
+     "Thunderbolt",
+     "Shadow Ball",
+     "Psychic"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 15,
+  "name": "Elite Four Marshal",
+  "location": "Pokémon League (Unova)",
+  "split": "Elite Four, N & Ghetsis",
+  "levelCap": 54,
+  "notes": [
+   "First battle (pre-National Pokédex)"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Throh",
+    "level": 48,
+    "ability": "Guts",
+    "ivs": 31,
+    "moves": [
+     "Stone Edge",
+     "Payback",
+     "Bulldoze",
+     "Storm Throw"
+    ]
+   },
+   {
+    "species": "Sawk",
+    "level": 48,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Stone Edge",
+     "Karate Chop",
+     "Grass Knot",
+     "Retaliate"
+    ]
+   },
+   {
+    "species": "Conkeldurr",
+    "level": 48,
+    "ability": "Sheer Force",
+    "ivs": 31,
+    "moves": [
+     "Stone Edge",
+     "Hammer Arm",
+     "Retaliate",
+     "Grass Knot"
+    ]
+   },
+   {
+    "species": "Mienshao",
+    "level": 50,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "U-turn",
+     "Jump Kick",
+     "Rock Slide",
+     "Retaliate"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 20,
+  "name": "Team Plasma N",
+  "location": "N's Castle",
+  "split": "Elite Four, N & Ghetsis",
+  "levelCap": 54,
+  "notes": [
+   "Fifth battle",
+   "Pokémon Black"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Zekrom",
+    "level": 52,
+    "ability": "Teravolt",
+    "ivs": 31,
+    "moves": [
+     "Fusion Bolt",
+     "Zen Headbutt",
+     "Giga Impact",
+     "Light Screen"
+    ]
+   },
+   {
+    "species": "Carracosta",
+    "level": 50,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Stone Edge",
+     "Aqua Jet",
+     "Crunch",
+     "Waterfall"
+    ]
+   },
+   {
+    "species": "Vanilluxe",
+    "level": 50,
+    "ability": "Ice Body",
+    "ivs": 31,
+    "moves": [
+     "Blizzard",
+     "Hail",
+     "Flash Cannon",
+     "Frost Breath"
+    ]
+   },
+   {
+    "species": "Archeops",
+    "level": 50,
+    "ability": "Defeatist",
+    "ivs": 31,
+    "moves": [
+     "Stone Edge",
+     "Acrobatics",
+     "Dragon Claw",
+     "Crunch"
+    ]
+   },
+   {
+    "species": "Zoroark",
+    "level": 50,
+    "ability": "Illusion",
+    "ivs": 31,
+    "moves": [
+     "Flamethrower",
+     "Focus Blast",
+     "Night Slash",
+     "Retaliate"
+    ]
+   },
+   {
+    "species": "Klinklang",
+    "level": 50,
+    "ability": "Plus",
+    "ivs": 31,
+    "moves": [
+     "Flash Cannon",
+     "Metal Sound",
+     "Hyper Beam",
+     "Thunderbolt"
+    ]
+   }
+  ],
+  "games": [
+   "black"
+  ]
+ },
+ {
+  "id": 21,
+  "name": "Team Plasma N",
+  "location": "N's Castle",
+  "split": "Elite Four, N & Ghetsis",
+  "levelCap": 54,
+  "notes": [
+   "Fifth battle",
+   "Pokémon White"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Reshiram",
+    "level": 52,
+    "ability": "Turboblaze",
+    "ivs": 31,
+    "moves": [
+     "Hyper Beam",
+     "Fusion Flare",
+     "Extrasensory",
+     "Reflect"
+    ]
+   },
+   {
+    "species": "Carracosta",
+    "level": 50,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Stone Edge",
+     "Aqua Jet",
+     "Crunch",
+     "Waterfall"
+    ]
+   },
+   {
+    "species": "Vanilluxe",
+    "level": 50,
+    "ability": "Ice Body",
+    "ivs": 31,
+    "moves": [
+     "Blizzard",
+     "Hail",
+     "Flash Cannon",
+     "Frost Breath"
+    ]
+   },
+   {
+    "species": "Archeops",
+    "level": 50,
+    "ability": "Defeatist",
+    "ivs": 31,
+    "moves": [
+     "Stone Edge",
+     "Acrobatics",
+     "Dragon Claw",
+     "Crunch"
+    ]
+   },
+   {
+    "species": "Zoroark",
+    "level": 50,
+    "ability": "Illusion",
+    "ivs": 31,
+    "moves": [
+     "Flamethrower",
+     "Focus Blast",
+     "Night Slash",
+     "Retaliate"
+    ]
+   },
+   {
+    "species": "Klinklang",
+    "level": 50,
+    "ability": "Plus",
+    "ivs": 31,
+    "moves": [
+     "Flash Cannon",
+     "Metal Sound",
+     "Hyper Beam",
+     "Thunderbolt"
+    ]
+   }
+  ],
+  "games": [
+   "white"
+  ]
+ },
+ {
+  "id": 22,
+  "name": "Team Plasma Ghetsis",
+  "location": "N's Castle",
+  "split": "Elite Four, N & Ghetsis",
+  "levelCap": 54,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Cofagrigus",
+    "level": 52,
+    "ability": "Mummy",
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Protect",
+     "Psychic",
+     "Toxic"
+    ]
+   },
+   {
+    "species": "Bouffalant",
+    "level": 52,
+    "ability": "Reckless",
+    "ivs": 31,
+    "moves": [
+     "Head Charge",
+     "Wild Charge",
+     "Earthquake",
+     "Poison Jab"
+    ]
+   },
+   {
+    "species": "Seismitoad",
+    "level": 52,
+    "ability": "Swift Swim",
+    "ivs": 31,
+    "moves": [
+     "Muddy Water",
+     "Rain Dance",
+     "Earthquake",
+     "Sludge Wave"
+    ]
+   },
+   {
+    "species": "Bisharp",
+    "level": 52,
+    "ability": "Defiant",
+    "ivs": 31,
+    "moves": [
+     "Night Slash",
+     "Stone Edge",
+     "X-Scissor",
+     "Metal Burst"
+    ]
+   },
+   {
+    "species": "Eelektross",
+    "level": 52,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Wild Charge",
+     "Flamethrower",
+     "Acrobatics",
+     "Crunch"
+    ]
+   },
+   {
+    "species": "Hydreigon",
+    "level": 54,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Fire Blast",
+     "Surf",
+     "Focus Blast"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ },
+ {
+  "id": 23,
+  "name": "Champion Alder",
+  "location": "Pokémon League (Unova)",
+  "split": "Post-game",
+  "levelCap": 75,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Accelgor",
+    "level": 75,
+    "ability": "Hydration",
+    "ivs": 31,
+    "moves": [
+     "Bug Buzz",
+     "Focus Blast",
+     "Me First",
+     "Energy Ball"
+    ]
+   },
+   {
+    "species": "Bouffalant",
+    "level": 75,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Head Charge",
+     "Megahorn",
+     "Stone Edge",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Druddigon",
+    "level": 75,
+    "ability": "Rough Skin",
+    "ivs": 31,
+    "moves": [
+     "Night Slash",
+     "Outrage",
+     "Superpower",
+     "Payback"
+    ]
+   },
+   {
+    "species": "Vanilluxe",
+    "level": 75,
+    "ability": "Ice Body",
+    "ivs": 31,
+    "moves": [
+     "Blizzard",
+     "Light Screen",
+     "Flash Cannon",
+     "Acid Armor"
+    ]
+   },
+   {
+    "species": "Escavalier",
+    "level": 75,
+    "ability": "Swarm",
+    "ivs": 31,
+    "moves": [
+     "X-Scissor",
+     "Giga Impact",
+     "Iron Head",
+     "Aerial Ace"
+    ]
+   },
+   {
+    "species": "Volcarona",
+    "level": 77,
+    "ability": "Flame Body",
+    "ivs": 31,
+    "moves": [
+     "Overheat",
+     "Bug Buzz",
+     "Quiver Dance",
+     "Hyper Beam"
+    ]
+   }
+  ],
+  "games": [
+   "black",
+   "white"
+  ]
+ }
+]

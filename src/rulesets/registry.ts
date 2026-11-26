@@ -17,12 +17,18 @@ export interface RulesetMeta {
 }
 
 const factories = new Map<string, () => Ruleset>();
+
+/** Story boss teams for the games with playthrough support (npm run fetch:trainers) */
+const OFFICIAL_TRAINERS: Record<number, () => Promise<TrainerInfo[]>> = {
+  9: () => import('../../data-src/trainers/gen9.json').then((m) => m.default as unknown as TrainerInfo[]),
+  5: () => import('../../data-src/trainers/gen5.json').then((m) => m.default as unknown as TrainerInfo[]),
+};
 const metas: RulesetMeta[] = [];
 
 for (let g = 9; g >= 1; g--) {
   const num = g as GenerationNum;
   metas.push({ id: `gen${g}`, name: `Gen ${g}`, group: 'Official' });
-  factories.set(`gen${g}`, () => createOfficialRuleset(num));
+  factories.set(`gen${g}`, () => ({ ...createOfficialRuleset(num), ...(OFFICIAL_TRAINERS[g] ? { loadTrainers: OFFICIAL_TRAINERS[g] } : {}) }));
   if (g >= 8) {
     metas.push({ id: `gen${g}natdex`, name: `Gen ${g} National Dex`, group: 'Official' });
     factories.set(`gen${g}natdex`, () => createOfficialRuleset(num, { natDex: true }));

@@ -57,8 +57,8 @@ export function CalcPage() {
   const bToA = useMemo(() => (left && right ? calcAll(rs, right, left, field) : []), [rs, left, right, field]);
   const speeds = left && right ? [effectiveSpeed(rs, left), effectiveSpeed(rs, right)] : undefined;
 
-  const openMatchup = (member: TeamSet, threat: TeamSet) => {
-    load(rs.id, { set: member }, { set: threat });
+  const openMatchup = (member: TeamSet, threat: TeamSet, threatTera?: boolean) => {
+    load(rs.id, { set: member }, { set: threat, tera: threatTera });
     setParams((p) => {
       const next = new URLSearchParams(p);
       next.delete('tab');

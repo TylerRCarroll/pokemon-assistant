@@ -13,6 +13,7 @@ export function setFromTrainerMon(rs: Ruleset, m: TrainerMon): TeamSet {
     ivs: Object.fromEntries(STAT_IDS.map((s) => [s, m.ivs])) as unknown as TeamSet['ivs'],
     evs: Object.fromEntries(STAT_IDS.map((s) => [s, m.evs?.[s] ?? 0])) as unknown as TeamSet['evs'],
     moves: m.moves.filter((n) => rs.getMove(n)).slice(0, 4),
+    ...(m.tera ? { teraType: m.tera } : {}),
   };
 }
 

@@ -89,6 +89,8 @@ export interface TrainerMon {
   /** Only harder difficulties give trainers EVs */
   evs?: Partial<StatsTable>;
   moves: string[];
+  /** Tera type, for bosses that Terastallize (Scarlet/Violet gym aces) */
+  tera?: string;
 }
 
 export interface TrainerInfo {
@@ -105,6 +107,8 @@ export interface TrainerInfo {
   boss: boolean;
   /** Game difficulty the team belongs to, for hacks with per-difficulty teams (Unbound) */
   difficulty?: string;
+  /** Game ids the fight is in, when a ruleset covers several (Black vs White, Scarlet vs Violet) */
+  games?: string[];
   team: TrainerMon[];
 }
 
@@ -162,6 +166,6 @@ export interface Ruleset {
   calcStat(stat: StatID, base: number, iv: number, ev: number, level: number, nature?: string): number;
   /** The game's TM list with locations, when known (romhack docs) */
   tms?: TMInfo[];
-  /** In-game trainer teams, when known (romhack docs); loaded on demand */
+  /** In-game boss teams, when known (romhack docs; Bulbapedia for Scarlet/Violet and Black/White); loaded on demand */
   loadTrainers?: () => Promise<TrainerInfo[]>;
 }

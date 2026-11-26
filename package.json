@@ -14,6 +14,7 @@
     "fetch:smogon": "tsx scripts/fetch-smogon.ts",
     "import:rp": "tsx scripts/romhacks/renegade-platinum/import.ts",
     "fetch:availability": "tsx scripts/fetch-availability.ts",
+    "fetch:trainers": "tsx scripts/fetch-trainers.ts",
     "icons": "tsx scripts/make-icons.ts"
   },
   "dependencies": {

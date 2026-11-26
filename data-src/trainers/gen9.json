@@ -1,0 +1,2360 @@
+[
+ {
+  "id": 14,
+  "name": "Pokémon Trainer Nemona",
+  "location": "Cabo Poco",
+  "split": "Gym 1: Katy",
+  "levelCap": 15,
+  "notes": [
+   "First battle",
+   "If you chose Sprigatito"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Quaxly",
+    "level": 5,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Pound",
+     "Growl",
+     "Water Gun"
+    ]
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 15,
+  "name": "Pokémon Trainer Nemona",
+  "location": "Cabo Poco",
+  "split": "Gym 1: Katy",
+  "levelCap": 15,
+  "notes": [
+   "First battle",
+   "If you chose Fuecoco"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Sprigatito",
+    "level": 5,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Scratch",
+     "Tail Whip",
+     "Leafage"
+    ]
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 16,
+  "name": "Pokémon Trainer Nemona",
+  "location": "Cabo Poco",
+  "split": "Gym 1: Katy",
+  "levelCap": 15,
+  "notes": [
+   "First battle",
+   "If you chose Quaxly"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Fuecoco",
+    "level": 5,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Leer",
+     "Ember"
+    ]
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 35,
+  "name": "Pokémon Trainer Arven",
+  "location": "Poco Path",
+  "split": "Gym 1: Katy",
+  "levelCap": 15,
+  "notes": [
+   "First battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Skwovet",
+    "level": 5,
+    "ability": "Cheek Pouch",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Tail Whip",
+     "Bite"
+    ]
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 17,
+  "name": "Pokémon Trainer Nemona",
+  "location": "South Province (Area One)",
+  "split": "Gym 1: Katy",
+  "levelCap": 15,
+  "notes": [
+   "Second battle",
+   "If you chose Sprigatito"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Quaxly",
+    "level": 8,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Pound",
+     "Growl",
+     "Water Gun",
+     "Work Up"
+    ]
+   },
+   {
+    "species": "Pawmi",
+    "level": 9,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Thunder Shock"
+    ],
+    "tera": "Electric"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 18,
+  "name": "Pokémon Trainer Nemona",
+  "location": "South Province (Area One)",
+  "split": "Gym 1: Katy",
+  "levelCap": 15,
+  "notes": [
+   "Second battle",
+   "If you chose Fuecoco"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Sprigatito",
+    "level": 8,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Scratch",
+     "Tail Whip",
+     "Leafage",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Pawmi",
+    "level": 9,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Thunder Shock"
+    ],
+    "tera": "Electric"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 19,
+  "name": "Pokémon Trainer Nemona",
+  "location": "South Province (Area One)",
+  "split": "Gym 1: Katy",
+  "levelCap": 15,
+  "notes": [
+   "Second battle",
+   "If you chose Quaxly"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Fuecoco",
+    "level": 8,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Leer",
+     "Ember",
+     "Round"
+    ]
+   },
+   {
+    "species": "Pawmi",
+    "level": 9,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Thunder Shock"
+    ],
+    "tera": "Electric"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 1,
+  "name": "Gym Leader Katy",
+  "location": "Cortondo Gym",
+  "split": "Gym 1: Katy",
+  "levelCap": 15,
+  "notes": [
+   "Gym battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Nymble",
+    "level": 14,
+    "ability": "Swarm",
+    "ivs": 31,
+    "moves": [
+     "Struggle Bug",
+     "Double Kick"
+    ]
+   },
+   {
+    "species": "Tarountula",
+    "level": 14,
+    "ability": "Insomnia",
+    "ivs": 31,
+    "moves": [
+     "Bug Bite",
+     "Assurance"
+    ]
+   },
+   {
+    "species": "Teddiursa",
+    "level": 15,
+    "ability": "Pickup",
+    "ivs": 31,
+    "moves": [
+     "Fury Cutter",
+     "Fury Swipes"
+    ],
+    "tera": "Bug"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 2,
+  "name": "Gym Leader Brassius",
+  "location": "Artazon Gym",
+  "split": "Gym 2: Brassius",
+  "levelCap": 17,
+  "notes": [
+   "Gym battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Petilil",
+    "level": 16,
+    "ability": "Own Tempo",
+    "ivs": 31,
+    "moves": [
+     "Sleep Powder",
+     "Mega Drain"
+    ]
+   },
+   {
+    "species": "Smoliv",
+    "level": 16,
+    "ability": "Early Bird",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Razor Leaf"
+    ]
+   },
+   {
+    "species": "Sudowoodo",
+    "level": 17,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Trailblaze",
+     "Rock Throw"
+    ],
+    "tera": "Grass"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 20,
+  "name": "Pokémon Trainer Nemona",
+  "location": "Paldea League#Gym Leaders",
+  "split": "Gym 3: Iono",
+  "levelCap": 24,
+  "notes": [
+   "Third battle",
+   "If you chose Sprigatito"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Rockruff",
+    "level": 21,
+    "ability": "Vital Spirit",
+    "ivs": 31,
+    "moves": [
+     "Double Team",
+     "Rock Throw",
+     "Howl",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Pawmi",
+    "level": 21,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Charge",
+     "Nuzzle",
+     "Dig",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Quaxwell",
+    "level": 22,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Double Hit",
+     "Water Pulse",
+     "Wing Attack",
+     "Work Up"
+    ],
+    "tera": "Water"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 21,
+  "name": "Pokémon Trainer Nemona",
+  "location": "Paldea League#Gym Leaders",
+  "split": "Gym 3: Iono",
+  "levelCap": 24,
+  "notes": [
+   "Third battle",
+   "If you chose Fuecoco"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Rockruff",
+    "level": 21,
+    "ability": "Vital Spirit",
+    "ivs": 31,
+    "moves": [
+     "Double Team",
+     "Rock Throw",
+     "Howl",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Pawmi",
+    "level": 21,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Charge",
+     "Nuzzle",
+     "Dig",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Floragato",
+    "level": 22,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Magical Leaf",
+     "Hone Claws",
+     "Bite"
+    ],
+    "tera": "Grass"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 22,
+  "name": "Pokémon Trainer Nemona",
+  "location": "Paldea League#Gym Leaders",
+  "split": "Gym 3: Iono",
+  "levelCap": 24,
+  "notes": [
+   "Third battle",
+   "If you chose Quaxly"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Rockruff",
+    "level": 21,
+    "ability": "Vital Spirit",
+    "ivs": 31,
+    "moves": [
+     "Double Team",
+     "Rock Throw",
+     "Howl",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Pawmi",
+    "level": 21,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Charge",
+     "Nuzzle",
+     "Dig",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Crocalor",
+    "level": 22,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Incinerate",
+     "Yawn",
+     "Bite",
+     "Round"
+    ],
+    "tera": "Fire"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 3,
+  "name": "Gym Leader Iono",
+  "location": "Levincia Gym",
+  "split": "Gym 3: Iono",
+  "levelCap": 24,
+  "notes": [
+   "Gym battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Wattrel",
+    "level": 23,
+    "ability": "Wind Power",
+    "ivs": 31,
+    "moves": [
+     "Pluck",
+     "Quick Attack",
+     "Spark"
+    ]
+   },
+   {
+    "species": "Bellibolt",
+    "level": 23,
+    "ability": "Electromorphosis",
+    "ivs": 31,
+    "moves": [
+     "Water Gun",
+     "Spark"
+    ]
+   },
+   {
+    "species": "Luxio",
+    "level": 23,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Spark",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Mismagius",
+    "level": 24,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Charge Beam",
+     "Hex",
+     "Confuse Ray"
+    ],
+    "tera": "Electric"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 4,
+  "name": "Gym Leader Kofu",
+  "location": "Cascarrafa Gym",
+  "split": "Gym 4: Kofu",
+  "levelCap": 30,
+  "notes": [
+   "Gym battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Veluza",
+    "level": 29,
+    "ability": "Mold Breaker",
+    "ivs": 31,
+    "moves": [
+     "Slash",
+     "Pluck",
+     "Aqua Cutter"
+    ]
+   },
+   {
+    "species": "Wugtrio",
+    "level": 29,
+    "ability": "Gooey",
+    "ivs": 31,
+    "moves": [
+     "Mud-Slap",
+     "Water Pulse",
+     "Headbutt"
+    ]
+   },
+   {
+    "species": "Crabominable",
+    "level": 30,
+    "ability": "Iron Fist",
+    "ivs": 31,
+    "moves": [
+     "Crabhammer",
+     "Rock Smash",
+     "Slam"
+    ],
+    "tera": "Water"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 5,
+  "name": "Gym Leader Larry",
+  "location": "Medali Gym",
+  "split": "Gym 5: Larry",
+  "levelCap": 36,
+  "notes": [
+   "Gym battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Komala",
+    "level": 35,
+    "ability": "Comatose",
+    "ivs": 31,
+    "moves": [
+     "Yawn",
+     "Sucker Punch",
+     "Slam"
+    ]
+   },
+   {
+    "species": "Dudunsparce",
+    "level": 35,
+    "ability": "Serene Grace",
+    "ivs": 31,
+    "moves": [
+     "Hyper Drill",
+     "Drill Run",
+     "Glare"
+    ]
+   },
+   {
+    "species": "Staraptor",
+    "level": 36,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Facade",
+     "Aerial Ace"
+    ],
+    "tera": "Normal"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 23,
+  "name": "Pokémon Trainer Nemona",
+  "location": "Paldea League#Gym Leaders",
+  "split": "Gym 6: Ryme",
+  "levelCap": 42,
+  "notes": [
+   "Fourth battle",
+   "If you chose Sprigatito"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lycanroc",
+    "level": 36,
+    "ability": "Sand Rush",
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Accelerock",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Goomy",
+    "level": 36,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Water Pulse",
+     "Flail"
+    ]
+   },
+   {
+    "species": "Pawmo",
+    "level": 36,
+    "ability": "Volt Absorb",
+    "ivs": 31,
+    "moves": [
+     "Spark",
+     "Arm Thrust",
+     "Thunder Wave",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Quaquaval",
+    "level": 37,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Air Slash",
+     "Aqua Step",
+     "Aqua Jet"
+    ],
+    "tera": "Water"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 24,
+  "name": "Pokémon Trainer Nemona",
+  "location": "Paldea League#Gym Leaders",
+  "split": "Gym 6: Ryme",
+  "levelCap": 42,
+  "notes": [
+   "Fourth battle",
+   "If you chose Fuecoco"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lycanroc",
+    "level": 36,
+    "ability": "Sand Rush",
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Accelerock",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Goomy",
+    "level": 36,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Water Pulse",
+     "Flail"
+    ]
+   },
+   {
+    "species": "Pawmo",
+    "level": 36,
+    "ability": "Volt Absorb",
+    "ivs": 31,
+    "moves": [
+     "Spark",
+     "Arm Thrust",
+     "Thunder Wave",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Meowscarada",
+    "level": 37,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Slash",
+     "Flower Trick",
+     "Quick Attack"
+    ],
+    "tera": "Grass"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 25,
+  "name": "Pokémon Trainer Nemona",
+  "location": "Paldea League#Gym Leaders",
+  "split": "Gym 6: Ryme",
+  "levelCap": 42,
+  "notes": [
+   "Fourth battle",
+   "If you chose Quaxly"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lycanroc",
+    "level": 36,
+    "ability": "Sand Rush",
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Accelerock",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Goomy",
+    "level": 36,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Water Pulse",
+     "Flail"
+    ]
+   },
+   {
+    "species": "Pawmo",
+    "level": 36,
+    "ability": "Volt Absorb",
+    "ivs": 31,
+    "moves": [
+     "Spark",
+     "Arm Thrust",
+     "Thunder Wave",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Skeledirge",
+    "level": 37,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Snarl",
+     "Torch Song",
+     "Lick"
+    ],
+    "tera": "Fire"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 6,
+  "name": "Gym Leader Ryme",
+  "location": "Montenevera Gym",
+  "split": "Gym 6: Ryme",
+  "levelCap": 42,
+  "notes": [
+   "Gym battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Banette",
+    "level": 41,
+    "ability": "Insomnia",
+    "ivs": 31,
+    "moves": [
+     "Icy Wind",
+     "Sucker Punch",
+     "Shadow Sneak"
+    ]
+   },
+   {
+    "species": "Mimikyu",
+    "level": 41,
+    "ability": "Disguise",
+    "ivs": 31,
+    "moves": [
+     "Light Screen",
+     "Shadow Sneak",
+     "Slash"
+    ]
+   },
+   {
+    "species": "Houndstone",
+    "level": 41,
+    "ability": "Sand Rush",
+    "ivs": 31,
+    "moves": [
+     "Play Rough",
+     "Crunch",
+     "Phantom Force"
+    ]
+   },
+   {
+    "species": "Toxtricity-Low-Key",
+    "level": 42,
+    "ability": "Punk Rock",
+    "ivs": 31,
+    "moves": [
+     "Discharge",
+     "Hex",
+     "Hyper Voice"
+    ],
+    "tera": "Ghost"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 26,
+  "name": "Pokémon Trainer Nemona",
+  "location": "Paldea League#Gym Leaders",
+  "split": "Gym 7: Tulip",
+  "levelCap": 45,
+  "notes": [
+   "Fifth battle",
+   "If you chose Sprigatito"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lycanroc",
+    "level": 42,
+    "ability": "Sand Rush",
+    "ivs": 31,
+    "moves": [
+     "Accelerock",
+     "Crunch",
+     "Rock Slide",
+     "Sand Attack"
+    ]
+   },
+   {
+    "species": "Sliggoo",
+    "level": 42,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Water Pulse",
+     "Flail"
+    ]
+   },
+   {
+    "species": "Pawmot",
+    "level": 42,
+    "ability": "Volt Absorb",
+    "ivs": 31,
+    "moves": [
+     "Spark",
+     "Arm Thrust",
+     "Thunder Wave",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Quaquaval",
+    "level": 43,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Air Slash",
+     "Aqua Step",
+     "Aqua Jet"
+    ],
+    "tera": "Water"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 27,
+  "name": "Pokémon Trainer Nemona",
+  "location": "Paldea League#Gym Leaders",
+  "split": "Gym 7: Tulip",
+  "levelCap": 45,
+  "notes": [
+   "Fifth battle",
+   "If you chose Fuecoco"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lycanroc",
+    "level": 42,
+    "ability": "Sand Rush",
+    "ivs": 31,
+    "moves": [
+     "Accelerock",
+     "Crunch",
+     "Rock Slide",
+     "Sand Attack"
+    ]
+   },
+   {
+    "species": "Sliggoo",
+    "level": 42,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Water Pulse",
+     "Flail"
+    ]
+   },
+   {
+    "species": "Pawmot",
+    "level": 42,
+    "ability": "Volt Absorb",
+    "ivs": 31,
+    "moves": [
+     "Spark",
+     "Arm Thrust",
+     "Thunder Wave",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Meowscarada",
+    "level": 43,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Slash",
+     "Flower Trick",
+     "Quick Attack"
+    ],
+    "tera": "Grass"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 28,
+  "name": "Pokémon Trainer Nemona",
+  "location": "Paldea League#Gym Leaders",
+  "split": "Gym 7: Tulip",
+  "levelCap": 45,
+  "notes": [
+   "Fifth battle",
+   "If you chose Quaxly"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lycanroc",
+    "level": 42,
+    "ability": "Sand Rush",
+    "ivs": 31,
+    "moves": [
+     "Accelerock",
+     "Crunch",
+     "Rock Slide",
+     "Sand Attack"
+    ]
+   },
+   {
+    "species": "Sliggoo",
+    "level": 42,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Water Pulse",
+     "Flail"
+    ]
+   },
+   {
+    "species": "Pawmot",
+    "level": 42,
+    "ability": "Volt Absorb",
+    "ivs": 31,
+    "moves": [
+     "Spark",
+     "Arm Thrust",
+     "Thunder Wave",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Skeledirge",
+    "level": 43,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Snarl",
+     "Torch Song",
+     "Lick"
+    ],
+    "tera": "Fire"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 7,
+  "name": "Gym Leader Tulip",
+  "location": "Alfornada Gym",
+  "split": "Gym 7: Tulip",
+  "levelCap": 45,
+  "notes": [
+   "Gym battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Farigiraf",
+    "level": 44,
+    "ability": "Armor Tail",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Zen Headbutt",
+     "Reflect"
+    ]
+   },
+   {
+    "species": "Gardevoir",
+    "level": 44,
+    "ability": "Synchronize",
+    "ivs": 31,
+    "moves": [
+     "Psychic",
+     "Dazzling Gleam",
+     "Energy Ball"
+    ]
+   },
+   {
+    "species": "Espathra",
+    "level": 44,
+    "ability": "Opportunist",
+    "ivs": 31,
+    "moves": [
+     "Psychic",
+     "Quick Attack",
+     "Shadow Ball"
+    ]
+   },
+   {
+    "species": "Florges",
+    "level": 45,
+    "ability": "Flower Veil",
+    "ivs": 31,
+    "moves": [
+     "Psychic",
+     "Moonblast",
+     "Petal Blizzard"
+    ],
+    "tera": "Psychic"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 8,
+  "name": "Gym Leader Grusha",
+  "location": "Glaseado Gym",
+  "split": "Gym 8: Grusha",
+  "levelCap": 48,
+  "notes": [
+   "Gym battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Frosmoth",
+    "level": 47,
+    "ability": "Shield Dust",
+    "ivs": 31,
+    "moves": [
+     "Blizzard",
+     "Bug Buzz",
+     "Tailwind"
+    ]
+   },
+   {
+    "species": "Beartic",
+    "level": 47,
+    "ability": "Snow Cloak",
+    "ivs": 31,
+    "moves": [
+     "Aqua Jet",
+     "Icicle Crash",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Cetitan",
+    "level": 47,
+    "ability": "Thick Fat",
+    "ivs": 31,
+    "moves": [
+     "Ice Spinner",
+     "Liquidation",
+     "Ice Shard"
+    ]
+   },
+   {
+    "species": "Altaria",
+    "level": 48,
+    "ability": "Natural Cure",
+    "ivs": 31,
+    "moves": [
+     "Ice Beam",
+     "Dragon Pulse",
+     "Moonblast",
+     "Hurricane"
+    ],
+    "tera": "Ice"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 9,
+  "name": "Rika",
+  "location": "Pokémon League (Paldea)",
+  "split": "Elite Four & Geeta",
+  "levelCap": 62,
+  "notes": [
+   "Champion Assessment"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Whiscash",
+    "level": 57,
+    "ability": "Oblivious",
+    "ivs": 31,
+    "moves": [
+     "Muddy Water",
+     "Earth Power",
+     "Blizzard",
+     "Future Sight"
+    ]
+   },
+   {
+    "species": "Camerupt",
+    "level": 57,
+    "ability": "Magma Armor",
+    "ivs": 31,
+    "moves": [
+     "Earth Power",
+     "Fire Blast",
+     "Flash Cannon",
+     "Yawn"
+    ]
+   },
+   {
+    "species": "Donphan",
+    "level": 57,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Stone Edge",
+     "Iron Head",
+     "Poison Jab"
+    ]
+   },
+   {
+    "species": "Dugtrio",
+    "level": 57,
+    "ability": "Sand Veil",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Rock Slide",
+     "Sucker Punch",
+     "Sandstorm"
+    ]
+   },
+   {
+    "species": "Clodsire",
+    "level": 58,
+    "ability": "Water Absorb",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Liquidation",
+     "Toxic",
+     "Protect"
+    ],
+    "tera": "Ground"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 10,
+  "name": "Poppy",
+  "location": "Pokémon League (Paldea)",
+  "split": "Elite Four & Geeta",
+  "levelCap": 62,
+  "notes": [
+   "Champion Assessment"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Copperajah",
+    "level": 58,
+    "ability": "Sheer Force",
+    "ivs": 31,
+    "moves": [
+     "High Horsepower",
+     "Play Rough",
+     "Heavy Slam",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Magnezone",
+    "level": 58,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Discharge",
+     "Flash Cannon",
+     "Light Screen",
+     "Tri Attack"
+    ]
+   },
+   {
+    "species": "Bronzong",
+    "level": 58,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Iron Head",
+     "Zen Headbutt",
+     "Rock Blast",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Corviknight",
+    "level": 58,
+    "ability": "Pressure",
+    "ivs": 31,
+    "moves": [
+     "Brave Bird",
+     "Iron Head",
+     "Body Press",
+     "Iron Defense"
+    ]
+   },
+   {
+    "species": "Tinkaton",
+    "level": 59,
+    "ability": "Mold Breaker",
+    "ivs": 31,
+    "moves": [
+     "Play Rough",
+     "Gigaton Hammer",
+     "Brick Break",
+     "Stone Edge"
+    ],
+    "tera": "Steel"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 11,
+  "name": "Larry",
+  "location": "Pokémon League (Paldea)",
+  "split": "Elite Four & Geeta",
+  "levelCap": 62,
+  "notes": [
+   "Champion Assessment"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Tropius",
+    "level": 59,
+    "ability": "Chlorophyll",
+    "ivs": 31,
+    "moves": [
+     "Air Slash",
+     "Solar Beam",
+     "Dragon Pulse",
+     "Sunny Day"
+    ]
+   },
+   {
+    "species": "Oricorio-Pom-Pom",
+    "level": 59,
+    "ability": "Dancer",
+    "ivs": 31,
+    "moves": [
+     "Revelation Dance",
+     "Air Slash",
+     "Teeter Dance",
+     "Icy Wind"
+    ]
+   },
+   {
+    "species": "Altaria",
+    "level": 59,
+    "ability": "Natural Cure",
+    "ivs": 31,
+    "moves": [
+     "Moonblast",
+     "Flamethrower",
+     "Ice Beam",
+     "Dragon Pulse"
+    ]
+   },
+   {
+    "species": "Staraptor",
+    "level": 59,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Facade",
+     "Brave Bird",
+     "Close Combat",
+     "Thief"
+    ]
+   },
+   {
+    "species": "Flamigo",
+    "level": 60,
+    "ability": "Scrappy",
+    "ivs": 31,
+    "moves": [
+     "Brave Bird",
+     "Close Combat",
+     "Throat Chop",
+     "Liquidation"
+    ],
+    "tera": "Flying"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 12,
+  "name": "Hassel",
+  "location": "Pokémon League (Paldea)",
+  "split": "Elite Four & Geeta",
+  "levelCap": 62,
+  "notes": [
+   "Champion Assessment"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Noivern",
+    "level": 60,
+    "ability": "Infiltrator",
+    "ivs": 31,
+    "moves": [
+     "Air Slash",
+     "Dragon Pulse",
+     "Super Fang",
+     "Hyper Voice"
+    ]
+   },
+   {
+    "species": "Haxorus",
+    "level": 60,
+    "ability": "Mold Breaker",
+    "ivs": 31,
+    "moves": [
+     "Dragon Claw",
+     "Crunch",
+     "Iron Head",
+     "Rock Tomb"
+    ]
+   },
+   {
+    "species": "Dragalge",
+    "level": 60,
+    "ability": "Poison Point",
+    "ivs": 31,
+    "moves": [
+     "Sludge Bomb",
+     "Dragon Pulse",
+     "Hydro Pump",
+     "Thunderbolt"
+    ]
+   },
+   {
+    "species": "Flapple",
+    "level": 60,
+    "ability": "Ripen",
+    "ivs": 31,
+    "moves": [
+     "Dragon Rush",
+     "Seed Bomb",
+     "Aerial Ace",
+     "Leech Seed"
+    ]
+   },
+   {
+    "species": "Baxcalibur",
+    "level": 61,
+    "ability": "Thermal Exchange",
+    "ivs": 31,
+    "moves": [
+     "Icicle Crash",
+     "Brick Break",
+     "Glaive Rush"
+    ],
+    "tera": "Dragon"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 13,
+  "name": "Top Champion Geeta",
+  "location": "Pokémon League (Paldea)",
+  "split": "Elite Four & Geeta",
+  "levelCap": 62,
+  "notes": [
+   "Paldea battles"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Espathra",
+    "level": 61,
+    "ability": "Opportunist",
+    "ivs": 31,
+    "moves": [
+     "Lumina Crash",
+     "Dazzling Gleam",
+     "Quick Attack",
+     "Reflect"
+    ]
+   },
+   {
+    "species": "Gogoat",
+    "level": 61,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Horn Leech",
+     "Zen Headbutt",
+     "Play Rough",
+     "Bulk Up"
+    ]
+   },
+   {
+    "species": "Veluza",
+    "level": 61,
+    "ability": "Mold Breaker",
+    "ivs": 31,
+    "moves": [
+     "Aqua Jet",
+     "Liquidation",
+     "Psycho Cut",
+     "Ice Fang"
+    ]
+   },
+   {
+    "species": "Avalugg",
+    "level": 61,
+    "ability": "Own Tempo",
+    "ivs": 31,
+    "moves": [
+     "Avalanche",
+     "Crunch",
+     "Earthquake",
+     "Body Press"
+    ]
+   },
+   {
+    "species": "Kingambit",
+    "level": 61,
+    "ability": "Supreme Overlord",
+    "ivs": 31,
+    "moves": [
+     "Iron Head",
+     "Kowtow Cleave",
+     "Zen Headbutt",
+     "Stone Edge"
+    ]
+   },
+   {
+    "species": "Glimmora",
+    "level": 62,
+    "ability": "Toxic Debris",
+    "ivs": 31,
+    "moves": [
+     "Tera Blast",
+     "Sludge Wave",
+     "Earth Power",
+     "Dazzling Gleam"
+    ],
+    "tera": "Rock"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 36,
+  "name": "Pokémon Trainer Arven",
+  "location": "Poco Path",
+  "split": "Area Zero (ending)",
+  "levelCap": 68,
+  "notes": [
+   "Second battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Greedent",
+    "level": 58,
+    "ability": "Cheek Pouch",
+    "ivs": 31,
+    "moves": [
+     "Bullet Seed",
+     "Body Slam",
+     "Psychic Fangs",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Cloyster",
+    "level": 59,
+    "ability": "Skill Link",
+    "ivs": 31,
+    "moves": [
+     "Rock Blast",
+     "Icicle Spear",
+     "Liquidation",
+     "Light Screen"
+    ]
+   },
+   {
+    "species": "Scovillain",
+    "level": 60,
+    "ability": "Chlorophyll",
+    "ivs": 31,
+    "moves": [
+     "Fire Blast",
+     "Energy Ball",
+     "Zen Headbutt",
+     "Crunch"
+    ]
+   },
+   {
+    "species": "Toedscruel",
+    "level": 61,
+    "ability": "Mycelium Might",
+    "ivs": 31,
+    "moves": [
+     "Power Whip",
+     "Earth Power",
+     "Spore",
+     "Sludge Bomb"
+    ]
+   },
+   {
+    "species": "Garganacl",
+    "level": 62,
+    "ability": "Purifying Salt",
+    "ivs": 31,
+    "moves": [
+     "Stone Edge",
+     "Earthquake",
+     "Body Press",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Mabosstiff",
+    "level": 63,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Psychic Fangs",
+     "Fire Fang",
+     "Play Rough"
+    ],
+    "tera": "Dark"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 29,
+  "name": "Champion Nemona",
+  "location": "Mesagoza",
+  "split": "Area Zero (ending)",
+  "levelCap": 68,
+  "notes": [
+   "Sixth battle",
+   "If you chose Sprigatito"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lycanroc",
+    "level": 65,
+    "ability": "Sand Rush",
+    "ivs": 31,
+    "moves": [
+     "Accelerock",
+     "Drill Run",
+     "Stone Edge",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Goodra",
+    "level": 65,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Muddy Water",
+     "Ice Beam",
+     "Sludge Bomb"
+    ]
+   },
+   {
+    "species": "Dudunsparce",
+    "level": 65,
+    "ability": "Serene Grace",
+    "ivs": 31,
+    "moves": [
+     "Hyper Drill",
+     "Drill Run",
+     "Dragon Rush",
+     "Coil"
+    ]
+   },
+   {
+    "species": "Orthworm",
+    "level": 65,
+    "ability": "Earth Eater",
+    "ivs": 31,
+    "moves": [
+     "Iron Tail",
+     "Body Press",
+     "Earthquake",
+     "Rock Blast"
+    ]
+   },
+   {
+    "species": "Pawmot",
+    "level": 65,
+    "ability": "Volt Absorb",
+    "ivs": 31,
+    "moves": [
+     "Double Shock",
+     "Close Combat",
+     "Ice Punch",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Quaquaval",
+    "level": 66,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Aqua Step",
+     "Brick Break",
+     "Aerial Ace",
+     "Ice Spinner"
+    ],
+    "tera": "Water"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 30,
+  "name": "Champion Nemona",
+  "location": "Mesagoza",
+  "split": "Area Zero (ending)",
+  "levelCap": 68,
+  "notes": [
+   "Sixth battle",
+   "If you chose Fuecoco"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lycanroc",
+    "level": 65,
+    "ability": "Sand Rush",
+    "ivs": 31,
+    "moves": [
+     "Accelerock",
+     "Drill Run",
+     "Stone Edge",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Goodra",
+    "level": 65,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Muddy Water",
+     "Ice Beam",
+     "Sludge Bomb"
+    ]
+   },
+   {
+    "species": "Dudunsparce",
+    "level": 65,
+    "ability": "Serene Grace",
+    "ivs": 31,
+    "moves": [
+     "Hyper Drill",
+     "Drill Run",
+     "Dragon Rush",
+     "Coil"
+    ]
+   },
+   {
+    "species": "Orthworm",
+    "level": 65,
+    "ability": "Earth Eater",
+    "ivs": 31,
+    "moves": [
+     "Iron Tail",
+     "Body Press",
+     "Earthquake",
+     "Rock Blast"
+    ]
+   },
+   {
+    "species": "Pawmot",
+    "level": 65,
+    "ability": "Volt Absorb",
+    "ivs": 31,
+    "moves": [
+     "Double Shock",
+     "Close Combat",
+     "Ice Punch",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Meowscarada",
+    "level": 66,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Flower Trick",
+     "Thunder Punch",
+     "Shadow Claw",
+     "Play Rough"
+    ],
+    "tera": "Grass"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 31,
+  "name": "Champion Nemona",
+  "location": "Mesagoza",
+  "split": "Area Zero (ending)",
+  "levelCap": 68,
+  "notes": [
+   "Sixth battle",
+   "If you chose Quaxly"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lycanroc",
+    "level": 65,
+    "ability": "Sand Rush",
+    "ivs": 31,
+    "moves": [
+     "Accelerock",
+     "Drill Run",
+     "Stone Edge",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Goodra",
+    "level": 65,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Muddy Water",
+     "Ice Beam",
+     "Sludge Bomb"
+    ]
+   },
+   {
+    "species": "Dudunsparce",
+    "level": 65,
+    "ability": "Serene Grace",
+    "ivs": 31,
+    "moves": [
+     "Hyper Drill",
+     "Drill Run",
+     "Dragon Rush",
+     "Coil"
+    ]
+   },
+   {
+    "species": "Orthworm",
+    "level": 65,
+    "ability": "Earth Eater",
+    "ivs": 31,
+    "moves": [
+     "Iron Tail",
+     "Body Press",
+     "Earthquake",
+     "Rock Blast"
+    ]
+   },
+   {
+    "species": "Pawmot",
+    "level": 65,
+    "ability": "Volt Absorb",
+    "ivs": 31,
+    "moves": [
+     "Double Shock",
+     "Close Combat",
+     "Ice Punch",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Skeledirge",
+    "level": 66,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Torch Song",
+     "Earth Power",
+     "Shadow Ball",
+     "Snarl"
+    ],
+    "tera": "Fire"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 37,
+  "name": "Pokémon Trainer Arven",
+  "location": "Mesagoza",
+  "split": "Area Zero (ending)",
+  "levelCap": 68,
+  "notes": [
+   "Third battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Greedent",
+    "level": 67,
+    "ability": "Cheek Pouch",
+    "ivs": 31,
+    "moves": [
+     "Bullet Seed",
+     "Body Slam",
+     "Psychic Fangs",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Cloyster",
+    "level": 67,
+    "ability": "Skill Link",
+    "ivs": 31,
+    "moves": [
+     "Rock Blast",
+     "Icicle Spear",
+     "Liquidation",
+     "Light Screen"
+    ]
+   },
+   {
+    "species": "Scovillain",
+    "level": 67,
+    "ability": "Chlorophyll",
+    "ivs": 31,
+    "moves": [
+     "Fire Blast",
+     "Energy Ball",
+     "Zen Headbutt",
+     "Crunch"
+    ]
+   },
+   {
+    "species": "Toedscruel",
+    "level": 67,
+    "ability": "Mycelium Might",
+    "ivs": 31,
+    "moves": [
+     "Power Whip",
+     "Earth Power",
+     "Spore",
+     "Sludge Bomb"
+    ]
+   },
+   {
+    "species": "Garganacl",
+    "level": 67,
+    "ability": "Purifying Salt",
+    "ivs": 31,
+    "moves": [
+     "Stone Edge",
+     "Earthquake",
+     "Body Press",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Mabosstiff",
+    "level": 68,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Psychic Fangs",
+     "Fire Fang",
+     "Play Rough"
+    ],
+    "tera": "Dark"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 32,
+  "name": "Pokemon Trainer Nemona",
+  "location": "Loyalty Plaza",
+  "split": "The Indigo Disk",
+  "levelCap": 80,
+  "notes": [
+   "Seventh battle",
+   "If you chose Sprigatito"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lycanroc",
+    "level": 86,
+    "ability": "Sand Rush",
+    "ivs": 31,
+    "moves": [
+     "Accelerock",
+     "Drill Run",
+     "Stone Edge",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Kommo-o",
+    "level": 86,
+    "ability": "Soundproof",
+    "ivs": 31,
+    "moves": [
+     "Clangorous Soul",
+     "Drain Punch",
+     "Thunder Punch",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Goodra",
+    "level": 86,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Muddy Water",
+     "Ice Beam",
+     "Sludge Bomb"
+    ]
+   },
+   {
+    "species": "Ribombee",
+    "level": 86,
+    "ability": "Shield Dust",
+    "ivs": 31,
+    "moves": [
+     "Bug Buzz",
+     "Moonblast",
+     "Energy Ball",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Pawmot",
+    "level": 86,
+    "ability": "Volt Absorb",
+    "ivs": 31,
+    "moves": [
+     "Double Shock",
+     "Close Combat",
+     "Ice Punch",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Quaquaval",
+    "level": 87,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Aqua Step",
+     "Brick Break",
+     "Aerial Ace",
+     "Ice Spinner"
+    ],
+    "tera": "Fighting"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 33,
+  "name": "Pokemon Trainer Nemona",
+  "location": "Loyalty Plaza",
+  "split": "The Indigo Disk",
+  "levelCap": 80,
+  "notes": [
+   "Seventh battle",
+   "If you chose Fuecoco"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lycanroc",
+    "level": 86,
+    "ability": "Sand Rush",
+    "ivs": 31,
+    "moves": [
+     "Accelerock",
+     "Drill Run",
+     "Stone Edge",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Kommo-o",
+    "level": 86,
+    "ability": "Soundproof",
+    "ivs": 31,
+    "moves": [
+     "Clangorous Soul",
+     "Drain Punch",
+     "Thunder Punch",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Goodra",
+    "level": 86,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Muddy Water",
+     "Ice Beam",
+     "Sludge Bomb"
+    ]
+   },
+   {
+    "species": "Milotic",
+    "level": 86,
+    "ability": "Competitive",
+    "ivs": 31,
+    "moves": [
+     "Draining Kiss",
+     "Surf",
+     "Ice Beam",
+     "Mud Shot"
+    ]
+   },
+   {
+    "species": "Pawmot",
+    "level": 86,
+    "ability": "Volt Absorb",
+    "ivs": 31,
+    "moves": [
+     "Double Shock",
+     "Close Combat",
+     "Ice Punch",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Meowscarada",
+    "level": 87,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Flower Trick",
+     "Thunder Punch",
+     "Shadow Claw",
+     "Play Rough"
+    ],
+    "tera": "Dark"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ },
+ {
+  "id": 34,
+  "name": "Pokemon Trainer Nemona",
+  "location": "Loyalty Plaza",
+  "split": "The Indigo Disk",
+  "levelCap": 80,
+  "notes": [
+   "Seventh battle",
+   "If you chose Quaxly"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lycanroc",
+    "level": 86,
+    "ability": "Sand Rush",
+    "ivs": 31,
+    "moves": [
+     "Accelerock",
+     "Drill Run",
+     "Stone Edge",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Kommo-o",
+    "level": 86,
+    "ability": "Soundproof",
+    "ivs": 31,
+    "moves": [
+     "Clangorous Soul",
+     "Drain Punch",
+     "Thunder Punch",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Goodra",
+    "level": 86,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Muddy Water",
+     "Ice Beam",
+     "Sludge Bomb"
+    ]
+   },
+   {
+    "species": "Dusknoir",
+    "level": 86,
+    "ability": "Pressure",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Thunder Punch",
+     "Shadow Sneak",
+     "Ice Punch"
+    ]
+   },
+   {
+    "species": "Pawmot",
+    "level": 86,
+    "ability": "Volt Absorb",
+    "ivs": 31,
+    "moves": [
+     "Double Shock",
+     "Close Combat",
+     "Ice Punch",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Skeledirge",
+    "level": 87,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Torch Song",
+     "Earth Power",
+     "Shadow Ball",
+     "Snarl"
+    ],
+    "tera": "Ghost"
+   }
+  ],
+  "games": [
+   "scarlet",
+   "violet"
+  ]
+ }
+]
