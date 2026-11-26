@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { CategoryBadge } from '../../components/MoveBits';
 import { SearchSelect, type Option } from '../../components/SearchSelect';
@@ -61,6 +61,7 @@ export function SetEditor({
         })),
     [rs, learnset],
   );
+  const moveInputs = useRef<(HTMLInputElement | null)[]>([]);
 
   if (!set) {
     return (
@@ -81,6 +82,15 @@ export function SetEditor({
     const moves = [...set.moves];
     moves[i] = name;
     update({ moves: moves.filter(Boolean) });
+  };
+  // Enter on a move jumps to the next empty slot so the moveset can be typed in one go
+  const nextMove = (i: number, name: string) => {
+    const moves = [...set.moves];
+    moves[i] = name;
+    const filled = moves.filter(Boolean).length;
+    // moves are kept packed to the front, so the first empty box is at index `filled`; all four boxes are
+    // always rendered, so focus can move right away and fast typists don't lose keystrokes
+    if (filled < 4) moveInputs.current[filled]?.focus();
   };
   const setStat = (kind: 'evs' | 'ivs', stat: StatID, value: number) =>
     update({ [kind]: { ...set[kind], [stat]: Math.max(0, Math.min(kind === 'evs' ? 252 : 31, value || 0)) } });
@@ -149,6 +159,10 @@ export function SetEditor({
               value={set.moves[i] ?? ''}
               options={moveOptions}
               onChange={(name) => setMove(i, name)}
+              onEnter={(name) => nextMove(i, name)}
+              inputRef={(el) => {
+                moveInputs.current[i] = el;
+              }}
               placeholder={`Move ${i + 1}`}
               invalid={!!set.moves[i] && moveInvalid(set.moves[i])}
               clearable

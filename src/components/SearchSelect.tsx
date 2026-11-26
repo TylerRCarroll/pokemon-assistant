@@ -21,6 +21,8 @@ export function SearchSelect({
   invalid = false,
   maxResults = 60,
   clearable = false,
+  onEnter,
+  inputRef: externalRef,
 }: {
   value: string;
   options: Option[];
@@ -29,6 +31,9 @@ export function SearchSelect({
   invalid?: boolean;
   maxResults?: number;
   clearable?: boolean;
+  /** Called after a pick made with Enter (not the mouse), e.g. to move focus to the next field */
+  onEnter?: (value: string) => void;
+  inputRef?: (el: HTMLInputElement | null) => void;
 }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
@@ -52,7 +57,10 @@ export function SearchSelect({
   return (
     <div className="relative">
       <input
-        ref={inputRef}
+        ref={(el) => {
+          inputRef.current = el;
+          externalRef?.(el);
+        }}
         role="combobox"
         aria-expanded={open}
         aria-controls={listId}
@@ -71,7 +79,11 @@ export function SearchSelect({
         onKeyDown={(e) => {
           if (e.key === 'ArrowDown') setCursor((c) => Math.min(c + 1, filtered.length - 1));
           else if (e.key === 'ArrowUp') setCursor((c) => Math.max(c - 1, 0));
-          else if (e.key === 'Enter' && filtered[cursor]) pick(filtered[cursor].value);
+          else if (e.key === 'Enter' && filtered[cursor]) {
+            const v = filtered[cursor].value;
+            pick(v);
+            onEnter?.(v);
+          }
           else if (e.key === 'Escape') inputRef.current?.blur();
           else return;
           e.preventDefault();
