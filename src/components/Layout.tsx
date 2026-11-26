@@ -1,4 +1,5 @@
 import { Link, NavLink, Outlet } from 'react-router-dom';
+import { THEME_ORDER, useTheme, type ThemePref } from '../lib/theme';
 import { RULESETS } from '../rulesets/registry';
 import { useRuleset, useRulesetStore } from '../state/ruleset';
 import { useAutoSync, useSyncStore } from '../state/sync';
@@ -13,12 +14,36 @@ const NAV = [
   { to: '/backup', label: 'Backup' },
 ];
 
+const THEME_LABEL: Record<ThemePref, { icon: string; name: string }> = {
+  system: { icon: '◐', name: 'System' },
+  light: { icon: '☀', name: 'Light' },
+  dark: { icon: '☾', name: 'Dark' },
+};
+
+/** Cycles System → Light → Dark */
+function ThemeButton({ value, onChange }: { value: ThemePref; onChange: (t: ThemePref) => void }) {
+  const next = THEME_ORDER[(THEME_ORDER.indexOf(value) + 1) % THEME_ORDER.length];
+  const { icon, name } = THEME_LABEL[value];
+  return (
+    <button
+      onClick={() => onChange(next)}
+      title={`Theme: ${name} (click for ${THEME_LABEL[next].name})`}
+      aria-label={`Theme: ${name}. Switch to ${THEME_LABEL[next].name}`}
+      className="flex items-center gap-1 rounded border border-slate-300 px-2 py-1 text-sm hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800"
+    >
+      <span aria-hidden>{icon}</span>
+      <span className="text-xs text-slate-500">{name}</span>
+    </button>
+  );
+}
+
 export function Layout() {
   const rulesetId = useRulesetStore((s) => s.rulesetId);
   const setRuleset = useRulesetStore((s) => s.setRuleset);
   const ruleset = useRuleset();
   useAutoSync();
   const sync = useSyncStore((s) => s.status);
+  const [theme, setTheme] = useTheme();
 
   return (
     <div className="min-h-screen">
@@ -69,6 +94,7 @@ export function Layout() {
               ))}
             </select>
           </label>
+          <ThemeButton value={theme} onChange={setTheme} />
         </div>
         {!ruleset.verified && (
           <div className="border-t border-amber-200 bg-amber-50 px-4 py-1.5 text-center text-xs text-amber-900 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-200">
