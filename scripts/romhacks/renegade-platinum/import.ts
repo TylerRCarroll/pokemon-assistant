@@ -372,6 +372,68 @@ for (const sheetName of trainerSheets) {
   }
 }
 
+// ---------------------------------------------------------------- encounters
+// ENCOUNTERS: 7-column location blocks laid out in story order. Within a block, capitalised rows name
+// the location, method rows carry a level range ("Grass (9-10)", "Honey Tree (21)", "Rods (O-10, G-25,
+// S-50)"), and "#066 Machop" rows list the Pokémon, sometimes with their own level. Each Pokémon is placed
+// at the first split whose level cap reaches its lowest level, with Surf after Wake's badge and the Poké
+// Radar (National Dex) in the post-game.
+const checkpoints = [...new Map(trainers.filter((t) => t.levelCap).map((t) => [t.split, t.levelCap!])).entries()]
+  .sort((a, b) => a[1] - b[1])
+  .map(([split, levelCap]) => ({ label: split.replace(/ split$/i, ''), levelCap }));
+const checkpointFor = (level: number) => {
+  const i = checkpoints.findIndex((c) => level <= c.levelCap);
+  return i < 0 ? checkpoints.length - 1 : i;
+};
+const SURF_FROM = checkpoints.findIndex((c) => /^Byron/.test(c.label));
+const POSTGAME = checkpoints.length - 1;
+const encounters: Record<string, number> = {};
+const encounterRows = sheet('ENCOUNTERS');
+const width = Math.max(...encounterRows.map((r) => r.cells.length));
+const levelOf = (s: string) => {
+  const m = s.match(/^(\d+)(?:\s*-\s*\d+)?$/);
+  return m ? Number(m[1]) : undefined;
+};
+for (let b = 4; b < width; b += 7) {
+  let method = '';
+  let methodLevel: number | undefined;
+  for (const { cells } of encounterRows) {
+    const head = cells[b] ?? '';
+    const entry = (cells[b + 1] ?? '').match(/^#\d+\s+(.+)$/);
+    if (!entry) {
+      // method headers fill the block's first cell; anything else (locations, notes) leaves the method alone
+      const m = head.match(/^(Grass|Cave|Surf|Ground|Honey Tree|Rods|Water|Rock Smash|Swarm|Old Rod|Good Rod|Super Rod)\b[^(]*\(([^)]*)\)/i);
+      if (m) {
+        method = m[1].toLowerCase();
+        methodLevel = levelOf(m[2].replace(/^[A-Z]-/, '').split(',')[0].trim());
+      } else if (/Poké Radar|Gift|Trade|Static|Event/i.test(head)) {
+        method = head.toLowerCase();
+        methodLevel = undefined;
+      } else if (head && head === head.toUpperCase() && /[A-Z]/.test(head)) {
+        method = '';
+        methodLevel = undefined;
+      }
+      continue;
+    }
+    if (/you give/i.test(cells[b + 3] ?? '')) continue;
+    const sp = resolveSpecies(entry[1]);
+    if (!sp) {
+      warn(`encounter "${entry[1]}" (column ${b + 1}): unknown species`);
+      continue;
+    }
+    let level = levelOf(cells[b + 2] ?? '') ?? methodLevel;
+    if (method === 'rods') {
+      // O / G / S rate columns: the first rod that can find it sets the level
+      const rod = [3, 4, 5].findIndex((k) => Number(cells[b + k]) > 0);
+      level = [10, 25, 50][rod < 0 ? 2 : rod];
+    }
+    let at = checkpointFor(level ?? 1);
+    if (method === 'surf') at = Math.max(at, SURF_FROM);
+    if (/poké radar/.test(method)) at = POSTGAME;
+    if (encounters[sp.id] === undefined || at < encounters[sp.id]) encounters[sp.id] = at;
+  }
+}
+
 // ---------------------------------------------------------------- write
 await mkdir(OUT, { recursive: true });
 const write = (file: string, data: unknown, pretty = true) => writeFile(`${OUT}/${file}`, JSON.stringify(data, null, pretty ? 1 : 0) + '\n');
@@ -380,6 +442,7 @@ await write('moves.json', { overrides: moveOverrides, customMoves, removedMoves 
 await write('learnsets.json', learnsets, false);
 await write('tms.json', tms);
 await write('trainers.json', trainers, false);
+await write('availability.json', { game: 'renegade-platinum', checkpoints, species: encounters }, false);
 
 for (const t of trainers) if (t.team.length > 6) warn(`trainer ${t.name} [${t.id}] has ${t.team.length} Pokémon`);
 const bosses = trainers.filter((t) => t.boss);
@@ -388,6 +451,7 @@ console.log(`moves: ${Object.keys(moveOverrides).length} changed, ${Object.keys(
 console.log(`learnsets: ${Object.keys(learnsets).length} species`);
 console.log(`TMs: ${tms.length} (${tms.filter((t) => t.location).length} with locations)`);
 console.log(`trainers: ${trainers.length} from ${trainerSheets.length} sheets, ${bosses.length} bosses`);
+console.log(`encounters: ${Object.keys(encounters).length} species over ${checkpoints.length} checkpoints`);
 if (warnings.length) {
   const shown = warnings.slice(0, 40);
   console.log(`\n${warnings.length} warnings${warnings.length > shown.length ? ' (first 40)' : ''}:\n  ${shown.join('\n  ')}`);

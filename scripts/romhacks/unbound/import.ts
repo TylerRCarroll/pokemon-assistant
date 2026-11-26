@@ -8,6 +8,7 @@ import { getRuleset } from '../../../src/rulesets/registry';
 import overlay from '../../../data-src/romhacks/unbound/overlay.json';
 import { parseCalcTrainers } from './calc';
 import { parseBaseStats, parseLearnsets } from './dpe';
+import { parseEncounters } from './encounters';
 
 const DOCS = 'Documentation/Unbound';
 const OUT = 'data-src/romhacks/unbound/generated';
@@ -131,16 +132,19 @@ const changed = await importTypesAndAbilities(species);
 const learnsets = await parseLearnsets(base, warnings, Object.keys(overlay.customMoves));
 // trainer sets are checked against the hack itself, so Unbound-only moves like Leech Fang resolve
 const trainers = await parseCalcTrainers(getRuleset('unbound'), warnings);
+const availability = await parseEncounters(base, speciesNames, trainers, warnings);
 
 await mkdir(OUT, { recursive: true });
 await writeFile(`${OUT}/species.json`, JSON.stringify(species, null, 1) + '\n');
 await writeFile(`${OUT}/tms.json`, JSON.stringify(tms, null, 1) + '\n');
 await writeFile(`${OUT}/learnsets.json`, JSON.stringify(learnsets) + '\n');
 await writeFile(`${OUT}/trainers.json`, JSON.stringify(trainers) + '\n');
+await writeFile(`${OUT}/availability.json`, JSON.stringify({ game: 'unbound', ...availability }) + '\n');
 
 console.log(`species: ${Object.keys(species).length} changed, ${unchanged} with Gen 8 stats`);
 console.log(`  ${changed.types} retyped, ${changed.abilities} with different abilities`);
 console.log(`learnsets: ${Object.keys(learnsets).length}`);
+console.log(`availability: ${Object.keys(availability.species).length} species over ${availability.checkpoints.length} checkpoints`);
 const counts = new Map<string, number>();
 for (const t of trainers) counts.set(t.difficulty ?? '', (counts.get(t.difficulty ?? '') ?? 0) + 1);
 console.log(`trainers: ${[...counts].map(([d, n]) => `${d} ${n}`).join(', ')}`);

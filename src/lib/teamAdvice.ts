@@ -103,6 +103,12 @@ export function tipFor(
       return { text: `Give one of them a different item. Leftovers, Heavy-Duty Boots, or a Choice item are the usual alternatives.` };
     case 'missingRole':
       return roleTip(rs, issue.need, members, learnsetOf);
+    case 'notAvailable':
+      return {
+        text: issue.from
+          ? `Plan it in for later, or use one of the suggested swaps for now.`
+          : `It isn't in this game; the suggested swaps only use Pokémon you can get.`,
+      };
   }
 }
 
@@ -224,10 +230,19 @@ function makePenalty(rs: Ruleset) {
   };
 }
 
-/** Candidates: the format's most-used Pokémon when there's usage data, otherwise fully evolved non-legendaries */
-function candidatePool(rs: Ruleset, members: Member[], meta?: FormatData): { species: SpeciesInfo; set: TeamSet }[] {
+export interface SwapOptions {
+  /** Playthrough mode: only these species, at this level, instead of the meta or every fully evolved Pokémon */
+  pool?: SpeciesInfo[];
+  level?: number;
+  /** Members the player can't have yet; swapping them out counts as a fix */
+  unavailable?: Set<Member>;
+}
+
+/** Candidates: a playthrough's reachable Pokémon, the format's most-used ones, or fully evolved non-legendaries */
+function candidatePool(rs: Ruleset, members: Member[], meta?: FormatData, opts: SwapOptions = {}): { species: SpeciesInfo; set: TeamSet }[] {
   const onTeam = new Set(members.map((m) => m.species.name.split('-')[0]));
   const ok = (s: SpeciesInfo) => !s.battleOnly && !onTeam.has(s.name.split('-')[0]);
+  if (opts.pool) return opts.pool.filter(ok).map((s) => ({ species: s, set: { ...newSet(rs, s.name), level: opts.level ?? 100 } }));
   if (meta) {
     const top = Object.entries(meta.pokemon)
       .slice(0, 100)
@@ -250,16 +265,19 @@ function quality(m: { species: SpeciesInfo }, meta?: FormatData) {
   return bst + usage;
 }
 
-export function suggestSwaps(rs: Ruleset, members: Member[], meta?: FormatData, limit = 3): Swap[] {
+export function suggestSwaps(rs: Ruleset, members: Member[], meta?: FormatData, limit = 3, opts: SwapOptions = {}): Swap[] {
   if (members.length < 2) return [];
-  const penalty = makePenalty(rs);
+  const typing = makePenalty(rs);
+  // a member you can't have yet is the first thing to replace
+  const penalty = (team: Member[], attacks: TypeName[][], roles: Role[][]) =>
+    typing(team, attacks, roles) + 15 * team.filter((m) => opts.unavailable?.has(m)).length;
   const attacks = members.map((m) => attackTypes(rs, m));
   const roles = members.map((m) => memberRoles(rs, m.set, m.species, meta));
   const before = penalty(members, attacks, roles);
   const qualities = members.map((m) => quality(m, meta));
 
   const best = new Map<string, { i: number; species: SpeciesInfo; set: TeamSet; score: number }>();
-  for (const c of candidatePool(rs, members, meta)) {
+  for (const c of candidatePool(rs, members, meta, opts)) {
     const incoming: Member = { species: c.species, set: c.set };
     const incomingAttacks = attackTypes(rs, incoming);
     const incomingRoles = memberRoles(rs, c.set, c.species, meta);
@@ -292,7 +310,10 @@ export function suggestSwaps(rs: Ruleset, members: Member[], meta?: FormatData, 
       outReasons: outReasons(rs, members, b.i, qualities, meta),
       incoming: b.species,
       set: b.set,
-      fixes: describeFixes(rs, members, members.map((m, j) => (j === b.i ? incoming : m)), meta),
+      fixes: [
+        ...(opts.unavailable?.has(members[b.i]) ? [`${members[b.i].species.name} isn't obtainable yet`] : []),
+        ...describeFixes(rs, members, members.map((m, j) => (j === b.i ? incoming : m)), meta),
+      ],
       score: b.score,
     });
     if (picked.length >= limit) break;

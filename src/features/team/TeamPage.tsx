@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { card } from '../../components/ui';
 import { formatsFor } from '../../data/formats';
+import { gamesFor } from '../../data/games';
+import { availablePool, buildAvailability, loadAvailability } from '../../lib/availability';
 import { resolveMembers, type Member } from '../../lib/coverage';
 import { memberRoles } from '../../lib/roles';
 import { loadFormat } from '../../lib/smogon';
@@ -8,9 +10,11 @@ import type { TeamSet } from '../../lib/team';
 import { checkSet } from '../../lib/legality';
 import { usePromise } from '../../lib/usePromise';
 import type { LearnsetEntry } from '../../rulesets/types';
+import { usePlaythrough } from '../../state/playthrough';
 import { useRuleset } from '../../state/ruleset';
 import { useTeamsStore } from '../../state/teams';
 import { CoveragePanel } from './CoveragePanel';
+import { PlaythroughBar } from './PlaythroughBar';
 import { SetEditor } from './SetEditor';
 import { SlotCard } from './SlotCard';
 import { TeamBar } from './TeamBar';
@@ -43,7 +47,25 @@ export function TeamPage() {
   const learnsetOf = (m: Member) => learnsets.data?.[team?.slots.indexOf(m.set) ?? -1];
   // the ruleset's main format (OU, usually) steers swap suggestions toward meta-relevant picks
   const mainFormat = formatsFor(rs.id)[0]?.id;
-  const meta = usePromise(() => (mainFormat ? loadFormat(mainFormat) : Promise.resolve(undefined)), [mainFormat]);
+  const metaData = usePromise(() => (mainFormat ? loadFormat(mainFormat) : Promise.resolve(undefined)), [mainFormat]);
+
+  // playthrough mode: advice limited to what the game has offered by the chosen checkpoint
+  const prefs = usePlaythrough(rs);
+  const game = gamesFor(rs.id).find((g) => g.id === prefs?.game);
+  const availabilityFile = usePromise(() => (game ? loadAvailability(game) : Promise.resolve(undefined)), [game?.id]);
+  const availability = useMemo(
+    () => (game && availabilityFile.data ? buildAvailability(rs, game, availabilityFile.data) : undefined),
+    [rs, game, availabilityFile.data],
+  );
+  const playing = prefs?.mode === 'playthrough' && availability;
+  const checkpoint = Math.min(prefs?.checkpoint ?? 0, (availability?.checkpoints.length ?? 1) - 1);
+  const play = useMemo(() => {
+    if (!playing) return undefined;
+    const cap = availability.checkpoints[checkpoint]?.levelCap ?? 100;
+    return { availability, checkpoint, pool: availablePool(rs, availability, checkpoint), level: cap };
+  }, [playing, availability, checkpoint, rs]);
+  // Smogon usage only steers competitive advice
+  const meta = { data: play ? undefined : metaData.data };
   const [lastSwap, setLastSwap] = useState<{ index: number; prev: TeamSet; label: string }>();
   useEffect(() => setLastSwap(undefined), [team?.id, rs.id]);
 
@@ -63,6 +85,7 @@ export function TeamPage() {
   return (
     <div className="space-y-5">
       <TeamBar rs={rs} teams={teams} active={team} />
+      {prefs && <PlaythroughBar rs={rs} prefs={{ ...prefs, checkpoint }} checkpoints={availability?.checkpoints} />}
 
       {!team ? (
         <div className={`${card} p-8 text-center text-slate-500`}>
@@ -100,6 +123,7 @@ export function TeamPage() {
             members={members}
             learnsetOf={learnsetOf}
             meta={meta.data}
+            play={play}
             onSwap={swap}
             undo={
               lastSwap && {

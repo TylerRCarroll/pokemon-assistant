@@ -29,6 +29,7 @@ Raw romhack documentation lives in `Documentation/<hack>/` (gitignored, since th
 npm run import:unbound
 npm run import:rp
 npm run fetch:smogon   # Smogon usage stats, sets, and sample teams (refresh monthly)
+npm run fetch:availability   # when Pokémon become obtainable in Scarlet/Violet and Black/White (PokéAPI + Bulbapedia)
 ```
 
 Hand-curated overrides in `data-src/romhacks/<hack>/overlay.json` take precedence over generated data.
@@ -48,6 +49,8 @@ All six planned features are in:
 4. **Planner** – Smogon usage, sets, and sample teams; romhack trainer battles
 5. **Calc** – `@smogon/calc` damage calculator and threat checks (meta or romhack trainers)
 6. **Trainer** – spaced-repetition quizzes on matchups, abilities, moves, counters, and romhack changes
+
+The Team Builder has a **Playthrough** mode (Scarlet/Violet, Black/White, Renegade Platinum, Unbound): pick how far you are, and warnings and swap suggestions only use Pokémon you could have by then, evolved as far as the level cap allows.
 
 Ideas next: Unbound move tutors and custom-ability descriptions, Renegade Platinum evolution changes and encounters, a Pokémon Champions ruleset.
 

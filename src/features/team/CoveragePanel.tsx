@@ -4,11 +4,11 @@ import { Sprite } from '../../components/Sprite';
 import { MoveName } from '../../components/Tooltip';
 import { TypeBadge } from '../../components/TypeBadge';
 import { card } from '../../components/ui';
-import { defensiveCoverage, offensiveCoverage, roleCoverage, teamWarnings, type Member } from '../../lib/coverage';
+import { defensiveCoverage, offensiveCoverage, roleCoverage, teamWarnings, type Member, type PlaythroughContext } from '../../lib/coverage';
 import type { FormatData } from '../../lib/smogonTypes';
 import { suggestSwaps, tipFor, type Swap, type Tip } from '../../lib/teamAdvice';
 import type { TeamSet } from '../../lib/team';
-import type { LearnsetEntry, Ruleset } from '../../rulesets/types';
+import type { LearnsetEntry, Ruleset, SpeciesInfo } from '../../rulesets/types';
 
 const button =
   'rounded border border-slate-300 px-2 py-0.5 text-xs font-medium hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800';
@@ -43,7 +43,7 @@ function TipLine({ rs, tip }: { rs: Ruleset; tip: Tip }) {
   );
 }
 
-function SwapCard({ rs, swap, onSwap }: { rs: Ruleset; swap: Swap; onSwap: () => void }) {
+function SwapCard({ swap, onSwap }: { swap: Swap; onSwap: () => void }) {
   return (
     <li className="rounded border border-slate-200 p-2.5 dark:border-slate-800">
       <div className="flex flex-wrap items-center gap-2 text-sm">
@@ -77,7 +77,7 @@ function SwapCard({ rs, swap, onSwap }: { rs: Ruleset; swap: Swap; onSwap: () =>
             Why {swap.out.species.name}: {swap.outReasons.join('; ')}
           </li>
         )}
-        {rs.kind === 'romhack' && <li className="text-slate-400">Check it&apos;s obtainable at your point in the game.</li>}
+
       </ul>
     </li>
   );
@@ -90,21 +90,28 @@ export function CoveragePanel({
   meta,
   onSwap,
   undo,
+  play,
 }: {
   rs: Ruleset;
   members: Member[];
   learnsetOf: (m: Member) => LearnsetEntry[] | undefined;
   /** Usage stats for the ruleset's main format, to favour meta-relevant swaps */
   meta?: FormatData;
+  /** Playthrough mode: progress, plus the Pokémon reachable by then and the level cap */
+  play?: PlaythroughContext & { pool: SpeciesInfo[]; level: number };
   onSwap: (out: Member, set: TeamSet) => void;
   /** Shown after a swap so it can be reverted */
   undo?: { label: string; run: () => void };
 }) {
-  const warnings = useMemo(() => teamWarnings(rs, members, meta), [rs, members, meta]);
+  const warnings = useMemo(() => teamWarnings(rs, members, meta, play), [rs, members, meta, play]);
   const roles = useMemo(() => roleCoverage(rs, members, meta), [rs, members, meta]);
   const swaps = useMemo(
-    () => (warnings.some((w) => w.issue.kind !== 'duplicateItem') ? suggestSwaps(rs, members, meta) : []),
-    [rs, members, meta, warnings],
+    () => {
+      if (!warnings.some((w) => w.issue.kind !== 'duplicateItem')) return [];
+      const unavailable = new Set(warnings.flatMap((w) => (w.issue.kind === 'notAvailable' ? [w.issue.member] : [])));
+      return suggestSwaps(rs, members, meta, 3, play && { pool: play.pool, level: play.level, unavailable });
+    },
+    [rs, members, meta, warnings, play],
   );
   if (!members.length) return null;
   const defense = defensiveCoverage(rs, members);
@@ -168,11 +175,15 @@ export function CoveragePanel({
           <h2 className="font-semibold">Suggested swaps</h2>
           <p className="mb-2 text-xs text-slate-500">
             Replacements that fix the most warnings and missing roles, weighed against what you&apos;d lose.{' '}
-            {meta ? 'Drawn from the most-used Pokémon in the format.' : 'Drawn from fully evolved, non-legendary Pokémon.'}
+            {play
+              ? `Drawn from the ${play.pool.length} Pokémon you can have by ${play.availability.checkpoints[play.checkpoint].label}, at level ${play.level}.`
+              : meta
+                ? 'Drawn from the most-used Pokémon in the format.'
+                : 'Drawn from fully evolved, non-legendary Pokémon.'}
           </p>
           <ul className="space-y-2">
             {swaps.map((s) => (
-              <SwapCard key={`${s.out.species.id}-${s.incoming.id}`} rs={rs} swap={s} onSwap={() => onSwap(s.out, s.set)} />
+              <SwapCard key={`${s.out.species.id}-${s.incoming.id}`} swap={s} onSwap={() => onSwap(s.out, s.set)} />
             ))}
           </ul>
         </section>

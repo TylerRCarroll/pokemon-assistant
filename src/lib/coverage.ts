@@ -1,4 +1,5 @@
 import type { Ruleset, SpeciesInfo, TypeName } from '../rulesets/types';
+import type { Availability } from './availability';
 import { memberRoles, roleNeeds, type RoleNeed } from './roles';
 import type { FormatData } from './smogonTypes';
 import type { TeamSet } from './team';
@@ -103,7 +104,14 @@ export type TeamIssue =
   | { kind: 'coverageGap'; types: TypeName[] }
   | { kind: 'noAttacks'; member: Member }
   | { kind: 'duplicateItem'; item: string }
-  | { kind: 'missingRole'; need: RoleNeed };
+  | { kind: 'missingRole'; need: RoleNeed }
+  | { kind: 'notAvailable'; member: Member; from?: string };
+
+/** A playthrough's progress, so advice can stick to what's obtainable by then */
+export interface PlaythroughContext {
+  availability: Availability;
+  checkpoint: number;
+}
 
 export interface TeamWarning {
   severity: 'high' | 'medium';
@@ -120,9 +128,24 @@ export function roleCoverage(rs: Ruleset, members: Member[], meta?: FormatData) 
   }));
 }
 
-export function teamWarnings(rs: Ruleset, members: Member[], meta?: FormatData): TeamWarning[] {
+export function teamWarnings(rs: Ruleset, members: Member[], meta?: FormatData, play?: PlaythroughContext): TeamWarning[] {
   if (!members.length) return [];
   const out: TeamWarning[] = [];
+  if (play) {
+    const { availability, checkpoint } = play;
+    for (const m of members) {
+      const at = availability.at(m.species.id);
+      if (at !== undefined && at <= checkpoint) continue;
+      const from = at === undefined ? undefined : availability.checkpoints[at]?.label;
+      out.push({
+        severity: 'high',
+        message: from
+          ? `${m.species.name} isn't obtainable yet in ${availability.game.name} (from ${from})`
+          : `${m.species.name} can't be obtained in ${availability.game.name}`,
+        issue: { kind: 'notAvailable', member: m, from },
+      });
+    }
+  }
   for (const row of defensiveCoverage(rs, members)) {
     if (row.weak.length >= 3 && row.weak.length > row.resist.length) {
       out.push({
