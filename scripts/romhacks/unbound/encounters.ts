@@ -5,6 +5,7 @@
 import type { Checkpoint } from '../../../src/data/games';
 import type { Ruleset, TrainerInfo } from '../../../src/rulesets/types';
 import { readWorkbook, sheetRows } from '../../lib/xlsx';
+import locationTable from '../../../data-src/romhacks/unbound/locations.json';
 
 const DOCS = 'Documentation/Unbound';
 
@@ -88,19 +89,46 @@ export async function parseEncounters(
   const guide = await readWorkbook(`${DOCS}/Pokémon Unbound Location Guide v2.1.1.1.xlsx`);
   const rows = (name: string) => sheetRows(guide.worksheets.find((w) => w.name.startsWith(name))!);
 
-  // wild grass/cave/water/swarm tables: catchable, but with no levels or route order. Unevolved Pokémon
-  // count from the start; evolved ones (Avalugg on a late route) are left to evolution, below. Cells mix
-  // Pokémon with sub-area labels ("1F - 4F", "Yellow Flowers"), so only cells that resolve count, quietly.
-  const wildEvolved = new Set<string>();
+  // wild tables: the guide has no levels or route order. Grass and cave Pokémon are timed by their
+  // location, using data-src/romhacks/unbound/locations.json (built from the Unbound wiki: Wooper is only
+  // in Cliff Cave, which needs Strength after the fourth gym). Everything else (water, swarms, trades,
+  // locations missing from the table) is untimed: never suggested, never flagged. Cells mix Pokémon with
+  // sub-area labels ("1F - 4F", "Yellow Flowers"), so only cells that resolve count, quietly.
+  const locationAt = new Map<string, number>();
+  for (const [location, { before }] of Object.entries(locationTable.locations)) {
+    const i = checkpoints.findIndex((c) => c.label === before);
+    if (i < 0) warnings.push(`locations.json: "${location}" has unknown checkpoint "${before}"`);
+    else locationAt.set(location, i);
+  }
+  const wild = new Set<string>();
+  // Surf is received on Route 12 (after the rival battle), but only works outside battle with the
+  // Battery Badge from Dehara City's gym, so surfing starts once Galavan (the fifth gym) is beaten
+  const dehara = locationAt.get('Dehara City');
+  const SURF_FROM = dehara === undefined ? undefined : dehara + 1;
   for (const sheet of ['Grass & Cave', 'Surfing, Fishing', 'Swarm Schedule', 'In-game trades']) {
-    for (const { cells } of rows(sheet)) {
-      for (const cell of cells) {
-        if (!cell || /\d|Encounter|Color|Swarm|Version|Credits|Guide/.test(cell)) continue;
-        for (const id of resolve(cell)) {
-          if (base.getSpecies(id)?.prevo) wildEvolved.add(id);
-          else place(id, 0, sheet, true);
+    const sheetRowsList = rows(sheet);
+    const timed = sheet === 'Grass & Cave' || sheet === 'Surfing, Fishing';
+    // the row naming each column pair's location
+    const header = timed ? sheetRowsList.find((r) => r.cells.filter((c) => /Route|Cave/.test(c)).length > 3) : undefined;
+    // water columns run Surfing → Old/Good/Super Rod → Rock Smash top to bottom; only Surf is timed
+    // (when the rods and Rock Smash arrive isn't known yet)
+    const method: string[] = [];
+    for (const { n, cells } of sheetRowsList) {
+      cells.forEach((cell, col) => {
+        if (/^(Surfing|Fishing|Old Rod|Good Rod|Super Rod|Rock Smash)$/.test(cell)) method[col] = cell;
+        if (!cell || /\d|Encounter|Color|Swarm|Version|Credits|Guide/.test(cell)) return;
+        const pairCol = header && (header.cells[col] ? col : col - 1);
+        const location = header && n > header.n ? header.cells[pairCol!]?.trim() : undefined;
+        let at = location !== undefined ? locationAt.get(location) : undefined;
+        if (sheet === 'Surfing, Fishing') {
+          const m = method[pairCol!] ?? 'Surfing';
+          at = m === 'Surfing' && at !== undefined && SURF_FROM !== undefined ? Math.max(at, SURF_FROM) : undefined;
         }
-      }
+        for (const id of resolve(cell)) {
+          if (at !== undefined) place(id, at, sheet, true);
+          else wild.add(id);
+        }
+      });
     }
   }
 
@@ -137,27 +165,20 @@ export async function parseEncounters(
 
   // raids: "3-Star Species (Lv. 35 - 40)" rows list that tier's Pokémon; dens marked (Post-game) wait
   const raids = await readWorkbook(`${DOCS}/Pokémon Unbound Raid Drops Table v2.1.1.1.xlsx`);
+  // sheets are named by location, and a den only counts once you can reach it (a low-star den on Route 11
+  // is still on Route 11); dens at locations missing from the table go by level alone
   for (const ws of raids.worksheets) {
     const post = /Post-game/i.test(ws.name);
+    const location = ws.name.replace(/\s*\(Post-game\)/i, '').trim();
+    const reachable = locationAt.get(location) ?? locationAt.get(location.replace('Thundercap Mountain', 'Thundercap Mt.')) ?? 0;
     for (const { cells } of sheetRows(ws)) {
       const tier = cells[0]?.match(/Star Species \(Lv\. (\d+)/);
       if (!tier) continue;
-      for (const cell of cells.slice(1)) if (cell) place(cell, post ? POSTGAME : byLevel(Number(tier[1])), `raid ${ws.name}`);
+      const at = post ? POSTGAME : Math.max(reachable, byLevel(Number(tier[1])));
+      for (const cell of cells.slice(1)) if (cell) place(cell, at, `raid ${ws.name}`);
     }
   }
-  // evolved Pokémon seen in the wild without an obtainable pre-evolution: assume they turn up around
-  // the level they'd evolve at, since late routes are where evolved Pokémon live
-  for (const id of wildEvolved) {
-    if (species[id] !== undefined) continue;
-    let sp = base.getSpecies(id);
-    let reachable = false;
-    while (sp?.prevo) {
-      if (species[base.getSpecies(sp.prevo)!.id] !== undefined) reachable = true;
-      sp = base.getSpecies(sp.prevo);
-    }
-    if (reachable) continue;
-    const level = Number(base.getSpecies(id)!.evoMethod?.match(/^Level (\d+)/)?.[1] ?? 30);
-    place(id, byLevel(level), 'wild evolved');
-  }
-  return { checkpoints, species };
+  // wild-only Pokémon (no gift, raid, or legendary timing) stay untimed
+  const untimed = [...wild].filter((id) => species[id] === undefined).sort();
+  return { checkpoints, species, untimed };
 }

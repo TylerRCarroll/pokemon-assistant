@@ -144,7 +144,9 @@ await writeFile(`${OUT}/availability.json`, JSON.stringify({ game: 'unbound', ..
 console.log(`species: ${Object.keys(species).length} changed, ${unchanged} with Gen 8 stats`);
 console.log(`  ${changed.types} retyped, ${changed.abilities} with different abilities`);
 console.log(`learnsets: ${Object.keys(learnsets).length}`);
-console.log(`availability: ${Object.keys(availability.species).length} species over ${availability.checkpoints.length} checkpoints`);
+console.log(
+  `availability: ${Object.keys(availability.species).length} species timed over ${availability.checkpoints.length} checkpoints, ${availability.untimed.length} wild-only untimed`,
+);
 const counts = new Map<string, number>();
 for (const t of trainers) counts.set(t.difficulty ?? '', (counts.get(t.difficulty ?? '') ?? 0) + 1);
 console.log(`trainers: ${[...counts].map(([d, n]) => `${d} ${n}`).join(', ')}`);

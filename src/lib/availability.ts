@@ -14,8 +14,10 @@ export async function loadAvailability(game: GameInfo): Promise<AvailabilityFile
 export interface Availability {
   game: GameInfo;
   checkpoints: Checkpoint[];
-  /** Earliest checkpoint a species can be on your team, counting evolution; undefined if never */
+  /** Earliest checkpoint a species can be on your team, counting evolution; undefined if never or unknown */
   at: (speciesId: string) => number | undefined;
+  /** Obtainable at some unknown point (it, or a pre-evolution, is in the game without timing) */
+  untimed: (speciesId: string) => boolean;
 }
 
 const levelOf = (method?: string) => Number(method?.match(/^Level (\d+)/)?.[1]) || undefined;
@@ -50,7 +52,14 @@ export function buildAvailability(rs: Ruleset, game: GameInfo, file: Availabilit
     memo.set(id, best);
     return best;
   };
-  return { game, checkpoints, at: (id) => at(id) };
+  const untimedSet = new Set(file.untimed ?? []);
+  const untimed = (id: string): boolean => {
+    for (let sp = rs.getSpecies(id), depth = 0; sp && depth < 4; sp = sp.prevo ? rs.getSpecies(sp.prevo) : undefined, depth++) {
+      if (untimedSet.has(sp.id)) return true;
+    }
+    return false;
+  };
+  return { game, checkpoints, at: (id) => at(id), untimed: (id) => at(id) === undefined && untimed(id) };
 }
 
 /**

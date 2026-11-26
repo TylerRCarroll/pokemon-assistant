@@ -1,0 +1,74 @@
+{
+  "_about": "When each Unbound location opens up: the checkpoint (next gym) you're preparing for when you first reach it. Built from the Pokémon Unbound Wiki's location pages (connections, requirements, trainers' minimum levels), 2026-11-25. Edit freely; locations missing here keep their wild Pokémon untimed. Labels must match the checkpoints in generated/availability.json.",
+  "locations": {
+    "Route 1": { "before": "Gym 1: Mirskle", "why": "start of the game" },
+    "Icy Hole": { "before": "Gym 1: Mirskle", "why": "south of Bellin Town" },
+    "Icicle Cave": { "before": "Gym 1: Mirskle", "why": "connects Bellin Town and Route 2; trainers from Lv 8" },
+    "Route 2": { "before": "Gym 1: Mirskle", "why": "leads to Dresco Town; trainers from Lv 11" },
+    "Dresco Town": { "before": "Gym 1: Mirskle", "why": "Mirskle's gym town" },
+    "Route 3": { "before": "Gym 1: Mirskle", "why": "north of Dresco Town; trainers from Lv 12" },
+    "Flower Paradise": { "before": "Gym 1: Mirskle", "why": "directly north of Route 3" },
+
+    "Route 4": { "before": "Gym 2: Vega", "why": "west of Dresco, toward Crater Town; confirmed by play" },
+    "Grim Woods": { "before": "Gym 2: Vega", "why": "on Route 4; trainers from Lv 16" },
+    "Cinder Volcano": { "before": "Gym 2: Vega", "why": "on Route 4; trainers from Lv 17" },
+    "Route 5": { "before": "Gym 2: Vega", "why": "connects Route 4 and Crater Town; trainers from Lv 19" },
+
+    "Valley Cave": { "before": "Gym 3: Alice", "why": "connects Crater Town to Route 6; trainers from Lv 21" },
+    "Route 6": { "before": "Gym 3: Alice", "why": "past Valley Cave; trainers from Lv 22" },
+    "Route 7": { "before": "Gym 3: Alice", "why": "west of Route 6; trainers from Lv 23" },
+    "Frost Mountain": { "before": "Gym 3: Alice", "why": "connects Route 7 and Route 8; trainers from Lv 24" },
+    "Route 8": { "before": "Gym 3: Alice", "why": "ends at Blizzard City; trainers from Lv 25" },
+    "Frozen Forest": { "before": "Gym 3: Alice", "why": "edge of Blizzard City; trainers from Lv 27" },
+
+    "KBT Expressway": { "before": "Gym 4: Mel", "why": "Crater Town's south entrance leads to Fallshore, the next stop after the Blizzard City gym" },
+    "Route 10": { "before": "Gym 4: Mel", "why": "west of Fallshore City; trainers from Lv 29" },
+    "Route 9 + Autl Woods": { "before": "Gym 4: Mel", "why": "west of Tehl Town, past Route 10; trainers from Lv 29" },
+    "Fallshore City": { "before": "Gym 4: Mel", "why": "Mel's gym town" },
+    "Route 11": { "before": "Gym 4: Mel", "why": "east of Fallshore; trainers from Lv 29 (the far side needs Cliff Cave)" },
+
+    "Cliff Cave": { "before": "Gym 5: Galavan", "why": "needs Strength, 'once you've beaten the gym in Fallshore City' (confirmed by play)" },
+    "Thundercap Mt.": { "before": "Gym 5: Galavan", "why": "reached through Cliff Cave; trainers from Lv 33" },
+    "Lost Tunnel": { "before": "Gym 5: Galavan", "why": "no wiki page; the gift list places it between Fallshore and Epidimy" },
+    "Route 12": { "before": "Gym 5: Galavan", "why": "connects Tarmigan Town to Dehara City; trainers from Lv 35. Surf is received here after the rival battle, but needs Dehara City's Battery Badge to use outside battle (both confirmed by play), so water encounters start after Galavan" },
+    "Rift Cave": { "before": "Gym 5: Galavan", "why": "next to Dehara City" },
+    "Route 13": { "before": "Gym 5: Galavan", "why": "unsure: runs from Route 4 to Dehara City, so likely opened from the Dehara side" },
+    "Route 14": { "before": "Gym 5: Galavan", "why": "unsure: between Route 6 and Route 12, likely opened from the Route 12 side" },
+    "Ruins of Void": { "before": "Gym 6: Big Mo", "why": "the story takes you here from Dehara City; trainers from Lv 38" },
+
+    "Great Desert": { "before": "Gym 6: Big Mo", "why": "between Dehara City and Gurun Town; trainers from Lv 39" },
+    "Vivill Woods": { "before": "Gym 6: Big Mo", "why": "connects Gurun Town to Vivill Town; trainers from Lv 41" },
+    "Antisis Sewers": { "before": "Gym 6: Big Mo", "why": "no wiki page; under Antisis City" },
+    "Route 16": { "before": "Gym 6: Big Mo", "why": "south to Gurun Town, branches to Antisis City; trainers from Lv 46" },
+    "Auburn Waterway": { "before": "Gym 6: Big Mo", "why": "unsure: between Route 6 and Route 10 by water; trainers from Lv 52" },
+    "Route 15": { "before": "Gym 6: Big Mo", "why": "unsure: between Route 2 and Vivill Town; trainers from Lv 52" },
+
+    "Route 17": { "before": "Gym 7: Tessy", "why": "between Route 16 and Seaport City; trainers from Lv 50" },
+    "Safari Zone": { "before": "Gym 7: Tessy", "why": "east side of Polder Town" },
+
+    "Cootes Bog": { "before": "Gym 8: Benjamin", "why": "north of Polder Town (after Tessy), leads to Magnolia Town" },
+    "Magnolia Fields": { "before": "Gym 8: Benjamin", "why": "no wiki page; between Magnolia Town and Redwood Village" },
+    "Redwood Forest": { "before": "Gym 8: Benjamin", "why": "no wiki page; by Redwood Village" },
+
+    "Route 18": { "before": "Elite Four & Champion", "why": "between Gurun Town and Victory Road" },
+    "Victory Road": { "before": "Elite Four & Champion", "why": "leads to the Pokémon League" },
+
+    "Bellin Town": { "before": "Gym 1: Mirskle", "why": "the first town after Frozen Heights" },
+    "Crater Town": { "before": "Gym 2: Vega", "why": "Vega's gym town, south of Route 5" },
+    "Blizzard City": { "before": "Gym 3: Alice", "why": "Alice's gym town, at the end of Route 8" },
+    "Tehl Town": { "before": "Gym 4: Mel", "why": "between Route 9 and Route 10" },
+    "Epidimy Town": { "before": "Gym 5: Galavan", "why": "between Route 11 (past Cliff Cave) and Thundercap Mountain" },
+    "Tarmigan Town": { "before": "Gym 5: Galavan", "why": "between Route 11 and Route 12; trainers from Lv 33" },
+    "Dehara City": { "before": "Gym 5: Galavan", "why": "Galavan's gym town" },
+    "Gurun Town": { "before": "Gym 6: Big Mo", "why": "past the Great Desert" },
+    "Vivill Town": { "before": "Gym 6: Big Mo", "why": "north of Vivill Woods; trainers from Lv 44" },
+    "Antisis City": { "before": "Gym 6: Big Mo", "why": "Big Mo's gym town; trainers from Lv 47" },
+    "Seaport City": { "before": "Gym 7: Tessy", "why": "end of Route 17; a sailor goes on to Polder Town" },
+    "Polder Town": { "before": "Gym 7: Tessy", "why": "Tessy's gym town; trainers from Lv 52" },
+    "Magnolia Town": { "before": "Gym 8: Benjamin", "why": "north of Cootes Bog; trainers from Lv 50" },
+    "Redwood Village": { "before": "Gym 8: Benjamin", "why": "Benjamin's gym town, past Magnolia Fields" },
+
+    "Crystal Peak": { "before": "Post-game", "why": "the raid tables mark it post-game" },
+    "Tomb of Borrius": { "before": "Post-game", "why": "no wiki page; legendary location behind missions" }
+  }
+}

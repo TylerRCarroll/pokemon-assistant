@@ -59,7 +59,7 @@ export const GAMES: GameInfo[] = [
   { id: 'black', name: 'Black', rulesetId: 'gen5', checkpoints: UNOVA, tradeEvolutions: false, source: 'PokéAPI wild encounters for Black, placed by location and level' },
   { id: 'white', name: 'White', rulesetId: 'gen5', checkpoints: UNOVA, tradeEvolutions: false, source: 'PokéAPI wild encounters for White, placed by location and level' },
   { id: 'renegade-platinum', name: 'Renegade Platinum', rulesetId: 'renegade-platinum', tradeEvolutions: true, source: "the Complete patch doc's encounter tables" },
-  { id: 'unbound', name: 'Unbound', rulesetId: 'unbound', tradeEvolutions: true, source: "the Unbound location guide (which Pokémon are obtainable; it has no levels or route order)" },
+  { id: 'unbound', name: 'Unbound', rulesetId: 'unbound', tradeEvolutions: true, source: "the Unbound location guide, timed by location from the Unbound wiki (data-src/romhacks/unbound/locations.json); water and swarm encounters aren't timed yet" },
 ];
 
 export const gamesFor = (rulesetId: string) => GAMES.filter((g) => g.rulesetId === rulesetId);
@@ -70,4 +70,6 @@ export interface AvailabilityFile {
   /** Present for romhacks, whose checkpoints come from their trainer docs */
   checkpoints?: Checkpoint[];
   species: Record<string, number>;
+  /** Obtainable, but the source doesn't say when (Unbound's wild encounters): never suggested, never flagged */
+  untimed?: string[];
 }

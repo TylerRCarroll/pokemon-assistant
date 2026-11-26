@@ -53,6 +53,25 @@ describe('playthrough availability', () => {
     expect(ub.checkpoints[ub.at('rayquaza')!].label).toBe('Post-game');
   });
 
+  it('Unbound: wild Pokémon are timed by location, and the rest stay untimed (never suggested or flagged)', async () => {
+    const { rs, a } = await availability('unbound');
+    // Wooper is only in Cliff Cave, which needs Strength after the fourth gym (Fallshore)
+    expect(a.checkpoints[a.at('wooper')!].label).toBe('Gym 5: Galavan');
+    expect(a.checkpoints[a.at('spoink')!].label).toBe('Gym 4: Mel');
+    // Surf comes on Route 12 but needs Dehara City's Battery Badge, so surf-only Pokémon wait for Gym 6
+    expect(a.checkpoints[a.at('tentacool')!].label).toBe('Gym 6: Big Mo');
+    const early = availablePool(rs, a, 1).map((s) => s.id);
+    expect(early).not.toContain('wooper');
+    expect(early).not.toContain('quagsire');
+    // water-only Pokémon have no timing yet: left out of suggestions, but not called unobtainable
+    const file = (await loadAvailability(GAMES.find((g) => g.id === 'unbound')!))!;
+    const untimed = file.untimed!.find((id) => rs.getSpecies(id) && !rs.getSpecies(id)!.prevo)!;
+    expect(a.untimed(untimed)).toBe(true);
+    expect(early).not.toContain(untimed);
+    const members = resolveMembers(rs, [untimed, 'beldum'].map((s) => newSet(rs, s)));
+    expect(teamWarnings(rs, members, undefined, { availability: a, checkpoint: 1 }).some((w) => w.issue.kind === 'notAvailable')).toBe(false);
+  });
+
   it('warns about and swaps out team members you can’t have yet', async () => {
     const { rs, a } = await availability('scarlet');
     const members = resolveMembers(rs, ['Great Tusk', 'Pawmot', 'Skeledirge', 'Tinkaton', 'Garganacl', 'Dondozo'].map((s) => newSet(rs, s)));
