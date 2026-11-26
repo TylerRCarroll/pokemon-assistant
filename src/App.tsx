@@ -27,7 +27,8 @@ const router = createBrowserRouter([
       { path: 'trainer', element: <TrainerPage /> },
     ],
   },
-]);
+  // match Vite's base so routes work under /pokemon-assistant/ on GitHub Pages
+], { basename: import.meta.env.BASE_URL });
 
 export default function App() {
   return <RouterProvider router={router} />;
