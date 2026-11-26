@@ -38,7 +38,9 @@ beforeAll(async () => {
   pool = availablePool(rs, availability, availability.checkpoints.findIndex((c) => c.levelCap >= cap));
   const species = new Set([...team.map((s) => s.species), ...pool.map((s) => s.name)]);
   await Promise.all([...species].map(async (s) => learnsets.set(s, await rs.learnset(s))));
-});
+  // the advice for all six is the slow part (seconds on a CI runner), so do it once here, not inside a test's 5s budget
+  for (const m of fantina.team) fixesFor(m.species);
+}, 60_000);
 
 describe('counter advisor', () => {
   it('finds the cheap fix: Bibarel relearning Crunch walls Banette now', () => {
