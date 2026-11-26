@@ -11,6 +11,11 @@ import { analyzeThreats, type Matchup, type ThreatReport } from '../../lib/threa
 import { DifficultySelect } from '../../components/DifficultySelect';
 import { groupBySplit, setFromTrainerMon, trainerDetails, trainerName } from '../../lib/trainers';
 import { useDifficulty } from '../../state/trainerPrefs';
+import { usePlaythrough } from '../../state/playthrough';
+import { gamesFor } from '../../data/games';
+import { availablePool, buildAvailability, loadAvailability } from '../../lib/availability';
+import { usePromise } from '../../lib/usePromise';
+import { CounterPanel } from './CounterPanel';
 import type { Ruleset, TrainerInfo } from '../../rulesets/types';
 
 const DANGER_STYLE = {
@@ -48,18 +53,26 @@ export function ThreatsView({
   format?: FormatInfo;
   onFormat: (id: string) => void;
   data?: FormatData;
-  /** Romhack trainer teams; used instead of usage stats when the ruleset has none */
+  /** Boss teams (romhack docs, or Bulbapedia for Scarlet/Violet and Black/White) */
   trainers?: TrainerInfo[];
   trainerId?: number;
   onTrainer: (id: number) => void;
-  onOpen: (member: TeamSet, threat: TeamSet) => void;
+  onOpen: (member: TeamSet, threat: TeamSet, threatTera?: boolean) => void;
 }) {
   const [count, setCount] = useState(30);
   const [expanded, setExpanded] = useState<string>();
   const [allTrainers, setAllTrainers] = useState(false);
   const [atCap, setAtCap] = useState(true);
-  const { difficulties, difficulty, setDifficulty, trainers } = useDifficulty(rs.id, allDifficulties);
-  const trainerMode = !formats.length && !!trainers?.length;
+  const prefs = usePlaythrough(rs);
+  const game = gamesFor(rs.id).find((g) => g.id === prefs?.game);
+  const { difficulties, difficulty, setDifficulty, trainers: byDifficulty } = useDifficulty(rs.id, allDifficulties);
+  // official games: only the fights in the game you're playing (Drayden in Black, Iris in White)
+  const trainers = useMemo(() => byDifficulty?.filter((t) => !t.games || !game || t.games.includes(game.id)), [byDifficulty, game]);
+  // with both usage stats and boss teams, playthrough mode starts on the bosses
+  const [sourceChoice, setSource] = useState<'usage' | 'bosses'>();
+  const both = formats.length > 0 && !!trainers?.length;
+  const source = sourceChoice ?? (prefs?.mode === 'playthrough' ? 'bosses' : 'usage');
+  const trainerMode = !!trainers?.length && (!formats.length || source === 'bosses');
   const bosses = useMemo(() => groupBySplit((trainers ?? []).filter((t) => allTrainers || t.boss)), [trainers, allTrainers]);
   // ids differ per difficulty, so after switching, follow the same trainer (and rival variant) by name
   const selected = allDifficulties?.find((t) => t.id === trainerId);
@@ -71,6 +84,15 @@ export function ThreatsView({
     bosses[0]?.trainers[0];
   const cap = trainer && (trainer.levelCap ?? Math.max(...trainer.team.map((m) => m.level)));
 
+  // what the player could catch by this fight, for the counter advisor: the first checkpoint at or past its cap
+  const availabilityFile = usePromise(() => (game ? loadAvailability(game) : Promise.resolve(undefined)), [game?.id]);
+  const pool = useMemo(() => {
+    if (!game || !availabilityFile.data || !cap) return undefined;
+    const availability = buildAvailability(rs, game, availabilityFile.data);
+    const i = availability.checkpoints.findIndex((c) => c.levelCap >= cap);
+    return availablePool(rs, availability, i >= 0 ? i : availability.checkpoints.length - 1);
+  }, [rs, game, availabilityFile.data, cap]);
+
   // in a romhack, compare at the split's level cap rather than whatever level the builder set
   const myTeam = useMemo(
     () => (trainerMode && atCap && cap ? team.map((s) => ({ ...s, level: cap })) : team),
@@ -81,7 +103,7 @@ export function ThreatsView({
     if (!myTeam.length) return [];
     if (trainerMode) {
       if (!trainer) return [];
-      return analyzeThreats(rs, trainer.team.map((m) => ({ set: setFromTrainerMon(rs, m), usage: 0 })), myTeam);
+      return analyzeThreats(rs, trainer.team.map((m) => ({ set: setFromTrainerMon(rs, m), usage: 0, tera: !!m.tera })), myTeam);
     }
     if (!data) return [];
     const threats = Object.entries(data.pokemon)
@@ -104,6 +126,19 @@ export function ThreatsView({
 
   return (
     <div className="space-y-3">
+      {both && (
+        <div className="flex gap-1 text-sm">
+          {(['bosses', 'usage'] as const).map((s) => (
+            <button
+              key={s}
+              onClick={() => setSource(s)}
+              className={`rounded px-3 py-1 font-medium ${source === s ? 'bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900' : 'hover:bg-slate-100 dark:hover:bg-slate-800'}`}
+            >
+              {s === 'bosses' ? `${game?.name ?? 'Story'} bosses` : 'Smogon usage'}
+            </button>
+          ))}
+        </div>
+      )}
       {trainerMode ? (
         <div className="flex flex-wrap items-center gap-3 text-sm">
           <select value={trainer?.id ?? ''} onChange={(e) => onTrainer(Number(e.target.value))} className={`${input} max-w-md`}>
@@ -179,6 +214,7 @@ export function ThreatsView({
                         <span className={`w-16 rounded px-1.5 py-0.5 text-center text-xs font-semibold capitalize ${DANGER_STYLE[r.danger]}`}>{r.danger}</span>
                         <MiniSprite rs={rs} species={r.threat.species} />
                         <span className="font-medium">{r.threat.species}</span>
+                        {r.tera && <span className="text-xs text-slate-500" title="Terastallizes in battle">Tera {r.threat.teraType}</span>}
                       </div>
                     </td>
                     <td className="px-2 tabular-nums text-slate-500">{trainerMode ? `Lv${r.threat.level}` : pct(r.usage)}</td>
@@ -200,6 +236,9 @@ export function ThreatsView({
                     <tr className="border-b border-slate-100 bg-slate-50/60 dark:border-slate-800/60 dark:bg-slate-900/60">
                       <td colSpan={6} className="px-3 py-2">
                         <MatchupGrid rs={rs} report={r} onOpen={onOpen} />
+                        {trainerMode && trainer && cap && (
+                          <CounterPanel rs={rs} threat={r.threat} threatTera={r.tera} team={team} cap={cap} trainer={trainer.name} pool={pool} onOpen={onOpen} />
+                        )}
                       </td>
                     </tr>
                   )}
@@ -213,7 +252,7 @@ export function ThreatsView({
   );
 }
 
-function MatchupGrid({ rs, report, onOpen }: { rs: Ruleset; report: ThreatReport; onOpen: (member: TeamSet, threat: TeamSet) => void }) {
+function MatchupGrid({ rs, report, onOpen }: { rs: Ruleset; report: ThreatReport; onOpen: (member: TeamSet, threat: TeamSet, threatTera?: boolean) => void }) {
   return (
     <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
       {report.matchups.map((m: Matchup, i) => (
@@ -235,7 +274,7 @@ function MatchupGrid({ rs, report, onOpen }: { rs: Ruleset; report: ThreatReport
             <div className="text-slate-500">{m.speedTie ? 'Speed tie' : m.threatFaster ? 'Threat is faster' : 'You are faster'}</div>
           </div>
           <button
-            onClick={() => onOpen(m.member, report.threat)}
+            onClick={() => onOpen(m.member, report.threat, report.tera)}
             className="shrink-0 rounded border border-slate-300 px-2 py-0.5 text-xs hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800"
           >
             Calc

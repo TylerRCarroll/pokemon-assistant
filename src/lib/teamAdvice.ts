@@ -22,7 +22,7 @@ export interface Tip {
 }
 
 /** Moves that look strong on paper but cost a turn or more, so they're bad coverage advice */
-const AWKWARD = new Set(['focuspunch', 'outrage', 'thrash', 'petaldance', 'ragingfury', 'futuresight', 'doomdesire', 'belch', 'lastresort', 'dreameater', 'synchronoise', 'steelbeam', 'mindblown', 'explosion', 'selfdestruct', 'mistyexplosion']);
+export const AWKWARD = new Set(['focuspunch', 'outrage', 'thrash', 'petaldance', 'ragingfury', 'futuresight', 'doomdesire', 'belch', 'lastresort', 'dreameater', 'synchronoise', 'steelbeam', 'mindblown', 'explosion', 'selfdestruct', 'mistyexplosion']);
 
 /** Damaging moves a member can learn but isn't running, best first: power × STAB × matching attack stat × accuracy² */
 function learnableAttacks(rs: Ruleset, m: Member, learnset: LearnsetEntry[]) {
