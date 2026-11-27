@@ -1,6 +1,8 @@
 import type { LearnsetEntry, MoveInfo, Ruleset, SpeciesInfo, TMInfo, TypeName } from '../rulesets/types';
 import { calcMove, effectiveSpeed, toCalcMove, type Boosts, type CalcSide, type FieldOptions } from './calc';
 import { statTotal } from './format';
+import { ownedMatch, type OwnedMon } from './box';
+import { familyOf } from './evolution';
 import { newSet, type TeamSet } from './team';
 import { AWKWARD } from './teamAdvice';
 import { matchupOf, type Matchup } from './threats';
@@ -32,6 +34,8 @@ export interface CounterFix {
   closeness: number;
   /** Rough effort, lower first */
   cost: number;
+  /** A newcomer that's already in the PC (evolved from `evolvesFrom` first, when set) */
+  owned?: { monId: string; evolvesFrom?: string };
 }
 
 export interface CounterInput {
@@ -51,6 +55,8 @@ export interface CounterInput {
   trainer?: string;
   /** Ideas per kind */
   perKind?: number;
+  /** The playthrough's PC: newcomers already caught, judged by their real sets */
+  owned?: OwnedMon[];
 }
 
 /** 0..1: how close a matchup is to walling (takes <50%, deals 50%+) or revenge killing (faster, OHKO) */
@@ -323,22 +329,54 @@ export function counterFixes(input: CounterInput): CounterFix[] {
     }
   }
 
-  // 5. Someone new, from what's obtainable by now
+  // 5. Someone new: from the PC first (already caught, real set), then from what's obtainable by now
   // one per evolution family: no Gabite suggested next to your Gible (forms count as the same family)
-  const family = (name: string) => {
-    let sp = rs.getSpecies(name);
-    for (let p = sp?.prevo && rs.getSpecies(sp.prevo); p; p = p.prevo && rs.getSpecies(p.prevo)) sp = p;
-    return (sp?.name ?? name).split('-')[0];
-  };
-  const onTeam = new Set(team.map((s) => family(s.species)));
+  const onTeam = new Set(team.map((s) => familyOf(rs, s.species)));
+  const teamIds = new Set(team.flatMap((s) => (s.monId ? [s.monId] : [])));
+  const owned = (input.owned ?? []).filter((m) => !teamIds.has(m.id) && !onTeam.has(familyOf(rs, m.set.species)));
   const catches: CounterFix[] = [];
-  for (const sp of input.pool ?? []) {
-    if (onTeam.has(family(sp.name))) continue;
+  const usedMons = new Set<string>();
+  const newcomers: { name: string; match?: ReturnType<typeof ownedMatch> }[] = (input.pool ?? []).map((sp) => {
+    const match = ownedMatch(rs, owned, sp.name);
+    if (match) usedMons.add(match.mon.id);
+    return { name: sp.name, match };
+  });
+  for (const mon of owned) {
+    if (usedMons.has(mon.id) || newcomers.some((n) => n.name === mon.set.species)) continue;
+    newcomers.push({ name: mon.set.species, match: { mon, set: mon.set } });
+  }
+  const seen = new Set<string>();
+  for (const { name, match: own } of newcomers) {
+    const sp = rs.getSpecies(name);
+    if (!sp) continue;
+    const fam = familyOf(rs, sp.name);
+    if (onTeam.has(fam) || (!own && seen.has(sp.name))) continue;
+    seen.add(sp.name);
     const learnset = learnsets.get(sp.name);
+    const ownedInfo = own && { monId: own.mon.id, evolvesFrom: own.evolvesFrom };
+    const ownedHow = own
+      ? [own.evolvesFrom ? `Your ${own.evolvesFrom} in the PC, evolved` : 'Already in your PC', `at Lv ${Math.min(own.set.level, cap)}`]
+      : [`at Lv ${cap}`];
+    const title = own ? (own.evolvesFrom ? `Evolve your ${own.evolvesFrom} into ${sp.name}` : `Use your ${sp.name} from the PC`) : `Get ${sp.name}`;
+    // a caught mon costs less than one you'd still have to find; a stronger one first among equals,
+    // one-off legendaries after the rest, and every TM or tutor its set needs is more legwork
+    const baseCost = (own ? 3 : 5) - (statTotal(sp.baseStats) - 400) / 400 + (sp.legendary ? 0.6 : 0);
+
+    // a PC mon as it already is
+    if (own) {
+      const real = { ...own.set, level: Math.min(own.set.level, cap) };
+      const after = match(real);
+      if (after.checks || !learnset) {
+        const c = closeness(after);
+        if (c >= 0.5) catches.push({ kind: 'catch', set: real, after, checks: after.checks, closeness: c, title, how: ownedHow, result: describe(after), cost: baseCost - 0.5, owned: ownedInfo });
+        continue;
+      }
+    }
     if (!learnset) continue;
-    const blank = { ...newSet(rs, sp.name), level: cap };
+    const blank = own ? { ...own.set, level: Math.min(own.set.level, cap), moves: [] } : { ...newSet(rs, sp.name), level: cap };
+    const reach = own ? blank.level : cap;
     // level-up (and relearner) moves first; TMs only when those can't do it
-    const sources = moveSources(rs, { ...blank, moves: [] }, learnset, cap, reward);
+    const sources = moveSources(rs, blank, learnset, reach, reward);
     const easy = bestMovesAgainst(rs, blank, t, sources.filter((s) => s.cost <= 1.5), field);
     const easySet = { ...blank, moves: easy.map((p) => p.move.name) };
     const easyAfter = easy.length ? match(easySet) : undefined;
@@ -350,16 +388,15 @@ export function counterFixes(input: CounterInput): CounterFix[] {
     if (c < 0.5) continue;
     catches.push({
       kind: 'catch', set, after, checks: after.checks, closeness: c,
-      title: `Get ${sp.name}`,
+      title,
       how: [
-        `at Lv ${cap}`,
+        ...ownedHow,
         // where each move comes from, so a late TM doesn't hide behind a good-looking set
         ...picked.map((p) => `${p.move.name}: ${p.level || p.how.startsWith('Move Reminder') ? 'level-up' : p.how}`),
       ],
       result: describe(after),
-      // stronger Pokémon first among equals; one-off legendaries after the rest
-      // and every TM or tutor its set needs is more legwork
-      cost: 5 - (statTotal(sp.baseStats) - 400) / 400 + (sp.legendary ? 0.6 : 0) + 0.3 * picked.filter((p) => p.cost > 1.5).length,
+      cost: baseCost + 0.3 * picked.filter((p) => p.cost > 1.5).length,
+      owned: ownedInfo,
     });
   }
   fixes.push(...catches);

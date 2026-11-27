@@ -72,6 +72,21 @@ describe('backups', () => {
     expect(writes['pokeplanner:ruleset']).toBeUndefined();
   });
 
+  it('merges PC mons like teams: by id, newer edit wins, releases stick', () => {
+    const mon = (id: string, updatedAt: number, species = id) => ({ id, rulesetId: 'gen9', game: 'sv', set: { species }, createdAt: 0, updatedAt });
+    const local = { 'pokeplanner:box': store({ mons: [mon('a', 5, 'Machop'), mon('b', 1, 'Eevee'), mon('gone', 1)], deleted: {} }) };
+    const backup = createBackup(
+      fakeStorage({
+        'pokeplanner:box': JSON.stringify(store({ mons: [mon('a', 9, 'Machoke'), mon('b', 0, 'Vaporeon'), mon('c', 3)], deleted: { gone: 2 } })),
+      }),
+    );
+    const plan = planImport(local, backup, 'merge');
+    const box = JSON.parse(plan.writes['pokeplanner:box']).state;
+    expect(box.mons.map((m: { set: { species: string } }) => m.set.species).sort()).toEqual(['Eevee', 'Machoke', 'c']);
+    expect(box.deleted).toEqual({ gone: 2 });
+    expect(plan.summary).toContain('PC: 1 new, 1 updated, 1 deleted');
+  });
+
   it('replace makes this browser match the backup, removing stores it lacks', () => {
     const local = { 'pokeplanner:teams': store({ teams: [team('a', 1)] }), 'pokeplanner:quiz': store({ byRuleset: {} }) };
     const backup = createBackup(fakeStorage({ 'pokeplanner:teams': JSON.stringify(store({ teams: [team('z', 1)] })) }));

@@ -17,6 +17,8 @@ let cap: number;
 let team: TeamSet[];
 const learnsets = new Map<string, LearnsetEntry[]>();
 let pool: ReturnType<typeof availablePool>;
+/** Spiritomb's advice with its best new catch already caught and sitting in the PC */
+let withPc: { owned: TeamSet; fixes: CounterFix[] };
 const cache = new Map<string, CounterFix[]>();
 const fixesFor = (species: string): CounterFix[] => {
   const mon = fantina.team.find((m) => m.species === species)!;
@@ -40,6 +42,10 @@ beforeAll(async () => {
   await Promise.all([...species].map(async (s) => learnsets.set(s, await rs.learnset(s))));
   // the advice for all six is the slow part (seconds on a CI runner), so do it once here, not inside a test's 5s budget
   for (const m of fantina.team) fixesFor(m.species);
+  const catchFix = fixesFor('Spiritomb').find((f) => f.kind === 'catch')!;
+  const owned = { ...catchFix.set, evs: { ...catchFix.set.evs, spe: 252 }, monId: 'pc1' };
+  const spiritomb = setFromTrainerMon(rs, fantina.team.find((m) => m.species === 'Spiritomb')!);
+  withPc = { owned, fixes: counterFixes({ rs, threat: spiritomb, team, cap, learnsets, pool, trainer: fantina.name, owned: [{ id: 'pc1', set: owned }] }) };
 }, 60_000);
 
 describe('counter advisor', () => {
@@ -105,6 +111,16 @@ describe('counter advisor', () => {
       expect(['Infernape', 'Monferno', 'Chimchar', 'Staraptor', 'Bibarel', 'Gardevoir', 'Gallade']).not.toContain(c.set.species);
       expect(c.set.level).toBe(cap);
     }
+  });
+
+  it('suggests a PC mon with its real set before catching another', () => {
+    const fromPc = withPc.fixes.find((f) => f.owned?.monId === 'pc1')!;
+    expect(fromPc).toBeDefined();
+    expect(fromPc.title).toBe(`Use your ${withPc.owned.species} from the PC`);
+    expect(fromPc.how[0]).toBe('Already in your PC');
+    expect(fromPc.set.evs.spe).toBe(252);
+    // no second copy of the same species as a new catch
+    expect(withPc.fixes.filter((f) => f.kind === 'catch' && !f.owned && f.set.species === withPc.owned.species)).toEqual([]);
   });
 
   it('skips members that already check the threat', () => {

@@ -87,6 +87,9 @@ describe('playthrough availability', () => {
     // Garganacl, Skeledirge, and Tinkaton evolve above level 24 too, so any of them may go first
     expect(unavailable.has(swaps[0].out)).toBe(true);
     expect(notYet.length).toBeGreaterThanOrEqual(3);
+    // a mon in the PC is already yours, so it never counts as not obtainable yet
+    const owned = resolveMembers(rs, [{ ...newSet(rs, 'Great Tusk'), monId: 'pc1' }, newSet(rs, 'Pawmot')]);
+    expect(teamWarnings(rs, owned, undefined, play).some((w) => w.issue.kind === 'notAvailable' && w.issue.member.species.name === 'Great Tusk')).toBe(false);
     expect(swaps[0].set.level).toBe(24);
   });
 });

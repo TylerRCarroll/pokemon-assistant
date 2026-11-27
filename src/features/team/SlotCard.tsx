@@ -11,6 +11,7 @@ export function SlotCard({
   selected,
   issueCount,
   roles = [],
+  note,
   onSelect,
 }: {
   rs: Ruleset;
@@ -18,6 +19,8 @@ export function SlotCard({
   selected: boolean;
   issueCount: number;
   roles?: Role[];
+  /** A short tag under the name, e.g. which team a PC mon is on */
+  note?: string;
   onSelect: () => void;
 }) {
   const ring = selected ? 'ring-2 ring-blue-500' : 'hover:border-slate-400 dark:hover:border-slate-600';
@@ -34,7 +37,9 @@ export function SlotCard({
       <div className="flex items-center gap-2">
         <Sprite id={sp?.spriteId ?? ''} name={set.species} size={48} />
         <div className="min-w-0">
-          <div className="truncate font-semibold">{set.species}</div>
+          <div className="truncate font-semibold">
+            {set.species} <span className="text-xs font-normal text-slate-500">Lv {set.level}</span>
+          </div>
           <div className="flex gap-1">
             {sp?.types.map((t) => (
               <TypeBadge key={t} type={t} short />
@@ -47,6 +52,7 @@ export function SlotCard({
           </span>
         )}
       </div>
+      {note && <div className="truncate text-[11px] font-medium text-blue-700 dark:text-blue-300">{note}</div>}
       <div className="truncate text-xs text-slate-500">
         {[set.item, set.ability].filter(Boolean).join(' · ') || '—'}
       </div>

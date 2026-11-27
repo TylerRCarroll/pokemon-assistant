@@ -4,6 +4,7 @@ import { memberRoles, ROLE_MOVES, roleNeeds, type Role, type RoleNeed } from './
 import { statTotal } from './format';
 import { findUsage, setFromUsage } from './smogon';
 import type { FormatData } from './smogonTypes';
+import { ownedMatch, type OwnedMon } from './box';
 import { newSet, type TeamSet } from './team';
 
 // ---------------------------------------------------------------------------------------------
@@ -178,6 +179,13 @@ export interface Swap {
   /** What the swap fixes, in plain language */
   fixes: string[];
   score: number;
+  /** The newcomer is already in the PC (evolved from `evolvesFrom` first, when set) */
+  owned?: SwapOwned;
+}
+
+export interface SwapOwned {
+  monId: string;
+  evolvesFrom?: string;
 }
 
 /** Types a member threatens: its damaging moves, or its own types (likely STAB) when it has no moves picked yet */
@@ -236,13 +244,41 @@ export interface SwapOptions {
   level?: number;
   /** Members the player can't have yet; swapping them out counts as a fix */
   unavailable?: Set<Member>;
+  /** Playthrough mode: the PC. Mons in it are judged by their real sets, and preferred, since nothing needs catching */
+  owned?: OwnedMon[];
+}
+
+interface Candidate {
+  species: SpeciesInfo;
+  set: TeamSet;
+  owned?: SwapOwned;
 }
 
 /** Candidates: a playthrough's reachable Pokémon, the format's most-used ones, or fully evolved non-legendaries */
-function candidatePool(rs: Ruleset, members: Member[], meta?: FormatData, opts: SwapOptions = {}): { species: SpeciesInfo; set: TeamSet }[] {
+function candidatePool(rs: Ruleset, members: Member[], meta?: FormatData, opts: SwapOptions = {}): Candidate[] {
   const onTeam = new Set(members.map((m) => m.species.name.split('-')[0]));
   const ok = (s: SpeciesInfo) => !s.battleOnly && !onTeam.has(s.name.split('-')[0]);
-  if (opts.pool) return opts.pool.filter(ok).map((s) => ({ species: s, set: { ...newSet(rs, s.name), level: opts.level ?? 100 } }));
+  if (opts.pool) {
+    // PC mons already on the team aren't newcomers
+    const teamIds = new Set(members.flatMap((m) => (m.set.monId ? [m.set.monId] : [])));
+    const owned = (opts.owned ?? []).filter((m) => !teamIds.has(m.id));
+    const used = new Set<string>();
+    const out: Candidate[] = opts.pool.filter(ok).map((s) => {
+      const match = ownedMatch(rs, owned, s.name);
+      if (!match) return { species: s, set: { ...newSet(rs, s.name), level: opts.level ?? 100 } };
+      used.add(match.mon.id);
+      return { species: s, set: match.set, owned: { monId: match.mon.id, evolvesFrom: match.evolvesFrom } };
+    });
+    // a PC mon the pool doesn't list (traded, gifted, or not evolved as far) is still yours to use
+    const listed = new Set(out.map((c) => c.species.name));
+    for (const mon of owned) {
+      const sp = rs.getSpecies(mon.set.species);
+      if (used.has(mon.id) || !sp || !ok(sp) || listed.has(sp.name)) continue;
+      listed.add(sp.name);
+      out.push({ species: sp, set: mon.set, owned: { monId: mon.id } });
+    }
+    return out;
+  }
   if (meta) {
     const top = Object.entries(meta.pokemon)
       .slice(0, 100)
@@ -276,7 +312,7 @@ export function suggestSwaps(rs: Ruleset, members: Member[], meta?: FormatData, 
   const before = penalty(members, attacks, roles);
   const qualities = members.map((m) => quality(m, meta));
 
-  const best = new Map<string, { i: number; species: SpeciesInfo; set: TeamSet; score: number }>();
+  const best = new Map<string, { i: number; species: SpeciesInfo; set: TeamSet; owned?: SwapOwned; score: number }>();
   for (const c of candidatePool(rs, members, meta, opts)) {
     const incoming: Member = { species: c.species, set: c.set };
     const incomingAttacks = attackTypes(rs, incoming);
@@ -292,9 +328,10 @@ export function suggestSwaps(rs: Ruleset, members: Member[], meta?: FormatData, 
           roles.map((r, j) => (j === i ? incomingRoles : r)),
         );
       if (gain < 1) return;
-      const score = gain + 0.6 * (q - qualities[i]);
+      // a mon you already own beats an equal one you'd have to go and catch
+      const score = gain + 0.6 * (q - qualities[i]) + (c.owned ? 0.75 : 0);
       const prev = best.get(c.species.id);
-      if (!prev || score > prev.score) best.set(c.species.id, { i, species: c.species, set: c.set, score });
+      if (!prev || score > prev.score) best.set(c.species.id, { i, species: c.species, set: c.set, owned: c.owned, score });
     });
   }
 
@@ -315,6 +352,7 @@ export function suggestSwaps(rs: Ruleset, members: Member[], meta?: FormatData, 
         ...describeFixes(rs, members, members.map((m, j) => (j === b.i ? incoming : m)), meta),
       ],
       score: b.score,
+      owned: b.owned,
     });
     if (picked.length >= limit) break;
   }

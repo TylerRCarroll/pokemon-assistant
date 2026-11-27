@@ -64,6 +64,12 @@ interface TeamLike {
   updatedAt: number;
 }
 
+/** Anything kept as a list of records with ids, edit times and deletion tombstones (teams, PC mons) */
+interface Dated {
+  id: string;
+  updatedAt: number;
+}
+
 export interface ImportPlan {
   /** New localStorage values to write, keyed by store */
   writes: Record<string, string>;
@@ -97,42 +103,23 @@ export function planImport(current: Record<string, Stored | undefined>, backup: 
 
   const teams = (backup.data[`${PREFIX}teams`]?.state.teams ?? []) as TeamLike[];
   if (mode === 'replace' || !current[`${PREFIX}teams`]) summary.unshift(`${teams.length} team${teams.length === 1 ? '' : 's'} from the backup`);
+  const mons = (backup.data[`${PREFIX}box`]?.state.mons ?? []) as Dated[];
+  if (mons.length && (mode === 'replace' || !current[`${PREFIX}box`])) summary.push(`${mons.length} PC mon${mons.length === 1 ? '' : 's'} from the backup`);
   return { writes, summary };
 }
 
 function mergeStore(key: string, local: Stored, incoming: Stored, summary: string[]): Stored | undefined {
   const name = key.slice(PREFIX.length);
   if (name === 'teams') {
-    const mine = (local.state.teams ?? []) as TeamLike[];
-    const theirs = (incoming.state.teams ?? []) as TeamLike[];
-    // deletions win over any edit made before them, from either side
-    const deleted: Record<string, number> = { ...(incoming.state.deleted as object) };
-    for (const [id, at] of Object.entries((local.state.deleted ?? {}) as Record<string, number>)) deleted[id] = Math.max(at, deleted[id] ?? 0);
-    const byId = new Map(mine.map((t) => [t.id, t]));
-    let added = 0;
-    let updated = 0;
-    for (const t of theirs) {
-      const existing = byId.get(t.id);
-      if ((deleted[t.id] ?? -1) >= t.updatedAt) continue;
-      if (!existing) added++;
-      else if (t.updatedAt > existing.updatedAt) updated++;
-      else continue;
-      byId.set(t.id, t);
-    }
-    let removed = 0;
-    for (const [id, t] of byId) {
-      if ((deleted[id] ?? -1) >= t.updatedAt) {
-        byId.delete(id);
-        removed++;
-      }
-    }
-    if (added || updated || removed) {
-      summary.push(
-        [`${added} new team${added === 1 ? '' : 's'}`, `${updated} updated`, ...(removed ? [`${removed} deleted`] : [])].join(', '),
-      );
-    }
+    const { list, deleted, counts } = mergeDated(local, incoming, 'teams');
+    if (counts) summary.push(counts.replace(/^(\d+) new/, (_, n) => `${n} new team${n === '1' ? '' : 's'}`));
     const active = { ...(incoming.state.activeByRuleset as object), ...(local.state.activeByRuleset as object) };
-    return { ...local, state: { ...local.state, teams: [...byId.values()], activeByRuleset: active, deleted } };
+    return { ...local, state: { ...local.state, teams: list, activeByRuleset: active, deleted } };
+  }
+  if (name === 'box') {
+    const { list, deleted, counts } = mergeDated(local, incoming, 'mons');
+    if (counts) summary.push(`PC: ${counts}`);
+    return { ...local, state: { ...local.state, mons: list, deleted } };
   }
   if (name === 'quiz') {
     type Progress = { answered: number };
@@ -158,4 +145,32 @@ function mergeStore(key: string, local: Stored, incoming: Stored, summary: strin
   }
   // anything else (the chosen ruleset): keep this browser's
   return undefined;
+}
+
+/** Merge two lists by id: the newer edit wins, and a deletion wins over any edit made before it, from either side */
+function mergeDated(local: Stored, incoming: Stored, field: string): { list: Dated[]; deleted: Record<string, number>; counts?: string } {
+  const mine = (local.state[field] ?? []) as Dated[];
+  const theirs = (incoming.state[field] ?? []) as Dated[];
+  const deleted: Record<string, number> = { ...(incoming.state.deleted as object) };
+  for (const [id, at] of Object.entries((local.state.deleted ?? {}) as Record<string, number>)) deleted[id] = Math.max(at, deleted[id] ?? 0);
+  const byId = new Map(mine.map((t) => [t.id, t]));
+  let added = 0;
+  let updated = 0;
+  for (const t of theirs) {
+    const existing = byId.get(t.id);
+    if ((deleted[t.id] ?? -1) >= t.updatedAt) continue;
+    if (!existing) added++;
+    else if (t.updatedAt > existing.updatedAt) updated++;
+    else continue;
+    byId.set(t.id, t);
+  }
+  let removed = 0;
+  for (const [id, t] of byId) {
+    if ((deleted[id] ?? -1) >= t.updatedAt) {
+      byId.delete(id);
+      removed++;
+    }
+  }
+  const counts = added || updated || removed ? [`${added} new`, `${updated} updated`, ...(removed ? [`${removed} deleted`] : [])].join(', ') : undefined;
+  return { list: [...byId.values()], deleted, counts };
 }

@@ -13,6 +13,8 @@ export interface TeamSet {
   teraType?: string;
   gender?: string;
   shiny?: boolean;
+  /** Playthrough mode: the PC mon this slot holds (see state/box.ts) */
+  monId?: string;
 }
 
 export const STAT_IDS: StatID[] = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'];

@@ -25,6 +25,10 @@ interface TeamsState {
   setSlots: (id: string, slots: (TeamSet | null)[]) => void;
   /** Put a set in the ruleset's active team's first free slot, or start a new team when it's full */
   addSet: (rulesetId: string, set: TeamSet) => { teamName: string; created: boolean };
+  /** A PC mon changed: rewrite every slot holding it (see state/box.ts) */
+  updateLinked: (monId: string, set: TeamSet) => void;
+  /** A PC mon was released: empty every slot holding it */
+  unlinkMon: (monId: string) => void;
 }
 
 const emptySlots = (): (TeamSet | null)[] => Array(6).fill(null);
@@ -69,6 +73,20 @@ export const useTeamsStore = create<TeamsState>()(
           }
           const id = get().createTeam(rulesetId, undefined, [newSet]);
           return { teamName: get().teams.find((t) => t.id === id)!.name, created: true };
+        },
+        updateLinked(monId, linked) {
+          const holds = (t: Team) => t.slots.some((s) => s?.monId === monId);
+          set((s) => ({
+            teams: s.teams.map((t) =>
+              holds(t) ? { ...t, slots: t.slots.map((x) => (x?.monId === monId ? linked : x)), updatedAt: Date.now() } : t,
+            ),
+          }));
+        },
+        unlinkMon(monId) {
+          const holds = (t: Team) => t.slots.some((s) => s?.monId === monId);
+          set((s) => ({
+            teams: s.teams.map((t) => (holds(t) ? { ...t, slots: t.slots.map((x) => (x?.monId === monId ? null : x)), updatedAt: Date.now() } : t)),
+          }));
         },
       };
     },

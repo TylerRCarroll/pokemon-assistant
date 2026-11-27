@@ -11,6 +11,7 @@ import { analyzeThreats, type Matchup, type ThreatReport } from '../../lib/threa
 import { DifficultySelect } from '../../components/DifficultySelect';
 import { groupBySplit, setFromTrainerMon, trainerDetails, trainerName } from '../../lib/trainers';
 import { useDifficulty } from '../../state/trainerPrefs';
+import { useBox } from '../../state/box';
 import { usePlaythrough } from '../../state/playthrough';
 import { gamesFor } from '../../data/games';
 import { availablePool, buildAvailability, loadAvailability } from '../../lib/availability';
@@ -65,6 +66,8 @@ export function ThreatsView({
   const [atCap, setAtCap] = useState(true);
   const prefs = usePlaythrough(rs);
   const game = gamesFor(rs.id).find((g) => g.id === prefs?.game);
+  const box = useBox(rs.id, game?.id);
+  const owned = prefs?.mode === 'playthrough' ? box : undefined;
   const { difficulties, difficulty, setDifficulty, trainers: byDifficulty } = useDifficulty(rs.id, allDifficulties);
   // official games: only the fights in the game you're playing (Drayden in Black, Iris in White)
   const trainers = useMemo(() => byDifficulty?.filter((t) => !t.games || !game || t.games.includes(game.id)), [byDifficulty, game]);
@@ -237,7 +240,7 @@ export function ThreatsView({
                       <td colSpan={6} className="px-3 py-2">
                         <MatchupGrid rs={rs} report={r} onOpen={onOpen} />
                         {trainerMode && trainer && cap && (
-                          <CounterPanel rs={rs} threat={r.threat} threatTera={r.tera} team={team} cap={cap} trainer={trainer.name} pool={pool} onOpen={onOpen} />
+                          <CounterPanel rs={rs} threat={r.threat} threatTera={r.tera} team={team} cap={cap} trainer={trainer.name} pool={pool} owned={owned} onOpen={onOpen} />
                         )}
                       </td>
                     </tr>

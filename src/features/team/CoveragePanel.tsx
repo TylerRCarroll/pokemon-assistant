@@ -6,7 +6,8 @@ import { TypeBadge } from '../../components/TypeBadge';
 import { card } from '../../components/ui';
 import { defensiveCoverage, offensiveCoverage, roleCoverage, teamWarnings, type Member, type PlaythroughContext } from '../../lib/coverage';
 import type { FormatData } from '../../lib/smogonTypes';
-import { suggestSwaps, tipFor, type Swap, type Tip } from '../../lib/teamAdvice';
+import type { OwnedMon } from '../../lib/box';
+import { suggestSwaps, tipFor, type Swap, type SwapOwned, type Tip } from '../../lib/teamAdvice';
 import type { TeamSet } from '../../lib/team';
 import type { LearnsetEntry, Ruleset, SpeciesInfo } from '../../rulesets/types';
 
@@ -59,6 +60,11 @@ function SwapCard({ swap, onSwap }: { swap: Swap; onSwap: () => void }) {
             <TypeBadge key={t} type={t} short />
           ))}
         </span>
+        {swap.owned && (
+          <span className="rounded bg-blue-100 px-1.5 text-[10px] font-semibold uppercase text-blue-700 dark:bg-blue-950 dark:text-blue-300">
+            {swap.owned.evolvesFrom ? `Evolve your ${swap.owned.evolvesFrom} (PC)` : `In your PC · Lv ${swap.set.level}`}
+          </span>
+        )}
         <span className="ml-auto flex gap-1.5">
           <Link to={`/planner/${swap.incoming.id}`} className={button}>
             Sets
@@ -91,6 +97,7 @@ export function CoveragePanel({
   onSwap,
   undo,
   play,
+  owned,
 }: {
   rs: Ruleset;
   members: Member[];
@@ -99,7 +106,9 @@ export function CoveragePanel({
   meta?: FormatData;
   /** Playthrough mode: progress, plus the Pokémon reachable by then and the level cap */
   play?: PlaythroughContext & { pool: SpeciesInfo[]; level: number };
-  onSwap: (out: Member, set: TeamSet) => void;
+  /** Playthrough mode: PC mons not on the team, preferred (with their real sets) over new catches */
+  owned?: OwnedMon[];
+  onSwap: (out: Member, set: TeamSet, owned?: SwapOwned) => void;
   /** Shown after a swap so it can be reverted */
   undo?: { label: string; run: () => void };
 }) {
@@ -109,9 +118,9 @@ export function CoveragePanel({
     () => {
       if (!warnings.some((w) => w.issue.kind !== 'duplicateItem')) return [];
       const unavailable = new Set(warnings.flatMap((w) => (w.issue.kind === 'notAvailable' ? [w.issue.member] : [])));
-      return suggestSwaps(rs, members, meta, 3, play && { pool: play.pool, level: play.level, unavailable });
+      return suggestSwaps(rs, members, meta, 3, play && { pool: play.pool, level: play.level, unavailable, owned });
     },
-    [rs, members, meta, warnings, play],
+    [rs, members, meta, warnings, play, owned],
   );
   if (!members.length) return null;
   const defense = defensiveCoverage(rs, members);
@@ -176,14 +185,14 @@ export function CoveragePanel({
           <p className="mb-2 text-xs text-slate-500">
             Replacements that fix the most warnings and missing roles, weighed against what you&apos;d lose.{' '}
             {play
-              ? `Drawn from the ${play.pool.length} Pokémon you can have by ${play.availability.checkpoints[play.checkpoint].label}, at level ${play.level}.`
+              ? `Drawn from your PC and the ${play.pool.length} Pokémon you can have by ${play.availability.checkpoints[play.checkpoint].label} (new catches at level ${play.level}).`
               : meta
                 ? 'Drawn from the most-used Pokémon in the format.'
                 : 'Drawn from fully evolved, non-legendary Pokémon.'}
           </p>
           <ul className="space-y-2">
             {swaps.map((s) => (
-              <SwapCard key={`${s.out.species.id}-${s.incoming.id}`} swap={s} onSwap={() => onSwap(s.out, s.set)} />
+              <SwapCard key={`${s.out.species.id}-${s.incoming.id}`} swap={s} onSwap={() => onSwap(s.out, s.set, s.owned)} />
             ))}
           </ul>
         </section>

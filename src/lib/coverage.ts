@@ -134,6 +134,8 @@ export function teamWarnings(rs: Ruleset, members: Member[], meta?: FormatData, 
   if (play) {
     const { availability, checkpoint } = play;
     for (const m of members) {
+      // a PC mon is one you already have, whatever the checkpoint says
+      if (m.set.monId) continue;
       const at = availability.at(m.species.id);
       // obtainable but untimed (Unbound's wild-only Pokémon): we can't say it's too early, so don't
       if ((at !== undefined && at <= checkpoint) || availability.untimed(m.species.id)) continue;

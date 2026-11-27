@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { create } from 'zustand';
 import { loadConfig, syncNow, type SyncConfig } from '../lib/sync';
+import { useBoxStore } from './box';
 import { usePlaythroughStore } from './playthrough';
 import { useQuizStore } from './quiz';
 import { useRulesetStore } from './ruleset';
@@ -8,7 +9,7 @@ import { useTeamsStore } from './teams';
 import { useTrainerPrefs } from './trainerPrefs';
 
 /** Every persisted store, so synced data can be reloaded into the running app */
-const STORES = [useTeamsStore, useQuizStore, usePlaythroughStore, useTrainerPrefs, useRulesetStore];
+const STORES = [useTeamsStore, useBoxStore, useQuizStore, usePlaythroughStore, useTrainerPrefs, useRulesetStore];
 
 type Status = 'off' | 'idle' | 'syncing' | 'error';
 

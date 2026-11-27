@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Sprite } from '../../components/Sprite';
+import type { OwnedMon } from '../../lib/box';
 import { counterFixes, type CounterFix, type FixKind } from '../../lib/counters';
 import type { TeamSet } from '../../lib/team';
 import type { LearnsetEntry, Ruleset, SpeciesInfo } from '../../rulesets/types';
@@ -7,8 +8,8 @@ import type { LearnsetEntry, Ruleset, SpeciesInfo } from '../../rulesets/types';
 const KIND_LABEL: Record<FixKind, string> = { level: 'Level up', evolve: 'Evolve', move: 'New move', item: 'Item', catch: 'New Pokémon' };
 
 /** Learnsets for every species the advisor might change or bring in */
-async function loadLearnsets(rs: Ruleset, team: TeamSet[], pool: SpeciesInfo[]) {
-  const names = new Set<string>(pool.map((s) => s.name));
+async function loadLearnsets(rs: Ruleset, team: TeamSet[], pool: SpeciesInfo[], owned: OwnedMon[]) {
+  const names = new Set<string>([...pool.map((s) => s.name), ...owned.map((m) => m.set.species)]);
   for (const s of team) {
     names.add(s.species);
     for (const e of rs.getSpecies(s.species)?.evos ?? []) names.add(e);
@@ -27,6 +28,7 @@ export function CounterPanel({
   cap,
   trainer,
   pool,
+  owned,
   onOpen,
 }: {
   rs: Ruleset;
@@ -38,16 +40,18 @@ export function CounterPanel({
   trainer: string;
   /** Pokémon obtainable by this fight; undefined when the game's availability isn't known */
   pool?: SpeciesInfo[];
+  /** Playthrough mode: the PC, so caught mons are suggested before new catches */
+  owned?: OwnedMon[];
   onOpen: (member: TeamSet, threat: TeamSet, threatTera?: boolean) => void;
 }) {
   const [state, setState] = useState<'idle' | 'working' | CounterFix[]>('idle');
 
   const run = async () => {
     setState('working');
-    const learnsets = await loadLearnsets(rs, team, pool ?? []);
+    const learnsets = await loadLearnsets(rs, team, pool ?? [], owned ?? []);
     // let "Working…" paint before the calc-heavy part (a second or so on a handheld)
     await new Promise((r) => setTimeout(r, 20));
-    setState(counterFixes({ rs, threat, threatTera, team, cap, learnsets, pool, trainer }));
+    setState(counterFixes({ rs, threat, threatTera, team, cap, learnsets, pool, trainer, owned }));
   };
 
   if (state === 'idle' || state === 'working') {
@@ -61,7 +65,7 @@ export function CounterPanel({
           {state === 'working' ? 'Working…' : `How do I beat ${threat.species}?`}
         </button>
         <span className="text-slate-500">
-          Tries levels (up to {cap}), evolutions, moves, held items{pool ? ', and Pokémon you can get by now' : ''}, one change at a time.
+          Tries levels (up to {cap}), evolutions, moves, held items{owned?.length ? ', your PC' : ''}{pool ? ', and Pokémon you can get by now' : ''}, one change at a time.
         </span>
       </div>
     );
@@ -100,7 +104,7 @@ function FixList({ title, fixes, rs, onOpen }: { title: string; fixes: CounterFi
             <div className="min-w-0 flex-1">
               <div className="flex flex-wrap items-center gap-x-2">
                 <span className="font-medium">{f.title}</span>
-                <span className="rounded bg-slate-100 px-1.5 text-[10px] uppercase text-slate-600 dark:bg-slate-800 dark:text-slate-400">{KIND_LABEL[f.kind]}</span>
+                <span className="rounded bg-slate-100 px-1.5 text-[10px] uppercase text-slate-600 dark:bg-slate-800 dark:text-slate-400">{f.owned ? 'In your PC' : KIND_LABEL[f.kind]}</span>
               </div>
               <div className="text-slate-500">{f.how.join(' · ')}</div>
               <div className={f.checks ? 'text-green-700 dark:text-green-400' : 'text-slate-600 dark:text-slate-300'}>{f.result}</div>

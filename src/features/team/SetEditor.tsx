@@ -4,12 +4,58 @@ import { CategoryBadge } from '../../components/MoveBits';
 import { SearchSelect, type Option } from '../../components/SearchSelect';
 import { TypeBadge } from '../../components/TypeBadge';
 import { card, input, link } from '../../components/ui';
+import { evolutionsOf, evolveSet } from '../../lib/evolution';
 import { formatPower } from '../../lib/format';
 import type { SetIssue } from '../../lib/legality';
 import { evTotal, finalStats, genFeatures, newSet, STAT_IDS, STAT_LABELS, type TeamSet } from '../../lib/team';
 import type { LearnsetEntry, Ruleset, StatID } from '../../rulesets/types';
+import type { StoredMon } from '../../state/box';
 
 const label = 'mb-0.5 block text-xs font-semibold uppercase text-slate-500';
+const smallButton =
+  'rounded border border-slate-300 px-2 py-0.5 text-xs font-medium hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800';
+const PC_PREFIX = 'pc:';
+
+/** Playthrough mode: changing the species swaps in another PC mon (or a new catch) instead of wiping this one */
+export interface PcPicker {
+  /** PC mons that can go in this slot (not already on the team) */
+  mons: StoredMon[];
+  onPick: (mon: StoredMon) => void;
+  /** A species that isn't in the PC yet: catch it */
+  onNew: (species: string) => void;
+  /** Overrides the note under the species picker */
+  hint?: string;
+}
+
+/** Evolve, keeping the whole set: a button for one evolution, a picker for branching ones (Eevee) */
+function EvolveControl({ rs, set, onChange }: { rs: Ruleset; set: TeamSet; onChange: (set: TeamSet) => void }) {
+  const evos = evolutionsOf(rs, set.species);
+  if (!evos.length) return null;
+  if (evos.length === 1) {
+    const e = evos[0];
+    return (
+      <button className={smallButton} title={`${e.evoMethod ?? 'Evolves'}. Keeps moves, EVs, IVs, nature, item and level.`} onClick={() => onChange(evolveSet(rs, set, e.name))}>
+        Evolve → {e.name}
+      </button>
+    );
+  }
+  return (
+    <select
+      value=""
+      onChange={(ev) => ev.target.value && onChange(evolveSet(rs, set, ev.target.value))}
+      className={`${input} py-0.5 text-xs`}
+      title="Keeps moves, EVs, IVs, nature, item and level"
+    >
+      <option value="">Evolve into…</option>
+      {evos.map((e) => (
+        <option key={e.name} value={e.name}>
+          {e.name}
+          {e.evoMethod ? ` (${e.evoMethod})` : ''}
+        </option>
+      ))}
+    </select>
+  );
+}
 
 export function SetEditor({
   rs,
@@ -18,6 +64,8 @@ export function SetEditor({
   issues,
   onChange,
   onRemove,
+  removeLabel = 'Remove from team',
+  pc,
   narrow = false,
 }: {
   rs: Ruleset;
@@ -27,20 +75,43 @@ export function SetEditor({
   onChange: (set: TeamSet) => void;
   /** Omit to hide the remove button (e.g. in the calculator) */
   onRemove?: () => void;
+  removeLabel?: string;
+  /** Playthrough mode: pick from the PC, and never wipe a mon by changing its species */
+  pc?: PcPicker;
   /** Two-column layout for half-width panels */
   narrow?: boolean;
 }) {
   const f = genFeatures(rs);
 
+  const pcMons = pc?.mons;
   const speciesOptions = useMemo<Option[]>(
-    () =>
-      rs.species().map((s) => ({
+    () => [
+      // the PC first, so a mon you already raised is one pick away
+      ...(pcMons ?? []).map((m) => ({
+        value: PC_PREFIX + m.id,
+        label: `${m.set.species} · PC Lv ${m.set.level}`,
+        extra: (
+          <>
+            {rs.getSpecies(m.set.species)?.types.map((t) => <TypeBadge key={t} type={t} short />)}
+            <span className="rounded bg-blue-100 px-1 text-[10px] font-semibold text-blue-700 dark:bg-blue-950 dark:text-blue-300">PC</span>
+          </>
+        ),
+      })),
+      ...rs.species().map((s) => ({
         value: s.name,
         label: s.name,
         extra: s.types.map((t) => <TypeBadge key={t} type={t} short />),
       })),
-    [rs],
+    ],
+    [rs, pcMons],
   );
+  const pickSpecies = (value: string) => {
+    if (!value || value === set?.species) return;
+    const mon = value.startsWith(PC_PREFIX) ? pcMons?.find((m) => PC_PREFIX + m.id === value) : undefined;
+    if (mon) pc!.onPick(mon);
+    else if (pc) pc.onNew(value);
+    else onChange(newSet(rs, value));
+  };
   const itemOptions = useMemo<Option[]>(() => rs.items().map((i) => ({ value: i.name, label: i.name })), [rs]);
   const moveOptions = useMemo<Option[]>(
     () =>
@@ -68,7 +139,7 @@ export function SetEditor({
       <div className={`${card} p-4`}>
         <span className={label}>Pick a Pokémon</span>
         <div className="max-w-sm">
-          <SearchSelect value="" options={speciesOptions} onChange={(name) => name && onChange(newSet(rs, name))} placeholder="Search Pokémon…" />
+          <SearchSelect value="" options={speciesOptions} onChange={pickSpecies} placeholder={pc?.mons.length ? 'Search the PC or any Pokémon…' : 'Search Pokémon…'} />
         </div>
       </div>
     );
@@ -102,16 +173,16 @@ export function SetEditor({
       <div className={`grid gap-3 sm:grid-cols-2 ${narrow ? '' : 'lg:grid-cols-4'}`}>
         <div>
           <span className={label}>Pokémon</span>
-          <SearchSelect
-            value={set.species}
-            options={speciesOptions}
-            onChange={(name) => name && name !== set.species && onChange(newSet(rs, name))}
-          />
-          {sp && (
-            <Link to={`/dex/pokemon/${sp.id}`} className={`${link} text-xs`}>
-              Dex page
-            </Link>
-          )}
+          <SearchSelect value={set.species} options={speciesOptions} onChange={pickSpecies} />
+          <div className="mt-1 flex flex-wrap items-center gap-2">
+            {sp && (
+              <Link to={`/dex/pokemon/${sp.id}`} className={`${link} text-xs`}>
+                Dex page
+              </Link>
+            )}
+            <EvolveControl rs={rs} set={set} onChange={onChange} />
+          </div>
+          {pc && <p className="mt-0.5 text-[11px] text-slate-500">{pc.hint ?? 'Picking another Pokémon swaps it in; this one stays in the PC.'}</p>}
         </div>
         {f.items && (
           <div>
@@ -234,7 +305,7 @@ export function SetEditor({
 
       {onRemove && (
         <button onClick={onRemove} className="text-sm text-red-700 hover:underline dark:text-red-400">
-          Remove from team
+          {removeLabel}
         </button>
       )}
     </div>

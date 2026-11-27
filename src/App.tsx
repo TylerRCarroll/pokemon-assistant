@@ -7,6 +7,7 @@ import { MoveDetail } from './features/dex/MoveDetail';
 import { PokemonDetail } from './features/dex/PokemonDetail';
 import { PlannerPage } from './features/planner/PlannerPage';
 import { TeamPage } from './features/team/TeamPage';
+import { PcPage } from './features/pc/PcPage';
 import { BackupPage } from './features/backup/BackupPage';
 import { TrainerPage } from './features/trainer/TrainerPage';
 import { TypesPage } from './features/types/TypesPage';
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       { path: 'dex/moves/:id', element: <MoveDetail /> },
       { path: 'dex/abilities/:id', element: <AbilityDetail /> },
       { path: 'team', element: <TeamPage /> },
+      { path: 'pc', element: <PcPage /> },
       { path: 'planner/:mon?', element: <PlannerPage /> },
       { path: 'calc', element: <CalcPage /> },
       { path: 'trainer', element: <TrainerPage /> },

@@ -8,6 +8,7 @@ const NAV = [
   { to: '/types', label: 'Types' },
   { to: '/dex', label: 'Dex' },
   { to: '/team', label: 'Team' },
+  { to: '/pc', label: 'PC' },
   { to: '/planner', label: 'Planner' },
   { to: '/calc', label: 'Calc' },
   { to: '/trainer', label: 'Trainer' },
