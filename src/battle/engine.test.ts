@@ -190,6 +190,40 @@ describe('battle text', () => {
     const text = battleText(s.log());
     expect(text[1]).toEqual(expect.arrayContaining(['Go! Snorlax!', 'The opposing Machamp used Close Combat!']));
     expect(text[2][0]).toBe('Player used a Potion on Snorlax!');
-    expect(text[2]).toContain('Snorlax had its HP restored.');
+    expect(text[2].some((l) => /^Snorlax had its HP restored \(\+\d+ HP, \d+%\)\.$/.test(l))).toBe(true);
+  });
+});
+
+describe('battle text amounts', () => {
+  it('says what each hit took and what drain and Leech Seed gave back', async () => {
+    const { battleText } = await import('./log');
+    const rs = getRuleset('gen9natdex');
+    const m = (sp: string, moves: string[]) => ({ ...newSet(rs, sp), moves, evs, ivs, level: 50 });
+    const s = BattleSession.start({ rulesetId: 'gen9natdex', seed: [2, 2, 2, 2], sides: [{ name: 'You', team: [m('Oddish', ['Mega Drain', 'Leech Seed'])] }, { name: 'Boss', team: [m('Rattata', ['Tackle'])] }] });
+    s.submit({ p1: { kind: 'move', move: 2 }, p2: { kind: 'move', move: 1 } });
+    s.submit({ p1: { kind: 'move', move: 1 }, p2: { kind: 'move', move: 1 } });
+    const lines = battleText(s.log()).flat();
+    // Tackle on Oddish, as a share and in HP
+    expect(lines.some((l) => /^\(Oddish lost \d+% of its HP: \d+ HP\)$/.test(l))).toBe(true);
+    // Mega Drain's hit on Rattata, then the heal
+    expect(lines.some((l) => /^\(The opposing Rattata lost \d+% of its HP: 40 HP\)$/.test(l))).toBe(true);
+    expect(lines.some((l) => /energy drained.*\(\+20 HP/.test(l))).toBe(true);
+    // Leech Seed: 1/8 of Rattata's 105 HP, sapped and given to Oddish
+    expect(lines.some((l) => /Leech Seed \(−13 HP, 12%\)!$/.test(l))).toBe(true);
+    expect(lines.some((l) => /^Oddish had its HP restored \(\+\d+ HP/.test(l))).toBe(true);
+  });
+
+  it('says when a hit is super effective, resisted, or does nothing', async () => {
+    const { battleText } = await import('./log');
+    const rs = getRuleset('gen9natdex');
+    const m = (sp: string, moves: string[]) => ({ ...newSet(rs, sp), moves, evs, ivs, level: 50 });
+    const text = (target: string, move = 'Water Gun', user = 'Squirtle') => {
+      const s = BattleSession.start({ rulesetId: 'gen9natdex', seed: [1, 1, 1, 1], sides: [{ name: 'You', team: [m(user, [move])] }, { name: 'Boss', team: [m(target, ['Growl'])] }] });
+      s.submit({ p1: { kind: 'move', move: 1 }, p2: { kind: 'move', move: 1 } });
+      return battleText(s.log()).flat().join(' / ');
+    };
+    expect(text('Charmander')).toMatch(/It's super effective!/);
+    expect(text('Bulbasaur')).toMatch(/It's not very effective/);
+    expect(text('Gastly', 'Tackle', 'Rattata')).toMatch(/doesn't affect/);
   });
 });

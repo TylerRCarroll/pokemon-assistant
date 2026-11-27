@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import type { Pokemon } from '@pkmn/sim';
 import { Link, useSearchParams } from 'react-router-dom';
 import { card, input, link } from '../../components/ui';
 import type { Advice, GauntletSetup } from '../../battle/analysis';
@@ -163,15 +164,23 @@ function Setup({ onStart }: { onStart: (c: Config) => void }) {
   const [fights, setFights] = useState<number[]>([]);
   const [healBetween, setHealBetween] = useState(false);
 
+  // picks belong to a ruleset: switching rulesets here starts them over
+  const [pickedFor, setPickedFor] = useState(rs.id);
+  if (pickedFor !== rs.id) {
+    setPickedFor(rs.id);
+    setOpponent('');
+    setFights([]);
+  }
+  const myId = teams.some((t) => t.id === mine) ? mine : ((teams.some((t) => t.id === activeId) ? activeId : teams[0]?.id) ?? '');
   const types = gameTypesFor(rs.gen);
   const type = types.includes(gameType) ? gameType : 'singles';
   // default opponent: the first boss, or another team
-  const opponentId = opponent || (bosses[0] ? `trainer:${bosses[0].trainers[0].id}` : teams.find((t) => t.id !== mine) ? `team:${teams.find((t) => t.id !== mine)!.id}` : '');
+  const opponentId = opponent || (bosses[0] ? `trainer:${bosses[0].trainers[0].id}` : teams.find((t) => t.id !== myId) ? `team:${teams.find((t) => t.id !== myId)!.id}` : '');
   const trainer = opponentId.startsWith('trainer:') ? trainers.data?.find((t) => String(t.id) === opponentId.slice(8)) : undefined;
   const teamOf = (t: TrainerInfo) => t.team.map((m) => setFromTrainerMon(rs, m));
   const opponentTeam: TeamSet[] = trainer ? teamOf(trainer) : ((teams.find((t) => `team:${t.id}` === opponentId)?.slots.filter(Boolean) ?? []) as TeamSet[]);
   const gauntletTrainers = bosses.flatMap((g) => g.trainers).filter((t) => fights.includes(t.id));
-  const myTeamRaw = (teams.find((t) => t.id === mine)?.slots.filter(Boolean) ?? []) as TeamSet[];
+  const myTeamRaw = (teams.find((t) => t.id === myId)?.slots.filter(Boolean) ?? []) as TeamSet[];
   // a gauntlet plays at its toughest fight's cap
   const cap = mode === 'gauntlet' ? Math.max(0, ...gauntletTrainers.map((t) => t.levelCap ?? 0)) || undefined : trainer?.levelCap;
   const myTeam = cap && atCap ? myTeamRaw.map((s) => ({ ...s, level: cap })) : myTeamRaw;
@@ -264,7 +273,7 @@ function Setup({ onStart }: { onStart: (c: Config) => void }) {
       <div className={`${card} grid gap-4 p-4 md:grid-cols-2`}>
         <div className="space-y-2">
           <h2 className="font-semibold">You</h2>
-          <select value={mine} onChange={(e) => setMine(e.target.value)} className={`${input} w-full`}>
+          <select value={myId} onChange={(e) => setMine(e.target.value)} className={`${input} w-full`}>
             {teams.map((t) => (
               <option key={t.id} value={t.id}>
                 {t.name} ({t.slots.filter(Boolean).length})
@@ -530,6 +539,14 @@ function AdvicePanel({ advice, onAsk, onPick }: { advice?: { list?: Advice[]; er
 // ---------------------------------------------------------------------------------------------
 // Your choices, one active slot at a time
 
+/** "2×", "½×", "0×" for a move's type against a Pokémon's current types (Tera included); abilities aside */
+function typeMultiplier(session: BattleSession, moveType: string, target: Pokemon): string {
+  const types = target.getTypes();
+  if (!session.battle.dex.getImmunity(moveType, types)) return '0×';
+  const n = 2 ** session.battle.dex.getEffectiveness(moveType, types);
+  return n === 0.5 ? '½×' : n === 0.25 ? '¼×' : `${n}×`;
+}
+
 type Tab = 'fight' | 'pokemon' | 'bag';
 
 function Controls({
@@ -561,6 +578,7 @@ function Controls({
   const [aiming, setAiming] = useState<number>();
   const me = session.active('p1', slot);
   const them = session.active('p2');
+  const foes = session.side('p2').active.filter((p): p is Pokemon => !!p && !p.fainted);
   const party = session.side('p1').pokemon;
   const gimmicks = legal.filter((a): a is Extract<Action, { kind: 'move' }> => a.kind === 'move' && !!a.gimmick);
   // once Tera (or Mega, ...) is spent, the box no longer applies
@@ -645,6 +663,20 @@ function Controls({
                     {move.basePower ? ` · ${move.basePower}` : ''}
                     {h && ` · ${Math.round(Math.min(h.min, 1) * 100)}–${Math.round(Math.min(h.max, 1) * 100)}% of its HP`}
                   </div>
+                  {move.category !== 'Status' && foes.length > 0 && (
+                    <div className="text-xs">
+                      {foes.map((f, j) => {
+                        const x = typeMultiplier(session, move.type, f);
+                        const tone = x === '0×' ? 'text-slate-400' : /^[248]/.test(x) && x !== '1×' ? 'font-semibold text-green-700 dark:text-green-400' : x === '1×' ? 'text-slate-500' : 'text-red-700 dark:text-red-400';
+                        return (
+                          <span key={j} className={`${tone} ${j ? 'ml-2' : ''}`}>
+                            {foes.length > 1 ? `${f.name} ` : ''}
+                            {x}
+                          </span>
+                        );
+                      })}
+                    </div>
+                  )}
                 </button>
               );
             })}
