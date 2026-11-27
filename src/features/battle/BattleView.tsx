@@ -59,8 +59,8 @@ export function HpBar({ mon, exact }: { mon: Pokemon; exact: boolean }) {
   );
 }
 
-function ActiveCard({ session, side, hidden, reveal }: { session: BattleSession; side: SideID; hidden: boolean; reveal?: Revealed }) {
-  const mon = session.active(side);
+function ActiveCard({ session, side, slot, hidden, reveal }: { session: BattleSession; side: SideID; slot: number; hidden: boolean; reveal?: Map<string, Revealed> }) {
+  const mon = session.active(side, slot);
   const s = session.side(side);
   if (!mon) return <div className={`${card} p-3 text-sm text-slate-500`}>{s.name}: no Pokémon in battle</div>;
   const sp = session.rs.getSpecies(mon.species.name);
@@ -68,9 +68,10 @@ function ActiveCard({ session, side, hidden, reveal }: { session: BattleSession;
   const boosts = Object.entries(mon.boosts).filter(([, n]) => n);
   const vols = Object.keys(mon.volatiles).flatMap((v) => (VOLATILES[v] ? [VOLATILES[v]] : []));
   const dex = session.battle.dex;
-  const item = hidden ? reveal?.item : mon.item ? dex.items.get(mon.item).name : undefined;
-  const ability = hidden ? reveal?.ability : dex.abilities.get(mon.ability).name;
-  const moves = hidden ? [...(reveal?.moves ?? [])] : mon.moveSlots.map((m) => `${m.move} ${m.pp}/${m.maxpp}`);
+  const shown = reveal?.get(mon.name);
+  const item = hidden ? shown?.item : mon.item ? dex.items.get(mon.item).name : undefined;
+  const ability = hidden ? shown?.ability : dex.abilities.get(mon.ability).name;
+  const moves = hidden ? [...(shown?.moves ?? [])] : mon.moveSlots.map((m) => `${m.move} ${m.pp}/${m.maxpp}`);
   return (
     <div className={`${card} flex gap-3 p-3`}>
       <Sprite id={sp?.spriteId ?? mon.species.id} name={mon.species.name} size={64} />
@@ -173,16 +174,26 @@ function Field({ session }: { session: BattleSession }) {
 
 /** Both sides of a battle: the opponent above, you below */
 export function BattleView({ session, hidden, reveal }: { session: BattleSession; hidden: boolean; reveal?: Map<string, Revealed> }) {
-  const foe = session.active('p2');
+  const slots = Array.from({ length: session.slots }, (_, i) => i);
+  const grid = session.slots === 1 ? '' : session.slots === 2 ? 'grid gap-2 md:grid-cols-2' : 'grid gap-2 md:grid-cols-3';
   return (
     <div className="space-y-2">
       <div className="flex items-center justify-between text-sm">
         <span className="font-medium">{session.side('p2').name}</span>
         <Party session={session} side="p2" hidden={hidden} />
       </div>
-      <ActiveCard session={session} side="p2" hidden={hidden} reveal={foe ? reveal?.get(foe.name) : undefined} />
+      {/* the foe's slots run right to left from your side, as they face you */}
+      <div className={grid}>
+        {[...slots].reverse().map((i) => (
+          <ActiveCard key={i} session={session} side="p2" slot={i} hidden={hidden} reveal={reveal} />
+        ))}
+      </div>
       <Field session={session} />
-      <ActiveCard session={session} side="p1" hidden={false} />
+      <div className={grid}>
+        {slots.map((i) => (
+          <ActiveCard key={i} session={session} side="p1" slot={i} hidden={false} />
+        ))}
+      </div>
       <div className="flex items-center justify-between text-sm">
         <span className="font-medium">{session.side('p1').name}</span>
         <Party session={session} side="p1" hidden={false} />

@@ -1,11 +1,12 @@
 // A few simulation workers, sharing out batch battles and advisor options between them
-import { mergeAdvice, type Advice, type AdviseOptions, type BattleRecord } from './analysis';
+import { mergeAdvice, type Advice, type AdviseOptions, type BattleRecord, type GauntletRun, type GauntletSetup } from './analysis';
 import type { BattleSession, SideID } from './engine';
 import type { AiKind } from './ai/players';
 import type { WorkerRequest } from './worker';
 
 type Reply =
   | { type: 'battle'; id: number; index: number; record: BattleRecord }
+  | { type: 'run'; id: number; index: number; run: GauntletRun }
   | { type: 'done'; id: number }
   | { type: 'advice'; id: number; advice: Advice[] }
   | { type: 'error'; id: number; error: string };
@@ -60,6 +61,33 @@ export class SimPool {
         w.postMessage({ type: 'batch', id, setup, ai, indices } satisfies WorkerRequest);
       });
       if (!open) resolve([]);
+    });
+  }
+
+  /** `count` runs of a gauntlet; `onRun` hears about each as it finishes */
+  gauntlet(gauntlet: GauntletSetup, count: number, ai: [AiKind, AiKind], onRun: (r: GauntletRun, index: number) => void): Promise<void> {
+    const workers = this.ensure();
+    const id = nextId++;
+    return new Promise((resolve, reject) => {
+      let open = 0;
+      workers.forEach((w, wi) => {
+        const indices = Array.from({ length: count }, (_, i) => i).filter((i) => i % workers.length === wi);
+        if (!indices.length) return;
+        open++;
+        const onMessage = (e: MessageEvent<Reply>) => {
+          const r = e.data;
+          if (r.id !== id) return;
+          if (r.type === 'run') onRun(r.run, r.index);
+          else if (r.type === 'done' || r.type === 'error') {
+            w.removeEventListener('message', onMessage);
+            if (r.type === 'error') reject(new Error(r.error));
+            else if (--open === 0) resolve();
+          }
+        };
+        w.addEventListener('message', onMessage);
+        w.postMessage({ type: 'gauntlet', id, gauntlet, ai, indices } satisfies WorkerRequest);
+      });
+      if (!open) resolve();
     });
   }
 

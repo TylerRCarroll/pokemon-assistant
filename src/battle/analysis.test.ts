@@ -52,3 +52,36 @@ describe('simulation', () => {
     expect(mergeAdvice(halves)).toHaveLength(advice.length);
   });
 });
+
+describe('gauntlet', () => {
+  const you = { name: 'You', team: [mon('Garchomp', ['Earthquake', 'Dragon Claw']), mon('Rotom-Wash', ['Hydro Pump', 'Volt Switch'])] };
+  const fight = (name: string, species: string, moves: string[], level = 45) => ({ name, team: [mon(species, moves, { level })] });
+  const g = {
+    rulesetId: 'gen9',
+    seed: [9, 9, 9, 9] as BattleSetup['seed'],
+    you,
+    fights: [fight('First', 'Heatran', ['Flamethrower']), fight('Second', 'Gengar', ['Shadow Ball']), fight('Third', 'Dragonite', ['Outrage'], 70)],
+  };
+
+  it('carries HP, faints, and the bag from one fight into the next, and stops at a loss', async () => {
+    const { runGauntlet, gauntletFightSetup, summarizeGauntlet } = await import('./analysis');
+    const run = runGauntlet(g, g.seed, ['smart', 'smart']);
+    expect(run.fights.length).toBeGreaterThanOrEqual(1);
+    // what the first fight left is what the second started with
+    if (run.fights.length > 1) {
+      const end = BattleSession.replay(run.fights[0].setup, run.fights[0].record.decisions).state('p1');
+      expect(run.fights[1].setup.sides[0].state).toEqual(end);
+    }
+    // a level-70 Dragonite at the end should stop some runs; a loss ends the run there
+    if (run.lostAt !== undefined) expect(run.fights).toHaveLength(run.lostAt + 1);
+    // healing between fights starts each one fresh
+    expect(gauntletFightSetup({ ...g, healBetween: true }, 1, g.seed, { state: [{ hp: 1 }, { hp: 0 }] }).sides[0].state).toBeUndefined();
+    const runs = [0, 1, 2].map((i) => runGauntlet(g, batchSeed(g.seed, i), ['smart', 'smart']));
+    const sum = summarizeGauntlet(g, runs);
+    expect(sum.runs).toBe(3);
+    expect(sum.fights[0].reached).toBe(3);
+    expect(sum.fights.reduce((a, f) => a + f.lost, 0) + sum.cleared).toBe(3);
+    // the battle names Rotom-Wash after its base species, as the games do
+    expect(sum.mons.map((m) => m.name)).toEqual(['Garchomp', 'Rotom']);
+  });
+});

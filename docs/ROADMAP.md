@@ -2,11 +2,11 @@
 
 Planned features, roughly in the order they build on each other. Each one says what it's for, how it would work, what data it needs, and what's still undecided. Nothing here is scheduled until it's picked up; done items move to the commit log.
 
-**Order:** the battle simulator is playable (doubles still to come). Next: "Where do I catch it?" (it produces the location data), then Nuzlocke mode (which runs on that data), then the gauntlet check (which runs on the simulator). The rest can go in any order.
+**Order:** the battle simulator and the gauntlet check are done. Next: "Where do I catch it?" (it produces the location data), then Nuzlocke mode (which runs on that data), then the gauntlet check (which runs on the simulator). The rest can go in any order.
 
 ---
 
-## 0. Battle simulator (phases 1–3 done)
+## 0. Battle simulator (done)
 
 **Goal:** one team against another with the real mechanics. Every move, ability, held item, nature, IV/EV, status, field effect and gimmick is covered, plus bag items and switching. You can either play one side against an AI, or run many battles to see what good play looks like.
 
@@ -26,9 +26,9 @@ Battles are seeded and logged, so any battle can be replayed or rewound exactly.
 1. ✓ The engine, bag and romhack mods.
 2. ✓ Playing against the AI.
 3. ✓ Simulation, the advisor and replays, in Web Workers.
-4. Doubles and triples, and the gauntlet check.
+4. ✓ Doubles and triples, and the gauntlet check (feature 3 below).
 
-**Not covered (yet):** doubles and triples until phase 4. Trainer AIs use generic logic, not each game's exact routine. Bosses' bag items start empty and can be edited, since the data sources don't list them.
+**Not covered (yet):** the advisor works in singles only (in doubles an option is every slot's choice combined). Trainer AIs use generic logic, not each game's exact routine. Bosses' bag items start empty and can be edited, since the data sources don't list them, and which boss fights are double battles isn't in the data, so you pick the battle type.
 
 ---
 
@@ -84,7 +84,7 @@ Battles are seeded and logged, so any battle can be replayed or rewound exactly.
 
 ---
 
-## 3. Gauntlet check
+## 3. Gauntlet check (done)
 
 **Goal:** run your team against a whole run of fights in a row and see who carries it, who's dead weight, and where you'd likely fall.
 

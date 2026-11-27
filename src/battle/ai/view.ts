@@ -55,7 +55,7 @@ const TERRAIN: Record<string, FieldOptions['terrain']> = {
 
 export function fieldOf(session: BattleSession): FieldOptions {
   const f = session.battle.field;
-  return { weather: WEATHER[f.weather] ?? '', terrain: TERRAIN[f.terrain] ?? '' };
+  return { weather: WEATHER[f.weather] ?? '', terrain: TERRAIN[f.terrain] ?? '', doubles: session.slots > 1 };
 }
 
 /** Expected damage of one of the attacker's moves, as fractions of the defender's current HP */
@@ -77,7 +77,7 @@ export function hit(session: BattleSession, side: SideID, attacker: Pokemon, def
   const a = calcSide(session, side, attacker, tera);
   const d = calcSide(session, foe(side), defender);
   const field = fieldOf(session);
-  const key = `${session.rs.id}#${sideKey(a)}#${sideKey(d)}#${move}#${field.weather}#${field.terrain}`;
+  const key = `${session.rs.id}#${sideKey(a)}#${sideKey(d)}#${move}#${field.weather}#${field.terrain}#${field.doubles ? 2 : 1}`;
   let r = calcCache.get(key);
   if (r === undefined) {
     try {

@@ -144,7 +144,7 @@ export function Simulation({ setup, ai, count, onExit }: { setup: BattleSetup; a
 }
 
 /** One simulated battle, a decision at a time */
-function Replay({ setup, record, onBack }: { setup: BattleSetup; record: BattleRecord; onBack: () => void }) {
+export function Replay({ setup, record, onBack, title = 'Replay' }: { setup: BattleSetup; record: BattleRecord; onBack: () => void; title?: string }) {
   const [step, setStep] = useState(0);
   const [playing, setPlaying] = useState(false);
   const total = record.decisions.length;
@@ -162,7 +162,7 @@ function Replay({ setup, record, onBack }: { setup: BattleSetup; record: BattleR
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap items-center gap-2">
-        <h1 className="mr-2 text-2xl font-bold">Replay</h1>
+        <h1 className="mr-2 text-2xl font-bold">{title}</h1>
         <span className="text-sm text-slate-500">
           {record.winner === 'p1' ? 'A win' : record.winner === 'p2' ? 'A loss' : 'A draw'} in {record.turns} turns · turn {session.turn}
         </span>

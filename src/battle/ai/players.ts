@@ -10,13 +10,16 @@
 import type { Pokemon } from '@pkmn/sim';
 import { bagItem, healAmount } from '../bag';
 import type { Action, BattleSession, SideID } from '../engine';
+import { pickSlots } from './multi';
 import { bestHit, foe, hit, movesFirst, rng } from './view';
 
 export type AiKind = 'ingame' | 'smart' | 'random';
 
 export interface Player {
   kind: AiKind;
+  /** One action in singles; one per active slot in doubles and triples */
   pick(session: BattleSession, side: SideID): Action;
+  pickAll(session: BattleSession, side: SideID): Action | Action[];
 }
 
 const HEALS = ['maxpotion', 'fullrestore', 'hyperpotion', 'superpotion', 'potion'];
@@ -192,12 +195,12 @@ function randomPick(session: BattleSession, side: SideID): Action {
 
 export function player(kind: AiKind): Player {
   const pick = kind === 'ingame' ? ingame : kind === 'smart' ? smart : randomPick;
-  return { kind, pick };
+  return { kind, pick, pickAll: (session, side) => (session.slots > 1 ? pickSlots(session, side, kind) : pick(session, side)) };
 }
 
 /** Let AIs make every pending choice (the ones in `players`), leaving the others to the caller */
 export function aiDecision(session: BattleSession, players: Partial<Record<SideID, Player>>) {
-  return Object.fromEntries(session.pending().flatMap((side) => (players[side] ? [[side, players[side]!.pick(session, side)]] : [])));
+  return Object.fromEntries(session.pending().flatMap((side) => (players[side] ? [[side, players[side]!.pickAll(session, side)]] : [])));
 }
 
 /** Play a battle out with AIs on both sides; returns the session at the end */

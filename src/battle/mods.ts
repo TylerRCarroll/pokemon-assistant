@@ -76,24 +76,30 @@ function romhackData(rs: Ruleset, base: ModdedDex): AnyData {
 }
 
 /** The sim mod and format for a ruleset (and game, where a remake has its own mechanics), built once */
-export function simFormat(rs: Ruleset, game?: string): SimFormat {
+export type GameType = 'singles' | 'doubles' | 'triples';
+
+/** Battle types each gen has: Doubles from Gen 3, Triples in Gens 5 and 6 */
+export const gameTypesFor = (gen: number): GameType[] => ['singles', ...(gen >= 3 ? (['doubles'] as const) : []), ...(gen === 5 || gen === 6 ? (['triples'] as const) : [])];
+
+export function simFormat(rs: Ruleset, game?: string, gameType: GameType = 'singles'): SimFormat {
   const parent = parentMod(rs, game);
-  const key = `${rs.id}|${parent}`;
+  const key = `${rs.id}|${parent}|${gameType}`;
   const hit = cache.get(key);
   if (hit) return hit;
 
   const base = Dex.mod(parent);
   const modid = toID(`pokeplanner ${rs.id} ${parent}`);
-  const name = `[Gen ${rs.gen}] PokePlanner ${rs.id}${parent.endsWith('bdsp') ? ' BDSP' : ''}`;
+  const name = `[Gen ${rs.gen}] PokePlanner ${rs.id}${parent.endsWith('bdsp') ? ' BDSP' : ''}${gameType === 'singles' ? '' : ` ${gameType}`}`;
   // Custom Game's rules, minus team preview: in-game, the trainer leads with its first Pokémon
   const ruleset = Dex.formats.get(`gen${rs.gen}customgame`).ruleset.filter((r) => r !== 'Team Preview');
-  const dex = Dex.mod(modid, {
+  // one mod per ruleset and mechanics; the battle types share it
+  const dex = Dex.dexes[modid] ?? Dex.mod(modid, {
     Scripts: { inherit: parent },
     Conditions: BAG_CONDITIONS,
     ...(rs.kind === 'romhack' ? romhackData(rs, base) : {}),
   } as Parameters<typeof Dex.mod>[1]);
   // battles (and clones, via fromJSON) look formats up in the global list
-  Dex.formats.extend([{ name, mod: modid, debug: true, battle: { trunc: Math.trunc }, ruleset }]);
+  Dex.formats.extend([{ name, mod: modid, debug: true, battle: { trunc: Math.trunc }, ruleset, ...(gameType === 'singles' ? {} : { gameType }) }]);
   const result = { dex, formatid: toID(name) };
   cache.set(key, result);
   return result;
