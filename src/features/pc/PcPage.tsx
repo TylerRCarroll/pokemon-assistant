@@ -44,6 +44,7 @@ export function PcPage() {
   const [selectedId, setSelectedId] = useState<string>();
   const selected = mons.find((m) => m.id === selectedId);
 
+  const currentId = game ? prefs?.currentTeams?.[game.id] : undefined;
   const teamsOf = (mon: StoredMon) => teams.filter((t) => t.slots.some((s) => s?.monId === mon.id));
   const shown = mons.filter((m) => !query.trim() || matches([m.set.species, m.set.item ?? '', m.set.ability ?? '', ...m.set.moves].join(' '), query));
 
@@ -80,7 +81,7 @@ export function PcPage() {
               <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Filter by name, move, item…" className={`${input} w-56`} />
             )}
             <span className="text-xs text-slate-500">
-              {mons.length} in {game.name}'s PC. Team members join automatically when you open the{' '}
+              {mons.length} in {game.name}'s PC. Your current team's members join automatically when you open the{' '}
               <Link to="/team" className="text-blue-700 hover:underline dark:text-blue-400">
                 Team
               </Link>{' '}
@@ -89,7 +90,7 @@ export function PcPage() {
           </div>
 
           {mons.length === 0 ? (
-            <p className={`${card} p-6 text-center text-slate-500`}>The PC is empty. Add a mon above, or open the Team page in playthrough mode to bring your team in.</p>
+            <p className={`${card} p-6 text-center text-slate-500`}>The PC is empty. Add a mon above, or open your current team on the Team page to bring it in.</p>
           ) : (
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
               {shown.map((m) => {
@@ -101,7 +102,7 @@ export function PcPage() {
                     set={m.set}
                     selected={m.id === selectedId}
                     issueCount={0}
-                    note={on.length ? `On ${on.map((t) => t.name).join(', ')}` : undefined}
+                    note={on.length ? `On ${on.map((t) => t.name + (t.id === currentId ? ' (current)' : '')).join(', ')}` : undefined}
                     onSelect={() => setSelectedId(m.id === selectedId ? undefined : m.id)}
                   />
                 );

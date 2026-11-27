@@ -105,3 +105,16 @@ describe('PC store', () => {
     expect(slots()[1]?.species).toBe('Pikachu');
   });
 });
+
+describe('playthrough settings', () => {
+  it('starts unsaved settings from the ruleset defaults, so marking a current team keeps a romhack in playthrough mode', async () => {
+    const { usePlaythroughStore } = await import('../state/playthrough');
+    usePlaythroughStore.setState({ byRuleset: {} });
+    const rp = getRuleset('renegade-platinum');
+    usePlaythroughStore.getState().set(rp, { currentTeams: { 'renegade-platinum': 't1' } });
+    expect(usePlaythroughStore.getState().byRuleset[rp.id]).toMatchObject({ mode: 'playthrough', game: 'renegade-platinum', currentTeams: { 'renegade-platinum': 't1' } });
+    // and a later change keeps what was saved
+    usePlaythroughStore.getState().set(rp, { checkpoint: 2 });
+    expect(usePlaythroughStore.getState().byRuleset[rp.id]).toMatchObject({ mode: 'playthrough', checkpoint: 2, currentTeams: { 'renegade-platinum': 't1' } });
+  });
+});

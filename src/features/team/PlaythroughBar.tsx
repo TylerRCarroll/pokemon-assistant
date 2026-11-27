@@ -10,7 +10,7 @@ export function PlaythroughBar({ rs, prefs, checkpoints }: { rs: Ruleset; prefs:
   const game = games.find((g) => g.id === prefs.game);
   const tab = (mode: PlaythroughPrefs['mode'], label: string) => (
     <button
-      onClick={() => set(rs.id, { mode })}
+      onClick={() => set(rs, { mode })}
       className={`rounded px-3 py-1 text-sm font-medium ${prefs.mode === mode ? 'bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900' : 'hover:bg-slate-100 dark:hover:bg-slate-800'}`}
     >
       {label}
@@ -25,7 +25,7 @@ export function PlaythroughBar({ rs, prefs, checkpoints }: { rs: Ruleset; prefs:
       {prefs.mode === 'playthrough' ? (
         <>
           {games.length > 1 && (
-            <select value={prefs.game} onChange={(e) => set(rs.id, { game: e.target.value, checkpoint: 0 })} className={input}>
+            <select value={prefs.game} onChange={(e) => set(rs, { game: e.target.value, checkpoint: 0 })} className={input}>
               {games.map((g) => (
                 <option key={g.id} value={g.id}>
                   {g.name}
@@ -35,7 +35,7 @@ export function PlaythroughBar({ rs, prefs, checkpoints }: { rs: Ruleset; prefs:
           )}
           <label className="flex items-center gap-1.5">
             <span className="text-slate-500">Next up</span>
-            <select value={prefs.checkpoint} onChange={(e) => set(rs.id, { checkpoint: Number(e.target.value) })} className={input} disabled={!checkpoints}>
+            <select value={prefs.checkpoint} onChange={(e) => set(rs, { checkpoint: Number(e.target.value) })} className={input} disabled={!checkpoints}>
               {checkpoints?.map((c, i) => (
                 <option key={c.label} value={i}>
                   {c.label} (Lv {c.levelCap})

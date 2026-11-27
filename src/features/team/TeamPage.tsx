@@ -12,7 +12,7 @@ import { checkSet } from '../../lib/legality';
 import { usePromise } from '../../lib/usePromise';
 import type { LearnsetEntry } from '../../rulesets/types';
 import { useBoxStore, type StoredMon } from '../../state/box';
-import { usePlaythrough } from '../../state/playthrough';
+import { usePlaythrough, usePlaythroughStore } from '../../state/playthrough';
 import { useRuleset } from '../../state/ruleset';
 import { useTeamsStore } from '../../state/teams';
 import { CoveragePanel } from './CoveragePanel';
@@ -93,21 +93,35 @@ export function TeamPage() {
   const [lastSwap, setLastSwap] = useState<LastSwap>();
   useEffect(() => setLastSwap(undefined), [team?.id, rs.id]);
 
-  // playthrough mode keeps every team member in the game's PC, so swapping one out never loses its set
+  // playthrough mode keeps the current team's members in the game's PC, so swapping one out never loses its set;
+  // other teams are plans, which can use PC mons but don't add to the PC
   const pcGame = prefs?.mode === 'playthrough' ? game : undefined;
+  const setPrefs = usePlaythroughStore((s) => s.set);
+  // the team you're running in this game; a deleted one just means there's no current team
+  const currentId = pcGame && teams.some((t) => t.id === prefs?.currentTeams?.[pcGame.id]) ? prefs!.currentTeams![pcGame.id] : undefined;
+  const current = pcGame && {
+    id: currentId,
+    make: (teamId: string) => setPrefs(rs, { currentTeams: { ...prefs?.currentTeams, [pcGame.id]: teamId } }),
+  };
   const pcMons = useMemo(
     () => (pcGame ? allMons.filter((m) => m.rulesetId === rs.id && m.game === pcGame.id) : []),
     [allMons, rs.id, pcGame],
   );
+  const isCurrent = !!team && team.id === currentId;
+  // the game's first team to be opened becomes its current one; it can be changed any time
+  useEffect(() => {
+    if (pcGame && team && !currentId) setPrefs(rs, { currentTeams: { ...prefs?.currentTeams, [pcGame.id]: team.id } });
+  }, [pcGame, team, currentId, rs, setPrefs, prefs?.currentTeams]);
   const benched = useMemo(() => {
     const onTeam = new Set(slots.flatMap((s) => (s?.monId ? [s.monId] : [])));
     return pcMons.filter((m) => !onTeam.has(m.id));
   }, [pcMons, slots]);
 
-  // members from before the PC existed (or pasted in) join this game's PC; a slot whose mon was released elsewhere empties
+  // the current team's members join this game's PC (from before the PC existed, pasted in, or a plan just made
+  // current); a slot whose mon was released elsewhere empties
   useEffect(() => {
-    if (pcGame && team) adoptTeam(team.id, rs.id, pcGame.id);
-  }, [pcGame, team, monById, rs.id, adoptTeam]);
+    if (pcGame && team && isCurrent) adoptTeam(team.id, rs.id, pcGame.id);
+  }, [pcGame, team, isCurrent, monById, rs.id, adoptTeam]);
 
   const rolesFor = (set: TeamSet | null) => {
     const sp = set && rs.getSpecies(set.species);
@@ -131,31 +145,39 @@ export function TeamPage() {
     const out = slots[index];
     place(index, mon.set, out ? `Swapped ${out.species} for ${mon.set.species} from the PC.` : `Added ${mon.set.species} from the PC.`);
   };
-  /** A species not in the PC yet: a new catch, at the level cap when there is one */
-  const catchNew = (index: number, species: string) => {
+  /** A species not in the PC yet: a new catch on the current team, a plan on any other; at the level cap when there is one */
+  const pickNew = (index: number, species: string) => {
     if (!pcGame) return;
     const set = { ...newSet(rs, species), level: play?.level ?? 100 };
-    const id = createMon(rs.id, pcGame.id, set);
     const out = slots[index];
-    place(index, { ...set, monId: id }, out ? `Swapped ${out.species} for a new ${species}.` : `Added a new ${species}.`, { created: id });
+    const label = out ? `Swapped ${out.species} for a new ${species}.` : `Added a new ${species}.`;
+    if (!isCurrent) return place(index, set, label);
+    const id = createMon(rs.id, pcGame.id, set);
+    place(index, { ...set, monId: id }, label, { created: id });
   };
 
   const swap = (out: Member, set: TeamSet, owned?: SwapOwned) => {
     const index = slots.indexOf(out.set);
     if (index < 0) return;
     const mon = owned && monById.get(owned.monId);
-    if (mon) {
+    if (mon && owned.evolvesFrom && !isCurrent) {
+      // a plan can count on the evolution without evolving the real mon yet
+      // (unlinked, or the PC's unevolved copy would show instead)
+      place(index, { ...set, monId: undefined }, `Swapped ${out.species.name} for your ${owned.evolvesFrom}, planned as ${set.species}.`);
+    } else if (mon) {
       // a PC mon the suggestion evolved: evolve it for real (undo puts it back)
       if (owned.evolvesFrom) updateMon(mon.id, set);
       const label = owned.evolvesFrom
         ? `Evolved your ${owned.evolvesFrom} into ${set.species} and swapped it in for ${out.species.name}.`
         : `Swapped ${out.species.name} for ${set.species} from the PC.`;
       place(index, { ...set, monId: mon.id }, label, owned.evolvesFrom ? { monBefore: { id: mon.id, set: mon.set } } : {});
-    } else if (pcGame) {
+    } else if (pcGame && isCurrent) {
       const id = createMon(rs.id, pcGame.id, set);
       place(index, { ...set, monId: id }, `Swapped ${out.species.name} for ${set.species}.`, { created: id });
     } else place(index, set, `Swapped ${out.species.name} for ${set.species}.`);
   };
+
+  const inPc = !!slots[selected]?.monId;
 
   const undo = () => {
     if (!team || !lastSwap) return;
@@ -167,7 +189,7 @@ export function TeamPage() {
 
   return (
     <div className="space-y-5">
-      <TeamBar rs={rs} teams={teams} active={team} />
+      <TeamBar rs={rs} teams={teams} active={team} current={current} />
       {prefs && <PlaythroughBar rs={rs} prefs={{ ...prefs, checkpoint }} checkpoints={availability?.checkpoints} />}
 
       {!team ? (
@@ -192,7 +214,7 @@ export function TeamPage() {
           </div>
 
           {pcGame && (
-            <PcStrip rs={rs} mons={benched} gameName={pcGame.name} slotLabel={`slot ${selected + 1}`} onPlace={(mon) => placeMon(selected, mon)} />
+            <PcStrip rs={rs} mons={benched} gameName={pcGame.name} slotLabel={`slot ${selected + 1}`} planned={!isCurrent} onPlace={(mon) => placeMon(selected, mon)} />
           )}
 
           <SetEditor
@@ -202,9 +224,18 @@ export function TeamPage() {
             learnset={learnsets.loading ? undefined : learnsets.data?.[selected]}
             issues={issuesFor(selected)}
             onChange={(set) => saveSlot(selected, set)}
-            onRemove={() => place(selected, null, `${pcGame ? 'Sent' : 'Removed'} ${slots[selected]?.species}${pcGame ? ' to the PC' : ''}.`)}
-            removeLabel={pcGame ? 'Send to PC' : undefined}
-            pc={pcGame && { mons: benched, onPick: (mon) => placeMon(selected, mon), onNew: (name) => catchNew(selected, name) }}
+            onRemove={() => place(selected, null, inPc ? `Sent ${slots[selected]?.species} to the PC.` : `Removed ${slots[selected]?.species}.`)}
+            removeLabel={inPc ? 'Send to PC' : undefined}
+            pc={
+              pcGame && {
+                mons: benched,
+                onPick: (mon) => placeMon(selected, mon),
+                onNew: (name) => pickNew(selected, name),
+                hint: isCurrent
+                  ? undefined
+                  : 'A planned team: picking another Pokémon replaces this plan. PC mons stay in the PC.',
+              }
+            }
           />
 
           <CoveragePanel

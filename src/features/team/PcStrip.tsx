@@ -5,14 +5,30 @@ import type { Ruleset } from '../../rulesets/types';
 import type { StoredMon } from '../../state/box';
 
 /** The playthrough's PC, minus whoever is on the team: tap one to put it in the selected slot */
-export function PcStrip({ rs, mons, gameName, slotLabel, onPlace }: { rs: Ruleset; mons: StoredMon[]; gameName: string; slotLabel: string; onPlace: (mon: StoredMon) => void }) {
+export function PcStrip({
+  rs,
+  mons,
+  gameName,
+  slotLabel,
+  planned,
+  onPlace,
+}: {
+  rs: Ruleset;
+  mons: StoredMon[];
+  gameName: string;
+  slotLabel: string;
+  /** A planned team: its own picks don't go into the PC */
+  planned?: boolean;
+  onPlace: (mon: StoredMon) => void;
+}) {
   return (
     <section className={`${card} p-3`}>
       <div className="mb-2 flex flex-wrap items-baseline gap-x-2">
         <h2 className="font-semibold">PC</h2>
         <span className="text-xs text-slate-500">
           {gameName} · {mons.length} not on this team.{' '}
-          {mons.length ? `Tap one to put it in ${slotLabel}; whoever was there goes back to the PC.` : 'Mons you swap out land here, sets intact.'}
+          {mons.length ? `Tap one to put it in ${slotLabel}; whoever was there goes back to the PC.` : 'Mons you swap out of your current team land here, sets intact.'}
+          {planned && ' This is a planned team: make it current once you have its members, and they join the PC.'}
         </span>
         <Link to="/pc" className="ml-auto text-xs font-medium text-blue-700 hover:underline dark:text-blue-400">
           Open PC

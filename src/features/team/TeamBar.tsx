@@ -9,7 +9,13 @@ const button =
 
 type Panel = 'none' | 'import' | 'export' | 'rename' | 'delete';
 
-export function TeamBar({ rs, teams, active }: { rs: Ruleset; teams: Team[]; active?: Team }) {
+/** Playthrough mode: which team is the one being run, as opposed to planned */
+export interface CurrentTeam {
+  id?: string;
+  make: (teamId: string) => void;
+}
+
+export function TeamBar({ rs, teams, active, current }: { rs: Ruleset; teams: Team[]; active?: Team; current?: CurrentTeam }) {
   const { createTeam, renameTeam, deleteTeam, setActive, setSlots } = useTeamsStore();
   const [panel, setPanel] = useState<Panel>('none');
   const [text, setText] = useState('');
@@ -44,6 +50,7 @@ export function TeamBar({ rs, teams, active }: { rs: Ruleset; teams: Team[]; act
             {teams.map((t) => (
               <option key={t.id} value={t.id}>
                 {t.name}
+                {current?.id === t.id ? ' (current)' : ''}
               </option>
             ))}
           </select>
@@ -54,6 +61,21 @@ export function TeamBar({ rs, teams, active }: { rs: Ruleset; teams: Team[]; act
         <button className={button} onClick={() => open('import')}>
           Import
         </button>
+        {active && current && (
+          current.id === active.id ? (
+            <button
+              className={`${button} border-green-500 text-green-700 disabled:opacity-100 dark:border-green-700 dark:text-green-400`}
+              disabled
+              title="The team you're running in this playthrough"
+            >
+              ✓ Current
+            </button>
+          ) : (
+            <button className={button} onClick={() => current.make(active.id)} title="Make this the team you're running; the rest stay planned">
+              Make current
+            </button>
+          )
+        )}
         {active && (
           <>
             <button className={button} onClick={() => open('export')}>

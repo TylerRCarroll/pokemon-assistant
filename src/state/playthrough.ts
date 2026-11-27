@@ -9,12 +9,15 @@ export interface PlaythroughPrefs {
   mode: PlayMode;
   game: string;
   checkpoint: number;
+  /** Per game: the team you're actually running; every other team is a plan */
+  currentTeams?: Record<string, string>;
 }
 
 interface PlaythroughState {
   /** Per ruleset: Smogon-style advice, or advice limited to what a playthrough has reached */
   byRuleset: Record<string, PlaythroughPrefs>;
-  set: (rulesetId: string, patch: Partial<PlaythroughPrefs>) => void;
+  /** Change some settings; unsaved ones start from the ruleset's defaults (a romhack starts in playthrough mode) */
+  set: (rs: Ruleset, patch: Partial<PlaythroughPrefs>) => void;
 }
 
 /** Romhacks default to playthrough mode; official gens to competitive (Smogon) */
@@ -28,9 +31,12 @@ export const usePlaythroughStore = create<PlaythroughState>()(
   persist(
     (set) => ({
       byRuleset: {},
-      set: (rulesetId, patch) =>
+      set: (rs, patch) =>
         set((s) => ({
-          byRuleset: { ...s.byRuleset, [rulesetId]: { ...(s.byRuleset[rulesetId] ?? { mode: 'competitive', game: '', checkpoint: 0 }), ...patch } },
+          byRuleset: {
+            ...s.byRuleset,
+            [rs.id]: { ...(defaultPrefs(rs) ?? { mode: 'competitive', game: '', checkpoint: 0 }), ...s.byRuleset[rs.id], ...patch },
+          },
         })),
     }),
     { name: 'pokeplanner:playthrough' },
