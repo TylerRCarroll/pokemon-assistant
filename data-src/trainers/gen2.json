@@ -1,0 +1,2490 @@
+[
+ {
+  "id": 22,
+  "name": "???",
+  "location": "Cherrygrove City",
+  "split": "Gym 1: Falkner",
+  "levelCap": 9,
+  "notes": [
+   "First battle",
+   "If you chose Chikorita"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Cyndaquil",
+    "level": 5,
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Leer"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 23,
+  "name": "???",
+  "location": "Cherrygrove City",
+  "split": "Gym 1: Falkner",
+  "levelCap": 9,
+  "notes": [
+   "First battle",
+   "If you chose Cyndaquil"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Totodile",
+    "level": 5,
+    "ivs": 31,
+    "moves": [
+     "Scratch",
+     "Leer"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 24,
+  "name": "???",
+  "location": "Cherrygrove City",
+  "split": "Gym 1: Falkner",
+  "levelCap": 9,
+  "notes": [
+   "First battle",
+   "If you chose Totodile"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Chikorita",
+    "level": 5,
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Growl"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 11,
+  "name": "Leader Falkner",
+  "location": "Violet Gym",
+  "split": "Gym 1: Falkner",
+  "levelCap": 9,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pidgey",
+    "level": 7,
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Mud-Slap"
+    ]
+   },
+   {
+    "species": "Pidgeotto",
+    "level": 9,
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Mud-Slap",
+     "Gust"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 12,
+  "name": "Leader Bugsy",
+  "location": "Azalea Gym",
+  "split": "Gym 2: Bugsy",
+  "levelCap": 16,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Metapod",
+    "level": 14,
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "String Shot",
+     "Harden"
+    ]
+   },
+   {
+    "species": "Kakuna",
+    "level": 14,
+    "ivs": 31,
+    "moves": [
+     "Poison Sting",
+     "String Shot",
+     "Harden"
+    ]
+   },
+   {
+    "species": "Scyther",
+    "level": 16,
+    "ivs": 31,
+    "moves": [
+     "Fury Cutter",
+     "Quick Attack",
+     "Leer"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 25,
+  "name": "Silver",
+  "location": "Azalea Town",
+  "split": "Gym 2: Bugsy",
+  "levelCap": 16,
+  "notes": [
+   "Second battle",
+   "If you chose Chikorita"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Gastly",
+    "level": 12,
+    "ivs": 31,
+    "moves": [
+     "Hypnosis",
+     "Lick",
+     "Spite"
+    ]
+   },
+   {
+    "species": "Zubat",
+    "level": 14,
+    "ivs": 31,
+    "moves": [
+     "Leech Life",
+     "Supersonic",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Quilava",
+    "level": 16,
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Leer",
+     "Smokescreen",
+     "Ember"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 26,
+  "name": "Silver",
+  "location": "Azalea Town",
+  "split": "Gym 2: Bugsy",
+  "levelCap": 16,
+  "notes": [
+   "Second battle",
+   "If you chose Cyndaquil"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Gastly",
+    "level": 12,
+    "ivs": 31,
+    "moves": [
+     "Hypnosis",
+     "Lick",
+     "Spite"
+    ]
+   },
+   {
+    "species": "Zubat",
+    "level": 14,
+    "ivs": 31,
+    "moves": [
+     "Leech Life",
+     "Supersonic",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Croconaw",
+    "level": 16,
+    "ivs": 31,
+    "moves": [
+     "Scratch",
+     "Leer",
+     "Rage",
+     "Water Gun"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 27,
+  "name": "Silver",
+  "location": "Azalea Town",
+  "split": "Gym 2: Bugsy",
+  "levelCap": 16,
+  "notes": [
+   "Second battle",
+   "If you chose Totodile"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Gastly",
+    "level": 12,
+    "ivs": 31,
+    "moves": [
+     "Hypnosis",
+     "Lick",
+     "Spite"
+    ]
+   },
+   {
+    "species": "Zubat",
+    "level": 14,
+    "ivs": 31,
+    "moves": [
+     "Leech Life",
+     "Supersonic",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Bayleef",
+    "level": 16,
+    "ivs": 31,
+    "moves": [
+     "Growl",
+     "Razor Leaf",
+     "Reflect",
+     "Poison Powder"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 13,
+  "name": "Leader Whitney",
+  "location": "Goldenrod Gym",
+  "split": "Gym 3: Whitney",
+  "levelCap": 20,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Clefairy",
+    "level": 18,
+    "ivs": 31,
+    "moves": [
+     "Encore",
+     "Double Slap",
+     "Mimic",
+     "Metronome"
+    ]
+   },
+   {
+    "species": "Miltank",
+    "level": 20,
+    "ivs": 31,
+    "moves": [
+     "Stomp",
+     "Attract",
+     "Milk Drink",
+     "Rollout"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 28,
+  "name": "Silver",
+  "location": "Burned Tower",
+  "split": "Gym 4: Morty",
+  "levelCap": 25,
+  "notes": [
+   "Third battle",
+   "If you chose Chikorita"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Haunter",
+    "level": 20,
+    "ivs": 31,
+    "moves": [
+     "Lick",
+     "Spite",
+     "Mean Look",
+     "Curse"
+    ]
+   },
+   {
+    "species": "Zubat",
+    "level": 20,
+    "ivs": 31,
+    "moves": [
+     "Leech Life",
+     "Supersonic",
+     "Bite",
+     "Confuse Ray"
+    ]
+   },
+   {
+    "species": "Magnemite",
+    "level": 18,
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Thunder Shock",
+     "Supersonic",
+     "Sonic Boom"
+    ]
+   },
+   {
+    "species": "Quilava",
+    "level": 22,
+    "ivs": 31,
+    "moves": [
+     "Ember",
+     "Leer",
+     "Quick Attack",
+     "Smokescreen"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 29,
+  "name": "Silver",
+  "location": "Burned Tower",
+  "split": "Gym 4: Morty",
+  "levelCap": 25,
+  "notes": [
+   "Third battle",
+   "If you chose Cyndaquil"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Haunter",
+    "level": 20,
+    "ivs": 31,
+    "moves": [
+     "Lick",
+     "Spite",
+     "Mean Look",
+     "Curse"
+    ]
+   },
+   {
+    "species": "Zubat",
+    "level": 20,
+    "ivs": 31,
+    "moves": [
+     "Leech Life",
+     "Supersonic",
+     "Bite",
+     "Confuse Ray"
+    ]
+   },
+   {
+    "species": "Magnemite",
+    "level": 18,
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Thunder Shock",
+     "Supersonic",
+     "Sonic Boom"
+    ]
+   },
+   {
+    "species": "Croconaw",
+    "level": 22,
+    "ivs": 31,
+    "moves": [
+     "Water Gun",
+     "Leer",
+     "Bite",
+     "Rage"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 30,
+  "name": "Silver",
+  "location": "Burned Tower",
+  "split": "Gym 4: Morty",
+  "levelCap": 25,
+  "notes": [
+   "Third battle",
+   "If you chose Totodile"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Haunter",
+    "level": 20,
+    "ivs": 31,
+    "moves": [
+     "Lick",
+     "Spite",
+     "Mean Look",
+     "Curse"
+    ]
+   },
+   {
+    "species": "Zubat",
+    "level": 20,
+    "ivs": 31,
+    "moves": [
+     "Leech Life",
+     "Supersonic",
+     "Bite",
+     "Confuse Ray"
+    ]
+   },
+   {
+    "species": "Magnemite",
+    "level": 18,
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Thunder Shock",
+     "Supersonic",
+     "Sonic Boom"
+    ]
+   },
+   {
+    "species": "Bayleef",
+    "level": 22,
+    "ivs": 31,
+    "moves": [
+     "Razor Leaf",
+     "Growl",
+     "Poison Powder",
+     "Reflect"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 14,
+  "name": "Leader Morty",
+  "location": "Ecruteak Gym",
+  "split": "Gym 4: Morty",
+  "levelCap": 25,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Gastly",
+    "level": 21,
+    "ivs": 31,
+    "moves": [
+     "Lick",
+     "Spite",
+     "Mean Look",
+     "Curse"
+    ]
+   },
+   {
+    "species": "Haunter",
+    "level": 21,
+    "ivs": 31,
+    "moves": [
+     "Hypnosis",
+     "Curse",
+     "Mimic",
+     "Night Shade"
+    ]
+   },
+   {
+    "species": "Gengar",
+    "level": 25,
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Mean Look",
+     "Hypnosis",
+     "Dream Eater"
+    ]
+   },
+   {
+    "species": "Haunter",
+    "level": 23,
+    "ivs": 31,
+    "moves": [
+     "Spite",
+     "Mean Look",
+     "Mimic",
+     "Night Shade"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 15,
+  "name": "Leader Chuck",
+  "location": "Cianwood Gym",
+  "split": "Gym 5: Chuck",
+  "levelCap": 30,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Primeape",
+    "level": 27,
+    "ivs": 31,
+    "moves": [
+     "Leer",
+     "Rage",
+     "Karate Chop",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Poliwrath",
+    "level": 30,
+    "ivs": 31,
+    "moves": [
+     "Hypnosis",
+     "Mind Reader",
+     "Surf",
+     "Dynamic Punch"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 17,
+  "name": "Leader Pryce",
+  "location": "Mahogany Gym",
+  "split": "Gym 7: Pryce",
+  "levelCap": 35,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Seel",
+    "level": 27,
+    "ivs": 31,
+    "moves": [
+     "Headbutt",
+     "Icy Wind",
+     "Aurora Beam",
+     "Rest"
+    ]
+   },
+   {
+    "species": "Dewgong",
+    "level": 29,
+    "ivs": 31,
+    "moves": [
+     "Headbutt",
+     "Icy Wind",
+     "Aurora Beam",
+     "Rest"
+    ]
+   },
+   {
+    "species": "Piloswine",
+    "level": 31,
+    "ivs": 31,
+    "moves": [
+     "Icy Wind",
+     "Fury Attack",
+     "Mist",
+     "Blizzard"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 31,
+  "name": "Silver",
+  "location": "Goldenrod Tunnel",
+  "split": "Gym 6: Jasmine",
+  "levelCap": 35,
+  "notes": [
+   "Fourth battle",
+   "If you chose Chikorita"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Golbat",
+    "level": 30,
+    "ivs": 31,
+    "moves": [
+     "Wing Attack",
+     "Confuse Ray",
+     "Bite",
+     "Leech Life"
+    ]
+   },
+   {
+    "species": "Magnemite",
+    "level": 28,
+    "ivs": 31,
+    "moves": [
+     "Sonic Boom",
+     "Thunder Wave",
+     "Tackle",
+     "Thunder Shock"
+    ]
+   },
+   {
+    "species": "Haunter",
+    "level": 30,
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Lick",
+     "Curse",
+     "Mean Look"
+    ]
+   },
+   {
+    "species": "Sneasel",
+    "level": 32,
+    "ivs": 31,
+    "moves": [
+     "Feint Attack",
+     "Leer",
+     "Quick Attack",
+     "Screech"
+    ]
+   },
+   {
+    "species": "Quilava",
+    "level": 32,
+    "ivs": 31,
+    "moves": [
+     "Ember",
+     "Smokescreen",
+     "Quick Attack",
+     "Flame Wheel"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 32,
+  "name": "Silver",
+  "location": "Goldenrod Tunnel",
+  "split": "Gym 6: Jasmine",
+  "levelCap": 35,
+  "notes": [
+   "Fourth battle",
+   "If you chose Cyndaquil"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Golbat",
+    "level": 30,
+    "ivs": 31,
+    "moves": [
+     "Wing Attack",
+     "Confuse Ray",
+     "Bite",
+     "Leech Life"
+    ]
+   },
+   {
+    "species": "Magnemite",
+    "level": 28,
+    "ivs": 31,
+    "moves": [
+     "Sonic Boom",
+     "Thunder Wave",
+     "Tackle",
+     "Thunder Shock"
+    ]
+   },
+   {
+    "species": "Haunter",
+    "level": 30,
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Lick",
+     "Curse",
+     "Mean Look"
+    ]
+   },
+   {
+    "species": "Sneasel",
+    "level": 32,
+    "ivs": 31,
+    "moves": [
+     "Feint Attack",
+     "Leer",
+     "Quick Attack",
+     "Screech"
+    ]
+   },
+   {
+    "species": "Feraligatr",
+    "level": 32,
+    "ivs": 31,
+    "moves": [
+     "Bite",
+     "Scary Face",
+     "Rage",
+     "Water Gun"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 33,
+  "name": "Silver",
+  "location": "Goldenrod Tunnel",
+  "split": "Gym 6: Jasmine",
+  "levelCap": 35,
+  "notes": [
+   "Fourth battle",
+   "If you chose Totodile"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Golbat",
+    "level": 30,
+    "ivs": 31,
+    "moves": [
+     "Wing Attack",
+     "Confuse Ray",
+     "Bite",
+     "Leech Life"
+    ]
+   },
+   {
+    "species": "Magnemite",
+    "level": 28,
+    "ivs": 31,
+    "moves": [
+     "Sonic Boom",
+     "Thunder Wave",
+     "Tackle",
+     "Thunder Shock"
+    ]
+   },
+   {
+    "species": "Haunter",
+    "level": 30,
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Lick",
+     "Curse",
+     "Mean Look"
+    ]
+   },
+   {
+    "species": "Sneasel",
+    "level": 32,
+    "ivs": 31,
+    "moves": [
+     "Feint Attack",
+     "Leer",
+     "Quick Attack",
+     "Screech"
+    ]
+   },
+   {
+    "species": "Meganium",
+    "level": 32,
+    "ivs": 31,
+    "moves": [
+     "Poison Powder",
+     "Razor Leaf",
+     "Body Slam",
+     "Reflect"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 16,
+  "name": "Leader Jasmine",
+  "location": "Olivine Gym",
+  "split": "Gym 6: Jasmine",
+  "levelCap": 35,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Magnemite",
+    "level": 30,
+    "ivs": 31,
+    "moves": [
+     "Thunderbolt",
+     "Supersonic",
+     "Sonic Boom",
+     "Thunder Wave"
+    ]
+   },
+   {
+    "species": "Magnemite",
+    "level": 30,
+    "ivs": 31,
+    "moves": [
+     "Thunderbolt",
+     "Supersonic",
+     "Sonic Boom",
+     "Thunder Wave"
+    ]
+   },
+   {
+    "species": "Steelix",
+    "level": 35,
+    "ivs": 31,
+    "moves": [
+     "Iron Tail",
+     "Rock Throw",
+     "Sunny Day",
+     "Screech"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 34,
+  "name": "Silver",
+  "location": "Victory Road (Kanto)",
+  "split": "Gym 8: Clair",
+  "levelCap": 40,
+  "notes": [
+   "Fifth battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Sneasel",
+    "level": 34,
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Screech",
+     "Feint Attack",
+     "Fury Cutter"
+    ]
+   },
+   {
+    "species": "Golbat",
+    "level": 36,
+    "ivs": 31,
+    "moves": [
+     "Wing Attack",
+     "Confuse Ray",
+     "Bite",
+     "Leech Life"
+    ]
+   },
+   {
+    "species": "Magneton",
+    "level": 35,
+    "ivs": 31,
+    "moves": [
+     "Sonic Boom",
+     "Thunder Wave",
+     "Swift",
+     "Thunder Shock"
+    ]
+   },
+   {
+    "species": "Haunter",
+    "level": 35,
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Curse",
+     "Mean Look",
+     "Confuse Ray"
+    ]
+   },
+   {
+    "species": "Kadabra",
+    "level": 35,
+    "ivs": 31,
+    "moves": [
+     "Recover",
+     "Future Sight",
+     "Disable",
+     "Psybeam"
+    ]
+   },
+   {
+    "species": "Typhlosion",
+    "level": 38,
+    "ivs": 31,
+    "moves": [
+     "Ember",
+     "Smokescreen",
+     "Quick Attack",
+     "Flame Wheel"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 35,
+  "name": "Silver",
+  "location": "Victory Road (Kanto)",
+  "split": "Gym 8: Clair",
+  "levelCap": 40,
+  "notes": [
+   "Fifth battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Sneasel",
+    "level": 34,
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Screech",
+     "Feint Attack",
+     "Fury Cutter"
+    ]
+   },
+   {
+    "species": "Golbat",
+    "level": 36,
+    "ivs": 31,
+    "moves": [
+     "Wing Attack",
+     "Confuse Ray",
+     "Bite",
+     "Leech Life"
+    ]
+   },
+   {
+    "species": "Magneton",
+    "level": 34,
+    "ivs": 31,
+    "moves": [
+     "Sonic Boom",
+     "Thunder Wave",
+     "Swift",
+     "Thunder Shock"
+    ]
+   },
+   {
+    "species": "Haunter",
+    "level": 35,
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Curse",
+     "Mean Look",
+     "Confuse Ray"
+    ]
+   },
+   {
+    "species": "Kadabra",
+    "level": 35,
+    "ivs": 31,
+    "moves": [
+     "Recover",
+     "Future Sight",
+     "Disable",
+     "Psybeam"
+    ]
+   },
+   {
+    "species": "Feraligatr",
+    "level": 38,
+    "ivs": 31,
+    "moves": [
+     "Slash",
+     "Scary Face",
+     "Rage",
+     "Water Gun"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 36,
+  "name": "Silver",
+  "location": "Victory Road (Kanto)",
+  "split": "Gym 8: Clair",
+  "levelCap": 40,
+  "notes": [
+   "Fifth battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Sneasel",
+    "level": 34,
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Screech",
+     "Feint Attack",
+     "Fury Cutter"
+    ]
+   },
+   {
+    "species": "Golbat",
+    "level": 36,
+    "ivs": 31,
+    "moves": [
+     "Wing Attack",
+     "Confuse Ray",
+     "Bite",
+     "Leech Life"
+    ]
+   },
+   {
+    "species": "Magneton",
+    "level": 35,
+    "ivs": 31,
+    "moves": [
+     "Sonic Boom",
+     "Thunder Wave",
+     "Swift",
+     "Thunder Shock"
+    ]
+   },
+   {
+    "species": "Haunter",
+    "level": 35,
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Curse",
+     "Mean Look",
+     "Confuse Ray"
+    ]
+   },
+   {
+    "species": "Kadabra",
+    "level": 35,
+    "ivs": 31,
+    "moves": [
+     "Recover",
+     "Future Sight",
+     "Disable",
+     "Psybeam"
+    ]
+   },
+   {
+    "species": "Meganium",
+    "level": 38,
+    "ivs": 31,
+    "moves": [
+     "Poison Powder",
+     "Razor Leaf",
+     "Body Slam",
+     "Reflect"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 18,
+  "name": "Leader Clair",
+  "location": "Blackthorn Gym",
+  "split": "Gym 8: Clair",
+  "levelCap": 40,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Dragonair",
+    "level": 37,
+    "ivs": 31,
+    "moves": [
+     "Surf",
+     "Slam",
+     "Thunder Wave",
+     "Dragon Breath"
+    ]
+   },
+   {
+    "species": "Dragonair",
+    "level": 37,
+    "ivs": 31,
+    "moves": [
+     "Thunderbolt",
+     "Slam",
+     "Thunder Wave",
+     "Dragon Breath"
+    ]
+   },
+   {
+    "species": "Dragonair",
+    "level": 37,
+    "ivs": 31,
+    "moves": [
+     "Ice Beam",
+     "Slam",
+     "Thunder Wave",
+     "Dragon Breath"
+    ]
+   },
+   {
+    "species": "Kingdra",
+    "level": 40,
+    "ivs": 31,
+    "moves": [
+     "Surf",
+     "Dragon Breath",
+     "Smokescreen",
+     "Hyper Beam"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 19,
+  "name": "Elite Four Will",
+  "location": "Indigo Plateau",
+  "split": "Elite Four & Lance",
+  "levelCap": 50,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Xatu",
+    "level": 40,
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Future Sight",
+     "Psychic",
+     "Confuse Ray"
+    ]
+   },
+   {
+    "species": "Exeggutor",
+    "level": 41,
+    "ivs": 31,
+    "moves": [
+     "Reflect",
+     "Egg Bomb",
+     "Psychic",
+     "Leech Seed"
+    ]
+   },
+   {
+    "species": "Slowbro",
+    "level": 41,
+    "ivs": 31,
+    "moves": [
+     "Curse",
+     "Amnesia",
+     "Body Slam",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Jynx",
+    "level": 41,
+    "ivs": 31,
+    "moves": [
+     "Ice Punch",
+     "Double Slap",
+     "Psychic",
+     "Lovely Kiss"
+    ]
+   },
+   {
+    "species": "Xatu",
+    "level": 42,
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Future Sight",
+     "Psychic",
+     "Confuse Ray"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 20,
+  "name": "Elite Four Koga",
+  "location": "Indigo Plateau",
+  "split": "Elite Four & Lance",
+  "levelCap": 50,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Ariados",
+    "level": 40,
+    "ivs": 31,
+    "moves": [
+     "Spider Web",
+     "Double Team",
+     "Baton Pass",
+     "Giga Drain"
+    ]
+   },
+   {
+    "species": "Venomoth",
+    "level": 41,
+    "ivs": 31,
+    "moves": [
+     "Psychic",
+     "Gust",
+     "Supersonic",
+     "Toxic"
+    ]
+   },
+   {
+    "species": "Forretress",
+    "level": 43,
+    "ivs": 31,
+    "moves": [
+     "Protect",
+     "Spikes",
+     "Swift",
+     "Explosion"
+    ]
+   },
+   {
+    "species": "Muk",
+    "level": 42,
+    "ivs": 31,
+    "moves": [
+     "Sludge Bomb",
+     "Acid Armor",
+     "Minimize",
+     "Toxic"
+    ]
+   },
+   {
+    "species": "Crobat",
+    "level": 44,
+    "ivs": 31,
+    "moves": [
+     "Double Team",
+     "Wing Attack",
+     "Quick Attack",
+     "Toxic"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 37,
+  "name": "Silver",
+  "location": "Mt. Moon",
+  "split": "Elite Four & Lance",
+  "levelCap": 50,
+  "notes": [
+   "Sixth battle",
+   "If you chose Chikorita"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Sneasel",
+    "level": 41,
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Screech",
+     "Feint Attack",
+     "Fury Cutter"
+    ]
+   },
+   {
+    "species": "Golbat",
+    "level": 42,
+    "ivs": 31,
+    "moves": [
+     "Wing Attack",
+     "Confuse Ray",
+     "Bite",
+     "Leech Life"
+    ]
+   },
+   {
+    "species": "Magneton",
+    "level": 41,
+    "ivs": 31,
+    "moves": [
+     "Sonic Boom",
+     "Thunder Wave",
+     "Thunder Shock",
+     "Swift"
+    ]
+   },
+   {
+    "species": "Gengar",
+    "level": 43,
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Curse",
+     "Mean Look",
+     "Confuse Ray"
+    ]
+   },
+   {
+    "species": "Alakazam",
+    "level": 43,
+    "ivs": 31,
+    "moves": [
+     "Recover",
+     "Future Sight",
+     "Disable",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Typhlosion",
+    "level": 45,
+    "ivs": 31,
+    "moves": [
+     "Swift",
+     "Smokescreen",
+     "Quick Attack",
+     "Flame Wheel"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 38,
+  "name": "Silver",
+  "location": "Mt. Moon",
+  "split": "Elite Four & Lance",
+  "levelCap": 50,
+  "notes": [
+   "Sixth battle",
+   "If you chose Cyndaquil"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Sneasel",
+    "level": 41,
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Screech",
+     "Feint Attack",
+     "Fury Cutter"
+    ]
+   },
+   {
+    "species": "Golbat",
+    "level": 42,
+    "ivs": 31,
+    "moves": [
+     "Wing Attack",
+     "Confuse Ray",
+     "Bite",
+     "Leech Life"
+    ]
+   },
+   {
+    "species": "Magneton",
+    "level": 41,
+    "ivs": 31,
+    "moves": [
+     "Sonic Boom",
+     "Thunder Wave",
+     "Thunder Shock",
+     "Swift"
+    ]
+   },
+   {
+    "species": "Gengar",
+    "level": 43,
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Curse",
+     "Mean Look",
+     "Confuse Ray"
+    ]
+   },
+   {
+    "species": "Alakazam",
+    "level": 43,
+    "ivs": 31,
+    "moves": [
+     "Recover",
+     "Future Sight",
+     "Disable",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Feraligatr",
+    "level": 45,
+    "ivs": 31,
+    "moves": [
+     "Water Gun",
+     "Bite",
+     "Scary Face",
+     "Slash"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 39,
+  "name": "Silver",
+  "location": "Mt. Moon",
+  "split": "Elite Four & Lance",
+  "levelCap": 50,
+  "notes": [
+   "Sixth battle",
+   "If you chose Totodile"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Sneasel",
+    "level": 41,
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Screech",
+     "Feint Attack",
+     "Fury Cutter"
+    ]
+   },
+   {
+    "species": "Golbat",
+    "level": 42,
+    "ivs": 31,
+    "moves": [
+     "Wing Attack",
+     "Confuse Ray",
+     "Bite",
+     "Leech Life"
+    ]
+   },
+   {
+    "species": "Magneton",
+    "level": 41,
+    "ivs": 31,
+    "moves": [
+     "Sonic Boom",
+     "Thunder Wave",
+     "Thunder Shock",
+     "Swift"
+    ]
+   },
+   {
+    "species": "Gengar",
+    "level": 43,
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Curse",
+     "Mean Look",
+     "Confuse Ray"
+    ]
+   },
+   {
+    "species": "Alakazam",
+    "level": 43,
+    "ivs": 31,
+    "moves": [
+     "Recover",
+     "Future Sight",
+     "Disable",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Meganium",
+    "level": 45,
+    "ivs": 31,
+    "moves": [
+     "Poison Powder",
+     "Razor Leaf",
+     "Body Slam",
+     "Light Screen"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 9,
+  "name": "Elite Four Bruno",
+  "location": "Indigo Plateau",
+  "split": "Elite Four & Lance",
+  "levelCap": 50,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Hitmontop",
+    "level": 42,
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Dig",
+     "Detect",
+     "Pursuit"
+    ]
+   },
+   {
+    "species": "Hitmonlee",
+    "level": 42,
+    "ivs": 31,
+    "moves": [
+     "Double Kick",
+     "Foresight",
+     "High Jump Kick",
+     "Swagger"
+    ]
+   },
+   {
+    "species": "Hitmonchan",
+    "level": 42,
+    "ivs": 31,
+    "moves": [
+     "Ice Punch",
+     "Fire Punch",
+     "Thunder Punch",
+     "Mach Punch"
+    ]
+   },
+   {
+    "species": "Onix",
+    "level": 43,
+    "ivs": 31,
+    "moves": [
+     "Rock Slide",
+     "Sandstorm",
+     "Earthquake",
+     "Bind"
+    ]
+   },
+   {
+    "species": "Machamp",
+    "level": 46,
+    "ivs": 31,
+    "moves": [
+     "Rock Slide",
+     "Foresight",
+     "Cross Chop",
+     "Vital Throw"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 21,
+  "name": "Elite Four Karen",
+  "location": "Indigo Plateau",
+  "split": "Elite Four & Lance",
+  "levelCap": 50,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Umbreon",
+    "level": 42,
+    "ivs": 31,
+    "moves": [
+     "Feint Attack",
+     "Confuse Ray",
+     "Mean Look",
+     "Sand Attack"
+    ]
+   },
+   {
+    "species": "Vileplume",
+    "level": 42,
+    "ivs": 31,
+    "moves": [
+     "Stun Spore",
+     "Acid",
+     "Petal Dance",
+     "Moonlight"
+    ]
+   },
+   {
+    "species": "Gengar",
+    "level": 45,
+    "ivs": 31,
+    "moves": [
+     "Lick",
+     "Spite",
+     "Curse",
+     "Destiny Bond"
+    ]
+   },
+   {
+    "species": "Murkrow",
+    "level": 44,
+    "ivs": 31,
+    "moves": [
+     "Feint Attack",
+     "Whirlwind",
+     "Pursuit",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Houndoom",
+    "level": 47,
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Flamethrower",
+     "Roar",
+     "Pursuit"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 10,
+  "name": "Champion Lance",
+  "location": "Indigo Plateau",
+  "split": "Elite Four & Lance",
+  "levelCap": 50,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Gyarados",
+    "level": 44,
+    "ivs": 31,
+    "moves": [
+     "Rain Dance",
+     "Surf",
+     "Flail",
+     "Hyper Beam"
+    ]
+   },
+   {
+    "species": "Dragonite",
+    "level": 47,
+    "ivs": 31,
+    "moves": [
+     "Twister",
+     "Thunder Wave",
+     "Blizzard",
+     "Hyper Beam"
+    ]
+   },
+   {
+    "species": "Charizard",
+    "level": 46,
+    "ivs": 31,
+    "moves": [
+     "Flamethrower",
+     "Wing Attack",
+     "Slash",
+     "Hyper Beam"
+    ]
+   },
+   {
+    "species": "Aerodactyl",
+    "level": 46,
+    "ivs": 31,
+    "moves": [
+     "Rock Slide",
+     "Ancient Power",
+     "Wing Attack",
+     "Hyper Beam"
+    ]
+   },
+   {
+    "species": "Dragonite",
+    "level": 47,
+    "ivs": 31,
+    "moves": [
+     "Twister",
+     "Thunder Wave",
+     "Thunder",
+     "Hyper Beam"
+    ]
+   },
+   {
+    "species": "Dragonite",
+    "level": 50,
+    "ivs": 31,
+    "moves": [
+     "Safeguard",
+     "Outrage",
+     "Fire Blast",
+     "Hyper Beam"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 5,
+  "name": "Leader Janine",
+  "location": "Fuchsia Gym",
+  "split": "Kanto Gyms",
+  "levelCap": 58,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Crobat",
+    "level": 36,
+    "ivs": 31,
+    "moves": [
+     "Wing Attack",
+     "Confuse Ray",
+     "Supersonic",
+     "Screech"
+    ]
+   },
+   {
+    "species": "Weezing",
+    "level": 36,
+    "ivs": 31,
+    "moves": [
+     "Sludge Bomb",
+     "Smog",
+     "Toxic",
+     "Explosion"
+    ]
+   },
+   {
+    "species": "Weezing",
+    "level": 36,
+    "ivs": 31,
+    "moves": [
+     "Sludge Bomb",
+     "Smog",
+     "Toxic",
+     "Explosion"
+    ]
+   },
+   {
+    "species": "Ariados",
+    "level": 33,
+    "ivs": 31,
+    "moves": [
+     "String Shot",
+     "Night Shade",
+     "Giga Drain",
+     "Scary Face"
+    ]
+   },
+   {
+    "species": "Venomoth",
+    "level": 39,
+    "ivs": 31,
+    "moves": [
+     "Toxic",
+     "Psychic",
+     "Double Team",
+     "Supersonic"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 1,
+  "name": "Leader Brock",
+  "location": "Pewter Gym",
+  "split": "Kanto Gyms",
+  "levelCap": 58,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Graveler",
+    "level": 41,
+    "ivs": 31,
+    "moves": [
+     "Defense Curl",
+     "Rock Slide",
+     "Rollout",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Rhyhorn",
+    "level": 41,
+    "ivs": 31,
+    "moves": [
+     "Fury Attack",
+     "Scary Face",
+     "Earthquake",
+     "Horn Drill"
+    ]
+   },
+   {
+    "species": "Omastar",
+    "level": 42,
+    "ivs": 31,
+    "moves": [
+     "Bite",
+     "Surf",
+     "Protect",
+     "Spike Cannon"
+    ]
+   },
+   {
+    "species": "Onix",
+    "level": 44,
+    "ivs": 31,
+    "moves": [
+     "Bind",
+     "Rock Slide",
+     "Bide",
+     "Sandstorm"
+    ]
+   },
+   {
+    "species": "Kabutops",
+    "level": 42,
+    "ivs": 31,
+    "moves": [
+     "Slash",
+     "Surf",
+     "Endure",
+     "Giga Drain"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 3,
+  "name": "Leader Lt. Surge",
+  "location": "Vermilion Gym",
+  "split": "Kanto Gyms",
+  "levelCap": 58,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Raichu",
+    "level": 44,
+    "ivs": 31,
+    "moves": [
+     "Thunderbolt",
+     "Thunder",
+     "Thunder Wave",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Magneton",
+    "level": 40,
+    "ivs": 31,
+    "moves": [
+     "Zap Cannon",
+     "Lock-On",
+     "Double Team",
+     "Swift"
+    ]
+   },
+   {
+    "species": "Electrode",
+    "level": 40,
+    "ivs": 31,
+    "moves": [
+     "Screech",
+     "Double Team",
+     "Swift",
+     "Explosion"
+    ]
+   },
+   {
+    "species": "Electrode",
+    "level": 40,
+    "ivs": 31,
+    "moves": [
+     "Screech",
+     "Double Team",
+     "Swift",
+     "Explosion"
+    ]
+   },
+   {
+    "species": "Electabuzz",
+    "level": 46,
+    "ivs": 31,
+    "moves": [
+     "Thunder Punch",
+     "Thunder",
+     "Light Screen",
+     "Quick Attack"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 4,
+  "name": "Leader Erika",
+  "location": "Celadon Gym",
+  "split": "Kanto Gyms",
+  "levelCap": 58,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Tangela",
+    "level": 42,
+    "ivs": 31,
+    "moves": [
+     "Vine Whip",
+     "Bind",
+     "Giga Drain",
+     "Sleep Powder"
+    ]
+   },
+   {
+    "species": "Jumpluff",
+    "level": 41,
+    "ivs": 31,
+    "moves": [
+     "Mega Drain",
+     "Leech Seed",
+     "Cotton Spore",
+     "Giga Drain"
+    ]
+   },
+   {
+    "species": "Victreebel",
+    "level": 46,
+    "ivs": 31,
+    "moves": [
+     "Sunny Day",
+     "Synthesis",
+     "Acid",
+     "Razor Leaf"
+    ]
+   },
+   {
+    "species": "Bellossom",
+    "level": 46,
+    "ivs": 31,
+    "moves": [
+     "Sunny Day",
+     "Synthesis",
+     "Petal Dance",
+     "Solar Beam"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 2,
+  "name": "Leader Misty",
+  "location": "Cerulean Gym",
+  "split": "Kanto Gyms",
+  "levelCap": 58,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Golduck",
+    "level": 42,
+    "ivs": 31,
+    "moves": [
+     "Surf",
+     "Disable",
+     "Psych Up",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Quagsire",
+    "level": 42,
+    "ivs": 31,
+    "moves": [
+     "Surf",
+     "Amnesia",
+     "Earthquake",
+     "Rain Dance"
+    ]
+   },
+   {
+    "species": "Lapras",
+    "level": 44,
+    "ivs": 31,
+    "moves": [
+     "Surf",
+     "Perish Song",
+     "Blizzard",
+     "Rain Dance"
+    ]
+   },
+   {
+    "species": "Starmie",
+    "level": 47,
+    "ivs": 31,
+    "moves": [
+     "Surf",
+     "Confuse Ray",
+     "Recover",
+     "Ice Beam"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 6,
+  "name": "Leader Sabrina",
+  "location": "Saffron Gym",
+  "split": "Kanto Gyms",
+  "levelCap": 58,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Espeon",
+    "level": 46,
+    "ivs": 31,
+    "moves": [
+     "Sand Attack",
+     "Quick Attack",
+     "Swift",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Mr. Mime",
+    "level": 46,
+    "ivs": 31,
+    "moves": [
+     "Barrier",
+     "Reflect",
+     "Baton Pass",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Alakazam",
+    "level": 48,
+    "ivs": 31,
+    "moves": [
+     "Recover",
+     "Future Sight",
+     "Psychic",
+     "Reflect"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 7,
+  "name": "Leader Blaine",
+  "location": "Cinnabar Gym",
+  "split": "Kanto Gyms",
+  "levelCap": 58,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Magcargo",
+    "level": 45,
+    "ivs": 31,
+    "moves": [
+     "Curse",
+     "Smog",
+     "Flamethrower",
+     "Rock Slide"
+    ]
+   },
+   {
+    "species": "Magmar",
+    "level": 45,
+    "ivs": 31,
+    "moves": [
+     "Thunder Punch",
+     "Fire Punch",
+     "Sunny Day",
+     "Confuse Ray"
+    ]
+   },
+   {
+    "species": "Rapidash",
+    "level": 50,
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Fire Spin",
+     "Fury Attack",
+     "Fire Blast"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 8,
+  "name": "Leader Blue",
+  "location": "Viridian Gym",
+  "split": "Kanto Gyms",
+  "levelCap": 58,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pidgeot",
+    "level": 56,
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Whirlwind",
+     "Wing Attack",
+     "Mirror Move"
+    ]
+   },
+   {
+    "species": "Alakazam",
+    "level": 54,
+    "ivs": 31,
+    "moves": [
+     "Disable",
+     "Recover",
+     "Psychic",
+     "Reflect"
+    ]
+   },
+   {
+    "species": "Rhydon",
+    "level": 56,
+    "ivs": 31,
+    "moves": [
+     "Fury Attack",
+     "Sandstorm",
+     "Rock Slide",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Gyarados",
+    "level": 58,
+    "ivs": 31,
+    "moves": [
+     "Twister",
+     "Hydro Pump",
+     "Rain Dance",
+     "Hyper Beam"
+    ]
+   },
+   {
+    "species": "Exeggutor",
+    "level": 58,
+    "ivs": 31,
+    "moves": [
+     "Sunny Day",
+     "Leech Seed",
+     "Egg Bomb",
+     "Solar Beam"
+    ]
+   },
+   {
+    "species": "Arcanine",
+    "level": 58,
+    "ivs": 31,
+    "moves": [
+     "Roar",
+     "Swift",
+     "Flamethrower",
+     "Extreme Speed"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ },
+ {
+  "id": 40,
+  "name": "Trainer Red",
+  "location": "Mt. Silver Cave",
+  "split": "Red",
+  "levelCap": 81,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pikachu",
+    "level": 81,
+    "ivs": 31,
+    "moves": [
+     "Charm",
+     "Quick Attack",
+     "Thunderbolt",
+     "Thunder"
+    ]
+   },
+   {
+    "species": "Espeon",
+    "level": 73,
+    "ivs": 31,
+    "moves": [
+     "Mud-Slap",
+     "Swift",
+     "Reflect",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Snorlax",
+    "level": 75,
+    "ivs": 31,
+    "moves": [
+     "Amnesia",
+     "Snore",
+     "Rest",
+     "Body Slam"
+    ]
+   },
+   {
+    "species": "Venusaur",
+    "level": 77,
+    "ivs": 31,
+    "moves": [
+     "Sunny Day",
+     "Giga Drain",
+     "Synthesis",
+     "Solar Beam"
+    ]
+   },
+   {
+    "species": "Charizard",
+    "level": 77,
+    "ivs": 31,
+    "moves": [
+     "Flamethrower",
+     "Wing Attack",
+     "Slash",
+     "Fire Spin"
+    ]
+   },
+   {
+    "species": "Blastoise",
+    "level": 77,
+    "ivs": 31,
+    "moves": [
+     "Rain Dance",
+     "Blizzard",
+     "Surf",
+     "Whirlpool"
+    ]
+   }
+  ],
+  "games": [
+   "gold",
+   "silver",
+   "crystal"
+  ]
+ }
+]

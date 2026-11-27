@@ -1,0 +1,2015 @@
+[
+ {
+  "id": 1,
+  "name": "Leader Viola",
+  "location": "Santalune Gym",
+  "split": "Gym 1: Viola",
+  "levelCap": 12,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Surskit",
+    "level": 10,
+    "ability": "Swift Swim",
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Bubble",
+     "Water Sport"
+    ]
+   },
+   {
+    "species": "Vivillon",
+    "level": 12,
+    "ability": "Shield Dust",
+    "ivs": 31,
+    "moves": [
+     "Harden",
+     "Infestation",
+     "Tackle"
+    ]
+   }
+  ],
+  "games": [
+   "x",
+   "y"
+  ]
+ },
+ {
+  "id": 16,
+  "name": "Leader Roxanne",
+  "location": "Rustboro Gym",
+  "split": "Gym 1: Roxanne",
+  "levelCap": 14,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Geodude",
+    "level": 12,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Defense Curl",
+     "Rock Tomb"
+    ]
+   },
+   {
+    "species": "Nosepass",
+    "level": 14,
+    "ability": "Magnet Pull",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Harden",
+     "Rock Tomb"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby",
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 17,
+  "name": "Leader Brawly",
+  "location": "Dewford Gym",
+  "split": "Gym 2: Brawly",
+  "levelCap": 16,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Machop",
+    "level": 14,
+    "ability": "Guts",
+    "ivs": 31,
+    "moves": [
+     "Leer",
+     "Karate Chop",
+     "Seismic Toss",
+     "Bulk Up"
+    ]
+   },
+   {
+    "species": "Makuhita",
+    "level": 16,
+    "ability": "Guts",
+    "ivs": 31,
+    "moves": [
+     "Arm Thrust",
+     "Knock Off",
+     "Sand Attack",
+     "Bulk Up"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby",
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 30,
+  "name": "Pokémon Trainer Wally",
+  "location": "Mauville City",
+  "split": "Gym 3: Wattson",
+  "levelCap": 21,
+  "notes": [
+   "First battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Ralts",
+    "level": 17,
+    "ability": "Synchronize",
+    "ivs": 31,
+    "moves": [
+     "Teleport",
+     "Lucky Chant",
+     "Magical Leaf",
+     "Disarming Voice"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby",
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 18,
+  "name": "Leader Wattson",
+  "location": "Mauville Gym",
+  "split": "Gym 3: Wattson",
+  "levelCap": 21,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Magnemite",
+    "level": 19,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Thunder Wave",
+     "Tackle",
+     "Volt Switch"
+    ]
+   },
+   {
+    "species": "Voltorb",
+    "level": 19,
+    "ability": "Soundproof",
+    "ivs": 31,
+    "moves": [
+     "Rollout",
+     "Charge",
+     "Volt Switch"
+    ]
+   },
+   {
+    "species": "Magneton",
+    "level": 21,
+    "ability": "Magnet Pull",
+    "ivs": 31,
+    "moves": [
+     "Supersonic",
+     "Magnet Bomb",
+     "Volt Switch"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby",
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 2,
+  "name": "Leader Grant",
+  "location": "Cyllage Gym",
+  "split": "Gym 2: Grant",
+  "levelCap": 25,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Amaura",
+    "level": 25,
+    "ability": "Refrigerate",
+    "ivs": 31,
+    "moves": [
+     "Aurora Beam",
+     "Rock Tomb",
+     "Thunder Wave",
+     "Take Down"
+    ]
+   },
+   {
+    "species": "Tyrunt",
+    "level": 25,
+    "ability": "Strong Jaw",
+    "ivs": 31,
+    "moves": [
+     "Rock Tomb",
+     "Bite",
+     "Stomp"
+    ]
+   }
+  ],
+  "games": [
+   "x",
+   "y"
+  ]
+ },
+ {
+  "id": 32,
+  "name": "Magma Leader Maxie",
+  "location": "Mt. Chimney",
+  "split": "Gym 4: Flannery",
+  "levelCap": 28,
+  "notes": [
+   "First battle",
+   "Pokémon Omega Ruby"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Mightyena",
+    "level": 25,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Roar",
+     "Snarl",
+     "Swagger",
+     "Assurance"
+    ]
+   },
+   {
+    "species": "Golbat",
+    "level": 25,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Wing Attack",
+     "Confuse Ray",
+     "Air Cutter",
+     "Swift"
+    ]
+   },
+   {
+    "species": "Camerupt",
+    "level": 27,
+    "ability": "Solid Rock",
+    "ivs": 31,
+    "moves": [
+     "Flame Burst",
+     "Amnesia",
+     "Lava Plume",
+     "Earth Power"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby"
+  ]
+ },
+ {
+  "id": 34,
+  "name": "Aqua Leader Archie",
+  "location": "Mt. Chimney",
+  "split": "Gym 4: Flannery",
+  "levelCap": 28,
+  "notes": [
+   "First battle",
+   "Pokémon Alpha Sapphire"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Mightyena",
+    "level": 25,
+    "ability": "Quick Feet",
+    "ivs": 31,
+    "moves": [
+     "Roar",
+     "Snarl",
+     "Swagger",
+     "Assurance"
+    ]
+   },
+   {
+    "species": "Golbat",
+    "level": 25,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Wing Attack",
+     "Confuse Ray",
+     "Air Cutter",
+     "Swift"
+    ]
+   },
+   {
+    "species": "Sharpedo",
+    "level": 27,
+    "ability": "Rough Skin",
+    "ivs": 31,
+    "moves": [
+     "Assurance",
+     "Screech",
+     "Swagger",
+     "Ice Fang"
+    ]
+   }
+  ],
+  "games": [
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 19,
+  "name": "Leader Flannery",
+  "location": "Lavaridge Gym",
+  "split": "Gym 4: Flannery",
+  "levelCap": 28,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Slugma",
+    "level": 26,
+    "ability": "Flame Body",
+    "ivs": 31,
+    "moves": [
+     "Overheat",
+     "Rock Throw",
+     "Light Screen",
+     "Sunny Day"
+    ]
+   },
+   {
+    "species": "Numel",
+    "level": 26,
+    "ability": "Simple",
+    "ivs": 31,
+    "moves": [
+     "Earth Power",
+     "Lava Plume",
+     "Amnesia",
+     "Sunny Day"
+    ]
+   },
+   {
+    "species": "Torkoal",
+    "level": 28,
+    "ability": "White Smoke",
+    "ivs": 31,
+    "moves": [
+     "Overheat",
+     "Body Slam",
+     "Curse",
+     "Sunny Day"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby",
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 20,
+  "name": "Leader Norman",
+  "location": "Petalburg Gym",
+  "split": "Gym 5: Norman",
+  "levelCap": 30,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Slaking",
+    "level": 28,
+    "ability": "Truant",
+    "ivs": 31,
+    "moves": [
+     "Retaliate",
+     "Yawn",
+     "Feint Attack",
+     "Encore"
+    ]
+   },
+   {
+    "species": "Vigoroth",
+    "level": 28,
+    "ability": "Vital Spirit",
+    "ivs": 31,
+    "moves": [
+     "Encore",
+     "Feint Attack",
+     "Retaliate",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Slaking",
+    "level": 30,
+    "ability": "Truant",
+    "ivs": 31,
+    "moves": [
+     "Retaliate",
+     "Feint Attack",
+     "Swagger",
+     "Chip Away"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby",
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 3,
+  "name": "Leader Korrina",
+  "location": "Shalour Gym",
+  "split": "Gym 3: Korrina",
+  "levelCap": 32,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Mienfoo",
+    "level": 29,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Power-Up Punch",
+     "Fake Out",
+     "Double Slap"
+    ]
+   },
+   {
+    "species": "Machoke",
+    "level": 28,
+    "ability": "Guts",
+    "ivs": 31,
+    "moves": [
+     "Power-Up Punch",
+     "Rock Tomb",
+     "Leer"
+    ]
+   },
+   {
+    "species": "Hawlucha",
+    "level": 32,
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Flying Press",
+     "Hone Claws",
+     "Power-Up Punch"
+    ]
+   }
+  ],
+  "games": [
+   "x",
+   "y"
+  ]
+ },
+ {
+  "id": 4,
+  "name": "Leader Ramos",
+  "location": "Coumarine Gym",
+  "split": "Gym 4: Ramos",
+  "levelCap": 34,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Jumpluff",
+    "level": 30,
+    "ability": "Chlorophyll",
+    "ivs": 31,
+    "moves": [
+     "Grass Knot",
+     "Acrobatics",
+     "Leech Seed"
+    ]
+   },
+   {
+    "species": "Weepinbell",
+    "level": 31,
+    "ability": "Chlorophyll",
+    "ivs": 31,
+    "moves": [
+     "Grass Knot",
+     "Acid",
+     "Poison Powder",
+     "Gastro Acid"
+    ]
+   },
+   {
+    "species": "Gogoat",
+    "level": 34,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Grass Knot",
+     "Bulldoze",
+     "Take Down"
+    ]
+   }
+  ],
+  "games": [
+   "x",
+   "y"
+  ]
+ },
+ {
+  "id": 21,
+  "name": "Leader Winona",
+  "location": "Fortree Gym",
+  "split": "Gym 6: Winona",
+  "levelCap": 35,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Swellow",
+    "level": 33,
+    "ability": "Guts",
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Aerial Ace",
+     "Double Team",
+     "Endeavor"
+    ]
+   },
+   {
+    "species": "Pelipper",
+    "level": 33,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Water Pulse",
+     "Roost",
+     "Protect",
+     "Aerial Ace"
+    ]
+   },
+   {
+    "species": "Skarmory",
+    "level": 33,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Sand Attack",
+     "Air Cutter",
+     "Steel Wing",
+     "Aerial Ace"
+    ]
+   },
+   {
+    "species": "Altaria",
+    "level": 35,
+    "ability": "Natural Cure",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Dragon Breath",
+     "Cotton Guard",
+     "Roost"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby",
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 5,
+  "name": "Leader Clemont",
+  "location": "Lumiose Gym",
+  "split": "Gym 5: Clemont",
+  "levelCap": 37,
+  "notes": [
+   "6F"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Emolga",
+    "level": 35,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Volt Switch",
+     "Quick Attack",
+     "Aerial Ace"
+    ]
+   },
+   {
+    "species": "Magneton",
+    "level": 35,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Thunderbolt",
+     "Electric Terrain",
+     "Mirror Shot"
+    ]
+   },
+   {
+    "species": "Heliolisk",
+    "level": 37,
+    "ability": "Dry Skin",
+    "ivs": 31,
+    "moves": [
+     "Thunderbolt",
+     "Quick Attack",
+     "Grass Knot"
+    ]
+   }
+  ],
+  "games": [
+   "x",
+   "y"
+  ]
+ },
+ {
+  "id": 6,
+  "name": "Leader Valerie",
+  "location": "Laverre Gym",
+  "split": "Gym 6: Valerie",
+  "levelCap": 42,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Mawile",
+    "level": 38,
+    "ability": "Hyper Cutter",
+    "ivs": 31,
+    "moves": [
+     "Feint Attack",
+     "Crunch",
+     "Iron Defense"
+    ]
+   },
+   {
+    "species": "Mr. Mime",
+    "level": 39,
+    "ability": "Soundproof",
+    "ivs": 31,
+    "moves": [
+     "Light Screen",
+     "Reflect",
+     "Psychic",
+     "Dazzling Gleam"
+    ]
+   },
+   {
+    "species": "Sylveon",
+    "level": 42,
+    "ability": "Cute Charm",
+    "ivs": 31,
+    "moves": [
+     "Dazzling Gleam",
+     "Quick Attack",
+     "Swift",
+     "Charm"
+    ]
+   }
+  ],
+  "games": [
+   "x",
+   "y"
+  ]
+ },
+ {
+  "id": 33,
+  "name": "Magma Leader Maxie",
+  "location": "Seafloor Cavern",
+  "split": "Gym 7: Tate & Liza",
+  "levelCap": 45,
+  "notes": [
+   "Second battle",
+   "Pokémon Omega Ruby"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Mightyena",
+    "level": 41,
+    "ability": "Quick Feet",
+    "ivs": 31,
+    "moves": [
+     "Scary Face",
+     "Take Down",
+     "Taunt",
+     "Embargo"
+    ]
+   },
+   {
+    "species": "Weezing",
+    "level": 41,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Haze",
+     "Double Hit",
+     "Sludge Bomb",
+     "Explosion"
+    ]
+   },
+   {
+    "species": "Crobat",
+    "level": 41,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Poison Fang",
+     "Mean Look",
+     "Acrobatics",
+     "Haze"
+    ]
+   },
+   {
+    "species": "Camerupt",
+    "level": 43,
+    "item": "Cameruptite",
+    "ability": "Magma Armor",
+    "ivs": 31,
+    "moves": [
+     "Curse",
+     "Take Down",
+     "Rock Slide",
+     "Yawn"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby"
+  ]
+ },
+ {
+  "id": 35,
+  "name": "Aqua Leader Archie",
+  "location": "Seafloor Cavern",
+  "split": "Gym 7: Tate & Liza",
+  "levelCap": 45,
+  "notes": [
+   "Second battle",
+   "Pokémon Alpha Sapphire"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Mightyena",
+    "level": 41,
+    "ability": "Quick Feet",
+    "ivs": 31,
+    "moves": [
+     "Scary Face",
+     "Take Down",
+     "Taunt",
+     "Embargo"
+    ]
+   },
+   {
+    "species": "Muk",
+    "level": 41,
+    "ability": "Stench",
+    "ivs": 31,
+    "moves": [
+     "Sludge Wave",
+     "Screech",
+     "Venom Drench",
+     "Gunk Shot"
+    ]
+   },
+   {
+    "species": "Crobat",
+    "level": 41,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Poison Fang",
+     "Mean Look",
+     "Acrobatics",
+     "Haze"
+    ]
+   },
+   {
+    "species": "Sharpedo",
+    "level": 43,
+    "item": "Sharpedonite",
+    "ability": "Rough Skin",
+    "ivs": 31,
+    "moves": [
+     "Scary Face",
+     "Slash",
+     "Poison Fang",
+     "Crunch"
+    ]
+   }
+  ],
+  "games": [
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 22,
+  "name": "Leaders Liza & Tate",
+  "location": "Mossdeep Gym",
+  "split": "Gym 7: Tate & Liza",
+  "levelCap": 45,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lunatone",
+    "level": 45,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Light Screen",
+     "Psychic",
+     "Hypnosis",
+     "Calm Mind"
+    ]
+   },
+   {
+    "species": "Solrock",
+    "level": 45,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Sunny Day",
+     "Rock Slide",
+     "Psychic",
+     "Solar Beam"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby",
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 28,
+  "name": "Steven",
+  "location": "Hoenn",
+  "split": "Gym 7: Tate & Liza",
+  "levelCap": 45,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Metagross",
+    "level": 45,
+    "item": "Metagrossite",
+    "ability": "Clear Body",
+    "ivs": 31,
+    "moves": [
+     "Meteor Mash",
+     "Zen Headbutt",
+     "Bullet Punch",
+     "Giga Impact"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby",
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 23,
+  "name": "Leader Wallace",
+  "location": "Sootopolis Gym",
+  "split": "Gym 8: Wallace",
+  "levelCap": 46,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Luvdisc",
+    "level": 44,
+    "ability": "Swift Swim",
+    "ivs": 31,
+    "moves": [
+     "Draining Kiss",
+     "Attract",
+     "Sweet Kiss",
+     "Water Pulse"
+    ]
+   },
+   {
+    "species": "Whiscash",
+    "level": 44,
+    "ability": "Oblivious",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Zen Headbutt",
+     "Waterfall",
+     "Mud Sport"
+    ]
+   },
+   {
+    "species": "Sealeo",
+    "level": 44,
+    "ability": "Thick Fat",
+    "ivs": 31,
+    "moves": [
+     "Encore",
+     "Waterfall",
+     "Aurora Beam",
+     "Body Slam"
+    ]
+   },
+   {
+    "species": "Seaking",
+    "level": 44,
+    "ability": "Swift Swim",
+    "ivs": 31,
+    "moves": [
+     "Waterfall",
+     "Rain Dance",
+     "Aqua Ring",
+     "Horn Drill"
+    ]
+   },
+   {
+    "species": "Milotic",
+    "level": 46,
+    "ability": "Marvel Scale",
+    "ivs": 31,
+    "moves": [
+     "Hydro Pump",
+     "Recover",
+     "Ice Beam",
+     "Disarming Voice"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby",
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 7,
+  "name": "Leader Olympia",
+  "location": "Anistar Gym",
+  "split": "Gym 7: Olympia",
+  "levelCap": 48,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Sigilyph",
+    "level": 44,
+    "ability": "Magic Guard",
+    "ivs": 31,
+    "moves": [
+     "Psychic",
+     "Air Slash",
+     "Light Screen",
+     "Reflect"
+    ]
+   },
+   {
+    "species": "Slowking",
+    "level": 45,
+    "ability": "Oblivious",
+    "ivs": 31,
+    "moves": [
+     "Psychic",
+     "Calm Mind",
+     "Power Gem",
+     "Yawn"
+    ]
+   },
+   {
+    "species": "Meowstic-F",
+    "level": 48,
+    "ability": "Infiltrator",
+    "ivs": 31,
+    "moves": [
+     "Psychic",
+     "Calm Mind",
+     "Fake Out",
+     "Shadow Ball"
+    ]
+   }
+  ],
+  "games": [
+   "x",
+   "y"
+  ]
+ },
+ {
+  "id": 31,
+  "name": "Pokémon Trainer Wally",
+  "location": "Victory Road (Hoenn)",
+  "split": "Elite Four & Steven",
+  "levelCap": 59,
+  "notes": [
+   "Second battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Altaria",
+    "level": 46,
+    "ability": "Natural Cure",
+    "ivs": 31,
+    "moves": [
+     "Aerial Ace",
+     "Safeguard",
+     "Dragon Pulse",
+     "Cotton Guard"
+    ]
+   },
+   {
+    "species": "Delcatty",
+    "level": 46,
+    "ability": "Cute Charm",
+    "ivs": 31,
+    "moves": [
+     "Sing",
+     "Disarming Voice",
+     "Charm",
+     "Feint Attack"
+    ]
+   },
+   {
+    "species": "Roselia",
+    "level": 46,
+    "ability": "Poison Point",
+    "ivs": 31,
+    "moves": [
+     "Synthesis",
+     "Leech Seed",
+     "Petal Blizzard",
+     "Toxic"
+    ]
+   },
+   {
+    "species": "Magneton",
+    "level": 46,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Screech",
+     "Discharge",
+     "Tri Attack",
+     "Flash Cannon"
+    ]
+   },
+   {
+    "species": "Gallade",
+    "level": 48,
+    "item": "Galladite",
+    "ability": "Steadfast",
+    "ivs": 31,
+    "moves": [
+     "Psycho Cut",
+     "Close Combat",
+     "Slash",
+     "Swords Dance"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby",
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 14,
+  "name": "Team Flare Lysandre",
+  "location": "Lysandre Labs",
+  "split": "Gym 8: Wulfric",
+  "levelCap": 59,
+  "notes": [
+   "First battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Mienfoo",
+    "level": 45,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Swords Dance",
+     "High Jump Kick",
+     "Acrobatics"
+    ]
+   },
+   {
+    "species": "Murkrow",
+    "level": 45,
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Foul Play",
+     "Aerial Ace",
+     "Retaliate",
+     "Steel Wing"
+    ]
+   },
+   {
+    "species": "Pyroar",
+    "level": 47,
+    "ability": "Rivalry",
+    "ivs": 31,
+    "moves": [
+     "Hyper Voice",
+     "Fire Blast",
+     "Dark Pulse"
+    ]
+   },
+   {
+    "species": "Gyarados",
+    "level": 49,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Aqua Tail",
+     "Earthquake",
+     "Iron Head",
+     "Outrage"
+    ]
+   }
+  ],
+  "games": [
+   "x",
+   "y"
+  ]
+ },
+ {
+  "id": 15,
+  "name": "Team Flare Lysandre",
+  "location": "Team Flare Secret HQ",
+  "split": "Gym 8: Wulfric",
+  "levelCap": 59,
+  "notes": [
+   "Second battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Mienshao",
+    "level": 47,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Swords Dance",
+     "High Jump Kick",
+     "Acrobatics"
+    ]
+   },
+   {
+    "species": "Honchkrow",
+    "level": 47,
+    "ability": "Insomnia",
+    "ivs": 31,
+    "moves": [
+     "Night Slash",
+     "Aerial Ace",
+     "Retaliate",
+     "Steel Wing"
+    ]
+   },
+   {
+    "species": "Pyroar",
+    "level": 49,
+    "ability": "Unnerve",
+    "ivs": 31,
+    "moves": [
+     "Hyper Voice",
+     "Fire Blast",
+     "Dark Pulse"
+    ]
+   },
+   {
+    "species": "Gyarados",
+    "level": 51,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Aqua Tail",
+     "Earthquake",
+     "Iron Head",
+     "Outrage"
+    ]
+   }
+  ],
+  "games": [
+   "x",
+   "y"
+  ]
+ },
+ {
+  "id": 24,
+  "name": "Elite Four Sidney",
+  "location": "Pokémon League (Hoenn)",
+  "split": "Elite Four & Steven",
+  "levelCap": 59,
+  "notes": [
+   "Initial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Mightyena",
+    "level": 50,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Swagger",
+     "Take Down",
+     "Sucker Punch",
+     "Crunch"
+    ]
+   },
+   {
+    "species": "Shiftry",
+    "level": 50,
+    "ability": "Chlorophyll",
+    "ivs": 31,
+    "moves": [
+     "Fake Out",
+     "Feint Attack",
+     "Extrasensory",
+     "Leaf Blade"
+    ]
+   },
+   {
+    "species": "Cacturne",
+    "level": 50,
+    "ability": "Sand Veil",
+    "ivs": 31,
+    "moves": [
+     "Leech Seed",
+     "Payback",
+     "Needle Arm",
+     "Spiky Shield"
+    ]
+   },
+   {
+    "species": "Sharpedo",
+    "level": 50,
+    "ability": "Rough Skin",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Poison Fang",
+     "Aqua Jet",
+     "Slash"
+    ]
+   },
+   {
+    "species": "Absol",
+    "level": 52,
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Aerial Ace",
+     "Night Slash",
+     "Psycho Cut",
+     "Slash"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby",
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 25,
+  "name": "Elite Four Phoebe",
+  "location": "Pokémon League (Hoenn)",
+  "split": "Elite Four & Steven",
+  "levelCap": 59,
+  "notes": [
+   "Initial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Dusclops",
+    "level": 51,
+    "ability": "Pressure",
+    "ivs": 31,
+    "moves": [
+     "Shadow Punch",
+     "Confuse Ray",
+     "Curse",
+     "Future Sight"
+    ]
+   },
+   {
+    "species": "Banette",
+    "level": 51,
+    "ability": "Insomnia",
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Spite",
+     "Will-O-Wisp",
+     "Feint Attack"
+    ]
+   },
+   {
+    "species": "Sableye",
+    "level": 51,
+    "ability": "Prankster",
+    "ivs": 31,
+    "moves": [
+     "Shadow Claw",
+     "Foul Play",
+     "Power Gem",
+     "Fake Out"
+    ]
+   },
+   {
+    "species": "Banette",
+    "level": 51,
+    "ability": "Insomnia",
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Grudge",
+     "Toxic",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Dusknoir",
+    "level": 53,
+    "ability": "Pressure",
+    "ivs": 31,
+    "moves": [
+     "Hex",
+     "Fire Punch",
+     "Ice Punch",
+     "Thunder Punch"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby",
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 26,
+  "name": "Elite Four Glacia",
+  "location": "Pokémon League (Hoenn)",
+  "split": "Elite Four & Steven",
+  "levelCap": 59,
+  "notes": [
+   "Initial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Glalie",
+    "level": 52,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Light Screen",
+     "Ice Shard",
+     "Hail",
+     "Crunch"
+    ]
+   },
+   {
+    "species": "Froslass",
+    "level": 52,
+    "ability": "Snow Cloak",
+    "ivs": 31,
+    "moves": [
+     "Confuse Ray",
+     "Blizzard",
+     "Hail",
+     "Ominous Wind"
+    ]
+   },
+   {
+    "species": "Glalie",
+    "level": 52,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Protect",
+     "Ice Shard",
+     "Hail",
+     "Freeze-Dry"
+    ]
+   },
+   {
+    "species": "Froslass",
+    "level": 52,
+    "ability": "Snow Cloak",
+    "ivs": 31,
+    "moves": [
+     "Draining Kiss",
+     "Blizzard",
+     "Hail",
+     "Shadow Ball"
+    ]
+   },
+   {
+    "species": "Walrein",
+    "level": 54,
+    "ability": "Thick Fat",
+    "ivs": 31,
+    "moves": [
+     "Surf",
+     "Body Slam",
+     "Blizzard",
+     "Sheer Cold"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby",
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 27,
+  "name": "Elite Four Drake",
+  "location": "Pokémon League (Hoenn)",
+  "split": "Elite Four & Steven",
+  "levelCap": 59,
+  "notes": [
+   "Initial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Altaria",
+    "level": 53,
+    "ability": "Natural Cure",
+    "ivs": 31,
+    "moves": [
+     "Aerial Ace",
+     "Cotton Guard",
+     "Dragon Pulse",
+     "Moonblast"
+    ]
+   },
+   {
+    "species": "Flygon",
+    "level": 53,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Dragon Claw",
+     "Rock Slide",
+     "Supersonic"
+    ]
+   },
+   {
+    "species": "Kingdra",
+    "level": 53,
+    "ability": "Sniper",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Surf",
+     "Yawn",
+     "Ice Beam"
+    ]
+   },
+   {
+    "species": "Flygon",
+    "level": 53,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Flamethrower",
+     "Boomburst",
+     "Dragon Pulse",
+     "Screech"
+    ]
+   },
+   {
+    "species": "Salamence",
+    "level": 55,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Dragon Rush",
+     "Zen Headbutt",
+     "Crunch",
+     "Thunder Fang"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby",
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 29,
+  "name": "Champion Steven",
+  "location": "Pokémon League (Hoenn)",
+  "split": "Elite Four & Steven",
+  "levelCap": 59,
+  "notes": [
+   "Champion battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Skarmory",
+    "level": 57,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Toxic",
+     "Aerial Ace",
+     "Spikes",
+     "Steel Wing"
+    ]
+   },
+   {
+    "species": "Claydol",
+    "level": 57,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Reflect",
+     "Light Screen",
+     "Extrasensory",
+     "Earth Power"
+    ]
+   },
+   {
+    "species": "Aggron",
+    "level": 57,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Stone Edge",
+     "Earthquake",
+     "Iron Tail",
+     "Dragon Claw"
+    ]
+   },
+   {
+    "species": "Cradily",
+    "level": 57,
+    "ability": "Suction Cups",
+    "ivs": 31,
+    "moves": [
+     "Giga Drain",
+     "Ancient Power",
+     "Sludge Bomb",
+     "Confuse Ray"
+    ]
+   },
+   {
+    "species": "Armaldo",
+    "level": 57,
+    "ability": "Battle Armor",
+    "ivs": 31,
+    "moves": [
+     "X-Scissor",
+     "Rock Blast",
+     "Metal Claw",
+     "Crush Claw"
+    ]
+   },
+   {
+    "species": "Metagross",
+    "level": 59,
+    "item": "Metagrossite",
+    "ability": "Clear Body",
+    "ivs": 31,
+    "moves": [
+     "Bullet Punch",
+     "Zen Headbutt",
+     "Meteor Mash",
+     "Giga Impact"
+    ]
+   }
+  ],
+  "games": [
+   "omega-ruby",
+   "alpha-sapphire"
+  ]
+ },
+ {
+  "id": 8,
+  "name": "Leader Wulfric",
+  "location": "Snowbelle Gym",
+  "split": "Gym 8: Wulfric",
+  "levelCap": 59,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Abomasnow",
+    "level": 56,
+    "ability": "Snow Warning",
+    "ivs": 31,
+    "moves": [
+     "Ice Beam",
+     "Ice Shard",
+     "Energy Ball"
+    ]
+   },
+   {
+    "species": "Cryogonal",
+    "level": 55,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Ice Beam",
+     "Confuse Ray",
+     "Flash Cannon",
+     "Hail"
+    ]
+   },
+   {
+    "species": "Avalugg",
+    "level": 59,
+    "ability": "Ice Body",
+    "ivs": 31,
+    "moves": [
+     "Avalanche",
+     "Crunch",
+     "Curse",
+     "Gyro Ball"
+    ]
+   }
+  ],
+  "games": [
+   "x",
+   "y"
+  ]
+ },
+ {
+  "id": 9,
+  "name": "Elite Four Malva",
+  "location": "Pokémon League (Kalos)",
+  "split": "Elite Four & Diantha",
+  "levelCap": 68,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pyroar",
+    "level": 63,
+    "ability": "Rivalry",
+    "ivs": 31,
+    "moves": [
+     "Hyper Voice",
+     "Flamethrower",
+     "Wild Charge",
+     "Noble Roar"
+    ]
+   },
+   {
+    "species": "Torkoal",
+    "level": 63,
+    "ability": "White Smoke",
+    "ivs": 31,
+    "moves": [
+     "Curse",
+     "Earthquake",
+     "Stone Edge",
+     "Flame Wheel"
+    ]
+   },
+   {
+    "species": "Chandelure",
+    "level": 63,
+    "ability": "Flame Body",
+    "ivs": 31,
+    "moves": [
+     "Flamethrower",
+     "Shadow Ball",
+     "Confuse Ray",
+     "Confide"
+    ]
+   },
+   {
+    "species": "Talonflame",
+    "level": 65,
+    "ability": "Flame Body",
+    "ivs": 31,
+    "moves": [
+     "Brave Bird",
+     "Quick Attack",
+     "Flare Blitz",
+     "Flail"
+    ]
+   }
+  ],
+  "games": [
+   "x",
+   "y"
+  ]
+ },
+ {
+  "id": 10,
+  "name": "Elite Four Siebold",
+  "location": "Pokémon League (Kalos)",
+  "split": "Elite Four & Diantha",
+  "levelCap": 68,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Clawitzer",
+    "level": 63,
+    "ability": "Mega Launcher",
+    "ivs": 31,
+    "moves": [
+     "Water Pulse",
+     "Dark Pulse",
+     "Dragon Pulse",
+     "Aura Sphere"
+    ]
+   },
+   {
+    "species": "Gyarados",
+    "level": 63,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Waterfall",
+     "Ice Fang",
+     "Earthquake",
+     "Dragon Dance"
+    ]
+   },
+   {
+    "species": "Starmie",
+    "level": 63,
+    "ability": "Illuminate",
+    "ivs": 31,
+    "moves": [
+     "Dazzling Gleam",
+     "Psychic",
+     "Surf",
+     "Light Screen"
+    ]
+   },
+   {
+    "species": "Barbaracle",
+    "level": 65,
+    "ability": "Tough Claws",
+    "ivs": 31,
+    "moves": [
+     "Cross Chop",
+     "Stone Edge",
+     "Razor Shell",
+     "X-Scissor"
+    ]
+   }
+  ],
+  "games": [
+   "x",
+   "y"
+  ]
+ },
+ {
+  "id": 11,
+  "name": "Elite Four Wikstrom",
+  "location": "Pokémon League (Kalos)",
+  "split": "Elite Four & Diantha",
+  "levelCap": 68,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Klefki",
+    "level": 63,
+    "ability": "Prankster",
+    "ivs": 31,
+    "moves": [
+     "Dazzling Gleam",
+     "Flash Cannon",
+     "Torment",
+     "Spikes"
+    ]
+   },
+   {
+    "species": "Probopass",
+    "level": 63,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Earth Power",
+     "Power Gem",
+     "Discharge",
+     "Flash Cannon"
+    ]
+   },
+   {
+    "species": "Scizor",
+    "level": 63,
+    "ability": "Technician",
+    "ivs": 31,
+    "moves": [
+     "Bullet Punch",
+     "X-Scissor",
+     "Iron Head",
+     "Night Slash"
+    ]
+   },
+   {
+    "species": "Aegislash",
+    "level": 65,
+    "ability": "Stance Change",
+    "ivs": 31,
+    "moves": [
+     "King's Shield",
+     "Sacred Sword",
+     "Shadow Claw",
+     "Iron Head"
+    ]
+   }
+  ],
+  "games": [
+   "x",
+   "y"
+  ]
+ },
+ {
+  "id": 12,
+  "name": "Elite Four Drasna",
+  "location": "Pokémon League (Kalos)",
+  "split": "Elite Four & Diantha",
+  "levelCap": 68,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Dragalge",
+    "level": 63,
+    "ability": "Poison Point",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Surf",
+     "Sludge Bomb",
+     "Thunderbolt"
+    ]
+   },
+   {
+    "species": "Druddigon",
+    "level": 63,
+    "ability": "Rough Skin",
+    "ivs": 31,
+    "moves": [
+     "Dragon Tail",
+     "Revenge",
+     "Retaliate",
+     "Chip Away"
+    ]
+   },
+   {
+    "species": "Altaria",
+    "level": 63,
+    "ability": "Natural Cure",
+    "ivs": 31,
+    "moves": [
+     "Moonblast",
+     "Dragon Pulse",
+     "Cotton Guard",
+     "Sing"
+    ]
+   },
+   {
+    "species": "Noivern",
+    "level": 65,
+    "ability": "Frisk",
+    "ivs": 31,
+    "moves": [
+     "Air Slash",
+     "Dragon Pulse",
+     "Flamethrower",
+     "Super Fang"
+    ]
+   }
+  ],
+  "games": [
+   "x",
+   "y"
+  ]
+ },
+ {
+  "id": 13,
+  "name": "Champion Diantha",
+  "location": "Pokémon League (Kalos)",
+  "split": "Elite Four & Diantha",
+  "levelCap": 68,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Hawlucha",
+    "level": 64,
+    "ability": "Limber",
+    "ivs": 31,
+    "moves": [
+     "Swords Dance",
+     "Flying Press",
+     "X-Scissor",
+     "Poison Jab"
+    ]
+   },
+   {
+    "species": "Tyrantrum",
+    "level": 65,
+    "ability": "Strong Jaw",
+    "ivs": 31,
+    "moves": [
+     "Head Smash",
+     "Earthquake",
+     "Dragon Claw",
+     "Crunch"
+    ]
+   },
+   {
+    "species": "Aurorus",
+    "level": 65,
+    "ability": "Refrigerate",
+    "ivs": 31,
+    "moves": [
+     "Thunder",
+     "Blizzard",
+     "Light Screen",
+     "Reflect"
+    ]
+   },
+   {
+    "species": "Gourgeist",
+    "level": 65,
+    "ability": "Pickup",
+    "ivs": 31,
+    "moves": [
+     "Trick-or-Treat",
+     "Phantom Force",
+     "Seed Bomb",
+     "Shadow Sneak"
+    ]
+   },
+   {
+    "species": "Goodra",
+    "level": 66,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Muddy Water",
+     "Fire Blast",
+     "Focus Blast"
+    ]
+   },
+   {
+    "species": "Gardevoir",
+    "level": 68,
+    "item": "Gardevoirite",
+    "ability": "Trace",
+    "ivs": 31,
+    "moves": [
+     "Moonblast",
+     "Psychic",
+     "Shadow Ball",
+     "Thunderbolt"
+    ]
+   }
+  ],
+  "games": [
+   "x",
+   "y"
+  ]
+ }
+]

@@ -7,25 +7,70 @@ import { analyzeThreat } from './threats';
 import { setFromTrainerMon } from './trainers';
 
 // data-src/trainers/*.json, from npm run fetch:trainers (Bulbapedia)
-describe.each(['gen9', 'gen5'])('%s story bosses', (id) => {
+const TRAINER_RULESETS = [...new Set(GAMES.filter((g) => g.checkpoints).map((g) => g.rulesetId))];
+
+describe.each(TRAINER_RULESETS)('%s story bosses', (id) => {
   const rs = getRuleset(id);
 
-  it('resolve against the ruleset and sit in a checkpoint that covers them', async () => {
+  it('resolve against the ruleset and sit in a checkpoint of their game that covers them', async () => {
     const trainers = await rs.loadTrainers!();
-    expect(trainers.length).toBeGreaterThan(20);
-    const checkpoints = GAMES.find((g) => g.rulesetId === id)!.checkpoints!;
+    expect(trainers.length).toBeGreaterThan(10);
     for (const t of trainers) {
-      const cp = checkpoints.find((c) => c.label === t.split);
-      expect(cp, `${t.name}: ${t.split}`).toBeDefined();
+      expect(t.games?.length, t.name).toBeGreaterThan(0);
+      for (const gameId of t.games!) {
+        const checkpoints = GAMES.find((g) => g.id === gameId)!.checkpoints!;
+        const cp = checkpoints.find((c) => c.label === t.split);
+        expect(cp, `${t.name} (${gameId}): ${t.split}`).toBeDefined();
+        // the checkpoint's cap is at least the ace's level, except the last one (anything goes post-game)
+        if (cp !== checkpoints[checkpoints.length - 1]) expect(cp!.levelCap, `${t.name} (${gameId})`).toBeGreaterThanOrEqual(Math.max(...t.team.map((m) => m.level)));
+      }
       for (const m of t.team) {
         expect(rs.getSpecies(m.species), `${t.name}: ${m.species}`).toBeDefined();
         expect(m.level).toBeGreaterThan(0);
         for (const mv of m.moves) expect(rs.getMove(mv), `${t.name}: ${m.species} ${mv}`).toBeDefined();
       }
-      // the checkpoint's cap is at least the ace's level, except the last one (anything goes post-game)
-      if (cp !== checkpoints[checkpoints.length - 1]) expect(cp!.levelCap).toBeGreaterThanOrEqual(Math.max(...t.team.map((m) => m.level)));
-      expect(t.games?.length).toBeGreaterThan(0);
     }
+  });
+
+  it("put each gym leader, kahuna, and Kanto leader in the game's own checkpoint for them", async () => {
+    const trainers = await rs.loadTrainers!();
+    for (const game of GAMES.filter((g) => g.rulesetId === id)) {
+      for (const c of game.checkpoints!.filter((x) => x.bosses)) {
+        expect(trainers.some((t) => t.games!.includes(game.id) && t.split === c.label), `${game.name}: ${c.label}`).toBe(true);
+      }
+    }
+  });
+});
+
+describe('every official game', () => {
+  it('has boss fights and an availability file, and the starters are there from the start', async () => {
+    const { loadAvailability } = await import('./availability');
+    for (const game of GAMES.filter((g) => g.checkpoints)) {
+      const file = await loadAvailability(game);
+      expect(file, game.name).toBeDefined();
+      expect(Object.keys(file!.species).length, game.name).toBeGreaterThan(50);
+      expect(Object.values(file!.species).filter((at) => at === 0).length, game.name).toBeGreaterThan(5);
+    }
+  });
+
+  it('keeps versions apart where their fights differ', async () => {
+    const gen1 = await getRuleset('gen1').loadTrainers!();
+    // Yellow's leaders run higher, and its checkpoints with them
+    expect(gen1.find((t) => /Erika/.test(t.name) && t.games!.includes('yellow'))!.levelCap).toBe(32);
+    expect(gen1.find((t) => /Erika/.test(t.name) && t.games!.includes('red'))!.levelCap).toBe(29);
+    const gen8 = await getRuleset('gen8').loadTrainers!();
+    expect(gen8.find((t) => /Bea$/.test(t.name) && t.split === 'Gym 4: Bea')?.games).toEqual(['sword']);
+    expect(gen8.find((t) => /Allister$/.test(t.name) && t.split === 'Gym 4: Allister')?.games).toEqual(['shield']);
+    // the Johto games' Kanto leaders are their post-game, not part of the Elite Four run
+    const gen2 = await getRuleset('gen2').loadTrainers!();
+    expect(gen2.find((t) => /Brock/.test(t.name))!.split).toBe('Kanto Gyms');
+    // Black 2/White 2 take Normal Mode, and leave out the World Tournament's exhibition fights
+    const gen5 = await getRuleset('gen5').loadTrainers!();
+    const roxie = gen5.find((t) => /Roxie/.test(t.name))!;
+    expect(Math.max(...roxie.team.map((m) => m.level))).toBe(18);
+    expect(gen5.some((t) => t.games!.includes('black-2') && t.location === 'Pokémon World Tournament')).toBe(false);
+    // BDSP plays under the National Dex ruleset
+    expect((await getRuleset('gen8natdex').loadTrainers!()).some((t) => /Cynthia/.test(t.name))).toBe(true);
   });
 });
 

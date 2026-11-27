@@ -1,0 +1,5884 @@
+[
+ {
+  "id": 18,
+  "name": "Pokémon Trainer Hau",
+  "location": "Iki Town",
+  "split": "Ilima's trial",
+  "levelCap": 10,
+  "notes": [
+   "First battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Popplio",
+    "level": 5,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Pound",
+     "Water Gun",
+     "Growl"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 19,
+  "name": "Pokémon Trainer Hau",
+  "location": "Iki Town",
+  "split": "Ilima's trial",
+  "levelCap": 10,
+  "notes": [
+   "First battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Rowlet",
+    "level": 5,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Leafage",
+     "Growl"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 20,
+  "name": "Pokémon Trainer Hau",
+  "location": "Iki Town",
+  "split": "Ilima's trial",
+  "levelCap": 10,
+  "notes": [
+   "First battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Litten",
+    "level": 5,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Scratch",
+     "Ember",
+     "Growl"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 21,
+  "name": "Pokémon Trainer Hau",
+  "location": "Iki Town",
+  "split": "Ilima's trial",
+  "levelCap": 10,
+  "notes": [
+   "Second battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pichu",
+    "level": 6,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Thunder Shock",
+     "Charm",
+     "Tail Whip"
+    ]
+   },
+   {
+    "species": "Popplio",
+    "level": 7,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Pound",
+     "Water Gun",
+     "Growl"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 22,
+  "name": "Pokémon Trainer Hau",
+  "location": "Iki Town",
+  "split": "Ilima's trial",
+  "levelCap": 10,
+  "notes": [
+   "Second battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pichu",
+    "level": 6,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Thunder Shock",
+     "Charm",
+     "Tail Whip"
+    ]
+   },
+   {
+    "species": "Rowlet",
+    "level": 7,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Leafage",
+     "Growl"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 23,
+  "name": "Pokémon Trainer Hau",
+  "location": "Iki Town",
+  "split": "Ilima's trial",
+  "levelCap": 10,
+  "notes": [
+   "Second battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pichu",
+    "level": 6,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Thunder Shock",
+     "Charm",
+     "Tail Whip"
+    ]
+   },
+   {
+    "species": "Litten",
+    "level": 7,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Scratch",
+     "Ember",
+     "Growl"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 1,
+  "name": "Captain Ilima",
+  "location": "Hau'oli City",
+  "split": "Ilima's trial",
+  "levelCap": 10,
+  "notes": [
+   "First battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Yungoos",
+    "level": 9,
+    "ability": "Strong Jaw",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Pursuit",
+     "Leer"
+    ]
+   },
+   {
+    "species": "Smeargle",
+    "level": 10,
+    "ability": "Technician",
+    "ivs": 31,
+    "moves": [
+     "Ember",
+     "Tackle"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 2,
+  "name": "Captain Ilima",
+  "location": "Hau'oli City",
+  "split": "Ilima's trial",
+  "levelCap": 10,
+  "notes": [
+   "First battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Yungoos",
+    "level": 9,
+    "ability": "Strong Jaw",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Pursuit",
+     "Leer"
+    ]
+   },
+   {
+    "species": "Smeargle",
+    "level": 10,
+    "ability": "Technician",
+    "ivs": 31,
+    "moves": [
+     "Water Gun",
+     "Tackle"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 3,
+  "name": "Captain Ilima",
+  "location": "Hau'oli City",
+  "split": "Ilima's trial",
+  "levelCap": 10,
+  "notes": [
+   "First battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Yungoos",
+    "level": 9,
+    "ability": "Strong Jaw",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Pursuit",
+     "Leer"
+    ]
+   },
+   {
+    "species": "Smeargle",
+    "level": 10,
+    "ability": "Technician",
+    "ivs": 31,
+    "moves": [
+     "Leafage",
+     "Tackle"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 75,
+  "name": "Pokémon Trainer Hau",
+  "location": "Alola Route 1",
+  "split": "Ilima's trial",
+  "levelCap": 11,
+  "notes": [
+   "First battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Popplio",
+    "level": 5,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Pound",
+     "Water Gun",
+     "Growl"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 76,
+  "name": "Pokémon Trainer Hau",
+  "location": "Alola Route 1",
+  "split": "Ilima's trial",
+  "levelCap": 11,
+  "notes": [
+   "First battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Rowlet",
+    "level": 5,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Leafage",
+     "Growl"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 77,
+  "name": "Pokémon Trainer Hau",
+  "location": "Alola Route 1",
+  "split": "Ilima's trial",
+  "levelCap": 11,
+  "notes": [
+   "First battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Litten",
+    "level": 5,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Scratch",
+     "Ember",
+     "Growl"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 78,
+  "name": "Pokémon Trainer Hau",
+  "location": "Iki Town",
+  "split": "Ilima's trial",
+  "levelCap": 11,
+  "notes": [
+   "Second battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pichu",
+    "level": 6,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Thunder Shock",
+     "Charm",
+     "Tail Whip"
+    ]
+   },
+   {
+    "species": "Popplio",
+    "level": 7,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Pound",
+     "Water Gun",
+     "Growl"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 79,
+  "name": "Pokémon Trainer Hau",
+  "location": "Iki Town",
+  "split": "Ilima's trial",
+  "levelCap": 11,
+  "notes": [
+   "Second battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pichu",
+    "level": 6,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Thunder Shock",
+     "Charm",
+     "Tail Whip"
+    ]
+   },
+   {
+    "species": "Rowlet",
+    "level": 7,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Leafage",
+     "Growl"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 80,
+  "name": "Pokémon Trainer Hau",
+  "location": "Iki Town",
+  "split": "Ilima's trial",
+  "levelCap": 11,
+  "notes": [
+   "Second battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pichu",
+    "level": 6,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Thunder Shock",
+     "Charm",
+     "Tail Whip"
+    ]
+   },
+   {
+    "species": "Litten",
+    "level": 7,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Scratch",
+     "Ember",
+     "Growl"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 61,
+  "name": "Captain Ilima",
+  "location": "Hau'oli City",
+  "split": "Ilima's trial",
+  "levelCap": 11,
+  "notes": [
+   "First battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Yungoos",
+    "level": 10,
+    "ability": "Stakeout",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Pursuit",
+     "Leer"
+    ]
+   },
+   {
+    "species": "Smeargle",
+    "level": 11,
+    "ability": "Technician",
+    "ivs": 31,
+    "moves": [
+     "Ember",
+     "Tackle"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 62,
+  "name": "Captain Ilima",
+  "location": "Hau'oli City",
+  "split": "Ilima's trial",
+  "levelCap": 11,
+  "notes": [
+   "First battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Yungoos",
+    "level": 10,
+    "ability": "Stakeout",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Pursuit",
+     "Leer"
+    ]
+   },
+   {
+    "species": "Smeargle",
+    "level": 11,
+    "ability": "Technician",
+    "ivs": 31,
+    "moves": [
+     "Water Gun",
+     "Tackle"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 63,
+  "name": "Captain Ilima",
+  "location": "Hau'oli City",
+  "split": "Ilima's trial",
+  "levelCap": 11,
+  "notes": [
+   "First battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Yungoos",
+    "level": 10,
+    "ability": "Stakeout",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Pursuit",
+     "Leer"
+    ]
+   },
+   {
+    "species": "Smeargle",
+    "level": 11,
+    "ability": "Technician",
+    "ivs": 31,
+    "moves": [
+     "Leafage",
+     "Tackle"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 24,
+  "name": "Pokémon Trainer Hau",
+  "location": "Alola Route 3",
+  "split": "Hala's grand trial",
+  "levelCap": 15,
+  "notes": [
+   "Third battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pikachu",
+    "level": 13,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Growl",
+     "Play Nice",
+     "Quick Attack",
+     "Electro Ball"
+    ]
+   },
+   {
+    "species": "Popplio",
+    "level": 14,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Water Gun",
+     "Growl",
+     "Disarming Voice",
+     "Baby-Doll Eyes"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 25,
+  "name": "Pokémon Trainer Hau",
+  "location": "Alola Route 3",
+  "split": "Hala's grand trial",
+  "levelCap": 15,
+  "notes": [
+   "Third battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pikachu",
+    "level": 13,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Growl",
+     "Play Nice",
+     "Quick Attack",
+     "Electro Ball"
+    ]
+   },
+   {
+    "species": "Rowlet",
+    "level": 14,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Leafage",
+     "Growl",
+     "Peck",
+     "Astonish"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 26,
+  "name": "Pokémon Trainer Hau",
+  "location": "Alola Route 3",
+  "split": "Hala's grand trial",
+  "levelCap": 15,
+  "notes": [
+   "Third battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pikachu",
+    "level": 13,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Growl",
+     "Play Nice",
+     "Quick Attack",
+     "Electro Ball"
+    ]
+   },
+   {
+    "species": "Litten",
+    "level": 14,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Ember",
+     "Growl",
+     "Lick",
+     "Leer"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 4,
+  "name": "Captain Ilima",
+  "location": "Trainers' School (Alola)",
+  "split": "Hala's grand trial",
+  "levelCap": 15,
+  "notes": [
+   "Second battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Gumshoos",
+    "level": 15,
+    "item": "Normalium Z",
+    "ability": "Stakeout",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Pursuit",
+     "Leer"
+    ]
+   },
+   {
+    "species": "Smeargle",
+    "level": 14,
+    "ability": "Technician",
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Ember",
+     "Water Gun",
+     "Leafage"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 5,
+  "name": "Island Kahuna Hala",
+  "location": "Iki Town",
+  "split": "Hala's grand trial",
+  "levelCap": 15,
+  "notes": [
+   "Grand trial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Mankey",
+    "level": 14,
+    "ability": "Anger Point",
+    "ivs": 31,
+    "moves": [
+     "Karate Chop",
+     "Focus Energy",
+     "Pursuit"
+    ]
+   },
+   {
+    "species": "Makuhita",
+    "level": 14,
+    "ability": "Thick Fat",
+    "ivs": 31,
+    "moves": [
+     "Fake Out",
+     "Sand Attack",
+     "Arm Thrust"
+    ]
+   },
+   {
+    "species": "Crabrawler",
+    "level": 15,
+    "item": "Fightinium Z",
+    "ability": "Iron Fist",
+    "ivs": 31,
+    "moves": [
+     "Power-Up Punch",
+     "Pursuit",
+     "Leer"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 81,
+  "name": "Pokémon Trainer Hau",
+  "location": "Alola Route 3",
+  "split": "Hala's grand trial",
+  "levelCap": 16,
+  "notes": [
+   "Third battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Popplio",
+    "level": 13,
+    "item": "Sitrus Berry",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Water Gun",
+     "Growl",
+     "Disarming Voice",
+     "Baby-Doll Eyes"
+    ]
+   },
+   {
+    "species": "Noibat",
+    "level": 11,
+    "ability": "Infiltrator",
+    "ivs": 31,
+    "moves": [
+     "Supersonic",
+     "Tackle",
+     "Absorb",
+     "Gust"
+    ]
+   },
+   {
+    "species": "Pikachu",
+    "level": 12,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Thunder Shock",
+     "Growl",
+     "Play Nice",
+     "Quick Attack"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 82,
+  "name": "Pokémon Trainer Hau",
+  "location": "Alola Route 3",
+  "split": "Hala's grand trial",
+  "levelCap": 16,
+  "notes": [
+   "Third battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Rowlet",
+    "level": 13,
+    "item": "Sitrus Berry",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Leafage",
+     "Growl",
+     "Peck",
+     "Astonish"
+    ]
+   },
+   {
+    "species": "Noibat",
+    "level": 11,
+    "ability": "Infiltrator",
+    "ivs": 31,
+    "moves": [
+     "Supersonic",
+     "Tackle",
+     "Absorb",
+     "Gust"
+    ]
+   },
+   {
+    "species": "Pikachu",
+    "level": 12,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Thunder Shock",
+     "Growl",
+     "Play Nice",
+     "Quick Attack"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 83,
+  "name": "Pokémon Trainer Hau",
+  "location": "Alola Route 3",
+  "split": "Hala's grand trial",
+  "levelCap": 16,
+  "notes": [
+   "Third battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Litten",
+    "level": 13,
+    "item": "Sitrus Berry",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Ember",
+     "Growl",
+     "Lick",
+     "Leer"
+    ]
+   },
+   {
+    "species": "Noibat",
+    "level": 11,
+    "ability": "Infiltrator",
+    "ivs": 31,
+    "moves": [
+     "Supersonic",
+     "Tackle",
+     "Absorb",
+     "Gust"
+    ]
+   },
+   {
+    "species": "Pikachu",
+    "level": 12,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Thunder Shock",
+     "Growl",
+     "Play Nice",
+     "Quick Attack"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 65,
+  "name": "Island Kahuna Hala",
+  "location": "Iki Town",
+  "split": "Hala's grand trial",
+  "levelCap": 16,
+  "notes": [
+   "Grand trial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Machop",
+    "level": 15,
+    "ability": "Guts",
+    "ivs": 31,
+    "moves": [
+     "Karate Chop",
+     "Revenge",
+     "Focus Energy"
+    ]
+   },
+   {
+    "species": "Makuhita",
+    "level": 15,
+    "ability": "Thick Fat",
+    "ivs": 31,
+    "moves": [
+     "Arm Thrust",
+     "Sand Attack",
+     "Fake Out"
+    ]
+   },
+   {
+    "species": "Crabrawler",
+    "level": 16,
+    "item": "Fightinium Z",
+    "ability": "Iron Fist",
+    "ivs": 31,
+    "moves": [
+     "Pursuit",
+     "Power-Up Punch",
+     "Leer"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 84,
+  "name": "Pokémon Trainer Hau",
+  "location": "Paniola Town",
+  "split": "Hala's grand trial",
+  "levelCap": 16,
+  "notes": [
+   "Fourth battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Brionne",
+    "level": 16,
+    "item": "Normalium Z",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Aqua Jet",
+     "Disarming Voice",
+     "Pound"
+    ]
+   },
+   {
+    "species": "Pikachu",
+    "level": 15,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Electro Ball",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Noibat",
+    "level": 14,
+    "ability": "Infiltrator",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Eevee",
+    "level": 14,
+    "ability": "Adaptability",
+    "ivs": 31,
+    "moves": [
+     "Baby-Doll Eyes",
+     "Quick Attack"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 85,
+  "name": "Pokémon Trainer Hau",
+  "location": "Paniola Town",
+  "split": "Hala's grand trial",
+  "levelCap": 16,
+  "notes": [
+   "Fourth battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Dartrix",
+    "level": 16,
+    "item": "Normalium Z",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Razor Leaf",
+     "Peck",
+     "Tackle"
+    ]
+   },
+   {
+    "species": "Pikachu",
+    "level": 15,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Electro Ball",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Noibat",
+    "level": 14,
+    "ability": "Infiltrator",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Eevee",
+    "level": 14,
+    "ability": "Adaptability",
+    "ivs": 31,
+    "moves": [
+     "Baby-Doll Eyes",
+     "Quick Attack"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 86,
+  "name": "Pokémon Trainer Hau",
+  "location": "Paniola Town",
+  "split": "Hala's grand trial",
+  "levelCap": 16,
+  "notes": [
+   "Fourth battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Torracat",
+    "level": 16,
+    "item": "Normalium Z",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Fire Fang",
+     "Lick",
+     "Scratch"
+    ]
+   },
+   {
+    "species": "Pikachu",
+    "level": 15,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Electro Ball",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Noibat",
+    "level": 14,
+    "ability": "Infiltrator",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Eevee",
+    "level": 14,
+    "ability": "Adaptability",
+    "ivs": 31,
+    "moves": [
+     "Baby-Doll Eyes",
+     "Quick Attack"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 27,
+  "name": "Pokémon Trainer Hau",
+  "location": "Paniola Town",
+  "split": "Olivia's grand trial",
+  "levelCap": 27,
+  "notes": [
+   "Fourth battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pikachu",
+    "level": 16,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Electro Ball",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Brionne",
+    "level": 17,
+    "item": "Normalium Z",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Aqua Jet",
+     "Disarming Voice",
+     "Pound"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 28,
+  "name": "Pokémon Trainer Hau",
+  "location": "Paniola Town",
+  "split": "Olivia's grand trial",
+  "levelCap": 27,
+  "notes": [
+   "Fourth battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pikachu",
+    "level": 16,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Electro Ball",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Dartrix",
+    "level": 17,
+    "item": "Normalium Z",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Razor Leaf",
+     "Peck",
+     "Tackle"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 29,
+  "name": "Pokémon Trainer Hau",
+  "location": "Paniola Town",
+  "split": "Olivia's grand trial",
+  "levelCap": 27,
+  "notes": [
+   "Fourth battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Pikachu",
+    "level": 16,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Electro Ball",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Torracat",
+    "level": 17,
+    "item": "Normalium Z",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Fire Fang",
+     "Lick",
+     "Scratch"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 39,
+  "name": "Team Skull Gladion",
+  "location": "Alola Route 5",
+  "split": "Olivia's grand trial",
+  "levelCap": 27,
+  "notes": [
+   "First battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Zubat",
+    "level": 17,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Bite",
+     "Wing Attack"
+    ]
+   },
+   {
+    "species": "Type: Null",
+    "level": 18,
+    "ability": "Battle Armor",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Pursuit"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 30,
+  "name": "Pokémon Trainer Hau",
+  "location": "Battle Royal Dome",
+  "split": "Olivia's grand trial",
+  "levelCap": 27,
+  "notes": [
+   "Fifth battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Brionne",
+    "level": 19,
+    "item": "Normalium Z",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Aqua Jet",
+     "Disarming Voice",
+     "Pound"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 31,
+  "name": "Pokémon Trainer Hau",
+  "location": "Battle Royal Dome",
+  "split": "Olivia's grand trial",
+  "levelCap": 27,
+  "notes": [
+   "Fifth battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Dartrix",
+    "level": 19,
+    "item": "Normalium Z",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Razor Leaf",
+     "Peck",
+     "Tackle"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 32,
+  "name": "Pokémon Trainer Hau",
+  "location": "Battle Royal Dome",
+  "split": "Olivia's grand trial",
+  "levelCap": 27,
+  "notes": [
+   "Fifth battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Torracat",
+    "level": 19,
+    "item": "Normalium Z",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Fire Fang",
+     "Lick",
+     "Scratch"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 40,
+  "name": "Team Skull Gladion",
+  "location": "Battle Royal Dome",
+  "split": "Olivia's grand trial",
+  "levelCap": 27,
+  "notes": [
+   "Second battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Type: Null",
+    "level": 19,
+    "ability": "Battle Armor",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Pursuit"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 7,
+  "name": "Island Kahuna Olivia",
+  "location": "Ruins of Life",
+  "split": "Olivia's grand trial",
+  "levelCap": 27,
+  "notes": [
+   "Grand trial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Nosepass",
+    "level": 26,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Rock Slide",
+     "Spark",
+     "Thunder Wave"
+    ]
+   },
+   {
+    "species": "Boldore",
+    "level": 26,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Rock Blast",
+     "Mud-Slap",
+     "Headbutt"
+    ]
+   },
+   {
+    "species": "Lycanroc-Midnight",
+    "level": 27,
+    "item": "Rockium Z",
+    "ability": "Vital Spirit",
+    "ivs": 31,
+    "moves": [
+     "Bite",
+     "Rock Throw"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 96,
+  "name": "Team Skull Gladion",
+  "location": "Alola Route 5",
+  "split": "Olivia's grand trial",
+  "levelCap": 28,
+  "notes": [
+   "First battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Zorua",
+    "level": 17,
+    "ability": "Illusion",
+    "ivs": 31,
+    "moves": [
+     "Feint Attack",
+     "Scratch"
+    ]
+   },
+   {
+    "species": "Type: Null",
+    "level": 18,
+    "ability": "Battle Armor",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Pursuit"
+    ]
+   },
+   {
+    "species": "Zubat",
+    "level": 17,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Bite",
+     "Wing Attack"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 87,
+  "name": "Pokémon Trainer Hau",
+  "location": "Battle Royal Dome",
+  "split": "Olivia's grand trial",
+  "levelCap": 28,
+  "notes": [
+   "Fifth battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Brionne",
+    "level": 20,
+    "item": "Normalium Z",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Aqua Jet",
+     "Disarming Voice",
+     "Pound"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 88,
+  "name": "Pokémon Trainer Hau",
+  "location": "Battle Royal Dome",
+  "split": "Olivia's grand trial",
+  "levelCap": 28,
+  "notes": [
+   "Fifth battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Dartrix",
+    "level": 20,
+    "item": "Normalium Z",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Razor Leaf",
+     "Peck",
+     "Tackle"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 89,
+  "name": "Pokémon Trainer Hau",
+  "location": "Battle Royal Dome",
+  "split": "Olivia's grand trial",
+  "levelCap": 28,
+  "notes": [
+   "Fifth battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Torracat",
+    "level": 20,
+    "item": "Normalium Z",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Fire Fang",
+     "Lick",
+     "Scratch"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 97,
+  "name": "Team Skull Gladion",
+  "location": "Battle Royal Dome",
+  "split": "Olivia's grand trial",
+  "levelCap": 28,
+  "notes": [
+   "Second battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Type: Null",
+    "level": 20,
+    "ability": "Battle Armor",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Pursuit"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 67,
+  "name": "Island Kahuna Olivia",
+  "location": "Ruins of Life",
+  "split": "Olivia's grand trial",
+  "levelCap": 28,
+  "notes": [
+   "Grand trial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Anorith",
+    "level": 27,
+    "ability": "Battle Armor",
+    "ivs": 31,
+    "moves": [
+     "Bug Bite",
+     "Smack Down",
+     "Metal Claw"
+    ]
+   },
+   {
+    "species": "Lileep",
+    "level": 27,
+    "ability": "Suction Cups",
+    "ivs": 31,
+    "moves": [
+     "Giga Drain",
+     "Ancient Power",
+     "Brine"
+    ]
+   },
+   {
+    "species": "Lycanroc-Midnight",
+    "level": 28,
+    "item": "Rockium Z",
+    "ability": "Vital Spirit",
+    "ivs": 31,
+    "moves": [
+     "Bite",
+     "Rock Tomb"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 33,
+  "name": "Pokémon Trainer Hau",
+  "location": "Malie City",
+  "split": "Nanu's grand trial",
+  "levelCap": 39,
+  "notes": [
+   "Sixth battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Raichu-Alola",
+    "level": 28,
+    "ability": "Surge Surfer",
+    "ivs": 31,
+    "moves": [
+     "Electro Ball",
+     "Quick Attack",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Flareon",
+    "level": 28,
+    "ability": "Flash Fire",
+    "ivs": 31,
+    "moves": [
+     "Fire Fang",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Brionne",
+    "level": 29,
+    "item": "Waterium Z",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Bubble Beam",
+     "Disarming Voice"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 34,
+  "name": "Pokémon Trainer Hau",
+  "location": "Malie City",
+  "split": "Nanu's grand trial",
+  "levelCap": 39,
+  "notes": [
+   "Sixth battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Raichu-Alola",
+    "level": 28,
+    "ability": "Surge Surfer",
+    "ivs": 31,
+    "moves": [
+     "Electro Ball",
+     "Quick Attack",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Vaporeon",
+    "level": 28,
+    "ability": "Water Absorb",
+    "ivs": 31,
+    "moves": [
+     "Water Pulse",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Dartrix",
+    "level": 29,
+    "item": "Grassium Z",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Razor Leaf",
+     "Pluck"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 35,
+  "name": "Pokémon Trainer Hau",
+  "location": "Malie City",
+  "split": "Nanu's grand trial",
+  "levelCap": 39,
+  "notes": [
+   "Sixth battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Raichu-Alola",
+    "level": 28,
+    "ability": "Surge Surfer",
+    "ivs": 31,
+    "moves": [
+     "Electro Ball",
+     "Quick Attack",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Leafeon",
+    "level": 28,
+    "ability": "Leaf Guard",
+    "ivs": 31,
+    "moves": [
+     "Giga Drain",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Torracat",
+    "level": 29,
+    "item": "Firium Z",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Fire Fang",
+     "Bite"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 12,
+  "name": "Pokémon Trainer Molayne",
+  "location": "Mount Hokulani",
+  "split": "Nanu's grand trial",
+  "levelCap": 39,
+  "notes": [
+   "First battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Skarmory",
+    "level": 29,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Air Cutter",
+     "Metal Claw"
+    ]
+   },
+   {
+    "species": "Metang",
+    "level": 29,
+    "ability": "Clear Body",
+    "ivs": 31,
+    "moves": [
+     "Zen Headbutt",
+     "Bullet Punch",
+     "Pursuit"
+    ]
+   },
+   {
+    "species": "Dugtrio-Alola",
+    "level": 30,
+    "ability": "Tangling Hair",
+    "ivs": 31,
+    "moves": [
+     "Metal Claw",
+     "Mud Bomb",
+     "Sucker Punch"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 45,
+  "name": "Team Skull Boss Guzma",
+  "location": "Malie Garden",
+  "split": "Nanu's grand trial",
+  "levelCap": 39,
+  "notes": [
+   "First battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Golisopod",
+    "level": 31,
+    "ability": "Emergency Exit",
+    "ivs": 31,
+    "moves": [
+     "First Impression",
+     "Razor Shell",
+     "Swords Dance"
+    ]
+   },
+   {
+    "species": "Ariados",
+    "level": 30,
+    "ability": "Swarm",
+    "ivs": 31,
+    "moves": [
+     "Fell Stinger",
+     "Sucker Punch",
+     "Shadow Sneak",
+     "Infestation"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 46,
+  "name": "Team Skull Boss Guzma",
+  "location": "Shady House",
+  "split": "Nanu's grand trial",
+  "levelCap": 39,
+  "notes": [
+   "Second battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Golisopod",
+    "level": 37,
+    "ability": "Emergency Exit",
+    "ivs": 31,
+    "moves": [
+     "First Impression",
+     "Razor Shell",
+     "Swords Dance"
+    ]
+   },
+   {
+    "species": "Ariados",
+    "level": 36,
+    "ability": "Swarm",
+    "ivs": 31,
+    "moves": [
+     "Fell Stinger",
+     "Sucker Punch",
+     "Shadow Sneak",
+     "Infestation"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 41,
+  "name": "Team Skull Gladion",
+  "location": "Aether House",
+  "split": "Nanu's grand trial",
+  "levelCap": 39,
+  "notes": [
+   "Third battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Golbat",
+    "level": 37,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Acrobatics",
+     "Poison Fang"
+    ]
+   },
+   {
+    "species": "Sneasel",
+    "level": 37,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Icy Wind",
+     "Metal Claw",
+     "Feint Attack",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Type: Null",
+    "level": 38,
+    "ability": "Battle Armor",
+    "ivs": 31,
+    "moves": [
+     "Pursuit",
+     "Crush Claw",
+     "X-Scissor"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 9,
+  "name": "Island Kahuna Nanu",
+  "location": "Malie City",
+  "split": "Nanu's grand trial",
+  "levelCap": 39,
+  "notes": [
+   "Grand trial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Sableye",
+    "level": 38,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Power Gem",
+     "Shadow Ball",
+     "Fake Out"
+    ]
+   },
+   {
+    "species": "Krokorok",
+    "level": 38,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Assurance",
+     "Swagger",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Persian-Alola",
+    "level": 39,
+    "item": "Darkinium Z",
+    "ability": "Fur Coat",
+    "ivs": 31,
+    "moves": [
+     "Power Gem",
+     "Fake Out",
+     "Dark Pulse"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 90,
+  "name": "Pokémon Trainer Hau",
+  "location": "Malie City",
+  "split": "Nanu's grand trial",
+  "levelCap": 44,
+  "notes": [
+   "Sixth battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Brionne",
+    "level": 30,
+    "item": "Waterium Z",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Bubble Beam",
+     "Disarming Voice"
+    ]
+   },
+   {
+    "species": "Flareon",
+    "level": 28,
+    "ability": "Flash Fire",
+    "ivs": 31,
+    "moves": [
+     "Fire Fang",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Noibat",
+    "level": 28,
+    "ability": "Infiltrator",
+    "ivs": 31,
+    "moves": [
+     "Wing Attack",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Tauros",
+    "level": 28,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Pursuit",
+     "Horn Attack"
+    ]
+   },
+   {
+    "species": "Raichu-Alola",
+    "level": 29,
+    "ability": "Surge Surfer",
+    "ivs": 31,
+    "moves": [
+     "Electro Ball",
+     "Quick Attack",
+     "Psychic"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 91,
+  "name": "Pokémon Trainer Hau",
+  "location": "Malie City",
+  "split": "Nanu's grand trial",
+  "levelCap": 44,
+  "notes": [
+   "Sixth battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Dartrix",
+    "level": 30,
+    "item": "Grassium Z",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Razor Leaf",
+     "Pluck"
+    ]
+   },
+   {
+    "species": "Vaporeon",
+    "level": 28,
+    "ability": "Water Absorb",
+    "ivs": 31,
+    "moves": [
+     "Water Pulse",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Noibat",
+    "level": 28,
+    "ability": "Infiltrator",
+    "ivs": 31,
+    "moves": [
+     "Wing Attack",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Tauros",
+    "level": 28,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Pursuit",
+     "Horn Attack"
+    ]
+   },
+   {
+    "species": "Raichu-Alola",
+    "level": 29,
+    "ability": "Surge Surfer",
+    "ivs": 31,
+    "moves": [
+     "Electro Ball",
+     "Quick Attack",
+     "Psychic"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 92,
+  "name": "Pokémon Trainer Hau",
+  "location": "Malie City",
+  "split": "Nanu's grand trial",
+  "levelCap": 44,
+  "notes": [
+   "Sixth battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Torracat",
+    "level": 30,
+    "item": "Firium Z",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Fire Fang",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Leafeon",
+    "level": 28,
+    "ability": "Leaf Guard",
+    "ivs": 31,
+    "moves": [
+     "Giga Drain",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Noibat",
+    "level": 28,
+    "ability": "Infiltrator",
+    "ivs": 31,
+    "moves": [
+     "Wing Attack",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Tauros",
+    "level": 28,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Pursuit",
+     "Horn Attack"
+    ]
+   },
+   {
+    "species": "Raichu-Alola",
+    "level": 29,
+    "ability": "Surge Surfer",
+    "ivs": 31,
+    "moves": [
+     "Electro Ball",
+     "Quick Attack",
+     "Psychic"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 102,
+  "name": "Team Skull Boss Guzma",
+  "location": "Malie Garden",
+  "split": "Nanu's grand trial",
+  "levelCap": 44,
+  "notes": [
+   "First battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Golisopod",
+    "level": 34,
+    "ability": "Emergency Exit",
+    "ivs": 31,
+    "moves": [
+     "Sucker Punch",
+     "Razor Shell",
+     "First Impression"
+    ]
+   },
+   {
+    "species": "Masquerain",
+    "level": 34,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Air Slash",
+     "Bug Buzz",
+     "Icy Wind"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 103,
+  "name": "Team Skull Boss Guzma",
+  "location": "Shady House",
+  "split": "Nanu's grand trial",
+  "levelCap": 44,
+  "notes": [
+   "Second battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Golisopod",
+    "level": 41,
+    "ability": "Emergency Exit",
+    "ivs": 31,
+    "moves": [
+     "Sucker Punch",
+     "Razor Shell",
+     "First Impression"
+    ]
+   },
+   {
+    "species": "Masquerain",
+    "level": 41,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Air Slash",
+     "Bug Buzz",
+     "Icy Wind"
+    ]
+   },
+   {
+    "species": "Pinsir",
+    "level": 41,
+    "ability": "Mold Breaker",
+    "ivs": 31,
+    "moves": [
+     "Throat Chop",
+     "Storm Throw",
+     "X-Scissor"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 98,
+  "name": "Team Skull Gladion",
+  "location": "Aether House",
+  "split": "Nanu's grand trial",
+  "levelCap": 44,
+  "notes": [
+   "Third battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Golbat",
+    "level": 42,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Acrobatics",
+     "Poison Fang",
+     "Venoshock"
+    ]
+   },
+   {
+    "species": "Zoroark",
+    "level": 42,
+    "ability": "Illusion",
+    "ivs": 31,
+    "moves": [
+     "Snarl",
+     "Hyper Voice"
+    ]
+   },
+   {
+    "species": "Type: Null",
+    "level": 43,
+    "ability": "Battle Armor",
+    "ivs": 31,
+    "moves": [
+     "Pursuit",
+     "Crush Claw",
+     "X-Scissor"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 69,
+  "name": "Island Kahuna Nanu",
+  "location": "Malie City",
+  "split": "Nanu's grand trial",
+  "levelCap": 44,
+  "notes": [
+   "Grand trial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Sableye",
+    "level": 43,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Power Gem",
+     "Shadow Ball",
+     "Fake Out"
+    ]
+   },
+   {
+    "species": "Krokorok",
+    "level": 43,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Assurance",
+     "Swagger",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Persian-Alola",
+    "level": 44,
+    "item": "Darkinium Z",
+    "ability": "Fur Coat",
+    "ivs": 31,
+    "moves": [
+     "Power Gem",
+     "Fake Out",
+     "Dark Pulse"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 47,
+  "name": "Team Skull Boss Guzma",
+  "location": "Aether Paradise",
+  "split": "Hapu's grand trial",
+  "levelCap": 48,
+  "notes": [
+   "Third battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Golisopod",
+    "level": 41,
+    "ability": "Emergency Exit",
+    "ivs": 31,
+    "moves": [
+     "First Impression",
+     "Razor Shell",
+     "Swords Dance"
+    ]
+   },
+   {
+    "species": "Ariados",
+    "level": 40,
+    "ability": "Swarm",
+    "ivs": 31,
+    "moves": [
+     "Fell Stinger",
+     "Sucker Punch",
+     "Shadow Sneak"
+    ]
+   },
+   {
+    "species": "Masquerain",
+    "level": 40,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Bug Buzz",
+     "Air Slash"
+    ]
+   },
+   {
+    "species": "Pinsir",
+    "level": 40,
+    "ability": "Mold Breaker",
+    "ivs": 31,
+    "moves": [
+     "X-Scissor",
+     "Brick Break",
+     "Double Hit"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 49,
+  "name": "Aether President Lusamine",
+  "location": "Aether Paradise",
+  "split": "Hapu's grand trial",
+  "levelCap": 48,
+  "notes": [
+   "First battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Clefable",
+    "level": 41,
+    "ability": "Magic Guard",
+    "ivs": 31,
+    "moves": [
+     "Cosmic Power",
+     "Metronome",
+     "Moonblast"
+    ]
+   },
+   {
+    "species": "Lilligant",
+    "level": 41,
+    "ability": "Own Tempo",
+    "ivs": 31,
+    "moves": [
+     "Petal Dance",
+     "Teeter Dance",
+     "Stun Spore"
+    ]
+   },
+   {
+    "species": "Mismagius",
+    "level": 41,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Mystical Fire",
+     "Shadow Ball",
+     "Power Gem"
+    ]
+   },
+   {
+    "species": "Milotic",
+    "level": 41,
+    "ability": "Marvel Scale",
+    "ivs": 31,
+    "moves": [
+     "Hydro Pump",
+     "Flail",
+     "Safeguard"
+    ]
+   },
+   {
+    "species": "Bewear",
+    "level": 41,
+    "ability": "Fluffy",
+    "ivs": 31,
+    "moves": [
+     "Baby-Doll Eyes",
+     "Take Down",
+     "Hammer Arm"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 11,
+  "name": "Island Kahuna Hapu",
+  "location": "Vast Poni Canyon",
+  "split": "Hapu's grand trial",
+  "levelCap": 48,
+  "notes": [
+   "Grand trial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Dugtrio-Alola",
+    "level": 47,
+    "ability": "Sand Veil",
+    "ivs": 31,
+    "moves": [
+     "Iron Head",
+     "Earthquake",
+     "Sucker Punch",
+     "Sandstorm"
+    ]
+   },
+   {
+    "species": "Gastrodon-East",
+    "level": 47,
+    "ability": "Sticky Hold",
+    "ivs": 31,
+    "moves": [
+     "Muddy Water",
+     "Mud Bomb",
+     "Recover"
+    ]
+   },
+   {
+    "species": "Flygon",
+    "level": 47,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Earth Power",
+     "Dragon Breath"
+    ]
+   },
+   {
+    "species": "Mudsdale",
+    "level": 48,
+    "item": "Groundium Z",
+    "ability": "Stamina",
+    "ivs": 31,
+    "moves": [
+     "Heavy Slam",
+     "Earthquake",
+     "Double Kick",
+     "Counter"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 104,
+  "name": "Team Skull Boss Guzma",
+  "location": "Aether Paradise",
+  "split": "Hapu's grand trial",
+  "levelCap": 54,
+  "notes": [
+   "Third battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Golisopod",
+    "level": 45,
+    "ability": "Emergency Exit",
+    "ivs": 31,
+    "moves": [
+     "Sucker Punch",
+     "Razor Shell",
+     "First Impression"
+    ]
+   },
+   {
+    "species": "Masquerain",
+    "level": 45,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Air Slash",
+     "Bug Buzz",
+     "Icy Wind"
+    ]
+   },
+   {
+    "species": "Pinsir",
+    "level": 45,
+    "ability": "Mold Breaker",
+    "ivs": 31,
+    "moves": [
+     "Throat Chop",
+     "Storm Throw",
+     "X-Scissor",
+     "Stone Edge"
+    ]
+   },
+   {
+    "species": "Vikavolt",
+    "level": 45,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Flash Cannon",
+     "Thunderbolt",
+     "Bug Buzz",
+     "Energy Ball"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 105,
+  "name": "Aether President Lusamine",
+  "location": "Aether Paradise",
+  "split": "Hapu's grand trial",
+  "levelCap": 54,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Clefable",
+    "level": 47,
+    "ability": "Magic Guard",
+    "ivs": 31,
+    "moves": [
+     "Moonblast",
+     "Charm",
+     "Psychic",
+     "Hyper Voice"
+    ]
+   },
+   {
+    "species": "Lilligant",
+    "level": 47,
+    "ability": "Own Tempo",
+    "ivs": 31,
+    "moves": [
+     "Petal Dance",
+     "Teeter Dance",
+     "Stun Spore"
+    ]
+   },
+   {
+    "species": "Lopunny",
+    "level": 47,
+    "ability": "Cute Charm",
+    "ivs": 31,
+    "moves": [
+     "Dizzy Punch",
+     "Thunder Punch",
+     "Ice Punch",
+     "Fire Punch"
+    ]
+   },
+   {
+    "species": "Milotic",
+    "level": 47,
+    "ability": "Marvel Scale",
+    "ivs": 31,
+    "moves": [
+     "Hydro Pump",
+     "Icy Wind",
+     "Flail",
+     "Dragon Pulse"
+    ]
+   },
+   {
+    "species": "Bewear",
+    "level": 47,
+    "ability": "Fluffy",
+    "ivs": 31,
+    "moves": [
+     "Zen Headbutt",
+     "Drain Punch",
+     "Take Down",
+     "Dual Chop"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 64,
+  "name": "Captain Ilima",
+  "location": "Hau'oli Cemetery",
+  "split": "Hapu's grand trial",
+  "levelCap": 54,
+  "notes": [
+   "Mina's trial"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Gumshoos",
+    "level": 51,
+    "ability": "Stakeout",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Hyper Fang",
+     "Super Fang"
+    ]
+   },
+   {
+    "species": "Smeargle",
+    "level": 51,
+    "ability": "Technician",
+    "ivs": 31,
+    "moves": [
+     "Extreme Speed",
+     "Flamethrower",
+     "Surf",
+     "Energy Ball"
+    ]
+   },
+   {
+    "species": "Komala",
+    "level": 51,
+    "item": "Normalium Z",
+    "ability": "Comatose",
+    "ivs": 31,
+    "moves": [
+     "Sucker Punch",
+     "Wood Hammer",
+     "Slam"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 70,
+  "name": "Island Kahuna Nanu",
+  "location": "Aether House",
+  "split": "Hapu's grand trial",
+  "levelCap": 54,
+  "notes": [
+   "Mina's trial",
+   "Pokémon Ultra Moon"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Sableye",
+    "level": 52,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Power Gem",
+     "Shadow Ball",
+     "Dark Pulse"
+    ]
+   },
+   {
+    "species": "Absol",
+    "level": 52,
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Night Slash",
+     "Psycho Cut",
+     "Sucker Punch"
+    ]
+   },
+   {
+    "species": "Persian-Alola",
+    "level": 53,
+    "item": "Darkinium Z",
+    "ability": "Fur Coat",
+    "ivs": 31,
+    "moves": [
+     "Power Gem",
+     "Fake Out",
+     "Dark Pulse"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 71,
+  "name": "Island Kahuna Hapu",
+  "location": "Exeggutor Island",
+  "split": "Hapu's grand trial",
+  "levelCap": 54,
+  "notes": [
+   "Grand trial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Golurk",
+    "level": 53,
+    "ability": "No Guard",
+    "ivs": 31,
+    "moves": [
+     "Hammer Arm",
+     "Earthquake",
+     "Shadow Punch",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Gastrodon-East",
+    "level": 53,
+    "ability": "Sticky Hold",
+    "ivs": 31,
+    "moves": [
+     "Muddy Water",
+     "Mud Bomb",
+     "Recover"
+    ]
+   },
+   {
+    "species": "Flygon",
+    "level": 53,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Earth Power",
+     "Dragon Breath"
+    ]
+   },
+   {
+    "species": "Mudsdale",
+    "level": 54,
+    "item": "Groundium Z",
+    "ability": "Stamina",
+    "ivs": 31,
+    "moves": [
+     "Heavy Slam",
+     "Earthquake",
+     "Double Kick",
+     "Payback"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 50,
+  "name": "Aether President Lusamine",
+  "location": "Ultra Deep Sea",
+  "split": "Elite Four & Kukui",
+  "levelCap": 58,
+  "notes": [
+   "Second battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Clefable",
+    "level": 50,
+    "ability": "Magic Guard",
+    "ivs": 31,
+    "moves": [
+     "Moonblast",
+     "Cosmic Power",
+     "Metronome",
+     "Moonlight"
+    ]
+   },
+   {
+    "species": "Lilligant",
+    "level": 50,
+    "ability": "Own Tempo",
+    "ivs": 31,
+    "moves": [
+     "Leech Seed",
+     "Petal Dance",
+     "Teeter Dance",
+     "Stun Spore"
+    ]
+   },
+   {
+    "species": "Mismagius",
+    "level": 50,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Power Gem",
+     "Mystical Fire",
+     "Pain Split"
+    ]
+   },
+   {
+    "species": "Milotic",
+    "level": 50,
+    "ability": "Marvel Scale",
+    "ivs": 31,
+    "moves": [
+     "Hydro Pump",
+     "Recover",
+     "Safeguard",
+     "Flail"
+    ]
+   },
+   {
+    "species": "Bewear",
+    "level": 50,
+    "ability": "Fluffy",
+    "ivs": 31,
+    "moves": [
+     "Baby-Doll Eyes",
+     "Hammer Arm",
+     "Take Down",
+     "Pain Split"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 42,
+  "name": "Pokémon Trainer Gladion",
+  "location": "Mount Lanakila",
+  "split": "Elite Four & Kukui",
+  "levelCap": 58,
+  "notes": [
+   "Fourth battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Crobat",
+    "level": 52,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Acrobatics",
+     "Cross Poison"
+    ]
+   },
+   {
+    "species": "Weavile",
+    "level": 52,
+    "ability": "Pressure",
+    "ivs": 31,
+    "moves": [
+     "Ice Shard",
+     "Night Slash",
+     "Metal Claw"
+    ]
+   },
+   {
+    "species": "Lucario",
+    "level": 52,
+    "item": "Steelium Z",
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Aura Sphere",
+     "Metal Claw",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Silvally",
+    "level": 53,
+    "item": "Fire Memory",
+    "ability": "RKS System",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Crush Claw",
+     "X-Scissor",
+     "Multi-Attack"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 43,
+  "name": "Pokémon Trainer Gladion",
+  "location": "Mount Lanakila",
+  "split": "Elite Four & Kukui",
+  "levelCap": 58,
+  "notes": [
+   "Fourth battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Crobat",
+    "level": 52,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Acrobatics",
+     "Cross Poison"
+    ]
+   },
+   {
+    "species": "Weavile",
+    "level": 52,
+    "ability": "Pressure",
+    "ivs": 31,
+    "moves": [
+     "Ice Shard",
+     "Night Slash",
+     "Metal Claw"
+    ]
+   },
+   {
+    "species": "Lucario",
+    "level": 52,
+    "item": "Steelium Z",
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Aura Sphere",
+     "Metal Claw",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Silvally",
+    "level": 53,
+    "item": "Water Memory",
+    "ability": "RKS System",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Crush Claw",
+     "X-Scissor",
+     "Multi-Attack"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 44,
+  "name": "Pokémon Trainer Gladion",
+  "location": "Mount Lanakila",
+  "split": "Elite Four & Kukui",
+  "levelCap": 58,
+  "notes": [
+   "Fourth battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Crobat",
+    "level": 52,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Acrobatics",
+     "Cross Poison"
+    ]
+   },
+   {
+    "species": "Weavile",
+    "level": 52,
+    "ability": "Pressure",
+    "ivs": 31,
+    "moves": [
+     "Ice Shard",
+     "Night Slash",
+     "Metal Claw"
+    ]
+   },
+   {
+    "species": "Lucario",
+    "level": 52,
+    "item": "Steelium Z",
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Aura Sphere",
+     "Metal Claw",
+     "Quick Attack"
+    ]
+   },
+   {
+    "species": "Silvally",
+    "level": 53,
+    "item": "Grass Memory",
+    "ability": "RKS System",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Crush Claw",
+     "X-Scissor",
+     "Multi-Attack"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 36,
+  "name": "Pokémon Trainer Hau",
+  "location": "Mount Lanakila",
+  "split": "Elite Four & Kukui",
+  "levelCap": 58,
+  "notes": [
+   "Seventh battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Raichu-Alola",
+    "level": 53,
+    "ability": "Surge Surfer",
+    "ivs": 31,
+    "moves": [
+     "Thunderbolt",
+     "Quick Attack",
+     "Psychic",
+     "Focus Blast"
+    ]
+   },
+   {
+    "species": "Flareon",
+    "level": 53,
+    "ability": "Flash Fire",
+    "ivs": 31,
+    "moves": [
+     "Flare Blitz",
+     "Quick Attack",
+     "Charm",
+     "Baby-Doll Eyes"
+    ]
+   },
+   {
+    "species": "Komala",
+    "level": 53,
+    "ability": "Comatose",
+    "ivs": 31,
+    "moves": [
+     "Wood Hammer",
+     "Sucker Punch",
+     "Earthquake",
+     "Shadow Claw"
+    ]
+   },
+   {
+    "species": "Primarina",
+    "level": 54,
+    "item": "Waterium Z",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Sparkling Aria",
+     "Moonblast",
+     "Hyper Voice"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 37,
+  "name": "Pokémon Trainer Hau",
+  "location": "Mount Lanakila",
+  "split": "Elite Four & Kukui",
+  "levelCap": 58,
+  "notes": [
+   "Seventh battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Raichu-Alola",
+    "level": 53,
+    "ability": "Surge Surfer",
+    "ivs": 31,
+    "moves": [
+     "Thunderbolt",
+     "Quick Attack",
+     "Psychic",
+     "Focus Blast"
+    ]
+   },
+   {
+    "species": "Vaporeon",
+    "level": 53,
+    "ability": "Water Absorb",
+    "ivs": 31,
+    "moves": [
+     "Hydro Pump",
+     "Quick Attack",
+     "Charm",
+     "Baby-Doll Eyes"
+    ]
+   },
+   {
+    "species": "Komala",
+    "level": 53,
+    "ability": "Comatose",
+    "ivs": 31,
+    "moves": [
+     "Wood Hammer",
+     "Sucker Punch",
+     "Earthquake",
+     "Shadow Claw"
+    ]
+   },
+   {
+    "species": "Decidueye",
+    "level": 54,
+    "item": "Grassium Z",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Spirit Shackle",
+     "Leaf Blade",
+     "Smack Down"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 38,
+  "name": "Pokémon Trainer Hau",
+  "location": "Mount Lanakila",
+  "split": "Elite Four & Kukui",
+  "levelCap": 58,
+  "notes": [
+   "Seventh battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Raichu-Alola",
+    "level": 53,
+    "ability": "Surge Surfer",
+    "ivs": 31,
+    "moves": [
+     "Thunderbolt",
+     "Quick Attack",
+     "Psychic",
+     "Focus Blast"
+    ]
+   },
+   {
+    "species": "Leafeon",
+    "level": 53,
+    "ability": "Leaf Guard",
+    "ivs": 31,
+    "moves": [
+     "Leaf Blade",
+     "Quick Attack",
+     "Charm",
+     "Baby-Doll Eyes"
+    ]
+   },
+   {
+    "species": "Komala",
+    "level": 53,
+    "ability": "Comatose",
+    "ivs": 31,
+    "moves": [
+     "Wood Hammer",
+     "Sucker Punch",
+     "Earthquake",
+     "Shadow Claw"
+    ]
+   },
+   {
+    "species": "Incineroar",
+    "level": 54,
+    "item": "Firium Z",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Darkest Lariat",
+     "Flare Blitz",
+     "Earthquake"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 6,
+  "name": "Elite Four Hala",
+  "location": "Pokémon League (Alola)",
+  "split": "Elite Four & Kukui",
+  "levelCap": 58,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Hariyama",
+    "level": 54,
+    "ability": "Thick Fat",
+    "ivs": 31,
+    "moves": [
+     "Fake Out",
+     "Close Combat",
+     "Knock Off"
+    ]
+   },
+   {
+    "species": "Primeape",
+    "level": 54,
+    "ability": "Anger Point",
+    "ivs": 31,
+    "moves": [
+     "Cross Chop",
+     "Outrage",
+     "Punishment",
+     "Pursuit"
+    ]
+   },
+   {
+    "species": "Bewear",
+    "level": 54,
+    "ability": "Fluffy",
+    "ivs": 31,
+    "moves": [
+     "Hammer Arm",
+     "Brutal Swing"
+    ]
+   },
+   {
+    "species": "Poliwrath",
+    "level": 54,
+    "ability": "Water Absorb",
+    "ivs": 31,
+    "moves": [
+     "Waterfall",
+     "Submission"
+    ]
+   },
+   {
+    "species": "Crabominable",
+    "level": 55,
+    "item": "Fightinium Z",
+    "ability": "Iron Fist",
+    "ivs": 31,
+    "moves": [
+     "Ice Hammer",
+     "Close Combat"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 8,
+  "name": "Elite Four Olivia",
+  "location": "Pokémon League (Alola)",
+  "split": "Elite Four & Kukui",
+  "levelCap": 58,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Relicanth",
+    "level": 54,
+    "ability": "Swift Swim",
+    "ivs": 31,
+    "moves": [
+     "Hydro Pump",
+     "Ancient Power",
+     "Yawn"
+    ]
+   },
+   {
+    "species": "Carbink",
+    "level": 54,
+    "ability": "Clear Body",
+    "ivs": 31,
+    "moves": [
+     "Power Gem",
+     "Moonblast",
+     "Reflect"
+    ]
+   },
+   {
+    "species": "Golem-Alola",
+    "level": 54,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Thunder Punch",
+     "Rock Blast",
+     "Steamroller"
+    ]
+   },
+   {
+    "species": "Probopass",
+    "level": 54,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Earth Power",
+     "Power Gem",
+     "Thunder Wave",
+     "Sandstorm"
+    ]
+   },
+   {
+    "species": "Lycanroc-Midnight",
+    "level": 55,
+    "item": "Rockium Z",
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Stone Edge",
+     "Counter",
+     "Rock Climb"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 13,
+  "name": "Elite Four Acerola",
+  "location": "Pokémon League (Alola)",
+  "split": "Elite Four & Kukui",
+  "levelCap": 58,
+  "notes": [
+   "Initial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Sableye",
+    "level": 54,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Shadow Claw",
+     "Zen Headbutt",
+     "Confuse Ray",
+     "Fake Out"
+    ]
+   },
+   {
+    "species": "Drifblim",
+    "level": 54,
+    "ability": "Aftermath",
+    "ivs": 31,
+    "moves": [
+     "Ominous Wind",
+     "Focus Energy",
+     "Amnesia",
+     "Baton Pass"
+    ]
+   },
+   {
+    "species": "Dhelmise",
+    "level": 54,
+    "ability": "Steelworker",
+    "ivs": 31,
+    "moves": [
+     "Slam",
+     "Shadow Ball",
+     "Energy Ball",
+     "Whirlpool"
+    ]
+   },
+   {
+    "species": "Froslass",
+    "level": 54,
+    "ability": "Snow Cloak",
+    "ivs": 31,
+    "moves": [
+     "Blizzard",
+     "Shadow Ball",
+     "Confuse Ray",
+     "Ice Shard"
+    ]
+   },
+   {
+    "species": "Palossand",
+    "level": 55,
+    "item": "Ghostium Z",
+    "ability": "Water Compaction",
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Earth Power",
+     "Giga Drain",
+     "Iron Defense"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 14,
+  "name": "Elite Four Kahili",
+  "location": "Pokémon League (Alola)",
+  "split": "Elite Four & Kukui",
+  "levelCap": 58,
+  "notes": [
+   "Initial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Skarmory",
+    "level": 54,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Slash",
+     "Steel Wing",
+     "Feint",
+     "Spikes"
+    ]
+   },
+   {
+    "species": "Crobat",
+    "level": 54,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Air Slash",
+     "Swift",
+     "Supersonic",
+     "Poison Fang"
+    ]
+   },
+   {
+    "species": "Oricorio",
+    "level": 54,
+    "ability": "Dancer",
+    "ivs": 31,
+    "moves": [
+     "Revelation Dance",
+     "Teeter Dance",
+     "Air Slash",
+     "Feather Dance"
+    ]
+   },
+   {
+    "species": "Mandibuzz",
+    "level": 54,
+    "ability": "Big Pecks",
+    "ivs": 31,
+    "moves": [
+     "Bone Rush",
+     "Brave Bird",
+     "Punishment",
+     "Flatter"
+    ]
+   },
+   {
+    "species": "Toucannon",
+    "level": 55,
+    "item": "Flyinium Z",
+    "ability": "Skill Link",
+    "ivs": 31,
+    "moves": [
+     "Bullet Seed",
+     "Rock Blast",
+     "Beak Blast",
+     "Screech"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 15,
+  "name": "Pokémon Professor Kukui",
+  "location": "Pokémon League (Alola)",
+  "split": "Elite Four & Kukui",
+  "levelCap": 58,
+  "notes": [
+   "Champion battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lycanroc",
+    "level": 57,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Stone Edge",
+     "Accelerock",
+     "Crunch",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Ninetales-Alola",
+    "level": 56,
+    "ability": "Snow Cloak",
+    "ivs": 31,
+    "moves": [
+     "Dazzling Gleam",
+     "Blizzard",
+     "Ice Shard",
+     "Safeguard"
+    ]
+   },
+   {
+    "species": "Braviary",
+    "level": 56,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Crush Claw",
+     "Brave Bird",
+     "Tailwind",
+     "Whirlwind"
+    ]
+   },
+   {
+    "species": "Magnezone",
+    "level": 56,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Thunderbolt",
+     "Flash Cannon",
+     "Thunder Wave",
+     "Mirror Coat"
+    ]
+   },
+   {
+    "species": "Snorlax",
+    "level": 56,
+    "ability": "Thick Fat",
+    "ivs": 31,
+    "moves": [
+     "Body Slam",
+     "Crunch",
+     "Heavy Slam",
+     "High Horsepower"
+    ]
+   },
+   {
+    "species": "Incineroar",
+    "level": 58,
+    "item": "Firium Z",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Flare Blitz",
+     "Darkest Lariat",
+     "Outrage",
+     "Cross Chop"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 16,
+  "name": "Pokémon Professor Kukui",
+  "location": "Pokémon League (Alola)",
+  "split": "Elite Four & Kukui",
+  "levelCap": 58,
+  "notes": [
+   "Champion battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lycanroc",
+    "level": 57,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Stone Edge",
+     "Accelerock",
+     "Crunch",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Ninetales-Alola",
+    "level": 56,
+    "ability": "Snow Cloak",
+    "ivs": 31,
+    "moves": [
+     "Dazzling Gleam",
+     "Blizzard",
+     "Ice Shard",
+     "Safeguard"
+    ]
+   },
+   {
+    "species": "Braviary",
+    "level": 56,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Crush Claw",
+     "Brave Bird",
+     "Tailwind",
+     "Whirlwind"
+    ]
+   },
+   {
+    "species": "Magnezone",
+    "level": 56,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Thunderbolt",
+     "Flash Cannon",
+     "Thunder Wave",
+     "Mirror Coat"
+    ]
+   },
+   {
+    "species": "Snorlax",
+    "level": 56,
+    "ability": "Thick Fat",
+    "ivs": 31,
+    "moves": [
+     "Body Slam",
+     "Crunch",
+     "Heavy Slam",
+     "High Horsepower"
+    ]
+   },
+   {
+    "species": "Primarina",
+    "level": 58,
+    "item": "Waterium Z",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Sparkling Aria",
+     "Moonblast",
+     "Aqua Jet",
+     "Hyper Voice"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 17,
+  "name": "Pokémon Professor Kukui",
+  "location": "Pokémon League (Alola)",
+  "split": "Elite Four & Kukui",
+  "levelCap": 58,
+  "notes": [
+   "Champion battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Lycanroc",
+    "level": 57,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Stone Edge",
+     "Accelerock",
+     "Crunch",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Ninetales-Alola",
+    "level": 56,
+    "ability": "Snow Cloak",
+    "ivs": 31,
+    "moves": [
+     "Dazzling Gleam",
+     "Blizzard",
+     "Ice Shard",
+     "Safeguard"
+    ]
+   },
+   {
+    "species": "Braviary",
+    "level": 56,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Crush Claw",
+     "Brave Bird",
+     "Tailwind",
+     "Whirlwind"
+    ]
+   },
+   {
+    "species": "Magnezone",
+    "level": 56,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Thunderbolt",
+     "Flash Cannon",
+     "Thunder Wave",
+     "Mirror Coat"
+    ]
+   },
+   {
+    "species": "Snorlax",
+    "level": 56,
+    "ability": "Thick Fat",
+    "ivs": 31,
+    "moves": [
+     "Body Slam",
+     "Crunch",
+     "Heavy Slam",
+     "High Horsepower"
+    ]
+   },
+   {
+    "species": "Decidueye",
+    "level": 58,
+    "item": "Grassium Z",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Leaf Blade",
+     "Spirit Shackle",
+     "Brave Bird",
+     "Sucker Punch"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 99,
+  "name": "Pokémon Trainer Gladion",
+  "location": "Mount Lanakila",
+  "split": "Elite Four & Hau",
+  "levelCap": 60,
+  "notes": [
+   "Fourth battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Crobat",
+    "level": 53,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Acrobatics",
+     "Cross Poison"
+    ]
+   },
+   {
+    "species": "Zoroark",
+    "level": 53,
+    "item": "Darkinium Z",
+    "ability": "Illusion",
+    "ivs": 31,
+    "moves": [
+     "Night Daze",
+     "Hyper Voice",
+     "Grass Knot"
+    ]
+   },
+   {
+    "species": "Silvally",
+    "level": 55,
+    "item": "Fire Memory",
+    "ability": "RKS System",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Crush Claw",
+     "X-Scissor",
+     "Multi-Attack"
+    ]
+   },
+   {
+    "species": "Lucario",
+    "level": 53,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Aura Sphere",
+     "Metal Claw",
+     "Quick Attack"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 100,
+  "name": "Pokémon Trainer Gladion",
+  "location": "Mount Lanakila",
+  "split": "Elite Four & Hau",
+  "levelCap": 60,
+  "notes": [
+   "Fourth battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Crobat",
+    "level": 53,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Acrobatics",
+     "Cross Poison"
+    ]
+   },
+   {
+    "species": "Zoroark",
+    "level": 53,
+    "item": "Darkinium Z",
+    "ability": "Illusion",
+    "ivs": 31,
+    "moves": [
+     "Night Daze",
+     "Hyper Voice",
+     "Grass Knot"
+    ]
+   },
+   {
+    "species": "Silvally",
+    "level": 55,
+    "item": "Water Memory",
+    "ability": "RKS System",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Crush Claw",
+     "X-Scissor",
+     "Multi-Attack"
+    ]
+   },
+   {
+    "species": "Lucario",
+    "level": 55,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Aura Sphere",
+     "Metal Claw",
+     "Quick Attack"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 101,
+  "name": "Pokémon Trainer Gladion",
+  "location": "Mount Lanakila",
+  "split": "Elite Four & Hau",
+  "levelCap": 60,
+  "notes": [
+   "Fourth battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Crobat",
+    "level": 53,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Acrobatics",
+     "Cross Poison"
+    ]
+   },
+   {
+    "species": "Zoroark",
+    "level": 53,
+    "item": "Darkinium Z",
+    "ability": "Illusion",
+    "ivs": 31,
+    "moves": [
+     "Night Daze",
+     "Hyper Voice",
+     "Grass Knot"
+    ]
+   },
+   {
+    "species": "Silvally",
+    "level": 55,
+    "item": "Grass Memory",
+    "ability": "RKS System",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Crush Claw",
+     "X-Scissor",
+     "Multi-Attack"
+    ]
+   },
+   {
+    "species": "Lucario",
+    "level": 53,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Aura Sphere",
+     "Metal Claw",
+     "Quick Attack"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 68,
+  "name": "Elite Four Olivia",
+  "location": "Pokémon League (Alola)",
+  "split": "Elite Four & Hau",
+  "levelCap": 60,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Armaldo",
+    "level": 56,
+    "ability": "Battle Armor",
+    "ivs": 31,
+    "moves": [
+     "Crush Claw",
+     "X-Scissor",
+     "Rock Blast"
+    ]
+   },
+   {
+    "species": "Cradily",
+    "level": 56,
+    "ability": "Suction Cups",
+    "ivs": 31,
+    "moves": [
+     "Rock Tomb",
+     "Energy Ball",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Gigalith",
+    "level": 56,
+    "ability": "Sand Stream",
+    "ivs": 31,
+    "moves": [
+     "Stone Edge",
+     "Bulldoze",
+     "Iron Head"
+    ]
+   },
+   {
+    "species": "Probopass",
+    "level": 56,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Earth Power",
+     "Power Gem",
+     "Thunder Wave",
+     "Sandstorm"
+    ]
+   },
+   {
+    "species": "Lycanroc-Midnight",
+    "level": 57,
+    "item": "Rockium Z",
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Stone Edge",
+     "Counter",
+     "Rock Climb"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 72,
+  "name": "Elite Four Molayne",
+  "location": "Pokémon League (Alola)",
+  "split": "Elite Four & Hau",
+  "levelCap": 60,
+  "notes": [
+   "Initial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Klefki",
+    "level": 56,
+    "ability": "Prankster",
+    "ivs": 31,
+    "moves": [
+     "Spikes",
+     "Thunder Wave",
+     "Flash Cannon",
+     "Reflect"
+    ]
+   },
+   {
+    "species": "Bisharp",
+    "level": 56,
+    "ability": "Defiant",
+    "ivs": 31,
+    "moves": [
+     "Night Slash",
+     "Iron Head",
+     "X-Scissor",
+     "Metal Sound"
+    ]
+   },
+   {
+    "species": "Magnezone",
+    "level": 56,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Flash Cannon",
+     "Thunderbolt",
+     "Tri Attack",
+     "Screech"
+    ]
+   },
+   {
+    "species": "Metagross",
+    "level": 56,
+    "ability": "Clear Body",
+    "ivs": 31,
+    "moves": [
+     "Hammer Arm",
+     "Meteor Mash",
+     "Bullet Punch",
+     "Zen Headbutt"
+    ]
+   },
+   {
+    "species": "Dugtrio-Alola",
+    "level": 57,
+    "item": "Steelium Z",
+    "ability": "Tangling Hair",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Iron Head",
+     "Sucker Punch",
+     "Fissure"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 73,
+  "name": "Elite Four Acerola",
+  "location": "Pokémon League (Alola)",
+  "split": "Elite Four & Hau",
+  "levelCap": 60,
+  "notes": [
+   "Initial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Banette",
+    "level": 56,
+    "ability": "Insomnia",
+    "ivs": 31,
+    "moves": [
+     "Shadow Claw",
+     "Feint Attack",
+     "Infestation",
+     "Screech"
+    ]
+   },
+   {
+    "species": "Drifblim",
+    "level": 56,
+    "ability": "Aftermath",
+    "ivs": 31,
+    "moves": [
+     "Ominous Wind",
+     "Focus Energy",
+     "Amnesia",
+     "Baton Pass"
+    ]
+   },
+   {
+    "species": "Dhelmise",
+    "level": 56,
+    "ability": "Steelworker",
+    "ivs": 31,
+    "moves": [
+     "Slam",
+     "Shadow Ball",
+     "Energy Ball",
+     "Whirlpool"
+    ]
+   },
+   {
+    "species": "Froslass",
+    "level": 56,
+    "ability": "Snow Cloak",
+    "ivs": 31,
+    "moves": [
+     "Blizzard",
+     "Shadow Ball",
+     "Confuse Ray",
+     "Ice Shard"
+    ]
+   },
+   {
+    "species": "Palossand",
+    "level": 57,
+    "item": "Ghostium Z",
+    "ability": "Water Compaction",
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Earth Power",
+     "Giga Drain",
+     "Iron Defense"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 74,
+  "name": "Elite Four Kahili",
+  "location": "Pokémon League (Alola)",
+  "split": "Elite Four & Hau",
+  "levelCap": 60,
+  "notes": [
+   "Initial battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Braviary",
+    "level": 56,
+    "ability": "Sheer Force",
+    "ivs": 31,
+    "moves": [
+     "Crush Claw",
+     "Brave Bird",
+     "Air Slash",
+     "Scary Face"
+    ]
+   },
+   {
+    "species": "Hawlucha",
+    "level": 56,
+    "ability": "Mold Breaker",
+    "ivs": 31,
+    "moves": [
+     "Flying Press",
+     "Throat Chop",
+     "Dual Chop",
+     "Poison Jab"
+    ]
+   },
+   {
+    "species": "Oricorio",
+    "level": 56,
+    "ability": "Dancer",
+    "ivs": 31,
+    "moves": [
+     "Revelation Dance",
+     "Teeter Dance",
+     "Air Slash",
+     "Feather Dance"
+    ]
+   },
+   {
+    "species": "Mandibuzz",
+    "level": 56,
+    "ability": "Big Pecks",
+    "ivs": 31,
+    "moves": [
+     "Bone Rush",
+     "Brave Bird",
+     "Punishment",
+     "Flatter"
+    ]
+   },
+   {
+    "species": "Toucannon",
+    "level": 57,
+    "item": "Flyinium Z",
+    "ability": "Skill Link",
+    "ivs": 31,
+    "moves": [
+     "Bullet Seed",
+     "Rock Blast",
+     "Beak Blast",
+     "Screech"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 93,
+  "name": "Pokémon Trainer Hau",
+  "location": "Pokémon League (Alola)",
+  "split": "Elite Four & Hau",
+  "levelCap": 60,
+  "notes": [
+   "Champion battle",
+   "If you chose Rowlet"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Raichu-Alola",
+    "level": 59,
+    "ability": "Surge Surfer",
+    "ivs": 31,
+    "moves": [
+     "Thunderbolt",
+     "Quick Attack",
+     "Psychic",
+     "Focus Blast"
+    ]
+   },
+   {
+    "species": "Flareon",
+    "level": 58,
+    "ability": "Flash Fire",
+    "ivs": 31,
+    "moves": [
+     "Flare Blitz",
+     "Quick Attack",
+     "Charm",
+     "Baby-Doll Eyes"
+    ]
+   },
+   {
+    "species": "Tauros",
+    "level": 58,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Zen Headbutt",
+     "Iron Head",
+     "Earthquake",
+     "Double-Edge"
+    ]
+   },
+   {
+    "species": "Noivern",
+    "level": 58,
+    "ability": "Infiltrator",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Air Slash",
+     "Dark Pulse",
+     "Super Fang"
+    ]
+   },
+   {
+    "species": "Crabominable",
+    "level": 59,
+    "ability": "Iron Fist",
+    "ivs": 31,
+    "moves": [
+     "Power-Up Punch",
+     "Ice Hammer",
+     "Stone Edge",
+     "Dizzy Punch"
+    ]
+   },
+   {
+    "species": "Primarina",
+    "level": 60,
+    "item": "Waterium Z",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Sparkling Aria",
+     "Moonblast",
+     "Hyper Voice"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 94,
+  "name": "Pokémon Trainer Hau",
+  "location": "Pokémon League (Alola)",
+  "split": "Elite Four & Hau",
+  "levelCap": 60,
+  "notes": [
+   "Champion battle",
+   "If you chose Litten"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Raichu-Alola",
+    "level": 59,
+    "ability": "Surge Surfer",
+    "ivs": 31,
+    "moves": [
+     "Thunderbolt",
+     "Quick Attack",
+     "Psychic",
+     "Focus Blast"
+    ]
+   },
+   {
+    "species": "Vaporeon",
+    "level": 58,
+    "ability": "Water Absorb",
+    "ivs": 31,
+    "moves": [
+     "Hydro Pump",
+     "Quick Attack",
+     "Charm",
+     "Baby-Doll Eyes"
+    ]
+   },
+   {
+    "species": "Tauros",
+    "level": 58,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Zen Headbutt",
+     "Iron Head",
+     "Earthquake",
+     "Double-Edge"
+    ]
+   },
+   {
+    "species": "Noivern",
+    "level": 58,
+    "ability": "Infiltrator",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Air Slash",
+     "Dark Pulse",
+     "Super Fang"
+    ]
+   },
+   {
+    "species": "Crabominable",
+    "level": 59,
+    "ability": "Iron Fist",
+    "ivs": 31,
+    "moves": [
+     "Power-Up Punch",
+     "Ice Hammer",
+     "Stone Edge",
+     "Dizzy Punch"
+    ]
+   },
+   {
+    "species": "Decidueye",
+    "level": 60,
+    "item": "Grassium Z",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Spirit Shackle",
+     "Leaf Blade",
+     "Smack Down"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 95,
+  "name": "Pokémon Trainer Hau",
+  "location": "Pokémon League (Alola)",
+  "split": "Elite Four & Hau",
+  "levelCap": 60,
+  "notes": [
+   "Champion battle",
+   "If you chose Popplio"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Raichu-Alola",
+    "level": 59,
+    "ability": "Surge Surfer",
+    "ivs": 31,
+    "moves": [
+     "Thunderbolt",
+     "Quick Attack",
+     "Psychic",
+     "Focus Blast"
+    ]
+   },
+   {
+    "species": "Leafeon",
+    "level": 58,
+    "ability": "Leaf Guard",
+    "ivs": 31,
+    "moves": [
+     "Leaf Blade",
+     "Quick Attack",
+     "Charm",
+     "Baby-Doll Eyes"
+    ]
+   },
+   {
+    "species": "Tauros",
+    "level": 58,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Zen Headbutt",
+     "Iron Head",
+     "Earthquake",
+     "Double-Edge"
+    ]
+   },
+   {
+    "species": "Noivern",
+    "level": 58,
+    "ability": "Infiltrator",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Air Slash",
+     "Dark Pulse",
+     "Super Fang"
+    ]
+   },
+   {
+    "species": "Crabominable",
+    "level": 59,
+    "ability": "Iron Fist",
+    "ivs": 31,
+    "moves": [
+     "Power-Up Punch",
+     "Ice Hammer",
+     "Stone Edge",
+     "Dizzy Punch"
+    ]
+   },
+   {
+    "species": "Incineroar",
+    "level": 60,
+    "item": "Firium Z",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Darkest Lariat",
+     "Flare Blitz",
+     "Earthquake"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 66,
+  "name": "Island Kahuna Hala",
+  "location": "Iki Town",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Second battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Hariyama",
+    "level": 63,
+    "ability": "Thick Fat",
+    "ivs": 31,
+    "moves": [
+     "Fake Out",
+     "Close Combat",
+     "Knock Off",
+     "Heavy Slam"
+    ]
+   },
+   {
+    "species": "Machamp",
+    "level": 63,
+    "ability": "Guts",
+    "ivs": 31,
+    "moves": [
+     "Cross Chop",
+     "Thunder Punch",
+     "Ice Punch",
+     "Fire Punch"
+    ]
+   },
+   {
+    "species": "Bewear",
+    "level": 63,
+    "ability": "Fluffy",
+    "ivs": 31,
+    "moves": [
+     "Hammer Arm",
+     "Brutal Swing",
+     "Dragon Claw",
+     "Shadow Claw"
+    ]
+   },
+   {
+    "species": "Poliwrath",
+    "level": 63,
+    "ability": "Water Absorb",
+    "ivs": 31,
+    "moves": [
+     "Waterfall",
+     "Brick Break",
+     "Poison Jab",
+     "Payback"
+    ]
+   },
+   {
+    "species": "Crabominable",
+    "level": 63,
+    "item": "Fightinium Z",
+    "ability": "Iron Fist",
+    "ivs": 31,
+    "moves": [
+     "Ice Hammer",
+     "Close Combat",
+     "Stone Edge",
+     "Earthquake"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 10,
+  "name": "Island Kahuna Nanu",
+  "location": "Seafolk Village",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Second battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Sableye",
+    "level": 63,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Power Gem",
+     "Shadow Ball",
+     "Dark Pulse",
+     "Toxic"
+    ]
+   },
+   {
+    "species": "Krookodile",
+    "level": 63,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Aerial Ace",
+     "Dragon Claw",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Honchkrow",
+    "level": 63,
+    "ability": "Insomnia",
+    "ivs": 31,
+    "moves": [
+     "Aerial Ace",
+     "Sucker Punch",
+     "Psychic",
+     "Snarl"
+    ]
+   },
+   {
+    "species": "Absol",
+    "level": 63,
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Psycho Cut",
+     "Sucker Punch",
+     "Aerial Ace",
+     "Night Slash"
+    ]
+   },
+   {
+    "species": "Persian-Alola",
+    "level": 63,
+    "item": "Darkinium Z",
+    "ability": "Fur Coat",
+    "ivs": 31,
+    "moves": [
+     "Power Gem",
+     "Fake Out",
+     "Dark Pulse",
+     "Thunderbolt"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 48,
+  "name": "Pokémon Trainer Guzma",
+  "location": "Hau'oli City",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Fourth battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Golisopod",
+    "level": 63,
+    "ability": "Emergency Exit",
+    "ivs": 31,
+    "moves": [
+     "First Impression",
+     "Waterfall",
+     "Sucker Punch"
+    ]
+   },
+   {
+    "species": "Ariados",
+    "level": 63,
+    "ability": "Swarm",
+    "ivs": 31,
+    "moves": [
+     "Fell Stinger",
+     "Sucker Punch",
+     "Cross Poison",
+     "Toxic Thread"
+    ]
+   },
+   {
+    "species": "Masquerain",
+    "level": 63,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Bug Buzz",
+     "Air Slash",
+     "Energy Ball",
+     "Ice Beam"
+    ]
+   },
+   {
+    "species": "Pinsir",
+    "level": 63,
+    "ability": "Mold Breaker",
+    "ivs": 31,
+    "moves": [
+     "Storm Throw",
+     "X-Scissor",
+     "Guillotine",
+     "Stone Edge"
+    ]
+   },
+   {
+    "species": "Scizor",
+    "level": 63,
+    "ability": "Technician",
+    "ivs": 31,
+    "moves": [
+     "Night Slash",
+     "X-Scissor",
+     "Iron Head",
+     "Bullet Punch"
+    ]
+   }
+  ],
+  "games": [
+   "sun",
+   "moon"
+  ]
+ },
+ {
+  "id": 53,
+  "name": "Team Magma Maxie",
+  "location": "Team Rocket's Castle",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Mightyena",
+    "level": 64,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Fire Fang",
+     "Thunder Fang",
+     "Ice Fang"
+    ]
+   },
+   {
+    "species": "Crobat",
+    "level": 64,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Air Slash",
+     "Toxic",
+     "Dark Pulse",
+     "Sludge Bomb"
+    ]
+   },
+   {
+    "species": "Weezing",
+    "level": 64,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Sludge Bomb",
+     "Thunderbolt",
+     "Shadow Ball",
+     "Pain Split"
+    ]
+   },
+   {
+    "species": "Camerupt",
+    "level": 64,
+    "ability": "Magma Armor",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Stone Edge",
+     "Flamethrower",
+     "Flash Cannon"
+    ]
+   },
+   {
+    "species": "Groudon",
+    "level": 66,
+    "ability": "Drought",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Flamethrower",
+     "Ancient Power",
+     "Solar Beam"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 54,
+  "name": "Team Aqua Archie",
+  "location": "Team Rocket's Castle",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Mightyena",
+    "level": 64,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Fire Fang",
+     "Thunder Fang",
+     "Ice Fang"
+    ]
+   },
+   {
+    "species": "Crobat",
+    "level": 64,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Air Slash",
+     "Toxic",
+     "Dark Pulse",
+     "Sludge Bomb"
+    ]
+   },
+   {
+    "species": "Muk",
+    "level": 64,
+    "ability": "Poison Touch",
+    "ivs": 31,
+    "moves": [
+     "Gunk Shot",
+     "Fire Punch",
+     "Thunder Punch",
+     "Ice Punch"
+    ]
+   },
+   {
+    "species": "Sharpedo",
+    "level": 64,
+    "ability": "Rough Skin",
+    "ivs": 31,
+    "moves": [
+     "Night Slash",
+     "Liquidation",
+     "Ice Fang",
+     "Poison Fang"
+    ]
+   },
+   {
+    "species": "Kyogre",
+    "level": 66,
+    "ability": "Drizzle",
+    "ivs": 31,
+    "moves": [
+     "Hydro Pump",
+     "Ice Beam",
+     "Ancient Power",
+     "Thunder"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun",
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 55,
+  "name": "Team Galactic Cyrus",
+  "location": "Team Rocket's Castle",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Pokémon Ultra Sun"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Houndoom",
+    "level": 65,
+    "ability": "Early Bird",
+    "ivs": 31,
+    "moves": [
+     "Fire Blast",
+     "Dark Pulse",
+     "Sludge Bomb",
+     "Shadow Ball"
+    ]
+   },
+   {
+    "species": "Honchkrow",
+    "level": 65,
+    "ability": "Insomnia",
+    "ivs": 31,
+    "moves": [
+     "Night Slash",
+     "Sky Attack",
+     "Heat Wave",
+     "Icy Wind"
+    ]
+   },
+   {
+    "species": "Crobat",
+    "level": 65,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Cross Poison",
+     "Zen Headbutt",
+     "X-Scissor",
+     "Super Fang"
+    ]
+   },
+   {
+    "species": "Weavile",
+    "level": 65,
+    "ability": "Pressure",
+    "ivs": 31,
+    "moves": [
+     "Night Slash",
+     "Quick Attack",
+     "Ice Punch",
+     "Brick Break"
+    ]
+   },
+   {
+    "species": "Dialga",
+    "level": 67,
+    "ability": "Pressure",
+    "ivs": 31,
+    "moves": [
+     "Roar of Time",
+     "Flash Cannon",
+     "Earth Power",
+     "Thunderbolt"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun"
+  ]
+ },
+ {
+  "id": 56,
+  "name": "Team Galactic Cyrus",
+  "location": "Team Rocket's Castle",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Pokémon Ultra Moon"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Houndoom",
+    "level": 65,
+    "ability": "Early Bird",
+    "ivs": 31,
+    "moves": [
+     "Fire Blast",
+     "Dark Pulse",
+     "Sludge Bomb",
+     "Shadow Ball"
+    ]
+   },
+   {
+    "species": "Honchkrow",
+    "level": 65,
+    "ability": "Insomnia",
+    "ivs": 31,
+    "moves": [
+     "Night Slash",
+     "Sky Attack",
+     "Heat Wave",
+     "Icy Wind"
+    ]
+   },
+   {
+    "species": "Crobat",
+    "level": 65,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Cross Poison",
+     "Zen Headbutt",
+     "X-Scissor",
+     "Super Fang"
+    ]
+   },
+   {
+    "species": "Weavile",
+    "level": 65,
+    "ability": "Pressure",
+    "ivs": 31,
+    "moves": [
+     "Night Slash",
+     "Quick Attack",
+     "Ice Punch",
+     "Brick Break"
+    ]
+   },
+   {
+    "species": "Palkia",
+    "level": 67,
+    "ability": "Pressure",
+    "ivs": 31,
+    "moves": [
+     "Spacial Rend",
+     "Surf",
+     "Earth Power",
+     "Thunderbolt"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 59,
+  "name": "Team Flare Lysandre",
+  "location": "Team Rocket's Castle",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Pokémon Ultra Sun"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Mienshao",
+    "level": 65,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Fake Out",
+     "Dual Chop",
+     "High Jump Kick",
+     "U-turn"
+    ]
+   },
+   {
+    "species": "Honchkrow",
+    "level": 65,
+    "ability": "Insomnia",
+    "ivs": 31,
+    "moves": [
+     "Dark Pulse",
+     "Heat Wave",
+     "Psychic",
+     "Shadow Ball"
+    ]
+   },
+   {
+    "species": "Pyroar",
+    "level": 65,
+    "ability": "Rivalry",
+    "ivs": 31,
+    "moves": [
+     "Flamethrower",
+     "Hyper Voice",
+     "Snarl",
+     "Will-O-Wisp"
+    ]
+   },
+   {
+    "species": "Gyarados",
+    "level": 65,
+    "item": "Gyaradosite",
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Waterfall",
+     "Earthquake",
+     "Stone Edge"
+    ]
+   },
+   {
+    "species": "Xerneas",
+    "level": 67,
+    "ability": "Fairy Aura",
+    "ivs": 31,
+    "moves": [
+     "Geomancy",
+     "Moonblast",
+     "Thunderbolt",
+     "Psyshock"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun"
+  ]
+ },
+ {
+  "id": 60,
+  "name": "Team Flare Lysandre",
+  "location": "Team Rocket's Castle",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Pokémon Ultra Moon"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Mienshao",
+    "level": 65,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Fake Out",
+     "Dual Chop",
+     "High Jump Kick",
+     "U-turn"
+    ]
+   },
+   {
+    "species": "Honchkrow",
+    "level": 65,
+    "ability": "Insomnia",
+    "ivs": 31,
+    "moves": [
+     "Dark Pulse",
+     "Heat Wave",
+     "Psychic",
+     "Shadow Ball"
+    ]
+   },
+   {
+    "species": "Pyroar",
+    "level": 65,
+    "ability": "Rivalry",
+    "ivs": 31,
+    "moves": [
+     "Flamethrower",
+     "Hyper Voice",
+     "Snarl",
+     "Will-O-Wisp"
+    ]
+   },
+   {
+    "species": "Gyarados",
+    "level": 65,
+    "item": "Gyaradosite",
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Waterfall",
+     "Earthquake",
+     "Stone Edge"
+    ]
+   },
+   {
+    "species": "Yveltal",
+    "level": 67,
+    "ability": "Dark Aura",
+    "ivs": 31,
+    "moves": [
+     "Oblivion Wing",
+     "Air Slash",
+     "Psychic",
+     "Shadow Ball"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 57,
+  "name": "Team Plasma Ghetsis",
+  "location": "Team Rocket's Castle",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Pokémon Ultra Sun"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Cofagrigus",
+    "level": 66,
+    "ability": "Mummy",
+    "ivs": 31,
+    "moves": [
+     "Will-O-Wisp",
+     "Shadow Ball",
+     "Power Split",
+     "Dark Pulse"
+    ]
+   },
+   {
+    "species": "Bouffalant",
+    "level": 66,
+    "ability": "Reckless",
+    "ivs": 31,
+    "moves": [
+     "Head Charge",
+     "Poison Jab",
+     "Earthquake",
+     "Megahorn"
+    ]
+   },
+   {
+    "species": "Bisharp",
+    "level": 66,
+    "ability": "Defiant",
+    "ivs": 31,
+    "moves": [
+     "Iron Head",
+     "Night Slash",
+     "Stone Edge",
+     "X-Scissor"
+    ]
+   },
+   {
+    "species": "Hydreigon",
+    "level": 66,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Hyper Voice",
+     "Dark Pulse",
+     "Surf"
+    ]
+   },
+   {
+    "species": "Zekrom",
+    "level": 68,
+    "ability": "Teravolt",
+    "ivs": 31,
+    "moves": [
+     "Bolt Strike",
+     "Hyper Voice",
+     "Dragon Claw",
+     "Zen Headbutt"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun"
+  ]
+ },
+ {
+  "id": 58,
+  "name": "Team Plasma Ghetsis",
+  "location": "Team Rocket's Castle",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Pokémon Ultra Moon"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Cofagrigus",
+    "level": 66,
+    "ability": "Mummy",
+    "ivs": 31,
+    "moves": [
+     "Will-O-Wisp",
+     "Shadow Ball",
+     "Power Split",
+     "Dark Pulse"
+    ]
+   },
+   {
+    "species": "Bouffalant",
+    "level": 66,
+    "ability": "Reckless",
+    "ivs": 31,
+    "moves": [
+     "Head Charge",
+     "Poison Jab",
+     "Earthquake",
+     "Megahorn"
+    ]
+   },
+   {
+    "species": "Bisharp",
+    "level": 66,
+    "ability": "Defiant",
+    "ivs": 31,
+    "moves": [
+     "Iron Head",
+     "Night Slash",
+     "Stone Edge",
+     "X-Scissor"
+    ]
+   },
+   {
+    "species": "Hydreigon",
+    "level": 66,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Dragon Pulse",
+     "Hyper Voice",
+     "Dark Pulse",
+     "Surf"
+    ]
+   },
+   {
+    "species": "Reshiram",
+    "level": 68,
+    "ability": "Turboblaze",
+    "ivs": 31,
+    "moves": [
+     "Blue Flare",
+     "Hyper Voice",
+     "Dragon Claw",
+     "Zen Headbutt"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-moon"
+  ]
+ },
+ {
+  "id": 51,
+  "name": "Team Rainbow Rocket Giovanni",
+  "location": "Team Rocket's Castle",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Pokémon Ultra Sun"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Dugtrio",
+    "level": 68,
+    "item": "Smooth Rock",
+    "ability": "Sand Veil",
+    "ivs": 31,
+    "moves": [
+     "Sandstorm",
+     "Earthquake",
+     "Sucker Punch",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Nidoking",
+    "level": 68,
+    "ability": "Poison Point",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Poison Jab",
+     "Throat Chop",
+     "Aqua Tail"
+    ]
+   },
+   {
+    "species": "Nidoqueen",
+    "level": 68,
+    "ability": "Poison Point",
+    "ivs": 31,
+    "moves": [
+     "Surf",
+     "Sludge Wave",
+     "Earth Power",
+     "Flamethrower"
+    ]
+   },
+   {
+    "species": "Rhyperior",
+    "level": 68,
+    "ability": "Lightning Rod",
+    "ivs": 31,
+    "moves": [
+     "Megahorn",
+     "Earthquake",
+     "Stone Edge",
+     "Thunder Punch"
+    ]
+   },
+   {
+    "species": "Mewtwo",
+    "level": 70,
+    "item": "Mewtwonite X",
+    "ability": "Pressure",
+    "ivs": 31,
+    "moves": [
+     "Zen Headbutt",
+     "Earthquake",
+     "Stone Edge",
+     "Drain Punch"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-sun"
+  ]
+ },
+ {
+  "id": 52,
+  "name": "Team Rainbow Rocket Giovanni",
+  "location": "Team Rocket's Castle",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Pokémon Ultra Moon"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Dugtrio",
+    "level": 68,
+    "item": "Smooth Rock",
+    "ability": "Sand Veil",
+    "ivs": 31,
+    "moves": [
+     "Sandstorm",
+     "Earthquake",
+     "Sucker Punch",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Nidoking",
+    "level": 68,
+    "ability": "Poison Point",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Poison Jab",
+     "Throat Chop",
+     "Aqua Tail"
+    ]
+   },
+   {
+    "species": "Nidoqueen",
+    "level": 68,
+    "ability": "Poison Point",
+    "ivs": 31,
+    "moves": [
+     "Surf",
+     "Sludge Wave",
+     "Earth Power",
+     "Flamethrower"
+    ]
+   },
+   {
+    "species": "Rhyperior",
+    "level": 68,
+    "ability": "Lightning Rod",
+    "ivs": 31,
+    "moves": [
+     "Megahorn",
+     "Earthquake",
+     "Stone Edge",
+     "Thunder Punch"
+    ]
+   },
+   {
+    "species": "Mewtwo",
+    "level": 70,
+    "item": "Mewtwonite Y",
+    "ability": "Pressure",
+    "ivs": 31,
+    "moves": [
+     "Psystrike",
+     "Aura Sphere",
+     "Psychic",
+     "Ice Beam"
+    ]
+   }
+  ],
+  "games": [
+   "ultra-moon"
+  ]
+ }
+]

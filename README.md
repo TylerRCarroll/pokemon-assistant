@@ -29,8 +29,8 @@ Raw romhack documentation lives in `Documentation/<hack>/` (gitignored, since th
 npm run import:unbound
 npm run import:rp
 npm run fetch:smogon   # Smogon usage stats, sets, and sample teams (refresh monthly)
-npm run fetch:availability   # when Pokémon become obtainable in Scarlet/Violet and Black/White (PokéAPI + Bulbapedia)
-npm run fetch:trainers       # story boss teams for Scarlet/Violet and Black/White (Bulbapedia)
+npm run fetch:availability   # when Pokémon become obtainable in each official game (PokéAPI + Bulbapedia; cached in node_modules/.cache)
+npm run fetch:trainers       # story boss teams for each official game (Bulbapedia; cached in node_modules/.cache)
 ```
 
 Hand-curated overrides in `data-src/romhacks/<hack>/overlay.json` take precedence over generated data.
@@ -48,10 +48,10 @@ All six planned features are in:
 2. **Dex** – Pokémon, moves, abilities, items, learnsets, evolutions
 3. **Team Builder** – legal sets, coverage analysis, Showdown import/export
 4. **Planner** – Smogon usage, sets, and sample teams; romhack trainer battles
-5. **Calc** – `@smogon/calc` damage calculator and threat checks against the meta or a game's bosses (romhack trainers; Scarlet/Violet and Black/White story fights). For a boss Pokémon nothing on your team checks, *How do I beat it?* damage-calcs single changes within the level cap: more levels, evolving, a new move, a held item, or a Pokémon you can get by then
+5. **Calc** – `@smogon/calc` damage calculator and threat checks against the meta or a game's bosses (romhack trainers; every official game's story fights). For a boss Pokémon nothing on your team checks, *How do I beat it?* damage-calcs single changes within the level cap: more levels, evolving, a new move, a held item, or a Pokémon you can get by then
 6. **Trainer** – spaced-repetition quizzes on matchups, abilities, moves, counters, and romhack changes
 
-The Team Builder has a **Playthrough** mode (Scarlet/Violet, Black/White, Renegade Platinum, Unbound): pick how far you are, and warnings and swap suggestions only use Pokémon you could have by then, evolved as far as the level cap allows.
+The Team Builder has a **Playthrough** mode (every mainline game from Red/Blue to Scarlet/Violet, including the remakes, plus Renegade Platinum and Unbound; Let's Go and Legends: Arceus aren't covered): pick how far you are, and warnings and swap suggestions only use Pokémon you could have by then, evolved as far as the level cap allows.
 
 Ideas next: Unbound move tutors and custom-ability descriptions, Renegade Platinum evolution changes and encounters, a Pokémon Champions ruleset.
 

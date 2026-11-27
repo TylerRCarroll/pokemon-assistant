@@ -54,7 +54,7 @@ export function ThreatsView({
   format?: FormatInfo;
   onFormat: (id: string) => void;
   data?: FormatData;
-  /** Boss teams (romhack docs, or Bulbapedia for Scarlet/Violet and Black/White) */
+  /** Boss teams (romhack docs, or Bulbapedia's story fights for the official games) */
   trainers?: TrainerInfo[];
   trainerId?: number;
   onTrainer: (id: number) => void;

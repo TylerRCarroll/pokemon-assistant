@@ -108,7 +108,10 @@ describe('romhack overlays', () => {
     expect(roark.team.map((m) => m.species)).toEqual(['Nosepass', 'Bonsly', 'Geodude', 'Onix', 'Larvitar', 'Cranidos']);
     expect(roark.team[0]).toMatchObject({ level: 15, item: 'Smooth Rock', ability: 'Sturdy', nature: 'Modest' });
     expect(trainers.every((t) => t.team.length >= 1 && t.team.length <= 6)).toBe(true);
-    expect(getRuleset('gen4').loadTrainers).toBeUndefined();
+    // official Gen 4 has its own (Bulbapedia) bosses, never the romhack's
+    const official = await getRuleset('gen4').loadTrainers!();
+    expect(official.every((t) => t.games?.length)).toBe(true);
+    expect(official.some((t) => /Roark/.test(t.name) && t.team.some((m) => m.item === 'Smooth Rock'))).toBe(false);
   });
 
   it('Unbound uses Gen 8 mechanics with the National Dex pool', () => {

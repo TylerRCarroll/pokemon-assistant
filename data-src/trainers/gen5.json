@@ -1,5 +1,251 @@
 [
  {
+  "id": 85,
+  "name": "Trainer Hugh",
+  "location": "Aspertia City",
+  "split": "Gym 1: Cheren",
+  "levelCap": 13,
+  "notes": [
+   "First battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Tepig",
+    "level": 5,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Tail Whip"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 86,
+  "name": "Trainer Hugh",
+  "location": "Aspertia City",
+  "split": "Gym 1: Cheren",
+  "levelCap": 13,
+  "notes": [
+   "First battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Oshawott",
+    "level": 5,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Tail Whip"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 87,
+  "name": "Trainer Hugh",
+  "location": "Aspertia City",
+  "split": "Gym 1: Cheren",
+  "levelCap": 13,
+  "notes": [
+   "First battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Snivy",
+    "level": 5,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Leer"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 88,
+  "name": "Trainer Hugh",
+  "location": "Floccesy Ranch",
+  "split": "Gym 1: Cheren",
+  "levelCap": 13,
+  "notes": [
+   "Second battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Tepig",
+    "level": 8,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Tail Whip"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 89,
+  "name": "Trainer Hugh",
+  "location": "Floccesy Ranch",
+  "split": "Gym 1: Cheren",
+  "levelCap": 13,
+  "notes": [
+   "Second battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Oshawott",
+    "level": 8,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Tail Whip"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 90,
+  "name": "Trainer Hugh",
+  "location": "Floccesy Ranch",
+  "split": "Gym 1: Cheren",
+  "levelCap": 13,
+  "notes": [
+   "Second battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Snivy",
+    "level": 8,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Leer"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 66,
+  "name": "Leader Cheren",
+  "location": "Aspertia Gym",
+  "split": "Gym 1: Cheren",
+  "levelCap": 13,
+  "notes": [
+   "Easy Mode/Normal Mode"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Patrat",
+    "level": 11,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Work Up",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Lillipup",
+    "level": 13,
+    "ability": "Vital Spirit",
+    "ivs": 31,
+    "moves": [
+     "Tackle",
+     "Work Up",
+     "Bite"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 78,
+  "name": "Leader Cheren",
+  "location": "Aspertia Gym",
+  "split": "Gym 1: Cheren",
+  "levelCap": 13,
+  "notes": [
+   "Easy Mode/Normal Mode"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Patrat",
+    "level": 11,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Work Up",
+     "Tackle",
+     "Bite"
+    ]
+   },
+   {
+    "species": "Lillipup",
+    "level": 13,
+    "ability": "Vital Spirit",
+    "ivs": 31,
+    "moves": [
+     "Work Up",
+     "Tackle",
+     "Bite"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
   "id": 24,
   "name": "Trainer Cheren",
   "location": "Nuvema Town",
@@ -731,6 +977,46 @@
   ]
  },
  {
+  "id": 67,
+  "name": "Leader Roxie",
+  "location": "Virbank Gym",
+  "split": "Gym 2: Roxie",
+  "levelCap": 18,
+  "notes": [
+   "Easy Mode/Normal Mode"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Koffing",
+    "level": 16,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Assurance",
+     "Tackle",
+     "Smog"
+    ]
+   },
+   {
+    "species": "Whirlipede",
+    "level": 18,
+    "ability": "Poison Point",
+    "ivs": 31,
+    "moves": [
+     "Venoshock",
+     "Protect",
+     "Poison Sting",
+     "Pursuit"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
   "id": 4,
   "name": "Leader Lenora",
   "location": "Nacrene Gym",
@@ -1285,6 +1571,101 @@
   ]
  },
  {
+  "id": 100,
+  "name": "Trainer Colress",
+  "location": "Unova Route 4",
+  "split": "Gym 3: Burgh",
+  "levelCap": 24,
+  "notes": [
+   "First battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Magnemite",
+    "level": 21,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Sonic Boom",
+     "Thunder Wave",
+     "Magnet Bomb",
+     "Spark"
+    ]
+   },
+   {
+    "species": "Klink",
+    "level": 23,
+    "ability": "Plus",
+    "ivs": 31,
+    "moves": [
+     "Charge",
+     "Thunder Shock",
+     "Gear Grind",
+     "Bind"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 61,
+  "name": "Leader Burgh",
+  "location": "Castelia Gym",
+  "split": "Gym 3: Burgh",
+  "levelCap": 24,
+  "notes": [
+   "Easy Mode/Normal Mode"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Swadloon",
+    "level": 22,
+    "ability": "Leaf Guard",
+    "ivs": 31,
+    "moves": [
+     "String Shot",
+     "Razor Leaf",
+     "Struggle Bug",
+     "Protect"
+    ]
+   },
+   {
+    "species": "Dwebble",
+    "level": 22,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Smack Down",
+     "Feint Attack",
+     "Rock Polish",
+     "Struggle Bug"
+    ]
+   },
+   {
+    "species": "Leavanny",
+    "level": 24,
+    "item": "Sitrus Berry",
+    "ability": "Swarm",
+    "ivs": 31,
+    "moves": [
+     "Razor Leaf",
+     "Cut",
+     "String Shot",
+     "Struggle Bug"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
   "id": 36,
   "name": "Trainer Cheren",
   "location": "Unova Route 5",
@@ -1537,6 +1918,58 @@
   "games": [
    "black",
    "white"
+  ]
+ },
+ {
+  "id": 62,
+  "name": "Leader Elesa",
+  "location": "Nimbasa Gym",
+  "split": "Gym 4: Elesa",
+  "levelCap": 30,
+  "notes": [
+   "Easy Mode/Normal Mode"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Emolga",
+    "level": 28,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Quick Attack",
+     "Pursuit",
+     "Volt Switch"
+    ]
+   },
+   {
+    "species": "Flaaffy",
+    "level": 28,
+    "ability": "Static",
+    "ivs": 31,
+    "moves": [
+     "Thunder Wave",
+     "Volt Switch",
+     "Take Down"
+    ]
+   },
+   {
+    "species": "Zebstrika",
+    "level": 30,
+    "item": "Sitrus Berry",
+    "ability": "Motor Drive",
+    "ivs": 31,
+    "moves": [
+     "Flame Charge",
+     "Pursuit",
+     "Volt Switch",
+     "Quick Attack"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
   ]
  },
  {
@@ -1854,6 +2287,60 @@
   ]
  },
  {
+  "id": 63,
+  "name": "Leader Clay",
+  "location": "Driftveil Gym",
+  "split": "Gym 5: Clay",
+  "levelCap": 33,
+  "notes": [
+   "Easy Mode/Normal Mode"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Krokorok",
+    "level": 31,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Sand Tomb",
+     "Bulldoze",
+     "Torment"
+    ]
+   },
+   {
+    "species": "Sandslash",
+    "level": 31,
+    "ability": "Sand Veil",
+    "ivs": 31,
+    "moves": [
+     "Crush Claw",
+     "Bulldoze",
+     "Fury Cutter",
+     "Rollout"
+    ]
+   },
+   {
+    "species": "Excadrill",
+    "level": 33,
+    "item": "Sitrus Berry",
+    "ability": "Sand Force",
+    "ivs": 31,
+    "moves": [
+     "Slash",
+     "Rock Slide",
+     "Metal Claw",
+     "Bulldoze"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
   "id": 8,
   "name": "Leader Skyla",
   "location": "Mistralton Gym",
@@ -2112,6 +2599,60 @@
   "games": [
    "black",
    "white"
+  ]
+ },
+ {
+  "id": 64,
+  "name": "Leader Skyla",
+  "location": "Mistralton Gym",
+  "split": "Gym 6: Skyla",
+  "levelCap": 39,
+  "notes": [
+   "Easy Mode/Normal Mode"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Swoobat",
+    "level": 37,
+    "ability": "Unaware",
+    "ivs": 31,
+    "moves": [
+     "Heart Stamp",
+     "Attract",
+     "Acrobatics",
+     "Assurance"
+    ]
+   },
+   {
+    "species": "Skarmory",
+    "level": 37,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Air Cutter",
+     "Agility",
+     "Steel Wing",
+     "Fury Attack"
+    ]
+   },
+   {
+    "species": "Swanna",
+    "level": 39,
+    "item": "Sitrus Berry",
+    "ability": "Big Pecks",
+    "ivs": 31,
+    "moves": [
+     "Feather Dance",
+     "Roost",
+     "Bubble Beam",
+     "Air Slash"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
   ]
  },
  {
@@ -2465,6 +3006,285 @@
   ],
   "games": [
    "white"
+  ]
+ },
+ {
+  "id": 91,
+  "name": "Trainer Hugh",
+  "location": "Undella Town",
+  "split": "Gym 7: Drayden",
+  "levelCap": 48,
+  "notes": [
+   "Fourth battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Unfezant",
+    "level": 39,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Taunt",
+     "Air Slash",
+     "Razor Wind",
+     "Detect"
+    ]
+   },
+   {
+    "species": "Simipour",
+    "level": 39,
+    "item": "Mystic Water",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Scald",
+     "Leer",
+     "Lick",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Emboar",
+    "level": 41,
+    "item": "Charcoal",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Take Down",
+     "Assurance",
+     "Heat Crash",
+     "Rollout"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 92,
+  "name": "Trainer Hugh",
+  "location": "Undella Town",
+  "split": "Gym 7: Drayden",
+  "levelCap": 48,
+  "notes": [
+   "Fourth battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Unfezant",
+    "level": 39,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Taunt",
+     "Air Slash",
+     "Razor Wind",
+     "Detect"
+    ]
+   },
+   {
+    "species": "Simisage",
+    "level": 39,
+    "item": "Miracle Seed",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Seed Bomb",
+     "Leer",
+     "Lick",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Samurott",
+    "level": 41,
+    "item": "Mystic Water",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Aqua Jet",
+     "Encore",
+     "Revenge",
+     "Slash"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 93,
+  "name": "Trainer Hugh",
+  "location": "Undella Town",
+  "split": "Gym 7: Drayden",
+  "levelCap": 48,
+  "notes": [
+   "Fourth battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Unfezant",
+    "level": 39,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Taunt",
+     "Air Slash",
+     "Razor Wind",
+     "Detect"
+    ]
+   },
+   {
+    "species": "Simisear",
+    "level": 39,
+    "item": "Charcoal",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Flame Burst",
+     "Leer",
+     "Lick",
+     "Fury Swipes"
+    ]
+   },
+   {
+    "species": "Serperior",
+    "level": 41,
+    "item": "Miracle Seed",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Coil",
+     "Leaf Blade",
+     "Slam",
+     "Mega Drain"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 65,
+  "name": "Leader Drayden",
+  "location": "Opelucid Gym",
+  "split": "Gym 7: Drayden",
+  "levelCap": 48,
+  "notes": [
+   "Easy Mode/Normal Mode"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Druddigon",
+    "level": 46,
+    "ability": "Sheer Force",
+    "ivs": 31,
+    "moves": [
+     "Revenge",
+     "Crunch",
+     "Slash",
+     "Dragon Tail"
+    ]
+   },
+   {
+    "species": "Flygon",
+    "level": 46,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Rock Slide",
+     "Earth Power",
+     "Crunch",
+     "Dragon Tail"
+    ]
+   },
+   {
+    "species": "Haxorus",
+    "level": 48,
+    "item": "Sitrus Berry",
+    "ability": "Mold Breaker",
+    "ivs": 31,
+    "moves": [
+     "Dragon Dance",
+     "Dragon Tail",
+     "Slash",
+     "Assurance"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 68,
+  "name": "Leader Marlon",
+  "location": "Humilau Gym",
+  "split": "Gym 8: Marlon",
+  "levelCap": 51,
+  "notes": [
+   "Easy Mode/Normal Mode"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Carracosta",
+    "level": 49,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Smack Down",
+     "Shell Smash",
+     "Scald",
+     "Crunch"
+    ]
+   },
+   {
+    "species": "Wailord",
+    "level": 49,
+    "ability": "Water Veil",
+    "ivs": 31,
+    "moves": [
+     "Amnesia",
+     "Scald",
+     "Rollout",
+     "Bounce"
+    ]
+   },
+   {
+    "species": "Jellicent",
+    "level": 51,
+    "item": "Sitrus Berry",
+    "ability": "Cursed Body",
+    "ivs": 31,
+    "moves": [
+     "Brine",
+     "Recover",
+     "Scald",
+     "Ominous Wind"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
   ]
  },
  {
@@ -3203,6 +4023,736 @@
   ]
  },
  {
+  "id": 75,
+  "name": "Team Plasma Ghetsis",
+  "location": "Giant Chasm",
+  "split": "Elite Four & Iris",
+  "levelCap": 59,
+  "notes": [],
+  "boss": true,
+  "team": [
+   {
+    "species": "Cofagrigus",
+    "level": 50,
+    "item": "Leftovers",
+    "ability": "Mummy",
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Psychic",
+     "Protect",
+     "Toxic"
+    ]
+   },
+   {
+    "species": "Seismitoad",
+    "level": 50,
+    "ability": "Poison Touch",
+    "ivs": 31,
+    "moves": [
+     "Muddy Water",
+     "Earthquake",
+     "Drain Punch",
+     "Sludge Wave"
+    ]
+   },
+   {
+    "species": "Eelektross",
+    "level": 50,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Thunderbolt",
+     "Flamethrower",
+     "Acrobatics",
+     "Crunch"
+    ]
+   },
+   {
+    "species": "Drapion",
+    "level": 50,
+    "ability": "Sniper",
+    "ivs": 31,
+    "moves": [
+     "Night Slash",
+     "Earthquake",
+     "Poison Fang",
+     "X-Scissor"
+    ]
+   },
+   {
+    "species": "Toxicroak",
+    "level": 50,
+    "ability": "Anticipation",
+    "ivs": 31,
+    "moves": [
+     "Brick Break",
+     "Shadow Ball",
+     "Sucker Punch",
+     "Poison Jab"
+    ]
+   },
+   {
+    "species": "Hydreigon",
+    "level": 52,
+    "item": "Life Orb",
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Dragon Rush",
+     "Crunch",
+     "Rock Slide",
+     "Frustration"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 101,
+  "name": "Team Plasma Colress",
+  "location": "Plasma Frigate",
+  "split": "Elite Four & Iris",
+  "levelCap": 59,
+  "notes": [
+   "Third battle"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Magneton",
+    "level": 50,
+    "item": "Eviolite",
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Volt Switch",
+     "Flash Cannon",
+     "Tri Attack",
+     "Thunder Wave"
+    ]
+   },
+   {
+    "species": "Metang",
+    "level": 50,
+    "ability": "Clear Body",
+    "ivs": 31,
+    "moves": [
+     "Meteor Mash",
+     "Zen Headbutt",
+     "Rock Slide",
+     "Agility"
+    ]
+   },
+   {
+    "species": "Beheeyem",
+    "level": 50,
+    "ability": "Synchronize",
+    "ivs": 31,
+    "moves": [
+     "Psychic",
+     "Energy Ball",
+     "Calm Mind",
+     "Recover"
+    ]
+   },
+   {
+    "species": "Magnezone",
+    "level": 50,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Discharge",
+     "Flash Cannon",
+     "Explosion",
+     "Thunder Wave"
+    ]
+   },
+   {
+    "species": "Klinklang",
+    "level": 52,
+    "item": "Air Balloon",
+    "ability": "Plus",
+    "ivs": 31,
+    "moves": [
+     "Gear Grind",
+     "Thunderbolt",
+     "Giga Impact",
+     "Shift Gear"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 94,
+  "name": "Trainer Hugh",
+  "location": "Victory Road (Black 2 and White 2)",
+  "split": "Elite Four & Iris",
+  "levelCap": 59,
+  "notes": [
+   "Fifth battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Unfezant",
+    "level": 55,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Facade",
+     "Aerial Ace",
+     "U-turn",
+     "Swagger"
+    ]
+   },
+   {
+    "species": "Simipour",
+    "level": 55,
+    "item": "Mystic Water",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Rock Slide",
+     "Crunch",
+     "Brick Break",
+     "Surf"
+    ]
+   },
+   {
+    "species": "Bouffalant",
+    "level": 55,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Head Charge",
+     "Wild Charge",
+     "Megahorn",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Emboar",
+    "level": 57,
+    "item": "Charcoal",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Flamethrower",
+     "Rock Slide",
+     "Brick Break",
+     "Scald"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 95,
+  "name": "Trainer Hugh",
+  "location": "Victory Road (Black 2 and White 2)",
+  "split": "Elite Four & Iris",
+  "levelCap": 59,
+  "notes": [
+   "Fifth battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Unfezant",
+    "level": 55,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Facade",
+     "Aerial Ace",
+     "U-turn",
+     "Swagger"
+    ]
+   },
+   {
+    "species": "Simisage",
+    "level": 55,
+    "item": "Miracle Seed",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Rock Slide",
+     "Crunch",
+     "Brick Break",
+     "Energy Ball"
+    ]
+   },
+   {
+    "species": "Bouffalant",
+    "level": 55,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Head Charge",
+     "Wild Charge",
+     "Megahorn",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Samurott",
+    "level": 57,
+    "item": "Mystic Water",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Surf",
+     "X-Scissor",
+     "Ice Beam",
+     "Revenge"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 96,
+  "name": "Trainer Hugh",
+  "location": "Victory Road (Black 2 and White 2)",
+  "split": "Elite Four & Iris",
+  "levelCap": 59,
+  "notes": [
+   "Fifth battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Unfezant",
+    "level": 55,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Facade",
+     "Aerial Ace",
+     "U-turn",
+     "Swagger"
+    ]
+   },
+   {
+    "species": "Simisear",
+    "level": 55,
+    "item": "Charcoal",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Rock Slide",
+     "Crunch",
+     "Brick Break",
+     "Flamethrower"
+    ]
+   },
+   {
+    "species": "Bouffalant",
+    "level": 55,
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Head Charge",
+     "Wild Charge",
+     "Megahorn",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Serperior",
+    "level": 57,
+    "item": "Miracle Seed",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Giga Drain",
+     "Leaf Blade",
+     "Dragon Tail",
+     "Coil"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 69,
+  "name": "Elite Four Shauntal",
+  "location": "Pokémon League (Unova)",
+  "split": "Elite Four & Iris",
+  "levelCap": 59,
+  "notes": [
+   "First battle (Easy Mode/Normal Mode)"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Cofagrigus",
+    "level": 56,
+    "ability": "Mummy",
+    "ivs": 31,
+    "moves": [
+     "Psychic",
+     "Shadow Ball",
+     "Will-O-Wisp",
+     "Grass Knot"
+    ]
+   },
+   {
+    "species": "Drifblim",
+    "level": 56,
+    "ability": "Aftermath",
+    "ivs": 31,
+    "moves": [
+     "Acrobatics",
+     "Thunderbolt",
+     "Shadow Ball",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Golurk",
+    "level": 56,
+    "ability": "Iron Fist",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Shadow Punch",
+     "Heavy Slam",
+     "Brick Break"
+    ]
+   },
+   {
+    "species": "Chandelure",
+    "level": 58,
+    "item": "Sitrus Berry",
+    "ability": "Flame Body",
+    "ivs": 31,
+    "moves": [
+     "Fire Blast",
+     "Energy Ball",
+     "Shadow Ball",
+     "Psychic"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 70,
+  "name": "Elite Four Grimsley",
+  "location": "Pokémon League (Unova)",
+  "split": "Elite Four & Iris",
+  "levelCap": 59,
+  "notes": [
+   "First battle (Easy Mode/Normal Mode)"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Liepard",
+    "level": 56,
+    "ability": "Limber",
+    "ivs": 31,
+    "moves": [
+     "Fake Out",
+     "Night Slash",
+     "Aerial Ace",
+     "Attract"
+    ]
+   },
+   {
+    "species": "Scrafty",
+    "level": 56,
+    "ability": "Moxie",
+    "ivs": 31,
+    "moves": [
+     "Rock Tomb",
+     "Brick Break",
+     "Crunch",
+     "Poison Jab"
+    ]
+   },
+   {
+    "species": "Krookodile",
+    "level": 56,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Crunch",
+     "Earthquake",
+     "Dragon Claw",
+     "Rock Tomb"
+    ]
+   },
+   {
+    "species": "Bisharp",
+    "level": 58,
+    "item": "Sitrus Berry",
+    "ability": "Defiant",
+    "ivs": 31,
+    "moves": [
+     "Aerial Ace",
+     "Night Slash",
+     "X-Scissor",
+     "Metal Claw"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 71,
+  "name": "Elite Four Caitlin",
+  "location": "Pokémon League (Unova)",
+  "split": "Elite Four & Iris",
+  "levelCap": 59,
+  "notes": [
+   "First battle (Easy Mode/Normal Mode)"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Musharna",
+    "level": 56,
+    "ability": "Synchronize",
+    "ivs": 31,
+    "moves": [
+     "Reflect",
+     "Yawn",
+     "Dream Eater",
+     "Charge Beam"
+    ]
+   },
+   {
+    "species": "Sigilyph",
+    "level": 56,
+    "ability": "Wonder Skin",
+    "ivs": 31,
+    "moves": [
+     "Psychic",
+     "Shadow Ball",
+     "Ice Beam",
+     "Air Slash"
+    ]
+   },
+   {
+    "species": "Reuniclus",
+    "level": 56,
+    "ability": "Magic Guard",
+    "ivs": 31,
+    "moves": [
+     "Focus Blast",
+     "Psychic",
+     "Energy Ball",
+     "Recover"
+    ]
+   },
+   {
+    "species": "Gothitelle",
+    "level": 58,
+    "item": "Sitrus Berry",
+    "ability": "Frisk",
+    "ivs": 31,
+    "moves": [
+     "Calm Mind",
+     "Psychic",
+     "Shadow Ball",
+     "Thunderbolt"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 72,
+  "name": "Elite Four Marshal",
+  "location": "Pokémon League (Unova)",
+  "split": "Elite Four & Iris",
+  "levelCap": 59,
+  "notes": [
+   "First battle (Easy Mode/Normal Mode)"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Throh",
+    "level": 56,
+    "ability": "Guts",
+    "ivs": 31,
+    "moves": [
+     "Rock Tomb",
+     "Bulldoze",
+     "Storm Throw",
+     "Payback"
+    ]
+   },
+   {
+    "species": "Sawk",
+    "level": 56,
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Payback",
+     "Rock Slide",
+     "Retaliate",
+     "Brick Break"
+    ]
+   },
+   {
+    "species": "Mienshao",
+    "level": 56,
+    "ability": "Regenerator",
+    "ivs": 31,
+    "moves": [
+     "High Jump Kick",
+     "U-turn",
+     "Bounce",
+     "Retaliate"
+    ]
+   },
+   {
+    "species": "Conkeldurr",
+    "level": 58,
+    "item": "Sitrus Berry",
+    "ability": "Guts",
+    "ivs": 31,
+    "moves": [
+     "Stone Edge",
+     "Hammer Arm",
+     "Retaliate",
+     "Bulk Up"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 77,
+  "name": "Champion Iris",
+  "location": "Pokémon League (Unova)",
+  "split": "Elite Four & Iris",
+  "levelCap": 59,
+  "notes": [
+   "Initial battle (Easy Mode/Normal Mode)"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Hydreigon",
+    "level": 57,
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Flamethrower",
+     "Charge Beam",
+     "Dragon Pulse",
+     "Surf"
+    ]
+   },
+   {
+    "species": "Druddigon",
+    "level": 57,
+    "item": "Life Orb",
+    "ability": "Sheer Force",
+    "ivs": 31,
+    "moves": [
+     "Rock Slide",
+     "Flamethrower",
+     "Dragon Tail",
+     "Focus Blast"
+    ]
+   },
+   {
+    "species": "Archeops",
+    "level": 57,
+    "ability": "Defeatist",
+    "ivs": 31,
+    "moves": [
+     "Acrobatics",
+     "Rock Slide",
+     "Dragon Claw",
+     "Endeavor"
+    ]
+   },
+   {
+    "species": "Aggron",
+    "level": 57,
+    "ability": "Rock Head",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Double-Edge",
+     "Rock Slide",
+     "Autotomize"
+    ]
+   },
+   {
+    "species": "Lapras",
+    "level": 57,
+    "ability": "Water Absorb",
+    "ivs": 31,
+    "moves": [
+     "Surf",
+     "Ice Beam",
+     "Thunderbolt",
+     "Sing"
+    ]
+   },
+   {
+    "species": "Haxorus",
+    "level": 59,
+    "item": "Focus Sash",
+    "ability": "Mold Breaker",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "X-Scissor",
+     "Dual Chop",
+     "Dragon Dance"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
   "id": 23,
   "name": "Champion Alder",
   "location": "Pokémon League (Unova)",
@@ -3287,6 +4837,1089 @@
   "games": [
    "black",
    "white"
+  ]
+ },
+ {
+  "id": 76,
+  "name": "Trainer Alder",
+  "location": "Floccesy Town",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Floccesy Town"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Accelgor",
+    "level": 60,
+    "ability": "Sticky Hold",
+    "ivs": 31,
+    "moves": [
+     "Focus Blast",
+     "Acid Spray",
+     "Giga Drain",
+     "Bug Buzz"
+    ]
+   },
+   {
+    "species": "Escavalier",
+    "level": 60,
+    "ability": "Shell Armor",
+    "ivs": 31,
+    "moves": [
+     "X-Scissor",
+     "Swords Dance",
+     "Iron Head",
+     "Reversal"
+    ]
+   },
+   {
+    "species": "Bouffalant",
+    "level": 60,
+    "ability": "Reckless",
+    "ivs": 31,
+    "moves": [
+     "Wild Charge",
+     "Earthquake",
+     "Megahorn",
+     "Head Charge"
+    ]
+   },
+   {
+    "species": "Conkeldurr",
+    "level": 60,
+    "ability": "Guts",
+    "ivs": 31,
+    "moves": [
+     "Stone Edge",
+     "Superpower",
+     "Earthquake",
+     "Poison Jab"
+    ]
+   },
+   {
+    "species": "Braviary",
+    "level": 60,
+    "ability": "Keen Eye",
+    "ivs": 31,
+    "moves": [
+     "Crush Claw",
+     "Superpower",
+     "Rock Slide",
+     "Aerial Ace"
+    ]
+   },
+   {
+    "species": "Volcarona",
+    "level": 62,
+    "item": "Sitrus Berry",
+    "ability": "Flame Body",
+    "ivs": 31,
+    "moves": [
+     "Quiver Dance",
+     "Silver Wind",
+     "Heat Wave",
+     "Psychic"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 97,
+  "name": "Trainer Hugh",
+  "location": "Undella Town",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Sixth battle",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Unfezant",
+    "level": 62,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Facade",
+     "Aerial Ace",
+     "U-turn",
+     "Swagger"
+    ]
+   },
+   {
+    "species": "Simipour",
+    "level": 62,
+    "item": "Mystic Water",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Rock Slide",
+     "Crunch",
+     "Brick Break",
+     "Surf"
+    ]
+   },
+   {
+    "species": "Bouffalant",
+    "level": 62,
+    "item": "Muscle Band",
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Head Charge",
+     "Wild Charge",
+     "Megahorn",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Flygon",
+    "level": 62,
+    "item": "Dragon Fang",
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Fire Blast",
+     "Dragon Claw",
+     "Stone Edge"
+    ]
+   },
+   {
+    "species": "Eelektross",
+    "level": 62,
+    "item": "Leftovers",
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Wild Charge",
+     "Flamethrower",
+     "Dragon Claw",
+     "Crunch"
+    ]
+   },
+   {
+    "species": "Emboar",
+    "level": 64,
+    "item": "Charcoal",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Fire Blast",
+     "Head Smash",
+     "Hammer Arm",
+     "Scald"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 98,
+  "name": "Trainer Hugh",
+  "location": "Undella Town",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Sixth battle",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Unfezant",
+    "level": 62,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Facade",
+     "Aerial Ace",
+     "U-turn",
+     "Swagger"
+    ]
+   },
+   {
+    "species": "Simisage",
+    "level": 62,
+    "item": "Miracle Seed",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Rock Slide",
+     "Crunch",
+     "Brick Break",
+     "Energy Ball"
+    ]
+   },
+   {
+    "species": "Bouffalant",
+    "level": 62,
+    "item": "Muscle Band",
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Head Charge",
+     "Wild Charge",
+     "Megahorn",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Flygon",
+    "level": 62,
+    "item": "Dragon Fang",
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Fire Blast",
+     "Dragon Claw",
+     "Stone Edge"
+    ]
+   },
+   {
+    "species": "Eelektross",
+    "level": 62,
+    "item": "Leftovers",
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Wild Charge",
+     "Flamethrower",
+     "Dragon Claw",
+     "Crunch"
+    ]
+   },
+   {
+    "species": "Samurott",
+    "level": 64,
+    "item": "Mystic Water",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Hydro Pump",
+     "Megahorn",
+     "Ice Beam",
+     "Grass Knot"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 99,
+  "name": "Trainer Hugh",
+  "location": "Undella Town",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Sixth battle",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Unfezant",
+    "level": 62,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "Facade",
+     "Aerial Ace",
+     "U-turn",
+     "Swagger"
+    ]
+   },
+   {
+    "species": "Simisear",
+    "level": 62,
+    "item": "Charcoal",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Rock Slide",
+     "Crunch",
+     "Brick Break",
+     "Flamethrower"
+    ]
+   },
+   {
+    "species": "Bouffalant",
+    "level": 62,
+    "item": "Muscle Band",
+    "ability": "Sap Sipper",
+    "ivs": 31,
+    "moves": [
+     "Head Charge",
+     "Wild Charge",
+     "Megahorn",
+     "Earthquake"
+    ]
+   },
+   {
+    "species": "Flygon",
+    "level": 62,
+    "item": "Dragon Fang",
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Earthquake",
+     "Fire Blast",
+     "Dragon Claw",
+     "Stone Edge"
+    ]
+   },
+   {
+    "species": "Eelektross",
+    "level": 62,
+    "item": "Leftovers",
+    "ability": "Levitate",
+    "ivs": 31,
+    "moves": [
+     "Wild Charge",
+     "Flamethrower",
+     "Dragon Claw",
+     "Crunch"
+    ]
+   },
+   {
+    "species": "Serperior",
+    "level": 64,
+    "item": "Miracle Seed",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Leaf Storm",
+     "Leaf Blade",
+     "Dragon Tail",
+     "Coil"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 82,
+  "name": "Trainer Bianca",
+  "location": "Unova Route 1",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Memory Link (one time only)",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Stoutland",
+    "level": 63,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Ice Fang",
+     "Surf",
+     "Wild Charge"
+    ]
+   },
+   {
+    "species": "Simisear",
+    "level": 63,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Flamethrower",
+     "Rock Slide",
+     "Brick Break"
+    ]
+   },
+   {
+    "species": "Musharna",
+    "level": 63,
+    "ability": "Forewarn",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Yawn",
+     "Dream Eater",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Mienshao",
+    "level": 63,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Drain Punch",
+     "U-turn",
+     "Fake Out"
+    ]
+   },
+   {
+    "species": "Chandelure",
+    "level": 63,
+    "ability": "Flash Fire",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Shadow Ball",
+     "Overheat",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Samurott",
+    "level": 65,
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Aerial Ace",
+     "X-Scissor",
+     "Aqua Tail"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 83,
+  "name": "Trainer Bianca",
+  "location": "Unova Route 1",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Memory Link (one time only)",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Stoutland",
+    "level": 63,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Ice Fang",
+     "Surf",
+     "Wild Charge"
+    ]
+   },
+   {
+    "species": "Simipour",
+    "level": 63,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Surf",
+     "Rock Slide",
+     "Brick Break"
+    ]
+   },
+   {
+    "species": "Musharna",
+    "level": 63,
+    "ability": "Forewarn",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Yawn",
+     "Dream Eater",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Mienshao",
+    "level": 63,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Drain Punch",
+     "U-turn",
+     "Fake Out"
+    ]
+   },
+   {
+    "species": "Chandelure",
+    "level": 63,
+    "ability": "Flash Fire",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Shadow Ball",
+     "Overheat",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Serperior",
+    "level": 65,
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Leaf Storm",
+     "Dragon Tail",
+     "Coil"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 84,
+  "name": "Trainer Bianca",
+  "location": "Unova Route 1",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Memory Link (one time only)",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Stoutland",
+    "level": 63,
+    "ability": "Intimidate",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Ice Fang",
+     "Surf",
+     "Wild Charge"
+    ]
+   },
+   {
+    "species": "Simisage",
+    "level": 63,
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Energy Ball",
+     "Rock Slide",
+     "Brick Break"
+    ]
+   },
+   {
+    "species": "Musharna",
+    "level": 63,
+    "ability": "Forewarn",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Yawn",
+     "Dream Eater",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Mienshao",
+    "level": 63,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Drain Punch",
+     "U-turn",
+     "Fake Out"
+    ]
+   },
+   {
+    "species": "Chandelure",
+    "level": 63,
+    "ability": "Flash Fire",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Shadow Ball",
+     "Overheat",
+     "Psychic"
+    ]
+   },
+   {
+    "species": "Emboar",
+    "level": 65,
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Return",
+     "Flare Blitz",
+     "Brick Break",
+     "Wild Charge"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 79,
+  "name": "Trainer Cheren",
+  "location": "Unova Route 5",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Memory Link (one time only)",
+   "If you chose Snivy"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Liepard",
+    "level": 65,
+    "item": "Sitrus Berry",
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Fake Out",
+     "Aerial Ace",
+     "Shadow Claw",
+     "Night Slash"
+    ]
+   },
+   {
+    "species": "Simisage",
+    "level": 65,
+    "item": "Miracle Seed",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Energy Ball",
+     "Rock Slide",
+     "Brick Break",
+     "Payback"
+    ]
+   },
+   {
+    "species": "Unfezant",
+    "level": 65,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "U-turn",
+     "Quick Attack",
+     "Air Slash",
+     "Facade"
+    ]
+   },
+   {
+    "species": "Gigalith",
+    "level": 65,
+    "item": "Leftovers",
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Giga Impact",
+     "Stone Edge",
+     "Earthquake",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Haxorus",
+    "level": 65,
+    "item": "Dragon Gem",
+    "ability": "Rivalry",
+    "ivs": 31,
+    "moves": [
+     "Outrage",
+     "X-Scissor",
+     "Rock Slide",
+     "Surf"
+    ]
+   },
+   {
+    "species": "Emboar",
+    "level": 67,
+    "item": "Focus Sash",
+    "ability": "Blaze",
+    "ivs": 31,
+    "moves": [
+     "Flare Blitz",
+     "Head Smash",
+     "Brick Break",
+     "Wild Charge"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 80,
+  "name": "Trainer Cheren",
+  "location": "Unova Route 5",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Memory Link (one time only)",
+   "If you chose Tepig"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Liepard",
+    "level": 65,
+    "item": "Sitrus Berry",
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Fake Out",
+     "Aerial Ace",
+     "Shadow Claw",
+     "Night Slash"
+    ]
+   },
+   {
+    "species": "Simisear",
+    "level": 65,
+    "item": "Charcoal",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Flamethrower",
+     "Rock Slide",
+     "Brick Break",
+     "Payback"
+    ]
+   },
+   {
+    "species": "Unfezant",
+    "level": 65,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "U-turn",
+     "Quick Attack",
+     "Air Slash",
+     "Facade"
+    ]
+   },
+   {
+    "species": "Gigalith",
+    "level": 65,
+    "item": "Leftovers",
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Giga Impact",
+     "Stone Edge",
+     "Earthquake",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Haxorus",
+    "level": 65,
+    "item": "Dragon Gem",
+    "ability": "Rivalry",
+    "ivs": 31,
+    "moves": [
+     "Outrage",
+     "X-Scissor",
+     "Rock Slide",
+     "Surf"
+    ]
+   },
+   {
+    "species": "Samurott",
+    "level": 67,
+    "item": "Focus Sash",
+    "ability": "Torrent",
+    "ivs": 31,
+    "moves": [
+     "Hydro Pump",
+     "Blizzard",
+     "X-Scissor",
+     "Aqua Jet"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 81,
+  "name": "Trainer Cheren",
+  "location": "Unova Route 5",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Memory Link (one time only)",
+   "If you chose Oshawott"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Liepard",
+    "level": 65,
+    "item": "Sitrus Berry",
+    "ability": "Unburden",
+    "ivs": 31,
+    "moves": [
+     "Fake Out",
+     "Aerial Ace",
+     "Shadow Claw",
+     "Night Slash"
+    ]
+   },
+   {
+    "species": "Simipour",
+    "level": 65,
+    "item": "Mystic Water",
+    "ability": "Gluttony",
+    "ivs": 31,
+    "moves": [
+     "Surf",
+     "Rock Slide",
+     "Brick Break",
+     "Payback"
+    ]
+   },
+   {
+    "species": "Unfezant",
+    "level": 65,
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "ivs": 31,
+    "moves": [
+     "U-turn",
+     "Quick Attack",
+     "Air Slash",
+     "Facade"
+    ]
+   },
+   {
+    "species": "Gigalith",
+    "level": 65,
+    "item": "Leftovers",
+    "ability": "Sturdy",
+    "ivs": 31,
+    "moves": [
+     "Giga Impact",
+     "Stone Edge",
+     "Earthquake",
+     "Stealth Rock"
+    ]
+   },
+   {
+    "species": "Haxorus",
+    "level": 65,
+    "item": "Dragon Gem",
+    "ability": "Rivalry",
+    "ivs": 31,
+    "moves": [
+     "Outrage",
+     "X-Scissor",
+     "Rock Slide",
+     "Surf"
+    ]
+   },
+   {
+    "species": "Serperior",
+    "level": 67,
+    "item": "Focus Sash",
+    "ability": "Overgrow",
+    "ivs": 31,
+    "moves": [
+     "Coil",
+     "Dragon Tail",
+     "Leaf Blade",
+     "Leaf Storm"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
+  ]
+ },
+ {
+  "id": 73,
+  "name": "Trainer N",
+  "location": "N's Castle",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "First battle",
+   "Pokémon Black 2"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Zekrom",
+    "level": 70,
+    "ability": "Teravolt",
+    "ivs": 31,
+    "moves": [
+     "Fusion Bolt",
+     "Imprison",
+     "Dragon Claw",
+     "Zen Headbutt"
+    ]
+   }
+  ],
+  "games": [
+   "black-2"
+  ]
+ },
+ {
+  "id": 74,
+  "name": "Trainer N",
+  "location": "N's Castle",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "First battle",
+   "Pokémon White 2"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Reshiram",
+    "level": 70,
+    "ability": "Turboblaze",
+    "ivs": 31,
+    "moves": [
+     "Fusion Flare",
+     "Imprison",
+     "Dragon Pulse",
+     "Extrasensory"
+    ]
+   }
+  ],
+  "games": [
+   "white-2"
+  ]
+ },
+ {
+  "id": 60,
+  "name": "Trainer Cynthia",
+  "location": "Undella Town",
+  "split": "Post-game",
+  "levelCap": 100,
+  "notes": [
+   "Undella Town"
+  ],
+  "boss": true,
+  "team": [
+   {
+    "species": "Spiritomb",
+    "level": 76,
+    "ability": "Pressure",
+    "ivs": 31,
+    "moves": [
+     "Shadow Ball",
+     "Double Team",
+     "Dream Eater",
+     "Hypnosis"
+    ]
+   },
+   {
+    "species": "Milotic",
+    "level": 76,
+    "ability": "Marvel Scale",
+    "ivs": 31,
+    "moves": [
+     "Hydro Pump",
+     "Blizzard",
+     "Attract",
+     "Rest"
+    ]
+   },
+   {
+    "species": "Togekiss",
+    "level": 76,
+    "ability": "Serene Grace",
+    "ivs": 31,
+    "moves": [
+     "Air Slash",
+     "Aura Sphere",
+     "Extreme Speed",
+     "Thunder Wave"
+    ]
+   },
+   {
+    "species": "Lucario",
+    "level": 76,
+    "ability": "Inner Focus",
+    "ivs": 31,
+    "moves": [
+     "Close Combat",
+     "Flash Cannon",
+     "Psychic",
+     "Extreme Speed"
+    ]
+   },
+   {
+    "species": "Glaceon",
+    "level": 76,
+    "ability": "Snow Cloak",
+    "ivs": 31,
+    "moves": [
+     "Ice Beam",
+     "Shadow Ball",
+     "Signal Beam",
+     "Barrier"
+    ]
+   },
+   {
+    "species": "Garchomp",
+    "level": 78,
+    "ability": "Sand Veil",
+    "ivs": 31,
+    "moves": [
+     "Dragon Rush",
+     "Earthquake",
+     "Stone Edge",
+     "Fire Blast"
+    ]
+   }
+  ],
+  "games": [
+   "black-2",
+   "white-2"
   ]
  }
 ]
