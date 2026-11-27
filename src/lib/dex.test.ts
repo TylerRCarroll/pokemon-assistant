@@ -42,3 +42,13 @@ describe('learnsets', () => {
     expect(names).not.toContain('Pikachu');
   });
 });
+
+describe('Unbound abilities', () => {
+  it("uses the name the game shows, not the twin ability the source reuses for its effect", () => {
+    const ub = getRuleset('unbound');
+    // Base_Stats.c: `.ability1 = ABILITY_INSOMNIA, //-ABILITY_VITALSPIRIT`
+    expect(ub.getSpecies('Delibird')?.abilities).toEqual(['Vital Spirit', 'Hustle', 'Prankster']);
+    expect(ub.getSpecies('Zekrom')?.abilities).toContain('Teravolt');
+    expect(ub.getSpecies('Cinderace')?.abilities).toContain('Libero');
+  });
+});

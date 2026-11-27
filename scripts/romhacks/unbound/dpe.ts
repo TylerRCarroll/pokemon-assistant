@@ -78,7 +78,15 @@ const stripComments = (src: string) => src.replace(/\/\*[\s\S]*?\*\//g, '').repl
 
 /** Typings and abilities from Base_Stats.c, keyed by @pkmn species id */
 export async function parseBaseStats(base: Ruleset, warnings: string[]) {
-  const src = stripComments(await read('Base_Stats.c'));
+  // `.ability1 = ABILITY_INSOMNIA, //-ABILITY_VITALSPIRIT`: the game shows (and is) Vital Spirit, and the engine
+  // reuses Insomnia's identical effect. Use the real name when it's an ability we know; Unbound's own abilities
+  // (Drill Beak, Nine Lives, ...) aren't, so those keep the stand-in that gives their effect.
+  const raw = (await read('Base_Stats.c')).replace(
+    /(ABILITY_\w+)(\s*,\s*)\/\/-(ABILITY_\w+)/g,
+    (whole, standIn: string, comma: string, shown: string) =>
+      abilityFromConstant(base, shown, []) ? `${shown}${comma}` : whole,
+  );
+  const src = stripComments(raw);
   const out: Record<string, { types: TypeName[]; abilities: string[] }> = {};
   for (const [, constant, body] of src.matchAll(/\[(SPECIES_\w+)\]\s*=\s*\{([\s\S]*?)\n\s*\}/g)) {
     const sp = speciesFromConstant(base, constant, warnings);

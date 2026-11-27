@@ -215,7 +215,7 @@
   },
   "abilities": [
    "Poison Point",
-   "Dazzling",
+   "Queenly Majesty",
    "Sheer Force"
   ]
  },
@@ -352,12 +352,7 @@
    "spa": 82,
    "spd": 96,
    "spe": 130
-  },
-  "abilities": [
-   "Insomnia",
-   "Anger Point",
-   "Defiant"
-  ]
+  }
  },
  "arcanine": {
   "baseStats": {
@@ -1342,7 +1337,7 @@
    "spe": 146
   },
   "abilities": [
-   "Insomnia",
+   "Vital Spirit",
    "Hustle",
    "Prankster"
   ]
@@ -1752,12 +1747,7 @@
    "spa": 112,
    "spd": 92,
    "spe": 26
-  },
-  "abilities": [
-   "Clear Body",
-   "Drought",
-   "Shell Armor"
-  ]
+  }
  },
  "sableye": {
   "baseStats": {
@@ -1881,12 +1871,7 @@
    "spa": 142,
    "spd": 101,
    "spe": 54
-  },
-  "abilities": [
-   "Magma Armor",
-   "Filter",
-   "Anger Point"
-  ]
+  }
  },
  "walrein": {
   "baseStats": {
@@ -2011,11 +1996,7 @@
    "spa": 92,
    "spd": 115,
    "spe": 123
-  },
-  "abilities": [
-   "Huge Power",
-   "Telepathy"
-  ]
+  }
  },
  "altaria": {
   "baseStats": {
@@ -2323,7 +2304,7 @@
    "spe": 81
   },
   "abilities": [
-   "Cloud Nine",
+   "Air Lock",
    "Shed Skin"
   ]
  },
@@ -2496,7 +2477,7 @@
   },
   "abilities": [
    "Pressure",
-   "Dazzling",
+   "Queenly Majesty",
    "Dauntless Shield"
   ]
  },
@@ -2796,12 +2777,7 @@
    "spa": 63,
    "spd": 63,
    "spe": 46
-  },
-  "abilities": [
-   "Lightning Rod",
-   "Filter",
-   "Reckless"
-  ]
+  }
  },
  "tangrowth": {
   "baseStats": {
@@ -2821,11 +2797,7 @@
    "spa": 107,
    "spd": 95,
    "spe": 107
-  },
-  "abilities": [
-   "Motor Drive",
-   "Insomnia"
-  ]
+  }
  },
  "magmortar": {
   "baseStats": {
@@ -3567,12 +3539,7 @@
    "spa": 103,
    "spd": 81,
    "spe": 39
-  },
-  "abilities": [
-   "Filter",
-   "Sturdy",
-   "Swift Swim"
-  ]
+  }
  },
  "archeops": {
   "baseStats": {
@@ -3746,11 +3713,7 @@
    "spa": 68,
    "spd": 147,
    "spe": 25
-  },
-  "abilities": [
-   "Rough Skin",
-   "Anticipation"
-  ]
+  }
  },
  "klinklang": {
   "baseStats": {
@@ -4073,7 +4036,7 @@
    "spe": 77
   },
   "abilities": [
-   "Mold Breaker",
+   "Turboblaze",
    "Flash Fire"
   ]
  },
@@ -4087,7 +4050,7 @@
    "spe": 77
   },
   "abilities": [
-   "Mold Breaker",
+   "Teravolt",
    "Lightning Rod"
   ]
  },
@@ -4113,10 +4076,7 @@
    "spa": 99,
    "spd": 74,
    "spe": 78
-  },
-  "abilities": [
-   "Mold Breaker"
-  ]
+  }
  },
  "kyuremwhite": {
   "baseStats": {
@@ -4126,10 +4086,7 @@
    "spa": 140,
    "spd": 82,
    "spe": 78
-  },
-  "abilities": [
-   "Mold Breaker"
-  ]
+  }
  },
  "keldeo": {
   "baseStats": {
@@ -5221,7 +5178,7 @@
   },
   "abilities": [
    "Tough Claws",
-   "Insomnia",
+   "Vital Spirit",
    "No Guard"
   ]
  },
@@ -5343,12 +5300,7 @@
    "spa": 60,
    "spd": 118,
    "spe": 86
-  },
-  "abilities": [
-   "Leaf Guard",
-   "Dazzling",
-   "Sweet Veil"
-  ]
+  }
  },
  "comfey": {
   "baseStats": {
@@ -5480,12 +5432,7 @@
    "spa": 57,
    "spd": 105,
    "spe": 138
-  },
-  "abilities": [
-   "Rough Skin",
-   "Lightning Rod",
-   "Sturdy"
-  ]
+  }
  },
  "mimikyu": {
   "baseStats": {
@@ -5780,7 +5727,7 @@
   },
   "abilities": [
    "Sand Force",
-   "Gooey",
+   "Tangling Hair",
    "Steely Spirit"
   ]
  },
@@ -5812,12 +5759,7 @@
    "spa": 81,
    "spd": 125,
    "spe": 62
-  },
-  "abilities": [
-   "Poison Touch",
-   "Gluttony",
-   "Receiver"
-  ]
+  }
  },
  "exeggutoralola": {
   "baseStats": {
@@ -5914,13 +5856,6 @@
    "Damp"
   ]
  },
- "mankey": {
-  "abilities": [
-   "Insomnia",
-   "Anger Point",
-   "Defiant"
-  ]
- },
  "machoke": {
   "abilities": [
    "Guts",
@@ -6012,18 +5947,6 @@
    "Analytic"
   ]
  },
- "electabuzz": {
-  "abilities": [
-   "Static",
-   "Insomnia"
-  ]
- },
- "magmar": {
-  "abilities": [
-   "Flame Body",
-   "Insomnia"
-  ]
- },
  "mew": {
   "abilities": [
    "Synchronize",
@@ -6104,30 +6027,11 @@
    "Moody"
   ]
  },
- "tyrogue": {
-  "abilities": [
-   "Guts",
-   "Steadfast",
-   "Insomnia"
-  ]
- },
  "smoochum": {
   "abilities": [
    "Oblivious",
    "Hydration",
    "Ice Scales"
-  ]
- },
- "elekid": {
-  "abilities": [
-   "Static",
-   "Insomnia"
-  ]
- },
- "magby": {
-  "abilities": [
-   "Flame Body",
-   "Insomnia"
   ]
  },
  "celebi": {
@@ -6196,22 +6100,11 @@
    "Magic Bounce"
   ]
  },
- "meditite": {
-  "abilities": [
-   "Huge Power",
-   "Telepathy"
-  ]
- },
  "swablu": {
   "abilities": [
    "Natural Cure",
    "Cloud Nine",
    "Cotton Down"
-  ]
- },
- "vigoroth": {
-  "abilities": [
-   "Insomnia"
   ]
  },
  "gulpin": {
@@ -6357,13 +6250,6 @@
    "Analytic"
   ]
  },
- "lillipup": {
-  "abilities": [
-   "Insomnia",
-   "Pickup",
-   "Run Away"
-  ]
- },
  "pansage": {
   "abilities": [
    "Gluttony",
@@ -6417,13 +6303,6 @@
    "Dancer"
   ]
  },
- "tirtouga": {
-  "abilities": [
-   "Filter",
-   "Sturdy",
-   "Swift Swim"
-  ]
- },
  "archen": {
   "abilities": [
    "Defeatist",
@@ -6442,11 +6321,6 @@
    "Water Absorb",
    "Cursed Body",
    "Water Bubble"
-  ]
- },
- "ferroseed": {
-  "abilities": [
-   "Rough Skin"
   ]
  },
  "klink": {
@@ -6669,7 +6543,7 @@
  "rockruff": {
   "abilities": [
    "Keen Eye",
-   "Insomnia",
+   "Vital Spirit",
    "Steadfast"
   ]
  },
@@ -6685,11 +6559,6 @@
    "Rain Dish",
    "Effect Spore",
    "Magic Bounce"
-  ]
- },
- "wimpod": {
-  "abilities": [
-   "Emergency Exit"
   ]
  },
  "necrozma": {
@@ -6713,15 +6582,8 @@
  "diglettalola": {
   "abilities": [
    "Sand Force",
-   "Gooey",
+   "Tangling Hair",
    "Steely Spirit"
-  ]
- },
- "grimeralola": {
-  "abilities": [
-   "Poison Touch",
-   "Gluttony",
-   "Receiver"
   ]
  },
  "deoxysattack": {
@@ -6778,24 +6640,6 @@
    "Clear Body"
   ]
  },
- "scorbunny": {
-  "abilities": [
-   "Blaze",
-   "Protean"
-  ]
- },
- "raboot": {
-  "abilities": [
-   "Blaze",
-   "Protean"
-  ]
- },
- "cinderace": {
-  "abilities": [
-   "Blaze",
-   "Protean"
-  ]
- },
  "nickit": {
   "abilities": [
    "Technician",
@@ -6810,32 +6654,6 @@
    "Stakeout"
   ]
  },
- "arrokuda": {
-  "abilities": [
-   "Swift Swim",
-   "Stalwart"
-  ]
- },
- "barraskewda": {
-  "abilities": [
-   "Swift Swim",
-   "Stalwart"
-  ]
- },
- "sizzlipede": {
-  "abilities": [
-   "Flash Fire",
-   "Clear Body",
-   "Flame Body"
-  ]
- },
- "centiskorch": {
-  "abilities": [
-   "Flash Fire",
-   "Clear Body",
-   "Flame Body"
-  ]
- },
  "mrrime": {
   "abilities": [
    "Screen Cleaner",
@@ -6846,18 +6664,13 @@
  "stonjourner": {
   "abilities": [
    "Power Spot",
-   "Filter"
-  ]
- },
- "glastrier": {
-  "abilities": [
-   "Moxie"
+   "Solid Rock"
   ]
  },
  "mrmimegalar": {
   "abilities": [
    "Screen Cleaner",
-   "Insomnia",
+   "Vital Spirit",
    "Ice Body"
   ]
  },
