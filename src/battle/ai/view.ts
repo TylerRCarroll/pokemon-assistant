@@ -67,13 +67,26 @@ export interface Hit {
 
 const ZERO: Hit = { min: 0, max: 0, avg: 0 };
 
+// The same matchups come up again and again in simulations; a calc result depends only on these
+const calcCache = new Map<string, ReturnType<typeof calcMove> | null>();
+const sideKey = (c: CalcSide) =>
+  [c.set.species, c.set.item, c.set.ability, c.set.level, c.set.nature, Object.values(c.set.evs), Object.values(c.set.ivs), c.set.teraType, c.tera, c.status, c.reflect, c.lightScreen, Object.values(c.boosts ?? {})].join('|');
+
 export function hit(session: BattleSession, side: SideID, attacker: Pokemon, defender: Pokemon, move: string, tera = false): Hit {
   if (!defender.hp) return ZERO;
-  let r;
-  try {
-    r = calcMove(session.rs, calcSide(session, side, attacker, tera), calcSide(session, foe(side), defender), move, fieldOf(session));
-  } catch {
-    return ZERO;
+  const a = calcSide(session, side, attacker, tera);
+  const d = calcSide(session, foe(side), defender);
+  const field = fieldOf(session);
+  const key = `${session.rs.id}#${sideKey(a)}#${sideKey(d)}#${move}#${field.weather}#${field.terrain}`;
+  let r = calcCache.get(key);
+  if (r === undefined) {
+    try {
+      r = calcMove(session.rs, a, d, move, field) ?? null;
+    } catch {
+      r = null;
+    }
+    if (calcCache.size > 20000) calcCache.clear();
+    calcCache.set(key, r);
   }
   if (!r) return ZERO;
   const scale = defender.maxhp / 100 / defender.hp;

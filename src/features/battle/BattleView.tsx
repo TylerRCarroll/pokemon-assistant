@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import type { Pokemon } from '@pkmn/sim';
 import { Sprite } from '../../components/Sprite';
 import { TypeBadge } from '../../components/TypeBadge';
@@ -186,6 +187,32 @@ export function BattleView({ session, hidden, reveal }: { session: BattleSession
         <span className="font-medium">{session.side('p1').name}</span>
         <Party session={session} side="p1" hidden={false} />
       </div>
+    </div>
+  );
+}
+
+/** The battle text, a turn at a time, kept scrolled to the latest */
+export function BattleLog({ turns }: { turns: string[][] }) {
+  const end = useRef<HTMLDivElement>(null);
+  // braces: newer browsers return a promise from scrollIntoView, which React would take for a cleanup
+  useEffect(() => {
+    end.current?.scrollIntoView({ block: 'nearest' });
+  }, [turns.length]);
+  return (
+    <div className={`${card} max-h-[32rem] overflow-y-auto p-3 text-sm`}>
+      {turns.map((lines, i) =>
+        lines.length ? (
+          <div key={i} className="mb-2">
+            {i > 0 && <div className="text-xs font-semibold uppercase tracking-wide text-slate-400">Turn {i}</div>}
+            {lines.map((l, j) => (
+              <div key={j} className={/^\(/.test(l) ? 'text-xs text-slate-500' : ''}>
+                {l}
+              </div>
+            ))}
+          </div>
+        ) : null,
+      )}
+      <div ref={end} />
     </div>
   );
 }

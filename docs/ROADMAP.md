@@ -2,11 +2,11 @@
 
 Planned features, roughly in the order they build on each other. Each one says what it's for, how it would work, what data it needs, and what's still undecided. Nothing here is scheduled until it's picked up; done items move to the commit log.
 
-**Order:** the battle simulator is in progress. After it: "Where do I catch it?" (it produces the location data), then Nuzlocke mode (which runs on that data), then the gauntlet check (which runs on the simulator). The rest can go in any order.
+**Order:** the battle simulator is playable (doubles still to come). Next: "Where do I catch it?" (it produces the location data), then Nuzlocke mode (which runs on that data), then the gauntlet check (which runs on the simulator). The rest can go in any order.
 
 ---
 
-## 0. Battle simulator (in progress)
+## 0. Battle simulator (phases 1–3 done)
 
 **Goal:** one team against another with the real mechanics. Every move, ability, held item, nature, IV/EV, status, field effect and gimmick is covered, plus bag items and switching. You can either play one side against an AI, or run many battles to see what good play looks like.
 
@@ -23,9 +23,9 @@ Battles are seeded and logged, so any battle can be replayed or rewound exactly.
 - **Simulate:** run many battles, smart AI against smart AI. You get the win rate, per-Pokémon KOs and faints, and the battles that decided it, each replayable turn by turn.
 
 **Phases**
-1. The engine, bag and romhack mods.
-2. Playing against the AI.
-3. Simulation, the advisor and replays, in Web Workers.
+1. ✓ The engine, bag and romhack mods.
+2. ✓ Playing against the AI.
+3. ✓ Simulation, the advisor and replays, in Web Workers.
 4. Doubles and triples, and the gauntlet check.
 
 **Not covered (yet):** doubles and triples until phase 4. Trainer AIs use generic logic, not each game's exact routine. Bosses' bag items start empty and can be edited, since the data sources don't list them.

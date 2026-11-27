@@ -14,13 +14,16 @@ import { usePromise } from '../../lib/usePromise';
 import { usePlaythrough } from '../../state/playthrough';
 import { useRuleset } from '../../state/ruleset';
 import { useTeamsStore } from '../../state/teams';
-import { BattleView } from './BattleView';
+import { BattleLog, BattleView } from './BattleView';
+import { Simulation } from './Simulation';
+import { SimPool } from '../../battle/pool';
+import type { Advice } from '../../battle/analysis';
 
 const button =
   'rounded border border-slate-300 px-3 py-1.5 text-sm font-medium hover:bg-slate-100 disabled:opacity-40 dark:border-slate-700 dark:hover:bg-slate-800';
 const primary = 'rounded bg-blue-600 px-4 py-1.5 text-sm font-semibold text-white hover:bg-blue-700 disabled:opacity-40';
 
-type Mode = 'play' | 'watch';
+type Mode = 'play' | 'watch' | 'simulate';
 const AI_LABEL: Record<Exclude<AiKind, 'random'>, string> = { ingame: 'In-game', smart: 'Smart' };
 
 interface Config {
@@ -29,11 +32,17 @@ interface Config {
   /** AI for the opponent, and for you in Watch mode */
   ai: [Exclude<AiKind, 'random'>, Exclude<AiKind, 'random'>];
   hidden: boolean;
+  /** Simulate: how many battles */
+  count?: number;
 }
+
+const MODE_LABEL: Record<Mode, string> = { play: 'Play', watch: 'Watch AI vs AI', simulate: 'Simulate' };
 
 export function BattlePage() {
   const [config, setConfig] = useState<Config>();
-  return config ? <Battle key={JSON.stringify(config.setup.seed)} config={config} onExit={() => setConfig(undefined)} /> : <Setup onStart={setConfig} />;
+  if (!config) return <Setup onStart={setConfig} />;
+  const exit = () => setConfig(undefined);
+  return config.mode === 'simulate' ? <Simulation key={config.setup.seed.join()} setup={config.setup} ai={config.ai} count={config.count ?? 100} onExit={exit} /> : <Battle key={config.setup.seed.join()} config={config} onExit={exit} />;
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -82,6 +91,7 @@ function Setup({ onStart }: { onStart: (c: Config) => void }) {
   const [mine, setMine] = useState(() => (teams.some((t) => t.id === activeId) ? activeId : teams[0]?.id) ?? '');
   const [opponent, setOpponent] = useState(() => (params.get('trainer') ? `trainer:${params.get('trainer')}` : ''));
   const [mode, setMode] = useState<Mode>('play');
+  const [count, setCount] = useState(100);
   const [ai, setAi] = useState<Config['ai']>(['smart', 'ingame']);
   const [hidden, setHidden] = useState(false);
   const [atCap, setAtCap] = useState(true);
@@ -165,13 +175,25 @@ function Setup({ onStart }: { onStart: (c: Config) => void }) {
 
       <div className={`${card} flex flex-wrap items-center gap-4 p-4 text-sm`}>
         <div className="flex rounded border border-slate-300 p-0.5 dark:border-slate-700">
-          {(['play', 'watch'] as const).map((m) => (
+          {(['play', 'watch', 'simulate'] as const).map((m) => (
             <button key={m} onClick={() => setMode(m)} className={`rounded px-3 py-1 font-medium ${mode === m ? 'bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900' : ''}`}>
-              {m === 'play' ? 'Play' : 'Watch AI vs AI'}
+              {MODE_LABEL[m]}
             </button>
           ))}
         </div>
-        {mode === 'watch' && (
+        {mode === 'simulate' && (
+          <label className="flex items-center gap-1.5">
+            Battles
+            <select value={count} onChange={(e) => setCount(Number(e.target.value))} className={input}>
+              {[25, 50, 100, 200, 500].map((n) => (
+                <option key={n} value={n}>
+                  {n}
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
+        {mode !== 'play' && (
           <label className="flex items-center gap-1.5">
             Your side
             <select value={ai[0]} onChange={(e) => setAi([e.target.value as Config['ai'][0], ai[1]])} className={input}>
@@ -193,10 +215,12 @@ function Setup({ onStart }: { onStart: (c: Config) => void }) {
             ))}
           </select>
         </label>
-        <label className="flex items-center gap-1.5" title="Show only what the game shows: species, HP bar, status, and moves, items, and abilities once revealed">
-          <input type="checkbox" checked={hidden} onChange={(e) => setHidden(e.target.checked)} />
-          Hide the opponent's details
-        </label>
+        {mode !== 'simulate' && (
+          <label className="flex items-center gap-1.5" title="Show only what the game shows: species, HP bar, status, and moves, items, and abilities once revealed">
+            <input type="checkbox" checked={hidden} onChange={(e) => setHidden(e.target.checked)} />
+            Hide the opponent's details
+          </label>
+        )}
         <span className="text-xs text-slate-500">
           In-game plays like the real trainer, mostly going for its strongest hit; Smart weighs damage, speed, switches, and healing a turn ahead.
         </span>
@@ -208,6 +232,7 @@ function Setup({ onStart }: { onStart: (c: Config) => void }) {
               mode,
               ai,
               hidden,
+              count,
               setup: {
                 rulesetId: rs.id,
                 game: game?.id,
@@ -220,7 +245,7 @@ function Setup({ onStart }: { onStart: (c: Config) => void }) {
             })
           }
         >
-          Start battle
+          {mode === 'simulate' ? `Run ${count} battles` : 'Start battle'}
         </button>
       </div>
       {moveless.length > 0 && (
@@ -248,6 +273,20 @@ function Battle({ config, onExit }: { config: Config; onExit: () => void }) {
   const [auto, setAuto] = useState(config.mode === 'watch');
   const session = sessionRef.current;
   const refresh = () => setVersion((v) => v + 1);
+
+  // the advisor plays each option out many times in workers; its answer is for this decision only
+  const pool = useRef<SimPool>(undefined);
+  useEffect(() => () => pool.current?.cancel(), []);
+  const [advice, setAdvice] = useState<{ at: number; list?: Advice[]; error?: string }>();
+  const at = session.decisions.length;
+  const ask = () => {
+    pool.current ??= new SimPool();
+    setAdvice({ at });
+    pool.current
+      .advise(session, 'p1', { rollouts: 24, depth: 16 })
+      .then((list) => setAdvice((a) => (a?.at === at ? { at, list } : a)))
+      .catch((e) => setAdvice((a) => (a?.at === at ? { at, error: String(e) } : a)));
+  };
 
   const players = useMemo(
     () => ({ p1: config.mode === 'watch' ? player(config.ai[0]) : undefined, p2: player(config.ai[1]) }),
@@ -319,7 +358,10 @@ function Battle({ config, onExit }: { config: Config; onExit: () => void }) {
               {session.winner === 'p1' ? 'You won!' : session.winner === 'p2' ? `${session.side('p2').name} won.` : 'A draw.'}
             </div>
           ) : youChoose ? (
-            <Controls session={session} hidden={hidden} onAction={submit} />
+            <>
+              <Controls session={session} hidden={hidden} onAction={submit} />
+              <AdvicePanel advice={advice?.at === at ? advice : undefined} onAsk={ask} onPick={submit} />
+            </>
           ) : config.mode === 'watch' ? (
             <div className="flex gap-2">
               <button className={button} onClick={() => setAuto(!auto)}>
@@ -340,27 +382,34 @@ function Battle({ config, onExit }: { config: Config; onExit: () => void }) {
   );
 }
 
-function BattleLog({ turns }: { turns: string[][] }) {
-  const end = useRef<HTMLDivElement>(null);
-  // braces: newer browsers return a promise from scrollIntoView, which React would take for a cleanup
-  useEffect(() => {
-    end.current?.scrollIntoView({ block: 'nearest' });
-  }, [turns.length]);
+function AdvicePanel({ advice, onAsk, onPick }: { advice?: { list?: Advice[]; error?: string }; onAsk: () => void; onPick: (a: Advice['action']) => void }) {
+  if (!advice) {
+    return (
+      <button className={button} onClick={onAsk} title="Plays each option out a couple of dozen times with the smart AI on both sides and ranks them by how often you win">
+        What should I do?
+      </button>
+    );
+  }
+  if (advice.error) return <p className="text-sm text-red-700 dark:text-red-400">{advice.error}</p>;
+  if (!advice.list) return <p className="text-sm text-slate-500">Playing each option out…</p>;
+  const top = advice.list.slice(0, 6);
   return (
-    <div className={`${card} max-h-[32rem] overflow-y-auto p-3 text-sm`}>
-      {turns.map((lines, i) =>
-        lines.length ? (
-          <div key={i} className="mb-2">
-            {i > 0 && <div className="text-xs font-semibold uppercase tracking-wide text-slate-400">Turn {i}</div>}
-            {lines.map((l, j) => (
-              <div key={j} className={/^\(/.test(l) ? 'text-xs text-slate-500' : ''}>
-                {l}
-              </div>
-            ))}
+    <div className={`${card} space-y-1.5 p-3 text-sm`}>
+      <div className="font-medium">
+        Best options <span className="font-normal text-slate-500">(estimated win chance after {advice.list[0]?.samples ?? 0} playouts each, smart AI on both sides)</span>
+      </div>
+      {top.map((a, i) => (
+        <div key={i} className="flex items-center gap-2">
+          <div className="h-2 w-24 shrink-0 overflow-hidden rounded bg-slate-200 dark:bg-slate-700">
+            <div className="h-full bg-blue-500" style={{ width: `${Math.round(a.winChance * 100)}%` }} />
           </div>
-        ) : null,
-      )}
-      <div ref={end} />
+          <span className="w-10 text-right tabular-nums">{Math.round(a.winChance * 100)}%</span>
+          <span className="flex-1">{a.label}</span>
+          <button className="text-blue-700 hover:underline dark:text-blue-400" onClick={() => onPick(a.action)}>
+            Do it
+          </button>
+        </div>
+      ))}
     </div>
   );
 }

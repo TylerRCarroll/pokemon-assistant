@@ -47,6 +47,8 @@ export default defineConfig(({ command, isPreview, mode }) => {
         },
       }),
     ],
+    // the battle simulation workers import the sim and its data in chunks, which needs module workers
+    worker: { format: 'es' as const },
     server: {
       // raw romhack docs live here; spreadsheets open in Excel are locked and crash the watcher
       watch: { ignored: ['**/Documentation/**', '**/android/**'] },
