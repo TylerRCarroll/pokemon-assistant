@@ -49,6 +49,9 @@ export default defineConfig(({ command, isPreview, mode }) => {
     ],
     // the battle simulation workers import the sim and its data in chunks, which needs module workers
     worker: { format: 'es' as const },
+    // Showdown's battle save/restore (cloning for the advisor) writes references by class name
+    // ("[Pokemon:p1a]"); minified class names ("[n:p1a]") don't restore, so keep them
+    esbuild: { keepNames: true },
     server: {
       // raw romhack docs live here; spreadsheets open in Excel are locked and crash the watcher
       watch: { ignored: ['**/Documentation/**', '**/android/**'] },

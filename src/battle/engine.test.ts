@@ -227,3 +227,29 @@ describe('battle text amounts', () => {
     expect(text('Gastly', 'Tackle', 'Rattata')).toMatch(/doesn't affect/);
   });
 });
+
+describe('an unlimited bag', () => {
+  it('offers every item of the gen and never runs out', () => {
+    const s = BattleSession.start({
+      rulesetId: 'gen9',
+      seed: [1, 2, 3, 4],
+      sides: [
+        { name: 'You', team: [mon('gen9', 'Pikachu', ['Thunderbolt']), mon('gen9', 'Snorlax', ['Body Slam'])], unlimitedBag: true },
+        { name: 'Boss', team: [mon('gen9', 'Machamp', ['Close Combat'], { level: 30 })] },
+      ],
+    });
+    // nothing is hurt yet, but X items work on the Pokémon in battle
+    expect(s.legal('p1').some((a) => a.kind === 'bag' && a.use.item === 'xspeed')).toBe(true);
+    expect(s.bagLeft('p1', 'hyperpotion')).toBe(Infinity);
+    s.submit({ p1: { kind: 'switch', to: 1 }, p2: { kind: 'move', move: 1 } });
+    for (let i = 0; i < 3; i++) {
+      const heal = s.legal('p1').find((a) => a.kind === 'bag' && a.use.item === 'potion');
+      if (!heal) break;
+      s.submit({ p1: heal, p2: { kind: 'move', move: 1 } });
+    }
+    expect(s.bagLeft('p1', 'potion')).toBe(Infinity);
+    expect(s.log().filter((l) => /used a Potion/.test(l)).length).toBeGreaterThan(0);
+    // and replays the same way
+    expect(BattleSession.replay(s.setup, s.decisions).log()).toEqual(s.log());
+  });
+});

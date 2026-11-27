@@ -44,6 +44,8 @@ export interface SideSetup {
   name: string;
   team: TeamSet[];
   bag?: Bag;
+  /** Any item, any number of times (a well-stocked bag), instead of counting `bag` */
+  unlimitedBag?: boolean;
   /** Per team member, its condition from an earlier fight; full health when absent */
   state?: (MonState | undefined)[];
 }
@@ -178,6 +180,11 @@ export class BattleSession {
   clone(): BattleSession {
     simFormat(this.rs, this.setup.game, this.setup.gameType); // the format must be registered wherever this runs
     const battle = Battle.fromJSON(JSON.stringify(this.battle.toJSON()));
+    // the state's references name classes; if a build renamed them, nothing restores to a real
+    // Pokémon. Replaying the decisions is slower but always right
+    if (!battle.sides.every((s) => s.active.every((p) => !p || typeof p.getMoveRequestData === 'function'))) {
+      return BattleSession.replay(this.setup, this.decisions);
+    }
     return new BattleSession(this.setup, battle, [...this.decisions], [{ ...this.bags[0] }, { ...this.bags[1] }]);
   }
 
@@ -254,9 +261,8 @@ export class BattleSession {
     // no bag while locked into a move (Outrage, Rollout, recharging): the game gives no choice then
     const locked = active.moves.some((m) => m.pp === undefined);
     if (!locked) {
-      const bag = this.bags[index(side)];
       for (const item of bagItemsFor(this.battle.gen)) {
-        if (!bag[item.id]) continue;
+        if (this.bagLeft(side, item.id) <= 0) continue;
         party.forEach((p, target) => {
           // X items and the like work on the Pokémon whose turn it is
           if (item.target === 'active' && p !== mon) return;
@@ -269,6 +275,11 @@ export class BattleSession {
       }
     }
     return out;
+  }
+
+  /** How many of an item the side has left (Infinity for an unlimited bag) */
+  bagLeft(side: SideID, item: BagItemId): number {
+    return this.setup.sides[index(side)].unlimitedBag ? Infinity : (this.bags[index(side)][item] ?? 0);
   }
 
   /** The targets a move can be aimed at: none needed in singles or for spread moves, else every Pokémon in reach */
@@ -310,8 +321,10 @@ export class BattleSession {
     for (const side of pending) {
       const parts = perSlot.get(side)!.map((action, slot) => {
         if (action.kind !== 'bag') return choiceString(action);
-        const bag = this.bags[index(side)];
-        bag[action.use.item] = (bag[action.use.item] ?? 1) - 1;
+        if (!this.setup.sides[index(side)].unlimitedBag) {
+          const bag = this.bags[index(side)];
+          bag[action.use.item] = (bag[action.use.item] ?? 1) - 1;
+        }
         applyBagItem(this.battle, index(side), action.use);
         // the item took this Pokémon's turn: submit any move for it, and cancel the move before it runs
         const mon = this.active(side, slot)!;

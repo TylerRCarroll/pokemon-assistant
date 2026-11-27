@@ -4,7 +4,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { card, input, link } from '../../components/ui';
 import type { Advice, GauntletSetup } from '../../battle/analysis';
 import { bagItem, bagItemsFor, type BagItemId } from '../../battle/bag';
-import { describeAction, BattleSession, newSeed, type Action, type Bag, type BattleSetup } from '../../battle/engine';
+import { BattleSession, newSeed, type Action, type Bag, type BattleSetup } from '../../battle/engine';
 import { aiDecision, player, type AiKind } from '../../battle/ai/players';
 import { hit } from '../../battle/ai/view';
 import { battleText } from '../../battle/log';
@@ -161,6 +161,8 @@ function Setup({ onStart }: { onStart: (c: Config) => void }) {
   const [hidden, setHidden] = useState(false);
   const [atCap, setAtCap] = useState(true);
   const [bags, setBags] = useState<[Bag, Bag]>([{}, {}]);
+  // in a battle you play, a full bag by default; simulations count, so the AI can't heal forever
+  const [anyItem, setAnyItem] = useState(true);
   const [fights, setFights] = useState<number[]>([]);
   const [healBetween, setHealBetween] = useState(false);
 
@@ -202,7 +204,8 @@ function Setup({ onStart }: { onStart: (c: Config) => void }) {
   }
 
   const start = () => {
-    const you = { name: 'You', team: myTeam, bag: bags[0] };
+    const unlimited = anyItem && (mode === 'play' || mode === 'watch');
+    const you = { name: 'You', team: myTeam, bag: bags[0], ...(unlimited ? { unlimitedBag: true } : {}) };
     if (mode === 'gauntlet') {
       onStart({
         mode,
@@ -286,7 +289,13 @@ function Setup({ onStart }: { onStart: (c: Config) => void }) {
               At the level cap (Lv {cap})
             </label>
           )}
-          <BagEditor gen={rs.gen} bag={bags[0]} onChange={(b) => setBags([b, bags[1]])} />
+          {(mode === 'play' || mode === 'watch') && (
+            <label className="flex items-center gap-1.5 text-sm" title="Every item the games have in this generation, as many times as you like">
+              <input type="checkbox" checked={anyItem} onChange={(e) => setAnyItem(e.target.checked)} />
+              Use any item (a full bag)
+            </label>
+          )}
+          {!(anyItem && (mode === 'play' || mode === 'watch')) && <BagEditor gen={rs.gen} bag={bags[0]} onChange={(b) => setBags([b, bags[1]])} />}
         </div>
         <div className="space-y-2">
           <h2 className="font-semibold">{mode === 'gauntlet' ? 'Fights' : 'Opponent'}</h2>
@@ -573,7 +582,6 @@ function Controls({
   const forced = legal.every((a) => a.kind === 'switch' || a.kind === 'pass');
   const [tab, setTab] = useState<Tab>(forced ? 'pokemon' : 'fight');
   const [gimmickChecked, setGimmick] = useState(false);
-  const [bagPick, setBagPick] = useState<BagItemId>();
   // a single-target move picked in doubles: now choose where it goes
   const [aiming, setAiming] = useState<number>();
   const me = session.active('p1', slot);
@@ -584,7 +592,7 @@ function Controls({
   // once Tera (or Mega, ...) is spent, the box no longer applies
   const gimmick = gimmickChecked && gimmicks.length > 0;
   const gimmickName = { mega: 'Mega Evolve', ultra: 'Ultra Burst', zmove: 'Z-Move', dynamax: 'Dynamax', terastallize: 'Terastallize' }[gimmicks[0]?.gimmick ?? 'mega'];
-  const tabs: Tab[] = forced ? ['pokemon'] : ['fight', 'pokemon', ...(legal.some((a) => a.kind === 'bag') ? (['bag'] as Tab[]) : [])];
+  const tabs: Tab[] = forced ? ['pokemon'] : ['fight', 'pokemon', 'bag'];
   const current = tabs.includes(tab) ? tab : tabs[0];
   const movesFor = (i: number) => legal.filter((a): a is Extract<Action, { kind: 'move' }> => a.kind === 'move' && a.move === i + 1 && (gimmick ? !!a.gimmick : !a.gimmick));
 
@@ -712,28 +720,80 @@ function Controls({
         </div>
       )}
 
-      {current === 'bag' && (
-        <div className="space-y-2">
-          <div className="flex flex-wrap gap-1.5">
-            {[...new Set(legal.flatMap((a) => (a.kind === 'bag' ? [a.use.item] : [])))].map((id) => (
-              <button key={id} onClick={() => setBagPick(id)} className={`${button} ${bagPick === id ? 'border-blue-500' : ''}`} title={bagItem(id).shortDesc(session.battle.gen)}>
-                {bagItem(id).name} ×{(session.bags[0][id] ?? 0) - picked.filter((p) => p.kind === 'bag' && p.use.item === id).length}
-              </button>
-            ))}
-          </div>
-          {bagPick && (
+      {current === 'bag' && <BagTab session={session} legal={legal} picked={picked} onAction={onAction} />}
+    </div>
+  );
+}
+
+const BAG_GROUPS: [string, BagItemId[]][] = [
+  ['HP', ['potion', 'superpotion', 'hyperpotion', 'maxpotion', 'fullrestore']],
+  ['Status', ['antidote', 'burnheal', 'iceheal', 'awakening', 'paralyzeheal', 'fullheal']],
+  ['Revive', ['revive', 'maxrevive']],
+  ['PP', ['ether', 'maxether', 'elixir', 'maxelixir']],
+  ['Battle items', ['xattack', 'xdefense', 'xspatk', 'xspdef', 'xspeed', 'xaccuracy', 'direhit', 'guardspec']],
+];
+
+/** Every item the gen has, by kind; the ones that wouldn't do anything right now are greyed out with why */
+function BagTab({ session, legal, picked, onAction }: { session: BattleSession; legal: Action[]; picked: Action[]; onAction: (a: Action) => void }) {
+  const [pick, setPick] = useState<BagItemId>();
+  const gen = session.battle.gen;
+  const party = session.side('p1').pokemon;
+  const available = new Set(bagItemsFor(gen).map((i) => i.id));
+  // what's left, counting the items earlier slots already picked this turn
+  const left = (id: BagItemId) => session.bagLeft('p1', id) - picked.filter((p) => p.kind === 'bag' && p.use.item === id).length;
+  const uses = (id: BagItemId) => (left(id) > 0 ? legal.filter((a): a is Extract<Action, { kind: 'bag' }> => a.kind === 'bag' && a.use.item === id) : []);
+  // locked into a move, or the like: the game offers no bag this turn
+  const none = !legal.some((a) => a.kind === 'bag') && !legal.some((a) => a.kind === 'move' || a.kind === 'switch');
+  return (
+    <div className="space-y-3">
+      {none && <p className="text-sm text-slate-500">No items this turn.</p>}
+      {BAG_GROUPS.map(([group, ids]) => {
+        const items = ids.filter((id) => available.has(id));
+        if (!items.length) return null;
+        return (
+          <div key={group}>
+            <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-500">{group}</div>
             <div className="flex flex-wrap gap-1.5">
-              {legal
-                .filter((a): a is Extract<Action, { kind: 'bag' }> => a.kind === 'bag' && a.use.item === bagPick)
-                .filter(() => (session.bags[0][bagPick] ?? 0) > picked.filter((p) => p.kind === 'bag' && p.use.item === bagPick).length)
-                .map((a) => (
-                  <button key={`${a.use.target}-${a.use.move ?? ''}`} className={button} onClick={() => onAction(a)}>
-                    {describeAction(session, 'p1', a).replace(`${bagItem(bagPick).name} on `, '')}
-                    {a.use.move !== undefined && ` (${party[a.use.target].moveSlots[a.use.move].move})`}
+              {items.map((id) => {
+                const item = bagItem(id);
+                const n = left(id);
+                const can = uses(id).length > 0;
+                const why = n <= 0 ? 'None left' : item.target === 'fainted' ? 'No Pokémon has fainted' : item.target === 'active' ? 'Nothing it would raise' : 'Nothing it would help right now';
+                return (
+                  <button
+                    key={id}
+                    disabled={!can}
+                    onClick={() => setPick(pick === id ? undefined : id)}
+                    className={`${button} ${pick === id ? 'border-blue-500' : ''}`}
+                    title={`${item.shortDesc(gen)}${can ? '' : ` (${why})`}`}
+                  >
+                    {item.name}
+                    <span className="ml-1 text-xs text-slate-500">{n === Infinity ? '' : `×${Math.max(0, n)}`}</span>
                   </button>
-                ))}
+                );
+              })}
             </div>
-          )}
+          </div>
+        );
+      })}
+      {pick && (
+        <div className="space-y-1 rounded border border-blue-300 p-2 dark:border-blue-800">
+          <div className="text-sm">
+            {bagItem(pick).name}: <span className="text-slate-500">{bagItem(pick).shortDesc(gen)}. Use it on:</span>
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {uses(pick).map((a) => {
+              const mon = party[a.use.target];
+              return (
+                <button key={`${a.use.target}-${a.use.move ?? ''}`} className={button} onClick={() => onAction(a)}>
+                  {mon.name}
+                  <span className="ml-1 text-xs text-slate-500">
+                    {a.use.move !== undefined ? mon.moveSlots[a.use.move].move : mon.fainted ? 'fainted' : `${mon.hp}/${mon.maxhp}${mon.status ? ` ${mon.status.toUpperCase()}` : ''}`}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
         </div>
       )}
     </div>

@@ -96,7 +96,7 @@ export function pickSlots(session: BattleSession, side: SideID, kind: AiKind): A
     const options = scoreSlot(session, side, slot, kind).filter(({ action }) => {
       if (action.kind === 'switch') return !used.has(action.to);
       if (action.kind === 'move' && action.gimmick) return !gimmicks.has(action.gimmick);
-      if (action.kind === 'bag') return (bagLeft[action.use.item] ?? 0) > 0;
+      if (action.kind === 'bag') return session.bagLeft(side, action.use.item) === Infinity || (bagLeft[action.use.item] ?? 0) > 0;
       return true;
     });
     let best = options[0];

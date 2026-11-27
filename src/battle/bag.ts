@@ -150,7 +150,7 @@ export function applyBagItem(battle: Battle, side: 0 | 1, use: BagUse) {
   const s = battle.sides[side];
   const mon: Pokemon = s.pokemon[use.target];
   const item = bagItem(use.item);
-  battle.add('message', `${s.name} used ${/^[AEIOU]/.test(item.name) ? 'an' : 'a'} ${item.name} on ${mon.name}!`);
+  battle.add('message', `${s.name} used ${/^([AEIOU]|X )/.test(item.name) ? 'an' : 'a'} ${item.name} on ${mon.name}!`);
 
   if (use.item === 'revive' || use.item === 'maxrevive') {
     // as Revival Blessing does it
