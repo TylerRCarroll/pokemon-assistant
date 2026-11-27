@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { card, input } from '../../components/ui';
 import { exportPaste, importPaste } from '../../lib/teamio';
 import type { Ruleset } from '../../rulesets/types';
@@ -81,6 +82,9 @@ export function TeamBar({ rs, teams, active, current }: { rs: Ruleset; teams: Te
             <button className={button} onClick={() => open('export')}>
               Export
             </button>
+            <Link to="/battle" className={button} title="Fight a boss or another team with this one">
+              Battle
+            </Link>
             <button className={button} onClick={() => open('rename')}>
               Rename
             </button>

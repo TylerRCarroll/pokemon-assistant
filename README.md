@@ -51,6 +51,8 @@ All six planned features are in:
 5. **Calc** – `@smogon/calc` damage calculator and threat checks against the meta or a game's bosses (romhack trainers; every official game's story fights). For a boss Pokémon nothing on your team checks, *How do I beat it?* damage-calcs single changes within the level cap: more levels, evolving, a new move, a held item, or a Pokémon you can get by then
 6. **Trainer** – spaced-repetition quizzes on matchups, abilities, moves, counters, and romhack changes
 
+**Battle** runs real battles on Pokémon Showdown's engine (`@pkmn/sim`), with in-game rules (no team preview, the trainer leads with its first Pokémon) and the bag (potions, status heals, Revives, Ethers, X items), which Showdown doesn't have. Fight a boss or another team yourself against an *In-game* AI (plays like the real trainer) or a *Smart* one, hide the opponent's details as the game would, and rewind any turn; or watch two AIs play it out. Romhack battles use the hack's own stats, types, and moves. Sprites load from Showdown's sprite server.
+
 The Team Builder has a **Playthrough** mode (every mainline game from Red/Blue to Scarlet/Violet, including the remakes, plus Renegade Platinum and Unbound; Let's Go and Legends: Arceus aren't covered): pick how far you are, and warnings and swap suggestions only use Pokémon you could have by then, evolved as far as the level cap allows.
 
 Ideas next: Unbound move tutors and custom-ability descriptions, Renegade Platinum evolution changes and encounters, a Pokémon Champions ruleset.

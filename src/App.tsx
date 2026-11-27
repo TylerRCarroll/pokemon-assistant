@@ -27,6 +27,8 @@ const router = createBrowserRouter([
       { path: 'pc', element: <PcPage /> },
       { path: 'planner/:mon?', element: <PlannerPage /> },
       { path: 'calc', element: <CalcPage /> },
+      // the battle engine is big: it loads with this page, not the app
+      { path: 'battle', lazy: () => import('./features/battle/BattlePage').then((m) => ({ Component: m.BattlePage })) },
       { path: 'trainer', element: <TrainerPage /> },
       { path: 'backup', element: <BackupPage /> },
     ],

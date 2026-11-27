@@ -24,7 +24,7 @@ export interface BagItem {
 }
 
 /** HP healed: potions got stronger and weaker over the gens (Super and Hyper Potion changed in Gen 7) */
-function healAmount(id: BagItemId, gen: number): number | 'full' | undefined {
+export function healAmount(id: BagItemId, gen: number): number | 'full' | undefined {
   switch (id) {
     case 'potion':
       return 20;

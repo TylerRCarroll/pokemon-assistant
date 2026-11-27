@@ -11,6 +11,7 @@ const NAV = [
   { to: '/pc', label: 'PC' },
   { to: '/planner', label: 'Planner' },
   { to: '/calc', label: 'Calc' },
+  { to: '/battle', label: 'Battle' },
   { to: '/trainer', label: 'Trainer' },
   { to: '/backup', label: 'Backup' },
 ];

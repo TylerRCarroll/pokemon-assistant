@@ -156,6 +156,11 @@ export function ThreatsView({
             ))}
           </select>
           <DifficultySelect difficulties={difficulties} value={difficulty} onChange={setDifficulty} />
+          {trainer && (
+            <Link to={`/battle?trainer=${trainer.id}`} className={link}>
+              Battle this trainer
+            </Link>
+          )}
           {!trainers?.every((t) => t.boss) && (
             <label className="flex items-center gap-1.5">
               <input type="checkbox" checked={allTrainers} onChange={(e) => setAllTrainers(e.target.checked)} />
