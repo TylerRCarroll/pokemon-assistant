@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Pokemon } from '@pkmn/sim';
 import { Link, useSearchParams } from 'react-router-dom';
 import { card, input, link } from '../../components/ui';
-import type { Advice, GauntletSetup } from '../../battle/analysis';
+import { tooClose, type Advice, type GauntletSetup } from '../../battle/analysis';
 import { bagItem, bagItemsFor, type BagItemId } from '../../battle/bag';
 import { BattleSession, newSeed, type Action, type Bag, type BattleSetup } from '../../battle/engine';
 import { aiDecision, player, type AiKind } from '../../battle/ai/players';
@@ -477,6 +477,7 @@ function Battle({ config, onExit }: { config: Extract<Config, { setup: BattleSet
         <button className={button} onClick={rewindTo} disabled={!session.decisions.some((d) => d.p1)}>
           ⟲ Rewind
         </button>
+        <CopyBattle session={session} advice={advice?.at === at ? advice.list : undefined} />
         <button className={button} onClick={onExit}>
           New battle
         </button>
@@ -514,6 +515,44 @@ function Battle({ config, onExit }: { config: Extract<Config, { setup: BattleSet
   );
 }
 
+/**
+ * The battle as text to paste into a bug report: teams, seed, and every choice (enough to rebuild it
+ * exactly), the advisor's last ranking, and the log as you read it
+ */
+function CopyBattle({ session, advice }: { session: BattleSession; advice?: Advice[] }) {
+  const [copied, setCopied] = useState<'yes' | 'failed'>();
+  const copy = async () => {
+    const report = {
+      kind: 'pokeplanner-battle',
+      copiedAt: new Date().toISOString(),
+      turn: session.turn,
+      setup: session.setup,
+      decisions: session.decisions,
+      advice: advice?.map((a) => ({ option: a.label, winChance: Math.round(a.winChance * 1000) / 1000, hpLeft: Math.round(a.margin * 1000) / 1000, samples: a.samples, action: a.action })),
+      log: battleText(session.log()).map((lines, turn) => ({ turn, lines })),
+    };
+    const text = JSON.stringify(report, null, 1);
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied('yes');
+    } catch {
+      // no clipboard (some Android webviews): save it as a file instead
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([text], { type: 'application/json' }));
+      a.download = `battle-turn-${session.turn}.json`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+      setCopied('failed');
+    }
+    setTimeout(() => setCopied(undefined), 2500);
+  };
+  return (
+    <button className={button} onClick={copy} title="Copies the teams, seed, every choice, the advisor's ranking, and the log, so the battle can be rebuilt exactly">
+      {copied === 'yes' ? 'Copied ✓' : copied === 'failed' ? 'Saved as a file' : 'Copy battle'}
+    </button>
+  );
+}
+
 function AdvicePanel({ advice, onAsk, onPick }: { advice?: { list?: Advice[]; error?: string }; onAsk: () => void; onPick: (a: Action) => void }) {
   if (!advice) {
     return (
@@ -524,17 +563,27 @@ function AdvicePanel({ advice, onAsk, onPick }: { advice?: { list?: Advice[]; er
   }
   if (advice.error) return <p className="text-sm text-red-700 dark:text-red-400">{advice.error}</p>;
   if (!advice.list) return <p className="text-sm text-slate-500">Playing each option out…</p>;
+  const [first, second] = advice.list;
+  const close = first && second && tooClose(first, second);
   return (
     <div className={`${card} space-y-1.5 p-3 text-sm`}>
       <div className="font-medium">
-        Best options <span className="font-normal text-slate-500">(estimated win chance after {advice.list[0]?.samples ?? 0} playouts each, smart AI on both sides)</span>
+        Best options <span className="font-normal text-slate-500">(estimated win chance after {first?.samples ?? 0} playouts each, smart AI on both sides; HP is your team's left at the end)</span>
       </div>
+      {close && (
+        <p className="text-xs text-amber-700 dark:text-amber-400">
+          The top options are too close to call: the playouts can't tell them apart, so pick on what you know of the fight.
+        </p>
+      )}
       {advice.list.slice(0, 6).map((a, i) => (
         <div key={i} className="flex items-center gap-2">
           <div className="h-2 w-24 shrink-0 overflow-hidden rounded bg-slate-200 dark:bg-slate-700">
             <div className="h-full bg-blue-500" style={{ width: `${Math.round(a.winChance * 100)}%` }} />
           </div>
           <span className="w-10 text-right tabular-nums">{Math.round(a.winChance * 100)}%</span>
+          <span className="w-16 text-right text-xs tabular-nums text-slate-500" title="Your team's HP left at the end of the playouts, on average">
+            {Math.round(a.margin * 100)}% HP
+          </span>
           <span className="flex-1">{a.label}</span>
           <button className="text-blue-700 hover:underline dark:text-blue-400" onClick={() => onPick(a.action)}>
             Do it

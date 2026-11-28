@@ -85,3 +85,20 @@ describe('gauntlet', () => {
     expect(sum.mons.map((m) => m.name)).toEqual(['Garchomp', 'Rotom']);
   });
 });
+
+describe('advisor ties', () => {
+  it("in a won position, ranks the strong hit over a resisted one listed first, and says when it can't tell", async () => {
+    const { tooClose } = await import('./analysis');
+    // Brutal Swing is Dark (resisted by Fighting); Zen Headbutt is Psychic (super effective). Both win
+    const s = BattleSession.start(setup([mon('Metagross', ['Brutal Swing', 'Zen Headbutt'], { level: 60 })], [mon('Machamp', ['Close Combat'], { level: 30 }), mon('Machamp', ['Close Combat'], { level: 30 })]));
+    const advice = advise(s, 'p1', { rollouts: 8, depth: 16 });
+    const swing = advice.find((a) => a.label === 'Brutal Swing')!;
+    const zen = advice.find((a) => a.label === 'Zen Headbutt')!;
+    expect(zen.winChance).toBe(1);
+    expect(swing.winChance).toBe(1);
+    // same win chance; the margin decides it
+    expect(zen.margin).toBeGreaterThan(swing.margin);
+    expect(advice[0].label).toBe('Zen Headbutt');
+    expect(tooClose(advice[0], { ...advice[0] })).toBe(true);
+  });
+});

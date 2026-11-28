@@ -154,6 +154,24 @@ export interface Advice {
   winChance: number;
   /** How many playouts it's based on */
   samples: number;
+  /** Your team's HP left at the end of the playouts, 0-1: how comfortably it wins (or how close it comes) */
+  margin: number;
+}
+
+/**
+ * Ranking: win chance first; between options that win about as often, the one that keeps more HP.
+ * Without the margin, a position you win whatever you do lists every option at 100%, and the
+ * first move on the list looks "best" for no reason
+ */
+export const adviceScore = (a: Pick<Advice, 'winChance' | 'margin' | 'action'>) => a.winChance + a.margin * 0.1 - (spendsGimmick(a.action) ? 0.03 : 0);
+
+/** Tera, a Z-Move, and Dynamax are once a battle: worth spending only when they change the outcome */
+const spendsGimmick = (a: Action) => a.kind === 'move' && (a.gimmick === 'terastallize' || a.gimmick === 'zmove' || a.gimmick === 'dynamax');
+
+/** Whether two options' win chances are within the playouts' noise of each other (two standard errors) */
+export function tooClose(a: Advice, b: Advice): boolean {
+  const se = (x: Advice) => Math.sqrt(Math.max(x.winChance * (1 - x.winChance), 0.01) / x.samples);
+  return Math.abs(a.winChance - b.winChance) < 2 * Math.hypot(se(a), se(b)) && Math.abs(a.margin - b.margin) < 0.05;
 }
 
 /** Position score for a playout cut short: a smooth stand-in for "who's winning" */
@@ -189,6 +207,7 @@ export function advise(session: BattleSession, side: SideID, opts: AdviseOptions
   return options
     .map((action) => {
       let total = 0;
+      let margin = 0;
       for (let k = 0; k < rollouts; k++) {
         const s = session.clone();
         // fresh random rolls for each playout
@@ -198,10 +217,11 @@ export function advise(session: BattleSession, side: SideID, opts: AdviseOptions
         s.submit(first);
         for (let d = 0; d < depth && !s.ended; d++) s.submit(aiDecision(s, { p1: smart, p2: smart }));
         total += evaluate(s, side);
+        margin += hpShare(s, side);
       }
-      return { action, label: describeAction(session, side, action), winChance: total / rollouts, samples: rollouts };
+      return { action, label: describeAction(session, side, action), winChance: total / rollouts, samples: rollouts, margin: margin / rollouts };
     })
-    .sort((a, b) => b.winChance - a.winChance);
+    .sort((a, b) => adviceScore(b) - adviceScore(a));
 }
 
 /** The advice lists of several workers, merged back together */
@@ -210,11 +230,13 @@ export function mergeAdvice(parts: Advice[][]): Advice[] {
   for (const a of parts.flat()) {
     const same = out.find((o) => sameAction(o.action, a.action));
     if (same) {
-      same.winChance = (same.winChance * same.samples + a.winChance * a.samples) / (same.samples + a.samples);
-      same.samples += a.samples;
+      const n = same.samples + a.samples;
+      same.winChance = (same.winChance * same.samples + a.winChance * a.samples) / n;
+      same.margin = (same.margin * same.samples + a.margin * a.samples) / n;
+      same.samples = n;
     } else out.push({ ...a });
   }
-  return out.sort((a, b) => b.winChance - a.winChance);
+  return out.sort((a, b) => adviceScore(b) - adviceScore(a));
 }
 
 // ---------------------------------------------------------------------------------------------
